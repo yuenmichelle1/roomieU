@@ -6,23 +6,23 @@ const app = express();
 const apiRoutes = require("./routes/apiRoutes");
 const mongoose = require("mongoose");
 
-// We'll have to change this for production!
-mongoose.connect("mongodb://localhost/product_db");
+// // We'll have to change this for production!
+// mongoose.connect("mongodb://localhost/product_db");
 
-// Serve up static assets
-app.use(express.static("client/build"));
+// // Serve up static assets
+// app.use(express.static("client/build"));
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+// // parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: true }));
 
-// parse application/json
-app.use(bodyParser.json());
+// // parse application/json
+// app.use(bodyParser.json());
 
-// Use apiRoutes
-app.use("/api", apiRoutes); //localhost:3000/api/...
+// // Use apiRoutes
+// app.use("/api", apiRoutes); //localhost:3000/api/...
 
-// Send every request to the React app
-// Define any API routes before this runs
+// // Send every request to the React app
+// // Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
