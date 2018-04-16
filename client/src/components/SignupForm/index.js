@@ -1,7 +1,9 @@
 import React from "react";
+import Navbar from "../NavBar";
 
 const SignupForm = () => (
   <div>
+    <Navbar />
     <h1 className="header-text">SignUp Page</h1>
     <p className="body-text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna

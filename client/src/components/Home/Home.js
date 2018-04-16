@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "../NavBar";
+import Navbar from "../NavBar";
 
-const Login = () => (
+const Home = () => (
   <div>
-    <NavBar />
-    <h1 className="header-text">Login Page</h1>
+    <Navbar />
+    <h1 className="header-text">Home Page</h1>
     <p className="body-text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
       varius, blandit rhoncus sem. Morbi lacinia nisi ac dui fermentum, sed luctus urna tincidunt.
@@ -18,4 +18,4 @@ const Login = () => (
   </div>
 );
 
-export default Login;
+export default Home;
