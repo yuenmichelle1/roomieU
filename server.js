@@ -9,10 +9,10 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/apiRoutes");
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/roomies_db";
 
-// We'll have to change this for production!
-// mongoose.connect("mongodb://localhost/product_db");
+mongoose.connect(MONGODB_URI);
 
 // Serve up static assets
 app.use(express.static("client/build"));
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Use apiRoutes
-// app.use("/api", apiRoutes); //localhost:3000/api/...
+app.use("/api", apiRoutes); //localhost:3000/api/...
 
 // // Send every request to the React app
 // // Define any API routes before this runs
