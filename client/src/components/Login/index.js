@@ -1,8 +1,8 @@
 import React from "react";
 
-const SignupForm = () => (
+const Login = () => (
   <div>
-    <h1 className="header-text">SignUp Page</h1>
+    <h1 className="header-text">Login Page</h1>
     <p className="body-text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
       varius, blandit rhoncus sem. Morbi lacinia nisi ac dui fermentum, sed luctus urna tincidunt.
@@ -16,4 +16,4 @@ const SignupForm = () => (
   </div>
 );
 
-export default SignupForm;
+export default Login;
