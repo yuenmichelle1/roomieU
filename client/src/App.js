@@ -9,8 +9,10 @@ class App extends Component {
     return (
       <Router>
       <div>
-        {/* <Nav /> */}
-        <Route exact path="/" component={FormWrapper} />
+        {/* <Route exact path="/" component={Home} />
+        <Route exact path="/signup" component={SignupForm} /> */}
+        <Route exact path="/roommatepreferences" component={FormWrapper} />
+        {/* <Route exact path="/dashboard" component={Dashboard} /> */}
       </div>
     </Router>
     );
