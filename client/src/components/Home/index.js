@@ -1,5 +1,7 @@
 import React from "react";
+import WordChanger from './WordChanger';
 
+WordChanger();
 const Home = () => (
   <div>
     <h1 className="header-text">Home Page</h1>
@@ -13,6 +15,7 @@ const Home = () => (
       consequat. Vestibulum vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
       fames ac ante ipsum primis in faucibus.
     </p>
+  <span className="header-text">Find your next </span><span className="randoms header-text"></span>
   </div>
 );
 
