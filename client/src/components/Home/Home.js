@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../NavBar";
+import WordChanger from './WordChanger';
 
+WordChanger();
 const Home = () => (
   <div>
     <Navbar />
@@ -15,6 +17,7 @@ const Home = () => (
       consequat. Vestibulum vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
       fames ac ante ipsum primis in faucibus.
     </p>
+    <span className="header-text">Find your next </span><span className="randoms header-text"></span>
   </div>
 );
 
