@@ -1,3 +1,8 @@
+require("dotenv").config();
+// you will need to set up your local .env file to access the key since .env file is ignored by gitignore
+console.log(process.env.ZillowApiKey)
+
+
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
