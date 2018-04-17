@@ -11,30 +11,40 @@ import {
 import Navbar from "../NavBar";
 import API from "../../utils/API";
 
-
-
 export default class SignUpForm extends React.Component {
   state = {
     email: "",
     password: "",
-    phone: ""
-  }
+    phone: "",
+    file: ""
+  };
 
-  handleFormSubmit = (event,data) => {
-    const userData={...this.state};
+  handleFormSubmit = (event, data) => {
+    const userData = { ...this.state };
     event.preventDefault();
     console.log(userData);
     API.createUser(userData).then(
       window.location="/roommatepreferences"
     )
-  }
-
+  };
 
   handleInputChange = event => {
     const value = event.target.value;
-    const name= event.target.name;
-    this.setState({[name]: value});
-  }
+    const name = event.target.name;
+    this.setState({ [name]: value });
+  };
+
+  fileUpload = event => {
+    event.preventDefault();
+    let userfile = event.target.files[0];
+    console.log(userfile);
+
+    if (userfile) {
+      let data = new FormData();
+      data.append("file", userfile);
+      this.setState({ file: userfile});
+    }
+  };
 
   render() {
     return (
@@ -92,7 +102,12 @@ export default class SignUpForm extends React.Component {
               Upload Your Image
             </Label>
             <Col sm={10}>
-              <Input type="file" name="file" id="imageFile" />
+              <Input
+                type="file"
+                name="file"
+                id="imageFile"
+                onChange={this.fileUpload}
+              />
               <FormText color="muted">
                 Please note uploading a photo gives you a higher chance of
                 finding a roomie.
@@ -103,7 +118,8 @@ export default class SignUpForm extends React.Component {
             <Col sm={{ size: 10 }}>
               <FormGroup check>
                 <Label check>
-                  <Input type="checkbox" id="checkbox2" /> I agree to Terms and Conditions.
+                  <Input type="checkbox" id="checkbox2" /> I agree to Terms and
+                  Conditions.
                 </Label>
               </FormGroup>
             </Col>

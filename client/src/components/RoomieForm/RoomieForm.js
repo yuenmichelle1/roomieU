@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input} from "reactstrap";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
-export default class RoomieForm extends React.Component {
+export default class Example extends React.Component {
   render() {
     return (
       <Form>
@@ -14,21 +14,51 @@ export default class RoomieForm extends React.Component {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="scheduleSelect">I wound prefer my roommate's schedule to be: </Label>
+          <Label for="scheduleSelect">
+            I wound prefer my roommate's schedule to be:{" "}
+          </Label>
           <Input type="select" name="scheduleSelect" id="scheduleSelect">
             <option>Morning Bird</option>
             <option>Night Owl</option>
-            <option>Neither</option>
+            <option>I actually don't care.</option>
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="userPartying">Partying: What Type of Party Animal Are You? </Label>
-          <Input type="select" name="userPartying" id="userPartying">
-            <option>I'm a Party Animal! I love having my friends over to throw a rager! </option>
-            <option>I'm not really a party animal, but we can throw some parties at our place. </option>
-            <option>I'm not ok with partying at our place.</option>
+          <Label for="petSelect">Pets: I prefer my roommate to have: </Label>
+          <Input type="select" name="petSelect" id="petSelect">
+            <option>No Pets Allowed.</option>
+            <option>
+              Pets live here already, but MINE ONLY. Yours will not.
+            </option>
+            <option>Bring your pets! I love all animals!</option>
+            <option>I actually don't care.</option>
           </Input>
-        </FormGroup>     
+        </FormGroup>
+        <FormGroup>
+          <Label for="smokeSelect">
+            Smoking: I prefer my roommate to have:{" "}
+          </Label>
+          <Input type="select" name="smokeSelect" id="smokeSelect">
+            <option> No smoking at all!</option>
+            <option>
+              I prefer a non-smoking household. He/She can smoke outdoors but
+              not inside.{" "}
+            </option>
+            <option>He/she should be ok with a smoking household.</option>
+            <option>I actually don't care.</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="partySelect">
+            Partying: I prefer my roommate to be a:{" "}
+          </Label>
+          <Input type="select" name="partySelect" id="partySelect">
+            <option> Party Animal! Let's throw some great parties!</option>
+            <option>You can party just not at our place.</option>
+            <option>No partying!</option>
+            <option>I actually don't care.</option>
+          </Input>
+        </FormGroup>
         <Button>Submit</Button>
       </Form>
     );
