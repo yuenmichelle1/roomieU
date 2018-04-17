@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = {
-    find: function (req, res) {
+    find: (req, res) => {
         db.User.findOne({_id: req.params.id}).then((dbUser) => {
             res.json(dbUser);
         });
@@ -9,8 +9,7 @@ module.exports = {
     findAll: (req, res)=> {
         db.User.find({}).then((dbUsers)=> res.json(dbUsers));
     },
-    create: function (req, res) {
-        // req.body => {name: "name", price: 1.50}
+    create: (req, res) => {
         db.User.create(req.body).then((dbUser) => {
             res.json(dbUser);
         });

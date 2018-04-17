@@ -3,10 +3,10 @@ const router = require("express").Router();
 const apartmentController = require("../controllers/apartmentController");
 
 // localhost/users/
-router.get("/:id", userController.find);
-router.post("/new", userController.create);
-router.get("/", userController.findAll);
-router.delete("/:id", userController.delete);
+router.get("/:id", apartmentController.find);
+router.post("/new", apartmentController.create);
+router.get("/", apartmentController.findAll);
+router.delete("/:id", apartmentController.delete);
 
 
 
