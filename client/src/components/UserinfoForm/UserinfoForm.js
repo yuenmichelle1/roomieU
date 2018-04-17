@@ -7,15 +7,27 @@ export default class UserinfoForm extends React.Component {
       <Form>
         <FormGroup>
           <Label for="userGender">I am a: </Label>
-          <Input type="select" name="userGender" id="userGender">
+          <Input
+            type="select"
+            name="gender"
+            id="userGender"
+            onChange={this.props.grabUserProfile}
+          >
             <option>Male</option>
             <option>Female</option>
             <option>Does it really matter?</option>
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="userBudget">My maximum budget for rent per month is around: </Label>
-          <Input type="select" name="userBudget" id="userBudget">
+          <Label for="userBudget">
+            My maximum budget for rent per month is around:{" "}
+          </Label>
+          <Input
+            type="select"
+            name="budget"
+            id="userBudget"
+            onChange={this.props.grabUserProfile}
+          >
             <option>$0 - $500</option>
             <option>$501 - $750 </option>
             <option>$751 - $1,000</option>
@@ -30,8 +42,15 @@ export default class UserinfoForm extends React.Component {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="userRadius">How far from campus are you willing to live?</Label>
-          <Input type="select" name="userRadius" id="userRadius">
+          <Label for="userRadius">
+            How far from campus are you willing to live?
+          </Label>
+          <Input
+            type="select"
+            name="radius"
+            id="userRadius"
+            onChange={this.props.grabUserProfile}
+          >
             <option>0-5 miles</option>
             <option>6-10 miles</option>
             <option>11-15miles</option>
@@ -40,7 +59,12 @@ export default class UserinfoForm extends React.Component {
         </FormGroup>
         <FormGroup>
           <Label for="userSmoking">Do you Smoke?</Label>
-          <Input type="select" name="userSmoking" id="userSmoking">
+          <Input
+            type="select"
+            name="smoking"
+            id="userSmoking"
+            onChange={this.props.grabUserProfile}
+          >
             <option> I don't smoke at all!</option>
             <option>I smoke outside.</option>
             <option>I do smoke (outside and inside).</option>
@@ -49,7 +73,12 @@ export default class UserinfoForm extends React.Component {
         </FormGroup>
         <FormGroup>
           <Label for="userSchedule">What is Your Schedule Like?</Label>
-          <Input type="select" name="userSchedule" id="userSchedule">
+          <Input
+            type="select"
+            name="schedule"
+            id="userSchedule"
+            onChange={this.props.grabUserProfile}
+          >
             <option> Morning Bird</option>
             <option>Night Owl</option>
             <option>I'm pretty much both</option>
@@ -57,27 +86,58 @@ export default class UserinfoForm extends React.Component {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="userPartying">Partying: What Type of Party Animal Are You? </Label>
-          <Input type="select" name="userPartying" id="userPartying">
-            <option>I'm a Party Animal! I love having my friends over to throw a rager! </option>
-            <option>I'm not really a party animal, but we can throw some parties at our place. </option>
+          <Label for="userPartying">
+            Partying: What Type of Party Animal Are You?{" "}
+          </Label>
+          <Input
+            type="select"
+            name="partying"
+            id="userPartying"
+            onChange={this.props.grabUserProfile}
+          >
+            <option>
+              I'm a Party Animal! I love having my friends over to throw a
+              rager!{" "}
+            </option>
+            <option>
+              I'm not really a party animal, but we can throw some parties at
+              our place.{" "}
+            </option>
             <option>I'm not ok with partying at our place.</option>
           </Input>
-        </FormGroup>    
+        </FormGroup>
         <FormGroup>
           <Label for="userPets">Pets: Do you have any?</Label>
-          <Input type="select" name="userPets" id="userPets">
-            <option>I don't have one and I would rather not live with one. </option>
-            <option>I don't have a pet, but I'm ok if my roommate has one. </option>
-            <option>I do have a pet/s, but he/she/they do not get along with other animals.</option>
-            <option>I do have a pet/s and I would love to meet more pet friends.</option>
+          <Input
+            type="select"
+            name="pets"
+            id="userPets"
+            onChange={this.props.grabUserProfile}
+          >
+            <option>
+              I don't have one and I would rather not live with one.{" "}
+            </option>
+            <option>
+              I don't have a pet, but I'm ok if my roommate has one.{" "}
+            </option>
+            <option>
+              I do have a pet/s, but he/she/they do not get along with other
+              animals.
+            </option>
+            <option>
+              I do have a pet/s and I would love to meet more pet friends.
+            </option>
           </Input>
-        </FormGroup>  
+        </FormGroup>
         <FormGroup>
           <Label for="userBio">Bio:</Label>
-          <Input type="textarea" name="userBio" id="userBeio" />
+          <Input
+            type="textarea"
+            name="bio"
+            id="userBio"
+            onChange={this.props.grabUserProfile}
+          />
         </FormGroup>
-        <Button>Submit</Button>
       </Form>
     );
   }
