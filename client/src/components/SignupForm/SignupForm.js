@@ -9,14 +9,39 @@ import {
   FormText
 } from "reactstrap";
 import Navbar from "../NavBar";
+import API from "../../utils/API";
+
+
 
 export default class SignUpForm extends React.Component {
+  state = {
+    email: "",
+    password: "",
+    phone: ""
+  }
+
+  handleFormSubmit = (event,data) => {
+    const userData={...this.state};
+    event.preventDefault();
+    console.log(userData);
+    API.createUser(userData).then(
+      window.location="/roommatepreferences"
+    )
+  }
+
+
+  handleInputChange = event => {
+    const value = event.target.value;
+    const name= event.target.name;
+    this.setState({[name]: value});
+  }
+
   render() {
     return (
       <div>
         <Navbar />
         <h1 className="text-center"> Sign Up With Your Email Address</h1>
-        <Form>
+        <Form onSubmit={this.handleFormSubmit}>
           <FormGroup row>
             <Label for="userEmail" sm={2}>
               Email
@@ -24,9 +49,11 @@ export default class SignUpForm extends React.Component {
             <Col sm={10}>
               <Input
                 type="email"
-                name="useremail"
+                name="email"
                 id="userEmail"
                 placeholder="Enter Your Email"
+                value={this.state.email}
+                onChange={this.handleInputChange}
               />
             </Col>
           </FormGroup>
@@ -40,6 +67,23 @@ export default class SignUpForm extends React.Component {
                 name="password"
                 id="userPassword"
                 placeholder="Enter Password"
+                value={this.state.password}
+                onChange={this.handleInputChange}
+              />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="userPhone" sm={2}>
+              Phone Number
+            </Label>
+            <Col sm={10}>
+              <Input
+                type="tel"
+                name="phone"
+                id="userPhone"
+                placeholder="Enter Phone Number"
+                value={this.state.phone}
+                onChange={this.handleInputChange}
               />
             </Col>
           </FormGroup>
@@ -66,7 +110,7 @@ export default class SignUpForm extends React.Component {
           </FormGroup>
           <FormGroup check row>
             <Col sm={{ size: 10, offset: 2 }}>
-              <Button>Submit</Button>
+              <Button type="submit">Submit</Button>
             </Col>
           </FormGroup>
         </Form>
