@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input} from "reactstrap";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 export default class UserinfoForm extends React.Component {
   render() {
@@ -73,6 +73,10 @@ export default class UserinfoForm extends React.Component {
             <option>I do have a pet/s and I would love to meet more pet friends.</option>
           </Input>
         </FormGroup>  
+        <FormGroup>
+          <Label for="userBio">Bio:</Label>
+          <Input type="textarea" name="userBio" id="userBeio" />
+        </FormGroup>
         <Button>Submit</Button>
       </Form>
     );
