@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Form, FormGroup, Label, Input } from "reactstrap";
 
 export default class Example extends React.Component {
   render() {
@@ -59,7 +59,6 @@ export default class Example extends React.Component {
             <option>I actually don't care.</option>
           </Input>
         </FormGroup>
-        <Button>Submit</Button>
       </Form>
     );
   }

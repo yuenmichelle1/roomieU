@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import RoomieForm from "../RoomieForm";
 import UserinfoForm from "../UserinfoForm";
-// import { Link } from "react-router";
+import { Button } from "reactstrap";
 import API from "../../utils/API";
 
 class FormWrapper extends Component {
@@ -36,6 +36,11 @@ class FormWrapper extends Component {
     this.setState({roommatePreferences: roommatePrefCopy}); 
   }
 
+  sendData = (event) => {
+    const stateCopy ={...this.state};
+    API.updateUser(stateCopy).then(data => console.log(`${data} has been sent`));
+  }
+
   render() {
     return (
       <div className="wrapper">
@@ -43,6 +48,7 @@ class FormWrapper extends Component {
         <UserinfoForm grabUserProfile={this.grabUserProfile} />
         <h1 className="text-center"> Your Ideal Roommate</h1>
         <RoomieForm setIdealRoommate={this.setIdealRoommate}/>
+        <Button onClick={this.sendData}>Submit</Button>
       </div>
     );
   }
