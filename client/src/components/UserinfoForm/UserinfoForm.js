@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Form, FormGroup, Label, Input } from "reactstrap";
 
 export default class UserinfoForm extends React.Component {
   render() {
@@ -9,7 +9,7 @@ export default class UserinfoForm extends React.Component {
           <Label for="userGender">I am a: </Label>
           <Input
             type="select"
-            name="gender"
+            data-name="gender"
             id="userGender"
             onChange={this.props.grabUserProfile}
           >
@@ -24,7 +24,7 @@ export default class UserinfoForm extends React.Component {
           </Label>
           <Input
             type="select"
-            name="budget"
+            data-name="budget"
             id="userBudget"
             onChange={this.props.grabUserProfile}
           >
@@ -47,7 +47,7 @@ export default class UserinfoForm extends React.Component {
           </Label>
           <Input
             type="select"
-            name="radius"
+            data-name="radius"
             id="userRadius"
             onChange={this.props.grabUserProfile}
           >
@@ -61,7 +61,7 @@ export default class UserinfoForm extends React.Component {
           <Label for="userSmoking">Do you Smoke?</Label>
           <Input
             type="select"
-            name="smoking"
+            data-name="smoking"
             id="userSmoking"
             onChange={this.props.grabUserProfile}
           >
@@ -75,7 +75,7 @@ export default class UserinfoForm extends React.Component {
           <Label for="userSchedule">What is Your Schedule Like?</Label>
           <Input
             type="select"
-            name="schedule"
+            data-name="schedule"
             id="userSchedule"
             onChange={this.props.grabUserProfile}
           >
@@ -91,7 +91,7 @@ export default class UserinfoForm extends React.Component {
           </Label>
           <Input
             type="select"
-            name="partying"
+            data-name="partying"
             id="userPartying"
             onChange={this.props.grabUserProfile}
           >
@@ -110,7 +110,7 @@ export default class UserinfoForm extends React.Component {
           <Label for="userPets">Pets: Do you have any?</Label>
           <Input
             type="select"
-            name="pets"
+            data-name="pets"
             id="userPets"
             onChange={this.props.grabUserProfile}
           >
@@ -133,7 +133,7 @@ export default class UserinfoForm extends React.Component {
           <Label for="userBio">Bio:</Label>
           <Input
             type="textarea"
-            name="bio"
+            data-name="bio"
             id="userBio"
             onChange={this.props.grabUserProfile}
           />
