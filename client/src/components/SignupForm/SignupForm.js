@@ -15,6 +15,7 @@ export default class SignUpForm extends React.Component {
   state = {
     email: "",
     password: "",
+    name: "",
     phone: "",
     file: ""
   };
