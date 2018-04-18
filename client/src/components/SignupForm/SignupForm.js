@@ -64,6 +64,7 @@ export default class SignUpForm extends React.Component {
                 placeholder="Enter Your Email"
                 value={this.state.email}
                 onChange={this.handleInputChange}
+                required 
               />
             </Col>
           </FormGroup>
@@ -79,6 +80,7 @@ export default class SignUpForm extends React.Component {
                 placeholder="Enter Password"
                 value={this.state.password}
                 onChange={this.handleInputChange}
+                required 
               />
             </Col>
           </FormGroup>
@@ -94,6 +96,7 @@ export default class SignUpForm extends React.Component {
                 placeholder="Enter Phone Number"
                 value={this.state.phone}
                 onChange={this.handleInputChange}
+                required 
               />
             </Col>
           </FormGroup>
@@ -107,11 +110,28 @@ export default class SignUpForm extends React.Component {
                 name="file"
                 id="imageFile"
                 onChange={this.fileUpload}
+                required 
               />
               <FormText color="muted">
                 Please note uploading a photo gives you a higher chance of
                 finding a roomie.
               </FormText>
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="userSchool" sm={2}>
+              School
+            </Label>
+            <Col sm={10}>
+              <Input
+                type="school"
+                name="school"
+                id="userschool"
+                placeholder="Enter Your School"
+                // value={this.state.email}
+                // onChange={this.handleInputChange}
+                required 
+              />
             </Col>
           </FormGroup>
           <FormGroup row>
