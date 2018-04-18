@@ -1,4 +1,5 @@
 const db = require("../models");
+const axios = require("axios")
 
 module.exports = {
     find: (req, res)=>{
@@ -6,19 +7,59 @@ module.exports = {
             res.json(dbApartment);
         });
     },
-    findAll: (req, res)=> {
-        db.Apartment.find({}).then((dbApartments)=> res.json(dbApartments));
+    search: (req, res)=> {
+        //need to pass requirement for zillow search endpoint in req body 
+        const ZillowEndpoint = ""
+        axios.get(ZillowEndpoint, (apartmentData) => {
+            res.json(apartmentData)
+        })
     },
-    create: (req, res) => {
-        // req.body => {name: "name", price: 1.50}
+    save: (req, res) => {
         db.Apartment.create(req.body).then((dbApartment)=>{
-            res.json(dbApartment);
-        });
+            console.log("req.body   " + req.body)
+            return db.User.findOneAndUpdate({
+                _id: req.params.userId
+            },{
+                $push: {
+                    apartments: dbApartment._id
+                }
+            }, {
+                new: true
+            });
+
+        }).then(dbUser => {
+                res.json(dbUser)
+        }).catch(err => res.json(err))     
     },
-    delete: (req, res)=> {
-        const _id = req.params.id;
-        db.Apartment
-          .deleteOne({_id})
-          .then((dbApartment)=> res.json(dbApartment));
+
+    unsave: (req, res)=> {
+        db.Apartment.findOneAndRemove({
+            _id: req.params.id
+        }).then(dbApartment=>{
+            return db.User.findOneAndUpdate({
+                _id: req.params.userId
+            },{
+                $pull: {
+                    apartments: dbApartment._id
+                }
+            },{
+                new: true
+            });
+        }).then(dbUser => {
+            res.json(dbUser)
+        }).catch(err => res.json(err))    
+    },
+
+
+    findSavedApartment: (req, res) => {
+        db.User.findOne({
+                _id: req.params.userId
+            })
+            .populate("apartments")
+            .then(function (dbUser) {
+                res.json(dbUser)
+            })
+            .catch(err => res.json(err))
+
     }
 }
