@@ -23,9 +23,7 @@ export default class SignUpForm extends React.Component {
     const userData = { ...this.state };
     event.preventDefault();
     console.log(userData);
-    API.createUser(userData).then(
-      window.location="/roommatepreferences"
-    )
+    API.createUser(userData).then((window.location = "/roommatepreferences"));
   };
 
   handleInputChange = event => {
@@ -42,7 +40,7 @@ export default class SignUpForm extends React.Component {
     if (userfile) {
       let data = new FormData();
       data.append("file", userfile);
-      this.setState({ file: userfile});
+      this.setState({ file: userfile });
     }
   };
 
@@ -64,7 +62,7 @@ export default class SignUpForm extends React.Component {
                 placeholder="Enter Your Email"
                 value={this.state.email}
                 onChange={this.handleInputChange}
-                required 
+                required
               />
             </Col>
           </FormGroup>
@@ -80,7 +78,23 @@ export default class SignUpForm extends React.Component {
                 placeholder="Enter Password"
                 value={this.state.password}
                 onChange={this.handleInputChange}
-                required 
+                required
+              />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="userName" sm={2}>
+              Name
+            </Label>
+            <Col sm={10}>
+              <Input
+                type="name"
+                name="name"
+                id="userName"
+                placeholder="Enter Your Name to Display on Your Portfolio"
+                value={this.state.name}
+                onChange={this.handleInputChange}
+                required
               />
             </Col>
           </FormGroup>
@@ -96,7 +110,7 @@ export default class SignUpForm extends React.Component {
                 placeholder="Enter Phone Number"
                 value={this.state.phone}
                 onChange={this.handleInputChange}
-                required 
+                required
               />
             </Col>
           </FormGroup>
@@ -110,7 +124,7 @@ export default class SignUpForm extends React.Component {
                 name="file"
                 id="imageFile"
                 onChange={this.fileUpload}
-                required 
+                required
               />
               <FormText color="muted">
                 Please note uploading a photo gives you a higher chance of
@@ -130,7 +144,7 @@ export default class SignUpForm extends React.Component {
                 placeholder="Enter Your School"
                 // value={this.state.email}
                 // onChange={this.handleInputChange}
-                required 
+                required
               />
             </Col>
           </FormGroup>

@@ -2,7 +2,7 @@ const axios = require("axios");
 const router = require("express").Router();
 const userController = require("../controllers/userController");
 
-// localhost/users/
+// localhost/user/
 router.get("/:id", userController.find);
 router.post("/new", userController.create);
 router.get("/", userController.findAll);
