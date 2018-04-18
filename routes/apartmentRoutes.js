@@ -4,9 +4,9 @@ const apartmentController = require("../controllers/apartmentController");
 
 // localhost/users/
 router.get("/:id", apartmentController.find);
-router.post("/new", apartmentController.create);
+router.post("/:userId/save", apartmentController.save);
 router.get("/", apartmentController.findAll);
-router.delete("/:id", apartmentController.delete);
+router.delete("/:userId/:id/unsave", apartmentController.delete);
 
 
 

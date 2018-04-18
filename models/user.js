@@ -86,7 +86,14 @@ const UserSchema = new Schema({
     // matchedRoomie: {
     //     type: Schema.Types.ObjectId,
     //     ref: "User"
-    // }
+    // },
+
+    // apartments:[
+    //     {
+    //         type: Schema.Types.ObjectId,
+    //         ref: "Apartment"
+    //     }
+    // ]
 })
 
 const User = mongoose.model("User", UserSchema);

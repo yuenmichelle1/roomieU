@@ -19,5 +19,33 @@ module.exports = {
         db.User
           .deleteOne({_id})
           .then((dbUser)=> res.json(dbUser));
+    },
+    update: (req, res) => {
+        db.findOneAndUpdate({
+            _id: req.params.id
+        }, {
+            $set: req.body
+        }, {
+            new: true
+        }).then(
+            (dbUser) => {
+                if (dbUser) {
+                    res.json("user updated")
+                } else {
+                    res.json("user doesn't exist")
+                }
+            }
+        ).catch(err => res.json(err))
+    },
+    findSavedApartment: (req, res) => {
+        db.User.findOne({
+                _id: req.params.id
+            })
+            .populate("Apartment")
+            .then(function (dbUser) {
+                res.json(dbUser)
+            })
+            .catch(err => res.json(err))
+
     }
 }
