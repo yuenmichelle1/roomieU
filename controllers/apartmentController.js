@@ -8,12 +8,15 @@ module.exports = {
         });
     },
     search: (req, res)=> {
-        axios.get("zillow api endpoint", (apartmentData) => {
+        //need to pass requirement for zillow search endpoint in req body 
+        const ZillowEndpoint = ""
+        axios.get(ZillowEndpoint, (apartmentData) => {
             res.json(apartmentData)
         })
     },
     save: (req, res) => {
         db.Apartment.create(req.body).then((dbApartment)=>{
+            console.log("req.body   " + req.body)
             return db.User.findOneAndUpdate({
                 _id: req.params.userId
             },{
@@ -45,5 +48,18 @@ module.exports = {
         }).then(dbUser => {
             res.json(dbUser)
         }).catch(err => res.json(err))    
+    },
+
+
+    findSavedApartment: (req, res) => {
+        db.User.findOne({
+                _id: req.params.userId
+            })
+            .populate("apartments")
+            .then(function (dbUser) {
+                res.json(dbUser)
+            })
+            .catch(err => res.json(err))
+
     }
 }

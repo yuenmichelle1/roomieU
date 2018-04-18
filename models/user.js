@@ -88,12 +88,12 @@ const UserSchema = new Schema({
     //     ref: "User"
     // },
 
-    // apartments:[
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "Apartment"
-    //     }
-    // ]
+    apartments:[
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Apartment"
+        }
+    ]
 })
 
 const User = mongoose.model("User", UserSchema);

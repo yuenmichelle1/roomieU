@@ -21,7 +21,7 @@ module.exports = {
           .then((dbUser)=> res.json(dbUser));
     },
     update: (req, res) => {
-        db.findOneAndUpdate({
+        db.User.findOneAndUpdate({
             _id: req.params.id
         }, {
             $set: req.body
@@ -36,16 +36,5 @@ module.exports = {
                 }
             }
         ).catch(err => res.json(err))
-    },
-    findSavedApartment: (req, res) => {
-        db.User.findOne({
-                _id: req.params.id
-            })
-            .populate("Apartment")
-            .then(function (dbUser) {
-                res.json(dbUser)
-            })
-            .catch(err => res.json(err))
-
     }
 }
