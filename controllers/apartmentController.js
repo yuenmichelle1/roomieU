@@ -1,14 +1,17 @@
 const db = require("../models");
+const axios = require("axios")
 
 module.exports = {
-    // find: (req, res)=>{
-    //     db.Apartment.findOne({_id: req.params.id}).then((dbApartment)=>{
-    //         res.json(dbApartment);
-    //     });
-    // },
-    // findAll: (req, res)=> {
-    //     db.Apartment.find({}).then((dbApartments)=> res.json(dbApartments));
-    // },
+    find: (req, res)=>{
+        db.Apartment.findOne({_id: req.params.id}).then((dbApartment)=>{
+            res.json(dbApartment);
+        });
+    },
+    search: (req, res)=> {
+        axios.get("zillow api endpoint", (apartmentData) => {
+            res.json(apartmentData)
+        })
+    },
     save: (req, res) => {
         db.Apartment.create(req.body).then((dbApartment)=>{
             return db.User.findOneAndUpdate({
@@ -26,7 +29,7 @@ module.exports = {
         }).catch(err => res.json(err))     
     },
 
-    delete: (req, res)=> {
+    unsave: (req, res)=> {
         db.Apartment.findOneAndRemove({
             _id: req.params.id
         }).then(dbApartment=>{
