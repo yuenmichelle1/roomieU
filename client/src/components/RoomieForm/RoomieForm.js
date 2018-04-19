@@ -1,92 +1,64 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Form, FormGroup, Label, Input } from "reactstrap";
 
 export default class Example extends React.Component {
   render() {
     return (
       <Form>
         <FormGroup>
-          <Label for="exampleEmail">Email</Label>
-          <Input
-            type="email"
-            name="email"
-            id="exampleEmail"
-            placeholder="with a placeholder"
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="examplePassword">Password</Label>
-          <Input
-            type="password"
-            name="password"
-            id="examplePassword"
-            placeholder="password placeholder"
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleSelect">Select</Label>
-          <Input type="select" name="select" id="exampleSelect">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <Label for="genderSelect">I wound prefer my roommate to be: </Label>
+          <Input type="select" data-name="gender" id="genderSelect" onChange={this.props.setIdealRoommate}>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Any gender is a good gender.</option>
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="exampleSelectMulti">Select Multiple</Label>
-          <Input
-            type="select"
-            name="selectMulti"
-            id="exampleSelectMulti"
-            multiple
-          >
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Input>
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleText">Text Area</Label>
-          <Input type="textarea" name="text" id="exampleText" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleFile">File</Label>
-          <Input type="file" name="file" id="exampleFile" />
-          <FormText color="muted">
-            This is some placeholder block-level help text for the above input.
-            It's a bit lighter and easily wraps to a new line.
-          </FormText>
-        </FormGroup>
-        <FormGroup tag="fieldset">
-          <legend>Radio Buttons</legend>
-          <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" /> Option one is this and
-              that—be sure to include why it's great
-            </Label>
-          </FormGroup>
-          <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" /> Option two can be something
-              else and selecting it will deselect option one
-            </Label>
-          </FormGroup>
-          <FormGroup check disabled>
-            <Label check>
-              <Input type="radio" name="radio1" disabled /> Option three is
-              disabled
-            </Label>
-          </FormGroup>
-        </FormGroup>
-        <FormGroup check>
-          <Label check>
-            <Input type="checkbox" /> Check me out
+          <Label for="scheduleSelect">
+            I wound prefer my roommate's schedule to be:{" "}
           </Label>
+          <Input type="select" data-name="schedule" id="scheduleSelect" onChange={this.props.setIdealRoommate}>
+            <option>Morning Bird</option>
+            <option>Night Owl</option>
+            <option>I actually don't care.</option>
+          </Input>
         </FormGroup>
-        <Button>Submit</Button>
+        <FormGroup>
+          <Label for="petSelect">Pets: I prefer my roommate to have: </Label>
+          <Input type="select" data-name="pets" id="petSelect" onChange={this.props.setIdealRoommate}>
+            <option>No Pets Allowed.</option>
+            <option>
+              Pets live here already, but MINE ONLY. Yours will not.
+            </option>
+            <option>Bring your pets! I love all animals!</option>
+            <option>I actually don't care.</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="smokeSelect">
+            Smoking: I prefer my roommate to have:{" "}
+          </Label>
+          <Input type="select" data-name="smokeSelect" id="smokeSelect" onChange={this.props.setIdealRoommate}>
+            <option> No smoking at all!</option>
+            <option>
+              I prefer a non-smoking household. He/She can smoke outdoors but
+              not inside.{" "}
+            </option>
+            <option>He/she should be ok with a smoking household.</option>
+            <option>I actually don't care.</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="partySelect">
+            Partying: I prefer my roommate to be a:{" "}
+          </Label>
+          <Input type="select" data-name="partySelect" id="partySelect" onChange={this.props.setIdealRoommate}>
+            <option> Party Animal! Let's throw some great parties!</option>
+            <option>You can party just not at our place.</option>
+            <option>No partying!</option>
+            <option>I actually don't care.</option>
+          </Input>
+        </FormGroup>
       </Form>
     );
   }

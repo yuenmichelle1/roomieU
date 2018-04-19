@@ -1,7 +1,9 @@
 import React from "react";
+import NavBar from "../NavBar";
 
 const Login = () => (
   <div>
+    <NavBar />
     <h1 className="header-text">Login Page</h1>
     <p className="body-text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
