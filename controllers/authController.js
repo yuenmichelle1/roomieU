@@ -42,7 +42,8 @@ authController.doRegister = (req, res, next) => {
 //post login
 authController.doLogin = (req, res) => {
     passport.authenticate("local")(req, res, () => {
-        res.redirect("/")
+        // res.redirect("/")
+        res.json(req.user)
     })
 };
 
