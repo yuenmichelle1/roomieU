@@ -6,33 +6,38 @@ let authController = {};
 
 // Restrict access to root page
 authController.home = (req, res) => {
-    res.render("index", {user: req.user})
+    console.log(req.user)
+    res.json(req.user)
 };
 
 // Go to registration page
-authController.register = (req, res) => {
-    res.render("register");
-};
+
+// authController.register = (req, res) => {
+//     res.render("register");
+// };
 
 // Post registeration 
 
-authController.doRegister = (req, res) => {
-    User.register(new User({ username: req.body.username, name: req.body.name
-    }), req.body.password, (err, user)=>{
+authController.doRegister = (req, res, next) => {
+    User.register(new User(req.body), req.body.password, (err, user)=>{
+        console.log(req.body)
+        console.log("-----------" +user)
+        console.log(User.register)
         if(err){
-            return res.render("register", {user: user})
+            // return res.render("register", {user: user})
+            return next(err)
         }
-
-        passport.authenticate("local")(req, res, ()=>{
-            res.redirect("/");
-        })
+        res.json(user)
+        // passport.authenticate("local")(req, res, ()=>{
+        //     res.redirect("/");
+        // })
     })
 };
 
 //Go to login page
-authController.login = (req, res) => {
-    res.render("login");
-};
+// authController.login = (req, res) => {
+//     res.render("login");
+// };
 
 //post login
 authController.doLogin = (req, res) => {

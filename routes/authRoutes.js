@@ -6,13 +6,13 @@ const authController = require("../controllers/authController");
 router.get('/', authController.home);
 
 // route to register page
-router.get('/register', authController.register);
+// router.get('/register', authController.register);
 
 // route for register action
 router.post('/register', authController.doRegister);
 
 // route to login page
-router.get('/login', authController.login);
+// router.get('/login', authController.login);
 
 // route for login action
 router.post('/login', authController.doLogin);

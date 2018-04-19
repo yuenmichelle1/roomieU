@@ -11,17 +11,17 @@ const UserSchema = new Schema({
         required: true
     },
 
-    email: {
-        type: String,
-        trim: true,
-        required: true
-    },
+    // email: {
+    //     type: String,
+    //     trim: true,
+    //     required: true
+    // },
 
-    password: {
-        type: String,
-        trim: true,
-        required: true
-    },
+    // password: {
+    //     type: String,
+    //     trim: true,
+    //     required: true
+    // },
 
     budget: {
         type: Number,
@@ -106,7 +106,7 @@ const UserSchema = new Schema({
     ]
 })
 
-UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(passportLocalMongoose,{usernameField:"email"});
 
 const User = mongoose.model("User", UserSchema);
 
