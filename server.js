@@ -11,8 +11,6 @@ const app = express();
 const routes = require("./routes");
 const mongoose = require("mongoose");
 
-
-
 //auth
 mongoose.Promise = global.Promise;
 

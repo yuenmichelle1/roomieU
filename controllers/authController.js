@@ -4,53 +4,31 @@ const User = require("../models").User;
 
 let authController = {};
 
-// Restrict access to root page
 authController.home = (req, res) => {
-    console.log(req.user)
     res.json(req.user)
 };
 
-// Go to registration page
-
-// authController.register = (req, res) => {
-//     res.render("register");
-// };
-
-// Post registeration 
-
-authController.doRegister = (req, res, next) => {
+authController.doRegister = (req, res) => {
     User.register(new User(req.body), req.body.password, (err, user)=>{
-        console.log(req.body)
-        console.log("-----------" +user)
-        console.log(User.register)
         if(err){
-            // return res.render("register", {user: user})
-            return next(err)
+            res.json(err);
         }
-        res.json(user)
-        // passport.authenticate("local")(req, res, ()=>{
-        //     res.redirect("/");
-        // })
+        passport.authenticate("local")(req, res, ()=>{
+            res.json(user);
+        })
     })
 };
 
-//Go to login page
-// authController.login = (req, res) => {
-//     res.render("login");
-// };
-
-//post login
 authController.doLogin = (req, res) => {
     passport.authenticate("local")(req, res, () => {
-        // res.redirect("/")
         res.json(req.user)
     })
 };
 
-// logout
+
 authController.logout = (req, res) => {
     req.logout();
-    req.redirect("/");
+    res.json(req.user)
 };
 
 module.exports = authController;
