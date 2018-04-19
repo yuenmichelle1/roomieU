@@ -30,13 +30,19 @@ body {
     padding-left: 0px;
 }
 
+p {
+    margin-bottom: 0px;
+}
+
 .randoms {
     color: #FFC107;
 }
 
+
+/* Hero */
 .hero-text {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50px;
     color: white;
     font-size: 1.5em;
@@ -44,4 +50,14 @@ body {
 
 .hero-subtext {
     font-size: 1em;
+}
+
+.tos-text {
+    font-size: .5em;
+}
+
+.hero-btn {
+    width: 160px;
+    height: 40px;
+    margin-top:20px;
 }
