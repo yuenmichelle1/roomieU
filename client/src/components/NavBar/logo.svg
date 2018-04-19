@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1621px" height="429px" viewBox="0 0 1621 429" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 2</title>
+    <title>White</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-2" transform="translate(0.000000, -51.000000)">
+        <g id="White" transform="translate(0.000000, -51.000000)">
             <g id="Group">
                 <g id="apartments" transform="translate(0.000000, 183.000000)">
                     <path d="M49.667,219.396 C47.667,220.722 44.667,221.736 41.667,222.396 L41.667,246.5 L49.667,246.5 L49.667,219.396 Z" id="Shape"></path>
@@ -39,8 +39,8 @@
                 </g>
             </g>
             <g id="RoomieU-2" transform="translate(332.000000, 131.000000)">
-                <text id="Roomie" font-family="ProximaNova-Bold, Proxima Nova" font-size="300" font-weight="bold" fill="#6E6E6E">
-                    <tspan x="0" y="297">Roomie</tspan>
+                <text id="Roomie" stroke="#000000" stroke-width="2" font-family="Cabin-Bold, Cabin" font-size="300" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="0" y="296">Roomie</tspan>
                 </text>
                 <g id="uparty-white" transform="translate(1160.728580, 142.686331) rotate(1.000000) translate(-1160.728580, -142.686331) translate(1034.228580, 2.186331)">
                     <path d="M42.2870859,158.576572 C42.2870859,158.576572 48.275711,280.151944 128.182729,280.151944 C181.454074,280.151944 210.085955,239.62682 214.078372,158.576572" id="Line" stroke="#28A745" stroke-width="40" stroke-linecap="square"></path>
