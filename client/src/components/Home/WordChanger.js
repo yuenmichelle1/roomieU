@@ -1,6 +1,6 @@
 function WordChanger () {
 
-    var words = ["Roomie", "Friend", "Best Friend", "Bestie", "Drinking Buddy"];
+    var words = ["Roomie", "Friend", "Best Friend", "Bestie", "Drinking Buddy", "Amigo", "Bae", "Pal", "Companion", "BFF", "Bestie Bae"];
 
     window.addEventListener("load", function() {
         let randoms = window.document.getElementsByClassName("randoms");

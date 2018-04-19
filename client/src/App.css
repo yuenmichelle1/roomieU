@@ -1,11 +1,23 @@
+<<<<<<< HEAD
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+=======
 .navbar-logo {
   max-height: 50px;
+>>>>>>> 530618f36f4840ff6fec7080e9b74b41d93703e5
 }
 
-.btn {
-  border-radius: 25px !important;
-  padding: 5px 10px !important;
-  width: 100px;
+.container-fluid {
+  width: 100vw;
+  max-width: 1366px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow:hidden;
 }
 
 .header-text {

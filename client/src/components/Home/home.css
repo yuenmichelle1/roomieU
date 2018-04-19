@@ -1,0 +1,47 @@
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container {
+    max-width: 1366px;
+}
+
+
+.btn {
+    border-radius: 25px !important;
+    padding: 5px 10px !important;
+    width: 100px;
+}
+
+.bg-row {
+    background-image: url("bg.jpg");
+    background-color:rgba(0, 0, 0, 0.541);
+    width: 100vw;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+    height: 100vh;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.randoms {
+    color: #FFC107;
+}
+
+.hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50px;
+    color: white;
+    font-size: 1.5em;
+}
+
+.hero-subtext {
+    font-size: 1em;
+}
