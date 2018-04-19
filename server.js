@@ -8,13 +8,31 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
-// const apiRoutes = require("./routes/apiRoutes");
 const routes = require("./routes");
+const mongoose = require("mongoose");
 
-const mongoose = require("mongoose")
+//auth
+mongoose.Promise = global.Promise;
+
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/roomies_db";
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI)
+    .then(() => console.log("connection to mongodb succesful"))
+    .catch(err => console.log(err));
+
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const session = require("express-session");
+app.use(session({secret: "keyboard cat", resave: false, saveUninitialized: false}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+const User = require("./models").User;
+// passport.use(new LocalStrategy(User.authenticate()));
+passport.use(User.createStrategy())
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser())
+
 
 // Serve up static assets
 app.use(express.static("client/build"));
