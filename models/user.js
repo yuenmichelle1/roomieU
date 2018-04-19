@@ -9,38 +9,43 @@ const UserSchema = new Schema({
         required: true
     },
 
-    // email: {
-    //     type: String,
-    //     trim: true,
-    //     required: true
-    // },
+    email: {
+        type: String,
+        trim: true,
+        required: true
+    },
 
-    // password: {
-    //     type: String,
-    //     trim: true,
-    //     required: true
-    // },
+    password: {
+        type: String,
+        trim: true,
+        required: true
+    },
 
-    // budget: {
-    //     type: Number,
-    //     trim: true,
-    //     require: true
-    // },
+    budget: {
+        type: Number,
+        trim: true,
+        require: true
+    },
 
-    // radius: {
-    //     type: Number,
-    //     trim: true,
-    //     require: true
-    // },
-    // photo: {
-    //     type: String,
-    //     trim: true
-    // },
+    radius: {
+        type: Number,
+        trim: true,
+        require: true
+    },
+    photo: {
+        type: String,
+        trim: true
+    },
 
-    // bio: {
-    //     type: String,
-    //     trim: true
-    // },
+    bio: {
+        type: String,
+        trim: true
+    },
+
+    school: {
+        type:String, 
+        trim: true
+    },
 
     // gender: {
     //     type: String,
@@ -56,10 +61,6 @@ const UserSchema = new Schema({
     //     type: Boolean,
     // },
 
-    // smoke: {
-    //     type: Boolean,
-    // },
-
     // pets: {
     //     type: Boolean,
     // },
@@ -68,25 +69,32 @@ const UserSchema = new Schema({
     //     type: Boolean,
     //     trim: true
     // },
+    userQuals: {
+        type: Array        
+    },
 
-    // candidateRoomies:[
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "User"
-    //     }
-    // ],
+    userPrefs: {
+        type: Array
+    },
 
-    // requestedRoomies:[
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "User"
-    //     }
-    // ],
+    candidateRoomies:[
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ],
+
+    requestedRoomies:[
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ],
    
-    // matchedRoomie: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "User"
-    // },
+    matchedRoomie: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    },
 
     apartments:[
         {
