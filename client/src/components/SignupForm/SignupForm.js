@@ -13,7 +13,6 @@ import Autosuggest from "react-autosuggest";
 import "./SignupForm.css";
 import API from "../../utils/API";
 import Schools from "../../CollegesUniversities.json";
-import IsolatedScroll from 'react-isolated-scroll';
 
 const SchoolNames = Schools.features.map(el => el.properties.NAME);
 
@@ -27,7 +26,6 @@ const getSuggestions = value => {
     : SchoolNames.filter(
         el => el.toLowerCase().slice(0, inputLength) === inputValue
       );
-  console.log(SchoolNames);
 };
 
 // When suggestion is clicked, Autosuggest needs to populate the input
@@ -35,21 +33,6 @@ const getSuggestions = value => {
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => suggestion;
 
-// Use your imagination to render suggestions.
-// function renderSuggestionsContainer({ containerProps, children }) {
-//   const { ref, ...restContainerProps } = containerProps;
-//   const callRef = isolatedScroll => {
-//     if (isolatedScroll !== null) {
-//       ref(isolatedScroll.component);
-//     }
-//   };
-
-//   return (
-//     <IsolatedScroll ref={callRef} {...restContainerProps}>
-//       {children}
-//     </IsolatedScroll>
-//   );
-// }
 const renderSuggestion = suggestion => (
   <div>
     {suggestion}
@@ -68,7 +51,13 @@ export default class SignUpForm extends React.Component {
   };
 
   handleFormSubmit = (event, data) => {
-    const userData = { ...this.state };
+    const userData = { 
+      email: this.state.email, 
+      password: this.state.password,
+      name: this.state.name,
+      phone: this.state.phone,
+      school: this.state.value
+    };
     event.preventDefault();
     console.log(userData);
     API.createUser(userData).then((window.location = "/roommatepreferences"));
@@ -121,15 +110,6 @@ export default class SignUpForm extends React.Component {
       placeholder: "Enter your School Name",
       value,
       onChange: this.onChange
-    };
-
-    const theme = {
-      container: "autosuggest dropdown",
-      containerOpen: "open",
-      input: "autosuggest-input form-control",
-      suggestionsContainer: "autosuggest-suggestions dropdown-menu",
-      suggestion: "",
-      suggestionFocused: "active"
     };
 
     return (
@@ -249,7 +229,7 @@ export default class SignUpForm extends React.Component {
           </FormGroup>
           <FormGroup check row>
             <Col sm={{ size: 10, offset: 2 }}>
-              <Button type="submit">Submit</Button>
+              <Button className="centerBlock" type="submit">Submit</Button>
             </Col>
           </FormGroup>
         </Form>
