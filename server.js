@@ -36,14 +36,14 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // Serve up static assets
-app.use(express.static(path.join(__dirname,"client", "build")));
+// app.use(express.static(path.join(__dirname,"client", "build")));
 // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// } else {
-//   // Use express.static to serve the public folder as a static directory
-//   app.use(express.static("public"));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+} else {
+  // Use express.static to serve the public folder as a static directory
+  app.use(express.static("public"));
+}
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
