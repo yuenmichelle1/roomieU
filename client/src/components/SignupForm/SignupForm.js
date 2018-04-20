@@ -8,7 +8,7 @@ import {
   Input,
   FormText
 } from "reactstrap";
-import Navbar from "../NavBar";
+import NavBar from "../NavBar";
 import API from "../../utils/API";
 
 export default class SignUpForm extends React.Component {
@@ -48,7 +48,13 @@ export default class SignUpForm extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <NavBar/>
+        <br />
+        <br />
+        <br />
+        <br />
+        {" "}
+        {" "}
         <h1 className="text-center"> Sign Up With Your Email Address</h1>
         <Form onSubmit={this.handleFormSubmit}>
           <FormGroup row>

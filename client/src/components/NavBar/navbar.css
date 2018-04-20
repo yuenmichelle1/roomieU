@@ -8,6 +8,7 @@
     left: 0 !important;
     background-color: transparent !important;
     z-index: 99;
+    margin-bottom: 20px;
 }
 
 .navbar-logo {
