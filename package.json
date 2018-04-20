@@ -2,7 +2,7 @@
   "name": "roomieU",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
