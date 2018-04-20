@@ -6,48 +6,100 @@ import API from "../../utils/API";
 
 class FormWrapper extends Component {
   state = {
-    gender: "Male",
     budget: "$0 - $500",
     radius: "0-5 miles",
-    smoking: "I don't smoke at all!",
-    pets: "I don't have one and I would rather not live with one.",
-    schedule: "Morning Bird",
-    partying: "I'm a Party Animal! I love having my friends over to throw a rager",
-    bio: "", 
-    roommatePreferences: []
+    bio: "",
+    userGender: "",
+    userGenderScore: "",
+    userSmoke: "",
+    userSmokeScore: "",
+    userParty: "",
+    userPartyScore: "",
+    userSchedule: "",
+    userScheduleScore: "",
+    userPets: "",
+    userPetsScore: "",
+    genderPref: "",
+    genderPrefScore:"",
+    smokePref: "",
+    smokePrefScore: "",
+    partyPref: "",
+    partyPrefScore: "",
+    petsPref: "",
+    petsPrefScore: "",
+    schedulePref: "",
+    schedulePrefScore: ""
   };
+
   grabUserProfile = event => {
     // Update the appropriate state
-    const value= event.target.value;
-    const name= event.target.dataset.name;
-    const newObj = {[name]: value};
+    const value = event.target.value;
+    const name = event.target.dataset.name;
+    const newObj = { [name]: value };
     this.setState(newObj);
     console.log(newObj);
     console.log(name);
   };
 
-  setIdealRoommate = (event) => {
-    const value= event.target.value;
-    const name= event.target.dataset.name;
-    const newObj = {[name]: value};
-    const roommatePrefCopy = [...this.state.roommatePreferences];
-    roommatePrefCopy.push(newObj);
-    console.log(roommatePrefCopy);
-    this.setState({roommatePreferences: roommatePrefCopy}); 
-  }
+ 
+  setUserQuals = event => {
+    const value = event.target.value;
+    const name = event.target.dataset.name;
+    const score = event.target.dataset.score;
+    const scoreName = name + "Score";
+    const newObj = { [name]: value, [scoreName]: score };
+    this.setState(newObj);
+    console.log(newObj);
+  };
 
-  sendData = (event) => {
-    const stateCopy ={...this.state};
-    API.updateUser(stateCopy).then(data => console.log(`${data} has been sent`));
-  }
+  sendData = event => {
+    const userInfo = {
+      budget: this.state.budget,
+      radius: this.state.radius,
+      bio: this.state.bio,
+      userQuals: [
+        { gender: this.state.userGenderScore },
+        { schedule: this.state.userScheduleScore },
+        { smoke: this.state.userSmokeScore },
+        { party: this.state.userPartyScore },
+        { pets: this.state.userPetsScore }
+      ],
+      roommatePrefs: [
+        { gender: this.state.genderPref },
+        { schedule: this.state.schedulePref },
+        { smoke: this.state.smokePref },
+        { party: this.state.partyPref },
+        { pets: this.state.petsPref }
+      ]
+    };
+
+    API.updateUser(userInfo).then(data =>
+      console.log(`${data} has been sent`)
+    );
+  };
 
   render() {
     return (
       <div className="wrapper">
         <h1 className="text-center"> Tell Us A Bit About You</h1>
-        <UserinfoForm grabUserProfile={this.grabUserProfile} />
+        <UserinfoForm
+          grabUserProfile={this.grabUserProfile}
+          setUserQuals={this.setUserQuals}
+          userGender={this.state.userGender}
+          userSmoke={this.state.userSmoke}
+          userSchedule={this.state.userSchedule}
+          userParty={this.state.userParty}
+          userPets={this.state.userPets}
+        />
         <h1 className="text-center"> Your Ideal Roommate</h1>
-        <RoomieForm setIdealRoommate={this.setIdealRoommate}/>
+        <RoomieForm 
+          setUserQuals={this.setUserQuals}
+          genderPref={this.state.genderPref}
+          smokePref={this.state.smokePref}
+          schedulePref={this.state.schedulePref}
+          partyPref={this.state.partyPref}
+          petsPref={this.state.petsPref}
+           />
         <Button onClick={this.sendData}>Submit</Button>
       </div>
     );
