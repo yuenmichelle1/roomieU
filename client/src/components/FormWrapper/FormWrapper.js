@@ -20,12 +20,17 @@ class FormWrapper extends Component {
     userPets: "",
     userPetsScore: "",
     genderPref: "",
+    genderPrefScore:"",
     smokePref: "",
+    smokePrefScore: "",
     partyPref: "",
+    partyPrefScore: "",
     petsPref: "",
+    petsPrefScore: "",
     schedulePref: "",
-    selectedValue: ""
+    schedulePrefScore: ""
   };
+
   grabUserProfile = event => {
     // Update the appropriate state
     const value = event.target.value;
@@ -36,13 +41,7 @@ class FormWrapper extends Component {
     console.log(name);
   };
 
-  setIdealRoommate = event => {
-    const value = event.target.value;
-    const name = event.target.dataset.name;
-    const newObj = { [name]: value };
-    this.setState(newObj);
-  };
-
+ 
   setUserQuals = event => {
     const value = event.target.value;
     const name = event.target.dataset.name;
@@ -93,7 +92,14 @@ class FormWrapper extends Component {
           userPets={this.state.userPets}
         />
         <h1 className="text-center"> Your Ideal Roommate</h1>
-        <RoomieForm setIdealRoommate={this.setIdealRoommate} />
+        <RoomieForm 
+          setUserQuals={this.setUserQuals}
+          genderPref={this.state.genderPref}
+          smokePref={this.state.smokePref}
+          schedulePref={this.state.schedulePref}
+          partyPref={this.state.partyPref}
+          petsPref={this.state.petsPref}
+           />
         <Button onClick={this.sendData}>Submit</Button>
       </div>
     );

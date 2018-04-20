@@ -136,7 +136,7 @@ const UserinfoForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="userPartying">
-            Partying: What Type of Party Animal Are You?{" "}
+            Partying: What Type of Party Animal Are You At Home?{" "}
           </Label>
           <input
             type="radio"
