@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Use apiRoutes
-app.use(routes); //localhost:3000/api/...
+// app.use(routes); //localhost:3000/api/...
 
 // // Send every request to the React app
 // // Define any API routes before this runs
