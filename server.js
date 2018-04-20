@@ -35,7 +35,10 @@ passport.deserializeUser(User.deserializeUser())
 
 
 // Serve up static assets
-app.use(express.static(path.join(__dirname,"client", "build")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
