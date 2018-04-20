@@ -65,11 +65,11 @@ class FormWrapper extends Component {
         { pets: this.state.userPetsScore }
       ],
       roommatePrefs: [
-        { gender: this.state.genderPref },
-        { schedule: this.state.schedulePref },
-        { smoke: this.state.smokePref },
-        { party: this.state.partyPref },
-        { pets: this.state.petsPref }
+        { gender: this.state.genderPrefScore },
+        { schedule: this.state.schedulePrefScore },
+        { smoke: this.state.smokePrefScore },
+        { party: this.state.partyPrefScore },
+        { pets: this.state.petsPrefScore }
       ]
     };
 
