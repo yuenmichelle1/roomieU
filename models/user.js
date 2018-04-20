@@ -75,7 +75,7 @@ const UserSchema = new Schema({
         type: Array        
     },
 
-    userPrefs: {
+    roommatePrefs: {
         type: Array
     },
 

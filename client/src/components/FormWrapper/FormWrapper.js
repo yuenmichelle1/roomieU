@@ -10,7 +10,7 @@ class FormWrapper extends Component {
     radius: "0-5 miles",
     bio: "",
     userGender: "",
-    userGenderScore:"",
+    userGenderScore: "",
     userSmoke: "",
     userSmokeScore: "",
     userParty: "",
@@ -47,15 +47,25 @@ class FormWrapper extends Component {
     const value = event.target.value;
     const name = event.target.dataset.name;
     const score = event.target.dataset.score;
-    const scoreName = name+'Score';
+    const scoreName = name + "Score";
     const newObj = { [name]: value, [scoreName]: score };
     this.setState(newObj);
     console.log(newObj);
   };
 
   sendData = event => {
-    const roommatePref = {
-      roommatePref: [
+    const userInfo = {
+      budget: this.state.budget,
+      radius: this.state.radius,
+      bio: this.state.bio,
+      userQuals: [
+        { gender: this.state.userGenderScore },
+        { schedule: this.state.userScheduleScore },
+        { smoke: this.state.userSmokeScore },
+        { party: this.state.userPartyScore },
+        { pets: this.state.userPetsScore }
+      ],
+      roommatePrefs: [
         { gender: this.state.genderPref },
         { schedule: this.state.schedulePref },
         { smoke: this.state.smokePref },
@@ -63,7 +73,8 @@ class FormWrapper extends Component {
         { pets: this.state.petsPref }
       ]
     };
-    API.updateUser(roommatePref).then(data =>
+
+    API.updateUser(userInfo).then(data =>
       console.log(`${data} has been sent`)
     );
   };
@@ -79,7 +90,7 @@ class FormWrapper extends Component {
           userSmoke={this.state.userSmoke}
           userSchedule={this.state.userSchedule}
           userParty={this.state.userParty}
-          userPets = {this.state.userPets}
+          userPets={this.state.userPets}
         />
         <h1 className="text-center"> Your Ideal Roommate</h1>
         <RoomieForm setIdealRoommate={this.setIdealRoommate} />
