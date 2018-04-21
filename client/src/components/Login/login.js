@@ -5,8 +5,7 @@ import {
   Form,
   FormGroup,
   Label,
-  Input,
-  FormText
+  Input
 } from "reactstrap";
 import NavBar from "../NavBar";
 import API from "../../utils/API";
@@ -20,9 +19,9 @@ export default class SignUpForm extends React.Component {
   handleFormSubmit = (event, data) => {
     const userData = { ...this.state };
     event.preventDefault();
-    console.log(userData);
+    // console.log(userData);
     // API.createUser(userData).then((window.location = "/roommatepreferences"));
-    API.loginUser(userData).then(console.log(userData))
+    API.loginUser(userData).then(userData=>console.log(userData))
   };
 
   handleInputChange = event => {
