@@ -5,5 +5,6 @@ export default {
     createUser: (userData) => axios.post("/auth/register", userData),
     updateUser: (userData) => axios.put("/api/user/update", userData),
     loginUser: (userData) => axios.post("/auth/login", userData),
-    logoutUser: ()=>axios.get("/auth/logout")
+    logoutUser: ()=>axios.get("/auth/logout"),
+    getUserInfo: ()=>axios.get("/auth/"),
 }
