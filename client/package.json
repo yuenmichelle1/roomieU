@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@hasura/react-check-auth": "^0.1.0-alpha.0",
     "axios": "^0.18.0",
     "bootstrap": "^4.1.0",
     "react": "^16.3.1",

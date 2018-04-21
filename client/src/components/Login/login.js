@@ -21,7 +21,10 @@ export default class SignUpForm extends React.Component {
     event.preventDefault();
     // console.log(userData);
     // API.createUser(userData).then((window.location = "/roommatepreferences"));
-    API.loginUser(userData).then(userInfo=>console.log(userInfo))
+    // get user data after login
+    // API.loginUser(userData).then(userInfo=>console.log(userInfo))
+    // testing
+    API.loginUser(userData).then((window.location = "/test"))
   };
 
   handleInputChange = event => {

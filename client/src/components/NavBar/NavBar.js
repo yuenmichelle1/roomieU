@@ -11,6 +11,8 @@ import {
 import logo from './logo.svg';
 import './navbar.css';
 
+// import {AuthConsumer} from '@hasura/react-check-auth';
+
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
