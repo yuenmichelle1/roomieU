@@ -227,9 +227,11 @@ export default class SignUpForm extends React.Component {
               </FormGroup>
             </Col>
           </FormGroup>
+          <br />
+          <br />
           <FormGroup check row>
             <Col sm={{ size: 10, offset: 2 }}>
-              <Button className="centerBlock" type="submit">Submit</Button>
+              <Button className="centerBlock" type="submit" style={{ width: "200px"}}>Submit</Button>
             </Col>
           </FormGroup>
         </Form>
