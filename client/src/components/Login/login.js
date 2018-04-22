@@ -24,7 +24,10 @@ export default class SignUpForm extends React.Component {
     // get user data after login
     // API.loginUser(userData).then(userInfo=>console.log(userInfo))
     // testing
-    API.loginUser(userData).then((window.location = "/test"))
+    API.loginUser(userData).then(userInfo=>{
+        window.location = "/"
+        // console.log(userInfo)
+    })
   };
 
   handleInputChange = event => {
