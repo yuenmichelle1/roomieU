@@ -8,7 +8,34 @@ import {
   Input,
   FormText
 } from "reactstrap";
+
 import API from "../../utils/API";
+import Schools from "../../CollegesUniversities.json";
+
+const SchoolNames = Schools.features.map(el => el.properties.NAME);
+
+// Teach Autosuggest how to calculate suggestions for any given input value.
+const getSuggestions = value => {
+  const inputValue = value.trim().toLowerCase();
+  const inputLength = inputValue.length;
+
+  return inputLength === 0
+    ? []
+    : SchoolNames.filter(
+        el => el.toLowerCase().slice(0, inputLength) === inputValue
+      );
+};
+
+// When suggestion is clicked, Autosuggest needs to populate the input
+// based on the clicked suggestion. Teach Autosuggest how to calculate the
+// input value for every given suggestion.
+const getSuggestionValue = suggestion => suggestion;
+
+const renderSuggestion = suggestion => (
+  <div>
+    {suggestion}
+  </div>
+);
 
 export default class SignUpForm extends React.Component {
   state = {
@@ -16,11 +43,19 @@ export default class SignUpForm extends React.Component {
     password: "",
     name: "",
     phone: "",
-    file: ""
+    file: "",
+    value: "",
+    suggestions: []
   };
 
   handleFormSubmit = (event, data) => {
-    const userData = { ...this.state };
+    const userData = { 
+      email: this.state.email, 
+      password: this.state.password,
+      name: this.state.name,
+      phone: this.state.phone,
+      school: this.state.value
+    };
     event.preventDefault();
     // console.log(userData);
     // API.createUser(userData).then((window.location = "/roommatepreferences"));
@@ -48,16 +83,43 @@ export default class SignUpForm extends React.Component {
     }
   };
 
+  onChange = (event, { newValue }) => {
+    this.setState({
+      value: newValue
+    });
+  };
+
+  // Autosuggest will call this function every time you need to update suggestions.
+  // You already implemented this logic above, so just use it.
+  onSuggestionsFetchRequested = ({ value }) => {
+    this.setState({
+      suggestions: getSuggestions(value)
+    });
+  };
+
+  // Autosuggest will call this function every time you need to clear suggestions.
+  onSuggestionsClearRequested = () => {
+    this.setState({
+      suggestions: []
+    });
+  };
+
   render() {
+    // Autosuggest will pass through all these props to the input.
+    const { value, suggestions } = this.state;
+
+    const inputProps = {
+      placeholder: "Enter your School Name",
+      value,
+      onChange: this.onChange
+    };
+
     return (
       <div>
         <br />
         <br />
         <br />
-        <br />
-        {" "}
-        {" "}
-        <h1 className="text-center"> Sign Up With Your Email Address</h1>
+        <br /> <h1 className="text-center"> Sign Up With Your Email Address</h1>
         <Form onSubmit={this.handleFormSubmit}>
           <FormGroup row>
             <Label for="userEmail" sm={2}>
@@ -146,14 +208,13 @@ export default class SignUpForm extends React.Component {
               School
             </Label>
             <Col sm={10}>
-              <Input
-                type="school"
-                name="school"
-                id="userschool"
-                placeholder="Enter Your School"
-                // value={this.state.email}
-                // onChange={this.handleInputChange}
-                required
+              <Autosuggest
+                suggestions={suggestions}
+                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                getSuggestionValue={getSuggestionValue}
+                renderSuggestion={renderSuggestion}
+                inputProps={inputProps}
               />
             </Col>
           </FormGroup>
@@ -167,9 +228,11 @@ export default class SignUpForm extends React.Component {
               </FormGroup>
             </Col>
           </FormGroup>
+          <br />
+          <br />
           <FormGroup check row>
             <Col sm={{ size: 10, offset: 2 }}>
-              <Button type="submit">Submit</Button>
+              <Button className="centerBlock" type="submit" style={{ width: "200px"}}>Submit</Button>
             </Col>
           </FormGroup>
         </Form>
