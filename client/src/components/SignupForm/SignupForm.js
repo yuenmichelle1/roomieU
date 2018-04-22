@@ -8,9 +8,7 @@ import {
   Input,
   FormText
 } from "reactstrap";
-import NavBar from "../NavBar";
-import Autosuggest from "react-autosuggest";
-import "./SignupForm.css";
+
 import API from "../../utils/API";
 import Schools from "../../CollegesUniversities.json";
 
@@ -59,8 +57,12 @@ export default class SignUpForm extends React.Component {
       school: this.state.value
     };
     event.preventDefault();
-    console.log(userData);
-    API.createUser(userData).then((window.location = "/roommatepreferences"));
+    // console.log(userData);
+    // API.createUser(userData).then((window.location = "/roommatepreferences"));
+    API.createUser(userData).then(userInfo=>{
+        window.location = "/roommatepreferences"
+        // console.log(userInfo)
+    });
   };
 
   handleInputChange = event => {
@@ -114,7 +116,6 @@ export default class SignUpForm extends React.Component {
 
     return (
       <div>
-        <NavBar />
         <br />
         <br />
         <br />

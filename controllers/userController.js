@@ -21,10 +21,8 @@ module.exports = {
           .then((dbUser)=> res.json(dbUser));
     },
     update: (req, res) => {
-        db.User.findOneAndUpdate({
-            _id: req.params.id
-        }, {
-            $set: req.body
+        db.User.findByIdAndUpdate(req.params.id, {
+            $set:req.body
         }, {
             new: true
         }).then(
