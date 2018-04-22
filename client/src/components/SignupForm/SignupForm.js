@@ -8,7 +8,7 @@ import {
   Input,
   FormText
 } from "reactstrap";
-import NavBar from "../NavBar";
+// import NavBar from "../NavBar";
 import API from "../../utils/API";
 
 export default class SignUpForm extends React.Component {
@@ -49,7 +49,7 @@ export default class SignUpForm extends React.Component {
   render() {
     return (
       <div>
-        <NavBar/>
+        {/* <NavBar/> */}
         <br />
         <br />
         <br />

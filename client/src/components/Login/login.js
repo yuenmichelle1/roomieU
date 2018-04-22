@@ -25,7 +25,7 @@ export default class SignUpForm extends React.Component {
     // API.loginUser(userData).then(userInfo=>console.log(userInfo))
     // testing
     API.loginUser(userData).then(userInfo=>{
-        window.location = "/"
+        window.location = "/roommatepreferences";
         // console.log(userInfo)
     })
   };
@@ -39,7 +39,7 @@ export default class SignUpForm extends React.Component {
   render() {
     return (
       <div>
-        <NavBar/>
+        {/* <NavBar/> */}
         <br />
         <br />
         <br />
