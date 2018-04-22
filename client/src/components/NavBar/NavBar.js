@@ -3,13 +3,14 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button } from 'reactstrap';
+  NavbarBrand
+} from 'reactstrap';
 import logo from './logo.svg';
 import './navbar.css';
+import API from "../../utils/API";
+import {AuthConsumer} from '@hasura/react-check-auth';
+import LogoutBtn from '../LogoutBtn';
+import LoginSignupBtn from'../LoginSignupBtn';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -25,24 +26,34 @@ export default class Example extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
+  handleLogout= (event) => {
+    event.preventDefault();
+    API.logoutUser().then(userInfo=>{
+        window.location = "/"
+        console.log(userInfo)
+    })
+  };
   render() {
     return (
-      <div>
-        <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/"><img alt="RoomieU" src={logo} className="navbar-logo" /></NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/signup"><Button color="success" className="btns signup-btn">Sign Up</Button></NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/login"><Button color="warning" id="login-btn" className="btns login-btn">Log In</Button></NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+        <AuthConsumer> 
+            {({userInfo, isLoading, error}) => (userInfo ?          
+                (<Navbar color="faded" light expand="md">
+                    <NavbarBrand href="/"><img alt="RoomieU" src={logo} className="navbar-logo" /></NavbarBrand>
+                    <NavbarToggler onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar>  
+                        <LogoutBtn handleLogout={this.handleLogout} userInfo={userInfo}/>
+                    </Collapse>
+                </Navbar>):
+                (<Navbar color="faded" light expand="md">
+                    <NavbarBrand href="/"><img alt="RoomieU" src={logo} className="navbar-logo" /></NavbarBrand>
+                    <NavbarToggler onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <LoginSignupBtn/>
+                    </Collapse>
+                </Navbar>)        
+            )}
+        </AuthConsumer> 
     );
   }
 }

@@ -3,7 +3,8 @@ import RoomieForm from "../RoomieForm";
 import UserinfoForm from "../UserinfoForm";
 import { Button } from "reactstrap";
 import API from "../../utils/API";
-
+import {AuthConsumer} from '@hasura/react-check-auth';
+import Home from "../Home"
 class FormWrapper extends Component {
   state = {
     budget: "$0 - $500",
@@ -73,35 +74,48 @@ class FormWrapper extends Component {
       ]
     };
 
-    API.updateUser(userInfo).then(data =>
-      console.log(`${data} has been sent`)
-    );
-  };
+    // first get current user info to get userID (note that userData is nested inside of data property)
+    // then update user info in the db with preferences. Returned data should be complete user info
+    API.getUserInfo().then(currentUserInfo=>{
+        const currentUserId = currentUserInfo.data._id;
+        API.updateUser(currentUserId, userInfo).then(message =>
+            // This message shows if user successfulay updated. If you prefer returning uer data, edit user controller to return dbuser
+            // console.log(data)
+            console.log(message.data)
+        );
+    });
+  }
 
+    
+// only alllow access if user if logged in 
   render() {
     return (
-      <div className="wrapper">
-        <h1 className="text-center"> Tell Us A Bit About You</h1>
-        <UserinfoForm
-          grabUserProfile={this.grabUserProfile}
-          setUserQuals={this.setUserQuals}
-          userGender={this.state.userGender}
-          userSmoke={this.state.userSmoke}
-          userSchedule={this.state.userSchedule}
-          userParty={this.state.userParty}
-          userPets={this.state.userPets}
-        />
-        <h1 className="text-center"> Your Ideal Roommate</h1>
-        <RoomieForm 
-          setUserQuals={this.setUserQuals}
-          genderPref={this.state.genderPref}
-          smokePref={this.state.smokePref}
-          schedulePref={this.state.schedulePref}
-          partyPref={this.state.partyPref}
-          petsPref={this.state.petsPref}
-           />
-        <Button onClick={this.sendData}>Submit</Button>
-      </div>
+    <AuthConsumer> 
+        {({userInfo, isLoading, error}) => (userInfo ?        
+            (<div className="wrapper"><br/><br/>
+                <h1 className="text-center"> Tell Us A Bit About You</h1>
+                <UserinfoForm
+                grabUserProfile={this.grabUserProfile}
+                setUserQuals={this.setUserQuals}
+                userGender={this.state.userGender}
+                userSmoke={this.state.userSmoke}
+                userSchedule={this.state.userSchedule}
+                userParty={this.state.userParty}
+                userPets={this.state.userPets}
+                />
+                <h1 className="text-center"> Your Ideal Roommate</h1>
+                <RoomieForm 
+                setUserQuals={this.setUserQuals}
+                genderPref={this.state.genderPref}
+                smokePref={this.state.smokePref}
+                schedulePref={this.state.schedulePref}
+                partyPref={this.state.partyPref}
+                petsPref={this.state.petsPref}
+                />
+                <Button onClick={this.sendData}>Submit</Button>
+            </div>):(<Home/>)
+        )}                 
+    </AuthConsumer> 
     );
   }
 }

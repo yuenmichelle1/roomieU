@@ -1,13 +1,11 @@
 import React from "react";
 import { Row, Col, Button } from 'reactstrap';
-import NavBar from "../NavBar";
 import WordChanger from './WordChanger';
 import './home.css'
 
 WordChanger();
 const Home = () => (
     <Row className="bg-row">
-      <NavBar />
       <Col xs="12" sm="12" md="12" lg="12">
         <Row className="hero-text">
           <Col xs="12" sm="12" md="12" lg="12">
