@@ -8,7 +8,6 @@ import {
   Input,
   FormText
 } from "reactstrap";
-// import NavBar from "../NavBar";
 import API from "../../utils/API";
 
 export default class SignUpForm extends React.Component {
@@ -25,7 +24,10 @@ export default class SignUpForm extends React.Component {
     event.preventDefault();
     // console.log(userData);
     // API.createUser(userData).then((window.location = "/roommatepreferences"));
-    API.createUser(userData).then(userInfo=>console.log(userInfo));
+    API.createUser(userData).then(userInfo=>{
+        window.location = "/roommatepreferences"
+        // console.log(userInfo)
+    });
   };
 
   handleInputChange = event => {
@@ -49,7 +51,6 @@ export default class SignUpForm extends React.Component {
   render() {
     return (
       <div>
-        {/* <NavBar/> */}
         <br />
         <br />
         <br />

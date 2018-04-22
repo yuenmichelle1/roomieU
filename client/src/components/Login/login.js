@@ -10,7 +10,7 @@ import {
 import NavBar from "../NavBar";
 import API from "../../utils/API";
 
-export default class SignUpForm extends React.Component {
+export default class LoginForm extends React.Component {
   state = {
     email: "",
     password: ""
@@ -19,13 +19,10 @@ export default class SignUpForm extends React.Component {
   handleFormSubmit = (event, data) => {
     const userData = { ...this.state };
     event.preventDefault();
-    // console.log(userData);
-    // API.createUser(userData).then((window.location = "/roommatepreferences"));
-    // get user data after login
-    // API.loginUser(userData).then(userInfo=>console.log(userInfo))
-    // testing
     API.loginUser(userData).then(userInfo=>{
+        // should link to dashboard once it's ready
         window.location = "/roommatepreferences";
+        // user information will be in userInfo
         // console.log(userInfo)
     })
   };

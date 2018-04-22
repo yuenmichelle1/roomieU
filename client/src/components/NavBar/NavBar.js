@@ -3,11 +3,8 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button } from 'reactstrap';
+  NavbarBrand
+} from 'reactstrap';
 import logo from './logo.svg';
 import './navbar.css';
 import API from "../../utils/API";
@@ -32,13 +29,8 @@ export default class Example extends React.Component {
 
   handleLogout= (event) => {
     event.preventDefault();
-    // console.log(userData);
-    // API.createUser(userData).then((window.location = "/roommatepreferences"));
-    // get user data after login
-    // API.loginUser(userData).then(userInfo=>console.log(userInfo))
-    // testing
     API.logoutUser().then(userInfo=>{
-        // window.location = "/test"
+        window.location = "/"
         console.log(userInfo)
     })
   };
