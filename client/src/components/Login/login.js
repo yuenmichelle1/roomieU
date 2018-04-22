@@ -7,7 +7,6 @@ import {
   Label,
   Input
 } from "reactstrap";
-import NavBar from "../NavBar";
 import API from "../../utils/API";
 
 export default class LoginForm extends React.Component {

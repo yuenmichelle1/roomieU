@@ -24,13 +24,13 @@ const UserSchema = new Schema({
     // },
 
     budget: {
-        type: Number,
+        type: String,
         trim: true,
         require: true
     },
 
     radius: {
-        type: Number,
+        type: String,
         trim: true,
         require: true
     },
