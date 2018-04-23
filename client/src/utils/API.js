@@ -7,4 +7,5 @@ export default {
     loginUser: (userData) => axios.post("/auth/login", userData),
     logoutUser: ()=>axios.get("/auth/logout"),
     getUserInfo: ()=>axios.get("/auth/"),
+    getAllUsers: () => axios.get("/api/user/"),
 }
