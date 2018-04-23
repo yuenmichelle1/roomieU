@@ -11,6 +11,7 @@ import {
 
 import API from "../../utils/API";
 import Schools from "../../CollegesUniversities.json";
+import Autosuggest from "react-autosuggest";
 
 const SchoolNames = Schools.features.map(el => el.properties.NAME);
 
