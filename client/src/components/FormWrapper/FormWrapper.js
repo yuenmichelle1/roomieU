@@ -78,10 +78,12 @@ class FormWrapper extends Component {
     // then update user info in the db with preferences. Returned data should be complete user info
     API.getUserInfo().then(currentUserInfo=>{
         const currentUserId = currentUserInfo.data._id;
-        API.updateUser(currentUserId, userInfo).then(message =>
+        API.updateUser(currentUserId, userInfo).then(message => {
             // This message shows if user successfulay updated. If you prefer returning uer data, edit user controller to return dbuser
             // console.log(data)
-            console.log(message.data)
+            console.log(message.data);
+            window.location = "/dashboard";
+        }
         );
     });
   }

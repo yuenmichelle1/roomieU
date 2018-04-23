@@ -6,7 +6,9 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import SignupForm from "./components/SignupForm";
 import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
 import {AuthProvider} from "@hasura/react-check-auth";
+
 
 class App extends Component {
   render() {
@@ -19,7 +21,7 @@ class App extends Component {
             <Route exact path="/signup" component={SignupForm} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/roommatepreferences" component={FormWrapper} />
-            {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+            <Route exact path="/dashboard" component={Dashboard} />
         </div>
         </Router>
     </AuthProvider>

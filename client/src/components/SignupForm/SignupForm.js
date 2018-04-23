@@ -216,6 +216,7 @@ export default class SignUpForm extends React.Component {
                 getSuggestionValue={getSuggestionValue}
                 renderSuggestion={renderSuggestion}
                 inputProps={inputProps}
+                style={{ width: "900px"}}
               />
             </Col>
           </FormGroup>
