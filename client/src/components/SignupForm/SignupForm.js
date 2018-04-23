@@ -13,6 +13,17 @@ import API from "../../utils/API";
 import Schools from "../../CollegesUniversities.json";
 import Autosuggest from "react-autosuggest";
 
+import firebase from "firebase";
+import FileUploader from "react-firebase-file-uploader";
+const config = {
+    apiKey: "AIzaSyC6GElWiN-c6OpaCp32KPkUNOZ1pS89ZgI",
+    authDomain: "roomieu.firebaseapp.com",
+    databaseURL: "https://roomieu.firebaseio.com",
+    projectId: "roomieu",
+    storageBucket: "",
+    messagingSenderId: "909135427924"
+  };
+firebase.initializeApp(config);
 const SchoolNames = Schools.features.map(el => el.properties.NAME);
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
@@ -44,10 +55,28 @@ export default class SignUpForm extends React.Component {
     password: "",
     name: "",
     phone: "",
-    file: "",
+    // file: "",
     value: "",
-    suggestions: []
+    suggestions: [],
+    //for photo storage
+    avatar: "",
+    isUploading: false,
+    progress: 0,
+    avatarURL: ""
   };
+
+    handleUploadStart = () => this.setState({isUploading: true, progress:0});
+    
+    handelProgress = (progress) => this.setState({progress});
+    
+    handleUploadError = (err) => {this.setState({isUploading: false});console.log(err)};
+    
+    handleUploadSuccess = (filename)=>{
+        this.setState({avatar: filename, progress:100, isUploading:false}); 
+        firebase.storage().ref('images').child(filename).getDownloadURL().then(
+            url=>this.setState({avatarURL: url})
+        )
+    };
 
   handleFormSubmit = (event, data) => {
     const userData = { 
