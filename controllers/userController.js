@@ -34,5 +34,12 @@ module.exports = {
                 }
             }
         ).catch(err => res.json(err))
+    },
+
+    filter: (req, res) => {
+        db.User.find(req.body).then(dbUser=>{
+            console.log(dbUser)
+            res.json(dbUser);
+        })
     }
 }

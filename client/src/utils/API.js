@@ -8,4 +8,5 @@ export default {
     logoutUser: ()=>axios.get("/auth/logout"),
     getUserInfo: ()=>axios.get("/auth/"),
     getAllUsers: () => axios.get("/api/user/"),
+    filterUser: (criteria)=>axios.post("/api/user", criteria)
 }
