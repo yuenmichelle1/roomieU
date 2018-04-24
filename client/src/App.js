@@ -6,14 +6,16 @@ import FormWrapper from "./components/FormWrapper";
 import Home from "./components/Home";
 import SignupForm from "./components/SignupForm";
 import Login from "./components/Login";
-
+import NavBar from "./components/NavBar";
 
 class App extends Component {
+
   render() {
     return (
       <Router>
       <div className="container-fluid">
-        {/* <NavBar /> */}
+        <NavBar />
+        {/* {this.state.isTop ? <NavBar /> : <NavBarWhite />} */}
         <Route exact path="/" component={Home} />
         <Route exact path="/signup" component={SignupForm} />
         <Route exact path="/login" component={Login} />

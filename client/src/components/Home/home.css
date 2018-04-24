@@ -1,14 +1,17 @@
 body {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
-.container {
-    max-width: 1366px;
+.container-row {
+    margin: 0 auto !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
-
 
 .btn {
     border-radius: 25px !important;
@@ -17,17 +20,11 @@ body {
 }
 
 .bg-row {
-    background-image: url("bg.jpg");
-    background-color:rgba(0, 0, 0, 0.541);
-    width: 100vw;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    position: relative;
     height: 100vh;
-    margin-left: 0px;
-    padding-left: 0px;
+    margin-top: -100px;
+    background-image: url("bg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 p {
@@ -42,7 +39,7 @@ p {
 /* Hero */
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 22vw;
     left: 50px;
     color: white;
     font-size: 1.5em;
@@ -54,10 +51,153 @@ p {
 
 .tos-text {
     font-size: .5em;
+    margin-top: 10px !important;
+    color: #f7f7f7;
 }
 
 .hero-btn {
-    width: 160px;
-    height: 40px;
+    width: 160px !important;
+    height: 40px !important;
     margin-top:20px;
+}
+
+/* Content */
+
+.div-spacing {
+    height: 160px;
+}
+
+.sub-text {
+    line-height: 1.2;
+}
+
+.img {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+}
+
+.cta-div {
+    background-color: #28a745;
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+}
+
+.cta-text {
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+.cta-btn {
+    width: 160px !important;
+    height: 40px !important;
+    margin-top:10px;
+}
+
+/* The Standard Breakpoints. Working with fluid images. */
+@media all and (max-width: 1690px) {
+    .div-spacing {
+        height: 220px;
+    }
+}
+@media all and (max-width: 1280px) {
+    .div-spacing {
+        height: 160px;
+    }
+}
+@media all and (max-width: 980px) {
+    .bg-row {
+        height: 600px;
+    }
+    
+    .hero-text {
+        position: absolute;
+        top: 17vw;
+        left: 50px;
+        font-size: 1.25em;
+    }
+
+    .div-spacing {
+        height: 110px;
+    }
+    
+    .header2-text {
+        font-size: 1.5em;
+    }
+
+    .cta-text {
+        font-size: 2em;
+    }
+}
+@media all and (max-width: 736px) {
+    .randoms {
+        display: block;
+        line-height: 1.1;
+    }
+
+    .bg-row {
+        height: 500px;
+    }
+    
+    .hero-text {
+        position: absolute;
+        top: 10vw;
+        left: 50px;
+        font-size: 1.25em;
+    }
+
+    .sub-hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sm-1 {
+        order: 1;
+    }
+
+    .sm-2 {
+        order: 2;
+    }
+
+    .div-spacing {
+        height: 80px;
+    }
+
+    .sub-text {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+}
+@media all and (max-width: 480px) {
+    .bg-row {
+        height: 667px;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 25vh;
+        left: 50px;
+        font-size: 1.0em;
+    }
+    
+    .header2-text {
+        font-size: 1.5em;
+    }
+
+    .body-text {
+        font-size: 1em;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .cta-text {
+        padding-top: 40px;
+        font-size: 1.8em;
+    }
 }

@@ -25,6 +25,7 @@ export default class Example extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div>
