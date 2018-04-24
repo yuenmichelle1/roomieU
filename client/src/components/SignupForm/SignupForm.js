@@ -6,7 +6,7 @@ import {
   FormGroup,
   Label,
   Input,
-  FormText
+//   FormText
 } from "reactstrap";
 
 import API from "../../utils/API";
@@ -14,7 +14,7 @@ import Schools from "../../CollegesUniversities.json";
 import Autosuggest from "react-autosuggest";
 
 import firebase from "firebase";
-import FileUploader from "react-firebase-file-uploader";
+// import FileUploader from "react-firebase-file-uploader";
 import CustomUploadButton from 'react-firebase-file-uploader/lib/CustomUploadButton';
 const config = {
     apiKey: "AIzaSyC6GElWiN-c6OpaCp32KPkUNOZ1pS89ZgI",
@@ -235,13 +235,8 @@ export default class SignUpForm extends React.Component {
           </FormGroup> */}
         <FormGroup row>
             <Label for="imageFile" sm={2}>Upload Your Image</Label>
-            {this.state.isUploading &&
-            <p>Progress: {this.state.progress}</p>
-            }
-            {this.state.avatarURL &&
-            <img src={this.state.avatarURL} />
-            }
-            <Col sm={10}>
+            <Col sm={2}>
+                {/* {this.state.isUploading && <p>Progress: {this.state.progress}</p> } */}
                 <CustomUploadButton
                     id="imageFile"
                     accept="image/*"
@@ -256,12 +251,12 @@ export default class SignUpForm extends React.Component {
                 > Upload
                 </CustomUploadButton>
             </Col>
+            <Col sm={8}>
+                {this.state.avatarURL && <img src={this.state.avatarURL}          
+                    style={{height:"200px"}}
+                />}                
+            </Col>
         </FormGroup>
-
-
-
-
-
           <FormGroup row>
             <Label for="userSchool" sm={2}>
               School
