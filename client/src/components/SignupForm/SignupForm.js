@@ -6,14 +6,25 @@ import {
   FormGroup,
   Label,
   Input,
-  FormText
+//   FormText
 } from "reactstrap";
-import NavBar from "../NavBar";
-import Autosuggest from "react-autosuggest";
-import "./SignupForm.css";
+
 import API from "../../utils/API";
 import Schools from "../../CollegesUniversities.json";
+import Autosuggest from "react-autosuggest";
 
+import firebase from "firebase";
+// import FileUploader from "react-firebase-file-uploader";
+import CustomUploadButton from 'react-firebase-file-uploader/lib/CustomUploadButton';
+const config = {
+    apiKey: "AIzaSyC6GElWiN-c6OpaCp32KPkUNOZ1pS89ZgI",
+    authDomain: "roomieu.firebaseapp.com",
+    databaseURL: "https://roomieu.firebaseio.com",
+    projectId: "roomieu",
+    storageBucket: "gs://roomieu.appspot.com",
+    messagingSenderId: "909135427924"
+  };
+firebase.initializeApp(config);
 const SchoolNames = Schools.features.map(el => el.properties.NAME);
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
@@ -45,10 +56,26 @@ export default class SignUpForm extends React.Component {
     password: "",
     name: "",
     phone: "",
-    file: "",
+    // file: "",
     value: "",
-    suggestions: []
+    suggestions: [],
+    //for photo storage
+    avatar: "",
+    isUploading: false,
+    progress: 0,
+    avatarURL: ""
   };
+
+    handleUploadStart = () => this.setState({isUploading: true, progress:0});
+    
+    handelProgress = (progress) => this.setState({progress});
+    
+    handleUploadError = (err) => {this.setState({isUploading: false});console.log(err)};
+    
+    handleUploadSuccess = (filename)=>{
+        this.setState({avatar: filename, progress: 100, isUploading: false});
+        firebase.storage().ref('images').child(filename).getDownloadURL().then(url => this.setState({avatarURL: url}));
+    };
 
   handleFormSubmit = (event, data) => {
     const userData = { 
@@ -56,11 +83,16 @@ export default class SignUpForm extends React.Component {
       password: this.state.password,
       name: this.state.name,
       phone: this.state.phone,
-      school: this.state.value
+      school: this.state.value,
+      photo:this.state.avatarURL
     };
     event.preventDefault();
-    console.log(userData);
-    API.createUser(userData).then((window.location = "/roommatepreferences"));
+    // console.log(userData);
+    // API.createUser(userData).then((window.location = "/roommatepreferences"));
+    API.createUser(userData).then(userInfo=>{
+        window.location = "/roommatepreferences"
+        // console.log(userInfo)
+    });
   };
 
   handleInputChange = event => {
@@ -69,17 +101,17 @@ export default class SignUpForm extends React.Component {
     this.setState({ [name]: value });
   };
 
-  fileUpload = event => {
-    event.preventDefault();
-    let userfile = event.target.files[0];
-    console.log(userfile);
+//   fileUpload = event => {
+//     event.preventDefault();
+//     let userfile = event.target.files[0];
+//     console.log(userfile);
 
-    if (userfile) {
-      let data = new FormData();
-      data.append("file", userfile);
-      this.setState({ file: userfile });
-    }
-  };
+//     if (userfile) {
+//       let data = new FormData();
+//       data.append("file", userfile);
+//       this.setState({ file: userfile });
+//     }
+//   };
 
   onChange = (event, { newValue }) => {
     this.setState({
@@ -114,7 +146,6 @@ export default class SignUpForm extends React.Component {
 
     return (
       <div>
-        <NavBar />
         <br />
         <br />
         <br />
@@ -184,7 +215,7 @@ export default class SignUpForm extends React.Component {
               />
             </Col>
           </FormGroup>
-          <FormGroup row>
+          {/* <FormGroup row>
             <Label for="imageFile" sm={2}>
               Upload Your Image
             </Label>
@@ -201,7 +232,31 @@ export default class SignUpForm extends React.Component {
                 finding a roomie.
               </FormText>
             </Col>
-          </FormGroup>
+          </FormGroup> */}
+        <FormGroup row>
+            <Label for="imageFile" sm={2}>Upload Your Image</Label>
+            <Col sm={2}>
+                {/* {this.state.isUploading && <p>Progress: {this.state.progress}</p> } */}
+                <CustomUploadButton
+                    id="imageFile"
+                    accept="image/*"
+                    name="avatar"
+                    randomizeFilename 
+                    storageRef={firebase.storage().ref('images')}
+                    onUploadStart={this.handleUploadStart}
+                    onUploadError={this.handleUploadError}
+                    onUploadSuccess={this.handleUploadSuccess}
+                    onProgress={this.handleProgress}
+                    style={{backgroundColor: 'steelblue', color: 'white', padding: 6, borderRadius: 4}}
+                > Upload
+                </CustomUploadButton>
+            </Col>
+            <Col sm={8}>
+                {this.state.avatarURL && <img src={this.state.avatarURL}          
+                    style={{height:"200px"}}
+                />}                
+            </Col>
+        </FormGroup>
           <FormGroup row>
             <Label for="userSchool" sm={2}>
               School
@@ -214,6 +269,7 @@ export default class SignUpForm extends React.Component {
                 getSuggestionValue={getSuggestionValue}
                 renderSuggestion={renderSuggestion}
                 inputProps={inputProps}
+                style={{ width: "900px"}}
               />
             </Col>
           </FormGroup>

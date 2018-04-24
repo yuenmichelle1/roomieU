@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col, Button } from 'reactstrap';
-import NavBar from "../NavBar";
 import WordChanger from './WordChanger';
 import './home.css'
 import tired from './tired.jpg';
@@ -10,7 +9,9 @@ import apartment from './apartment.jpg';
 
 WordChanger();
 const Home = () => (
+
     <Row className="container-row">
+
       <Col xs="12" sm="12" md="12" lg="12">
         <Row className="bg-row" />
         {/* Hero */}
