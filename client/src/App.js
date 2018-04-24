@@ -6,11 +6,16 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import SignupForm from "./components/SignupForm";
 import Login from "./components/Login";
+
+import NavBar from "./components/NavBar";
+
 import Dashboard from "./components/Dashboard";
 import {AuthProvider} from "@hasura/react-check-auth";
 
 
+
 class App extends Component {
+
   render() {
     return (
     <AuthProvider authUrl={'/auth'}>

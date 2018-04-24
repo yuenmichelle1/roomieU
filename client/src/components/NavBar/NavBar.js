@@ -27,6 +27,7 @@ export default class Example extends React.Component {
     });
   }
 
+
   handleLogout= (event) => {
     event.preventDefault();
     API.logoutUser().then(userInfo=>{
@@ -34,6 +35,7 @@ export default class Example extends React.Component {
         console.log(userInfo)
     })
   };
+
   render() {
     return (
         <AuthConsumer> 

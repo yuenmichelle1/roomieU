@@ -14,12 +14,13 @@ p {
 
 .container-fluid {
   width: 100vw;
-  max-width: 1366px;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 0;
-  margin-right: 0;
-  overflow:hidden;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin: 0 auto !important;
+}
+
+.col-12 {
+  padding: 0 !important;
 }
 
 .header-text {
@@ -28,11 +29,31 @@ p {
   font-size: 3em;
 }
 
+.header2-text {
+  font-family: 'Arvo', serif;
+  font-weight: 700;
+  font-size: 2em;
+  color: #616161;
+}
+
 .body-text {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   line-height: 1.8;
 }
 
+/* The Standard Breakpoints. Working with fluid images. */
+@media all and (max-width: 1690px) {
 
+}
+@media all and (max-width: 1280px) {
 
+}
+@media all and (max-width: 980px) {
+
+}
+@media all and (max-width: 736px) {
+
+}
+@media all and (max-width: 480px) {
+}
