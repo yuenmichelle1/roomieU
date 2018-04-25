@@ -34,6 +34,7 @@ class FormWrapper extends Component {
 
   grabUserProfile = event => {
     // Update the appropriate state
+    event.preventDefault();
     const value = event.target.value;
     const name = event.target.dataset.name;
     const newObj = { [name]: value };
@@ -44,6 +45,7 @@ class FormWrapper extends Component {
 
  
   setUserQuals = event => {
+    event.preventDefault();
     const value = event.target.value;
     const name = event.target.dataset.name;
     const score = event.target.dataset.score;
@@ -54,6 +56,7 @@ class FormWrapper extends Component {
   };
 
   sendData = event => {
+    event.preventDefault();
     const userInfo = {
       budget: this.state.budget,
       radius: this.state.radius,

@@ -101,18 +101,6 @@ export default class SignUpForm extends React.Component {
     this.setState({ [name]: value });
   };
 
-//   fileUpload = event => {
-//     event.preventDefault();
-//     let userfile = event.target.files[0];
-//     console.log(userfile);
-
-//     if (userfile) {
-//       let data = new FormData();
-//       data.append("file", userfile);
-//       this.setState({ file: userfile });
-//     }
-//   };
-
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue
