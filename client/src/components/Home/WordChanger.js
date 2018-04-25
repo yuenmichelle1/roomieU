@@ -12,7 +12,7 @@ function WordChanger () {
         a.innerHTML = words[getRandomInt(0, words.length - 1)];
         setTimeout(function() {
                 changeWord(a);
-        }, getRandomInt(2000, 2000));
+        }, getRandomInt(2000, 1200));
     };
 
     function getRandomInt(min, max) {
