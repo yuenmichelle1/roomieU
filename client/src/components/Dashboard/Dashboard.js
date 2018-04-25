@@ -30,8 +30,8 @@ class Dashboard extends Component {
       // userData
       // query
       const school = res.data.school;
-      console.log(`HERE IS MY ${school}`);
-      API.filterUser({ school: school })
+      // console.log(`HERE IS MY ${school}`);
+      API.filterUser({ school: school, radius: res.data.radius, budget: res.data.budget, _id: {$ne: res.data._id} })
         .then(res => {
           this.setState({ users: [...res.data] });
         })
