@@ -35,9 +35,11 @@ module.exports = {
             }
         ).catch(err => res.json(err))
     },
-    // filter: (req, res) => {
-    //     console.log(`this is MYYY BODY ${req.body}`);
-    //     db.User.findAll({}).then(dbUsers => res.json(dbUsers))
-   
-    // }
+    filter: (req, res) => {
+        db.User.find(req.body).then(dbUser=>{
+            console.log(dbUser)
+            res.json(dbUser);
+        })
+    }
+
 }

@@ -3999,6 +3999,7 @@ isolated-scroll@^0.1.0:
   resolved "https://registry.yarnpkg.com/isolated-scroll/-/isolated-scroll-0.1.0.tgz#463126c5adaabb5b759c721498ece090d8bef7a7"
 
 isomorphic-fetch@2.2.1, isomorphic-fetch@^2.1.1:
+
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -5894,9 +5895,11 @@ react-autowhatever@^10.1.0:
     react-themeable "^1.1.0"
     section-iterator "^2.0.0"
 
+
 react-deep-force-update@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.1.tgz#bcd31478027b64b3339f108921ab520b4313dc2c"
+
 
 react-dev-utils@^5.0.1:
   version "5.0.1"
@@ -5934,11 +5937,13 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+
 react-firebase-file-uploader@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/react-firebase-file-uploader/-/react-firebase-file-uploader-2.4.1.tgz#ddf4d9f426bc9ab477be3aa754f50dd5defdeb31"
   dependencies:
     uuid "^2.0.3"
+
 
 react-isolated-scroll@^0.1.1:
   version "0.1.1"

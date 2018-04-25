@@ -8,7 +8,7 @@ router.post("/new", userController.create);
 router.get("/", userController.findAll);
 router.delete("/:id", userController.delete);
 router.put("/:id", userController.update);
-router.post("/", userController.filter);
+router.post("/", userController.filter)
 
 
 
