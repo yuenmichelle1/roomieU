@@ -58,7 +58,7 @@ p {
 .hero-btn {
     width: 160px !important;
     height: 40px !important;
-    margin-top:20px;
+    margin-top:30px;
 }
 
 /* Content */
@@ -83,7 +83,6 @@ p {
 
 .cta-div {
     background-color: #28a745;
-    width: 100vw;
     height: 200px;
     text-align: center;
 }
@@ -104,6 +103,9 @@ p {
 @media all and (max-width: 1690px) {
     .div-spacing {
         height: 220px;
+    }
+    .hero-text {
+        top: 20vh;
     }
 }
 @media all and (max-width: 1280px) {
