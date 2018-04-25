@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1621px" height="429px" viewBox="0 0 1621 429" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1601px" height="429px" viewBox="0 0 1601 429" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
     <title>White</title>
     <desc>Created with Sketch.</desc>
@@ -38,11 +38,11 @@
                     <path d="M151.000015,100 C151.000015,100 150.982622,100 150.982022,100 C147.727737,100 144.988044,102.770892 145.000039,106.011995 C145.006037,109.311875 147.694151,112 151.01261,112 C154.318474,111.988005 157.005988,109.293882 156.99999,105.988005 C156.993992,102.682127 154.300481,100 151.000015,100 Z" id="Shape" fill="#000000"></path>
                 </g>
             </g>
-            <g id="RoomieU-2" transform="translate(332.000000, 131.000000)">
-                <text id="Roomie" stroke="#000000" stroke-width="2" font-family="Cabin-Bold, Cabin" font-size="300" font-weight="bold" fill="#FFFFFF">
+            <g id="RoomieU-2" transform="translate(332.000000, 132.000000)">
+                <text id="Roomie" stroke="#28A745" fill="#28A745" font-family="Cabin-Bold, Cabin" font-size="300" font-weight="bold">
                     <tspan x="0" y="296">Roomie</tspan>
                 </text>
-                <g id="uparty-white" transform="translate(1160.728580, 142.686331) rotate(1.000000) translate(-1160.728580, -142.686331) translate(1034.228580, 2.186331)">
+                <g id="uparty-white" transform="translate(1140.728580, 142.686331) rotate(1.000000) translate(-1140.728580, -142.686331) translate(1014.228580, 2.186331)">
                     <path d="M42.2870859,158.576572 C42.2870859,158.576572 48.275711,280.151944 128.182729,280.151944 C181.454074,280.151944 210.085955,239.62682 214.078372,158.576572" id="Line" stroke="#28A745" stroke-width="40" stroke-linecap="square"></path>
                     <circle id="Oval-2" fill="#FFC107" fill-rule="nonzero" cx="37.6619359" cy="37.6619359" r="37.6619359"></circle>
                     <circle id="Oval-2-Copy" fill="#FFC107" fill-rule="nonzero" cx="214.739108" cy="37.6619359" r="37.6619359"></circle>
