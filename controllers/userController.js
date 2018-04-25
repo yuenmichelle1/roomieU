@@ -41,6 +41,7 @@ module.exports = {
             candidateRoomies: false,
             requestedRoomies: false,
             apartments: false,
+            school:false,
             __v: false,
             budget: false,
             radius: false,

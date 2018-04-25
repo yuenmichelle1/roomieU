@@ -6,6 +6,7 @@ import { AuthConsumer } from "@hasura/react-check-auth";
 import { CardColumns, Container, Row, Col } from "reactstrap";
 import "./Dashboard.css";
 import Home from "../Home";
+// import sortByMatchScore from "./matchFunction"
 //neeeds to be a class because need to grab matches and display image cards;
 class Dashboard extends Component {
   state = {
@@ -14,7 +15,7 @@ class Dashboard extends Component {
   componentDidMount() {
     // this.getAllUsers();
     this.getPotentialMatches();
-  }
+  };
 
   getAllUsers() {
     API.getAllUsers()
@@ -23,17 +24,37 @@ class Dashboard extends Component {
         console.log([...res.data].map(el => el.name));
       })
       .catch(err => console.log(err));
-  }
+  };
+
+  sortByMatchScore = function (user, potentials){
+    const prefs = user.roommatePrefs
+    const matchSortedByScore = potentials.map((potential)=>{
+        const quals = potential.userQuals; 
+        let score = 0;   
+        quals.forEach((a,i)=>{
+            if(prefs[i] === "0"|| prefs[i] === a){
+                score++
+            }
+        })
+        potential["matchScore"] = score;
+        return potential
+    })
+    return matchSortedByScore.sort((a,b)=>b.matchScore-a.matchScore)
+};
 
   getPotentialMatches() {
     API.getUserInfo().then(res => {
       // userData
       // query
+      const userData = res.data
       const school = res.data.school;
-      // console.log(`HERE IS MY ${school}`);
+      console.log(`HERE IS MY userData ${userData}`);
       API.filterUser({ school: school, radius: res.data.radius, budget: res.data.budget, _id: {$ne: res.data._id} })
         .then(res => {
-          this.setState({ users: [...res.data] });
+            const ranked = this.sortByMatchScore(userData,res.data)
+            console.log(ranked)
+            this.setState({ users: [...ranked] })
+        //   this.setState({ users: [...res.data] });
         })
         .catch(err => console.log(err));
       // console.log(userSchool);
