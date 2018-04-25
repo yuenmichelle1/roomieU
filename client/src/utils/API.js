@@ -9,4 +9,5 @@ export default {
     getUserInfo: ()=>axios.get("/auth/"),
     getAllUsers: () => axios.get("/api/user/"),
     filterUser: (criteria)=>axios.post("/api/user", criteria)
+
 }
