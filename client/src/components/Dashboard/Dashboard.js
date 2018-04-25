@@ -36,7 +36,6 @@ class Dashboard extends Component {
           this.setState({ users: [...res.data] });
         })
         .catch(err => console.log(err));
-      // console.log(userSchool);
     });
   }
 
