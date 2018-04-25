@@ -36,7 +36,18 @@ module.exports = {
         ).catch(err => res.json(err))
     },
     filter: (req, res) => {
-        db.User.find(req.body).then(dbUser=>{
+        const usersProjection = {
+            roommatePrefs:false,
+            candidateRoomies: false,
+            requestedRoomies: false,
+            apartments: false,
+            __v: false,
+            budget: false,
+            radius: false,
+            salt:false,
+            hash:false
+        };
+        db.User.find(req.body, usersProjection).then(dbUser=>{
             console.log(dbUser)
             res.json(dbUser);
         })
