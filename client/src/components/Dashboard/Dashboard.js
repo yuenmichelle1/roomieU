@@ -13,7 +13,7 @@ class Dashboard extends Component {
   };
   componentDidMount() {
     // this.getAllUsers();
-    this.getAllUsers();
+    this.getPotentialMatches();
   }
 
   getAllUsers() {
@@ -29,9 +29,13 @@ class Dashboard extends Component {
     API.getUserInfo().then(res => {
       // userData
       // query
-      const school= res.data.school;
-      console.log(`HERE IS MY STUPID ${school}`);
-      API.getMatches({school: school}).then(res => console.log(res.data))
+      const school = res.data.school;
+      console.log(`HERE IS MY ${school}`);
+      API.filterUser({ school: school })
+        .then(res => {
+          this.setState({ users: [...res.data] });
+        })
+        .catch(err => console.log(err));
       // console.log(userSchool);
     });
   }
