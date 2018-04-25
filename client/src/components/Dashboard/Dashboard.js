@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import RoommateCard from "../RoommateCard/RoommateCard";
 import { AuthConsumer } from "@hasura/react-check-auth";
-import { CardColumns } from "reactstrap";
+import { CardColumns, Container, Row, Col } from "reactstrap";
 import "./Dashboard.css";
 import Home from "../Home";
 //neeeds to be a class because need to grab matches and display image cards;
@@ -12,6 +12,7 @@ class Dashboard extends Component {
     users: []
   };
   componentDidMount() {
+    // this.getAllUsers();
     this.getAllUsers();
   }
 
@@ -24,43 +25,60 @@ class Dashboard extends Component {
       .catch(err => console.log(err));
   }
 
+  getPotentialMatches() {
+    API.getUserInfo().then(res => {
+      // userData
+      // query
+      const school= res.data.school;
+      console.log(`HERE IS MY STUPID ${school}`);
+      API.getMatches({school: school}).then(res => console.log(res.data))
+      // console.log(userSchool);
+    });
+  }
+
   render() {
     return (
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
           userInfo ? (
-            <div className="container">
-              <div className="row">
+            <Container>
+              <Row>
                 <h1> Potential Roommates That Best Suit You </h1>
-                <CardColumns className="row">
-                  {this.state.users.map(user => (
-                    <RoommateCard
-                      photo={user.photo}
-                      name={user.name}
-                      school={user.school}
-                      bio={user.bio}
-                    />
-                  ))}
-                </CardColumns>
-              </div>
+                <Col>
+                  <CardColumns>
+                    {this.state.users.map(user => (
+                      <RoommateCard
+                        photo={user.photo}
+                        name={user.name}
+                        school={user.school}
+                        bio={user.bio}
+                      />
+                    ))}
+                  </CardColumns>
+                </Col>
+              </Row>
               <br />
               <br />
               <br />
               <br />
               <br />
-              <div className="row">
+              <Row>
                 <h1> Roommates That You Like</h1>
                 <br />
                 <br />
                 <br />
                 <br />
-                <CardColumns />
-              </div>
-              <div className="row">
+                <Col>
+                  <CardColumns />
+                </Col>
+              </Row>
+              <Row>
                 <h1> Roommates That Like YOU </h1>
-                <CardColumns />
-              </div>
-            </div>
+                <Col>
+                  <CardColumns />
+                </Col>
+              </Row>
+            </Container>
           ) : (
             <Home />
           )

@@ -34,5 +34,10 @@ module.exports = {
                 }
             }
         ).catch(err => res.json(err))
-    }
+    },
+    // filter: (req, res) => {
+    //     console.log(`this is MYYY BODY ${req.body}`);
+    //     db.User.findAll({}).then(dbUsers => res.json(dbUsers))
+   
+    // }
 }
