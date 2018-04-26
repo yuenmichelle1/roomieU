@@ -37,9 +37,7 @@ class Dashboard extends Component {
     API.getUserInfo().then(res => {
       const user = res.data;
       console.log(`HERE IS MY userData ${user}`);
-      this.setState(
-        { requestedRoomies: user.requestedRoomies }
-      );
+      this.setState({ requestedRoomies: user.requestedRoomies });
       API.filterUser({
         school: user.school,
         radius: user.radius,
@@ -62,7 +60,7 @@ class Dashboard extends Component {
       API.getMatch(reqRoomieCopy[i]).then(res => {
         reqRoomieObjArr.push(res.data);
         console.log(`TOUCH ${reqRoomieObjArr}`);
-        this.setState({ reqRoomieObjArr: reqRoomieCopy });
+        this.setState({ reqRoomieObjArr: reqRoomieObjArr });
       });
     }
   };
@@ -70,7 +68,6 @@ class Dashboard extends Component {
   handleClick = id => {
     this.likeRoommate(id);
     this.updateOtherUser(id);
-    
   };
 
   likeRoommate = id => {
@@ -82,7 +79,8 @@ class Dashboard extends Component {
         API.updateUser(res.data._id, {
           requestedRoomies: newRequestedRoomies
         }).then(result => {
-          this.setState({requestedRoomies: newRequestedRoomies});
+          this.setState({ requestedRoomies: newRequestedRoomies });
+          this.displayRoomies();
         });
       }
     });
@@ -95,9 +93,9 @@ class Dashboard extends Component {
         const currentCandidateRoomies = [...res.data.candidateRoomies];
         if (currentCandidateRoomies.indexOf(userId) === -1) {
           currentCandidateRoomies.push(userId);
-          API.updateUser(id, { candidateRoomies: currentCandidateRoomies }).then(
-            res => console.log(`updated other user`)
-          );
+          API.updateUser(id, {
+            candidateRoomies: currentCandidateRoomies
+          }).then(res => console.log(`updated other user`));
         }
       });
     });
