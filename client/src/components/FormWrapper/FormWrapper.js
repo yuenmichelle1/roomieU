@@ -61,20 +61,34 @@ class FormWrapper extends Component {
       budget: this.state.budget,
       radius: this.state.radius,
       bio: this.state.bio,
-      userQuals: [
-        { gender: this.state.userGenderScore },
-        { schedule: this.state.userScheduleScore },
-        { smoke: this.state.userSmokeScore },
-        { party: this.state.userPartyScore },
-        { pets: this.state.userPetsScore }
-      ],
-      roommatePrefs: [
-        { gender: this.state.genderPrefScore },
-        { schedule: this.state.schedulePrefScore },
-        { smoke: this.state.smokePrefScore },
-        { party: this.state.partyPrefScore },
-        { pets: this.state.petsPrefScore }
-      ]
+    //   userQuals: [
+    //     { gender: this.state.userGenderScore },
+    //     { schedule: this.state.userScheduleScore },
+    //     { smoke: this.state.userSmokeScore },
+    //     { party: this.state.userPartyScore },
+    //     { pets: this.state.userPetsScore }
+    //   ],
+    //   roommatePrefs: [
+    //     { gender: this.state.genderPrefScore },
+    //     { schedule: this.state.schedulePrefScore },
+    //     { smoke: this.state.smokePrefScore },
+    //     { party: this.state.partyPrefScore },
+    //     { pets: this.state.petsPrefScore }
+    //   ]
+        userQuals: [
+            this.state.userGenderScore,
+            this.state.userScheduleScore,
+            this.state.userSmokeScore,
+            this.state.userPartyScore,
+            this.state.userPetsScore
+        ],
+        roommatePrefs: [
+            this.state.genderPrefScore,
+            this.state.schedulePrefScore,
+            this.state.smokePrefScore,
+            this.state.partyPrefScore,
+            this.state.petsPrefScore
+        ]
     };
 
     // first get current user info to get userID (note that userData is nested inside of data property)

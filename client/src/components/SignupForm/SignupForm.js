@@ -203,28 +203,9 @@ export default class SignUpForm extends React.Component {
               />
             </Col>
           </FormGroup>
-          {/* <FormGroup row>
-            <Label for="imageFile" sm={2}>
-              Upload Your Image
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="file"
-                name="file"
-                id="imageFile"
-                onChange={this.fileUpload}
-                required
-              />
-              <FormText color="muted">
-                Please note uploading a photo gives you a higher chance of
-                finding a roomie.
-              </FormText>
-            </Col>
-          </FormGroup> */}
         <FormGroup row>
             <Label for="imageFile" sm={2}>Upload Your Image</Label>
             <Col sm={2}>
-                {/* {this.state.isUploading && <p>Progress: {this.state.progress}</p> } */}
                 <CustomUploadButton
                     id="imageFile"
                     accept="image/*"
@@ -241,7 +222,7 @@ export default class SignUpForm extends React.Component {
             </Col>
             <Col sm={8}>
                 {this.state.avatarURL && <img src={this.state.avatarURL}          
-                    style={{height:"200px"}}
+                    style={{height:"200px"}} alt=""
                 />}                
             </Col>
         </FormGroup>
