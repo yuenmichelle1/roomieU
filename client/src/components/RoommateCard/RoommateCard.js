@@ -28,7 +28,7 @@ const RoommateCard = props => {
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.school}</CardSubtitle>
           <CardText><b>Bio:</b>{props.bio}</CardText>
-          <Button>Button</Button>
+          <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button>
         </CardBody>
       </Card>
     </div>
