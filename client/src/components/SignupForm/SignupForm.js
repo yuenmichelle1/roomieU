@@ -105,18 +105,6 @@ export default class SignUpForm extends React.Component {
     this.setState({ [name]: value });
   };
 
-//   fileUpload = event => {
-//     event.preventDefault();
-//     let userfile = event.target.files[0];
-//     console.log(userfile);
-
-//     if (userfile) {
-//       let data = new FormData();
-//       data.append("file", userfile);
-//       this.setState({ file: userfile });
-//     }
-//   };
-
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue
@@ -155,6 +143,7 @@ export default class SignUpForm extends React.Component {
             <Col xs="12" sm="12" md="12" lg="12">
               <h1 className="header-text text-center">Sign Up With Your School Email</h1>
             </Col>
+
           </Row>
           <Row className="form-div">
             <Col xs="12" sm="12" md="12" lg="12">
@@ -264,6 +253,7 @@ export default class SignUpForm extends React.Component {
                           style={{height:"200px"}}
                       />}                
                   </Col>
+
               </FormGroup>
                 <FormGroup row>
                   <Label for="userSchool" sm={4}>

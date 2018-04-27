@@ -20,9 +20,14 @@ export default class LoginForm extends React.Component {
     event.preventDefault();
     API.loginUser(userData).then(userInfo=>{
         // should link to dashboard once it's ready
-        window.location = "/roommatepreferences";
+        // window.location = "/roommatepreferences";
         // user information will be in userInfo
-        // console.log(userInfo)
+        if (userInfo.data.roommatePrefs[0]) {
+          window.location="/dashboard";
+        } else {
+          window.location = "/roommatepreferences";
+        }
+        console.log(`THIS IS MY USERINFO ${userInfo.data.roommatePrefs[0].gender}`);
     })
   };
 
