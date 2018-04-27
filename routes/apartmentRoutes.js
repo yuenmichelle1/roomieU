@@ -2,7 +2,7 @@ const axios = require("axios");
 const router = require("express").Router();
 const apartmentController = require("../controllers/apartmentController");
 
-// localhost/users/
+// localhost/api/apartment
 router.get("/:id", apartmentController.find);
 router.get("/search", apartmentController.search);
 

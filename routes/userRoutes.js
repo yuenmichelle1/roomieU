@@ -10,6 +10,8 @@ router.delete("/:id", userController.delete);
 router.put("/:id", userController.update);
 router.post("/", userController.filter);
 
+router.post(`/requested`, userController.getLikes);
+
 
 
 

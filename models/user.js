@@ -11,18 +11,6 @@ const UserSchema = new Schema({
         required: true
     },
 
-    // email: {
-    //     type: String,
-    //     trim: true,
-    //     required: true
-    // },
-
-    // password: {
-    //     type: String,
-    //     trim: true,
-    //     required: true
-    // },
-
     budget: {
         type: String,
         trim: true,
