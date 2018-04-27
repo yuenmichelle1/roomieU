@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import RoommateCard from "../RoommateCard";
 import API from "../../utils/API";
+import axios from "axios";
 import RoommateCard from "../RoommateCard/RoommateCard";
 import { AuthConsumer } from "@hasura/react-check-auth";
 import { CardColumns, Container, Row, Col } from "reactstrap";
@@ -15,7 +16,16 @@ class Dashboard extends Component {
     candidateRoomies: []
   };
   componentDidMount() {
-    this.getPotentialMatches();
+    this.getPotentialMatches().then(() => {
+      axios
+        .post("/api/user/requested", this.state.requestedRoomies)
+        .then(res => {
+          console.log(res.data, `IS THE DATA FROM MOUNTED`);
+          this.setState({ reqRoomieObjArr: res.data }, () =>
+            console.log(this.state.reqRoomieObjArr)
+          );
+        });
+    });
   }
 
   sortByMatchScore = function(user, filteredMatches) {
@@ -34,7 +44,7 @@ class Dashboard extends Component {
   };
 
   getPotentialMatches() {
-    API.getUserInfo().then(res => {
+    return API.getUserInfo().then(res => {
       const user = res.data;
       console.log(`HERE IS MY userData ${user}`);
       this.setState({ requestedRoomies: user.requestedRoomies });
@@ -53,18 +63,6 @@ class Dashboard extends Component {
     });
   }
 
-  displayRoomies = () => {
-    const reqRoomieCopy = [...this.state.requestedRoomies];
-    const reqRoomieObjArr = [...this.state.reqRoomieObjArr];
-    for (var i = 0; i < reqRoomieCopy.length; i++) {
-      API.getMatch(reqRoomieCopy[i]).then(res => {
-        reqRoomieObjArr.push(res.data);
-        console.log(`TOUCH ${reqRoomieObjArr}`);
-        this.setState({ reqRoomieObjArr: reqRoomieObjArr });
-      });
-    }
-  };
-
   handleClick = id => {
     this.likeRoommate(id);
     this.updateOtherUser(id);
@@ -80,7 +78,6 @@ class Dashboard extends Component {
           requestedRoomies: newRequestedRoomies
         }).then(result => {
           this.setState({ requestedRoomies: newRequestedRoomies });
-          this.displayRoomies();
         });
       }
     });
@@ -106,57 +103,52 @@ class Dashboard extends Component {
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
           userInfo ? (
-            <Container>
-              <Row>
-                <h1> Potential Roommates That Best Suit You </h1>
-                <Col>
-                  <CardColumns>
-                    {this.state.users.map((user, i) => (
-                      <RoommateCard
-                        key={i}
-                        photo={user.photo}
-                        name={user.name}
-                        school={user.school}
-                        bio={user.bio}
-                        id={user._id}
-                        handleClick={this.handleClick}
-                      />
-                    ))}
-                  </CardColumns>
-                </Col>
-              </Row>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <Row>
-                <h1> Roommates That You Like</h1>
-                <br />
-                <br />
-                <br />
-                <br />
-                <Col>
-                  <CardColumns>
-                    {this.state.reqRoomieObjArr.map(user => {
-                      <RoommateCard
-                        photo={user.photo}
-                        name={user.name}
-                        school={user.school}
-                        bio={user.bio}
-                        id={user._id}
-                      />;
-                    })}
-                  </CardColumns>
-                </Col>
-              </Row>
-              <Row>
-                <h1> Roommates That Like YOU </h1>
-                <Col>
-                  <CardColumns />
-                </Col>
-              </Row>
-            </Container>
+            <div>
+              <Container>
+                <Row>
+                  <h1> Potential Roommates That Best Suit You </h1>
+                  <Col>
+                    <CardColumns>
+                      {this.state.users.map((user, i) => (
+                        <RoommateCard
+                          key={i}
+                          photo={user.photo}
+                          name={user.name}
+                          school={user.school}
+                          bio={user.bio}
+                          id={user._id}
+                          handleClick={this.handleClick}
+                        />
+                      ))}
+                    </CardColumns>
+                  </Col>
+                </Row>
+                <Row>
+                  <h1> Roommates That You Like</h1>
+                  <Col>
+                    <CardColumns>
+                      {this.state.reqRoomieObjArr.map((user, i) => (
+                        <RoommateCard
+                          key={i}
+                          photo={user.photo}
+                          name={user.name}
+                          school={user.school}
+                          bio={user.bio}
+                          id={user._id}
+                          handleClick={this.handleClick}
+                        />
+                      ))}
+                    </CardColumns>
+                  </Col>
+                </Row>
+                <Row>
+                  <h1> Roommates That Like YOU </h1>
+                  <Col>
+                    <CardColumns />
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           ) : (
             <Home />
           )
