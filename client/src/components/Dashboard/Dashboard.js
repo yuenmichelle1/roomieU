@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import RoommateCard from "../RoommateCard";
 import API from "../../utils/API";
-import axios from "axios";
 import RoommateCard from "../RoommateCard/RoommateCard";
 import { AuthConsumer } from "@hasura/react-check-auth";
 import { CardColumns, Container, Row, Col } from "reactstrap";
@@ -17,14 +16,12 @@ class Dashboard extends Component {
   };
   componentDidMount() {
     this.getPotentialMatches().then(() => {
-      axios
-        .post("/api/user/requested", this.state.requestedRoomies)
-        .then(res => {
-          console.log(res.data, `IS THE DATA FROM MOUNTED`);
-          this.setState({ reqRoomieObjArr: res.data }, () =>
-            console.log(this.state.reqRoomieObjArr)
-          );
-        });
+      API.getUserLikes(this.state.requestedRoomies).then(res => {
+        console.log(res.data, `IS THE DATA FROM MOUNTED`);
+        this.setState({ reqRoomieObjArr: res.data }, () =>
+          console.log(this.state.reqRoomieObjArr)
+        );
+      });
     });
   }
 
@@ -46,7 +43,6 @@ class Dashboard extends Component {
   getPotentialMatches() {
     return API.getUserInfo().then(res => {
       const user = res.data;
-      console.log(`HERE IS MY userData ${user}`);
       this.setState({ requestedRoomies: user.requestedRoomies });
       API.filterUser({
         school: user.school,
