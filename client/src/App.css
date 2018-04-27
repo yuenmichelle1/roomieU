@@ -38,7 +38,7 @@ p {
 }
 
 .body-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   font-size: 1em;
   line-height: 1.8;
 }
