@@ -12,16 +12,20 @@ class Dashboard extends Component {
     users: [],
     requestedRoomies: [],
     reqRoomieObjArr: [],
-    candidateRoomies: []
+    candidateRoomies: [],
+    candidateRoomiesArr: []
   };
   componentDidMount() {
     this.getPotentialMatches().then(() => {
       API.getUserLikes(this.state.requestedRoomies).then(res => {
-        console.log(res.data, `IS THE DATA FROM MOUNTED`);
         this.setState({ reqRoomieObjArr: res.data }, () =>
           console.log(this.state.reqRoomieObjArr)
         );
-      });
+      }).then(() => {
+        API.getUserLikes(this.state.candidateRoomies).then(res =>{
+          this.setState({candidateRoomiesArr: res.data});
+        })
+      })
     });
   }
 
@@ -43,7 +47,7 @@ class Dashboard extends Component {
   getPotentialMatches() {
     return API.getUserInfo().then(res => {
       const user = res.data;
-      this.setState({ requestedRoomies: user.requestedRoomies });
+      this.setState({ requestedRoomies: user.requestedRoomies, candidateRoomies: user.candidateRoomies });
       API.filterUser({
         school: user.school,
         radius: user.radius,
@@ -140,7 +144,19 @@ class Dashboard extends Component {
                 <Row>
                   <h1> Roommates That Like YOU </h1>
                   <Col>
-                    <CardColumns />
+                    <CardColumns>
+                    {this.state.candidateRoomiesArr.map((user, i) => (
+                        <RoommateCard
+                          key={i}
+                          photo={user.photo}
+                          name={user.name}
+                          school={user.school}
+                          bio={user.bio}
+                          id={user._id}
+                          handleClick={this.handleClick}
+                        />
+                      ))}
+                    </CardColumns>
                   </Col>
                 </Row>
               </Container>
