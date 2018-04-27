@@ -78,7 +78,7 @@ class Dashboard extends Component {
           requestedRoomies: newRequestedRoomies
         }).then(result => {
           this.setState({ requestedRoomies: newRequestedRoomies });
-        });
+        })
       }
     });
   };
