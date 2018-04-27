@@ -1,6 +1,9 @@
 import React from "react";
+// import Signupform.css
+import "./SignupForm.css";
 import {
   Col,
+  Row,
   Button,
   Form,
   FormGroup,
@@ -23,7 +26,8 @@ const config = {
     projectId: "roomieu",
     storageBucket: "gs://roomieu.appspot.com",
     messagingSenderId: "909135427924"
-  };
+};
+
 firebase.initializeApp(config);
 const SchoolNames = Schools.features.map(el => el.properties.NAME);
 
@@ -133,134 +137,165 @@ export default class SignUpForm extends React.Component {
     };
 
     return (
-      <div>
-        <br />
-        <br />
-        <br />
-        <br /> <h1 className="text-center"> Sign Up With Your Email Address</h1>
-        <Form onSubmit={this.handleFormSubmit}>
-          <FormGroup row>
-            <Label for="userEmail" sm={2}>
-              Email
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="email"
-                name="email"
-                id="userEmail"
-                placeholder="Enter Your Email"
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                required
-              />
+      <Row className="container-row">
+        <Col xs="12" sm="12" md="12" lg="12">
+          <Row className="title-div">
+            <Col xs="12" sm="12" md="12" lg="12">
+              <h1 className="header-text text-center">Sign Up With Your School Email</h1>
             </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="userPassword" sm={2}>
-              Password
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="password"
-                name="password"
-                id="userPassword"
-                placeholder="Enter Password"
-                value={this.state.password}
-                onChange={this.handleInputChange}
-                required
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="userName" sm={2}>
-              Name
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="name"
-                name="name"
-                id="userName"
-                placeholder="Enter Your Name to Display on Your Portfolio"
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                required
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="userPhone" sm={2}>
-              Phone Number
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="tel"
-                name="phone"
-                id="userPhone"
-                placeholder="Enter Phone Number"
-                value={this.state.phone}
-                onChange={this.handleInputChange}
-                required
-              />
-            </Col>
-          </FormGroup>
-        <FormGroup row>
-            <Label for="imageFile" sm={2}>Upload Your Image</Label>
-            <Col sm={2}>
-                <CustomUploadButton
-                    id="imageFile"
-                    accept="image/*"
-                    name="avatar"
-                    randomizeFilename 
-                    storageRef={firebase.storage().ref('images')}
-                    onUploadStart={this.handleUploadStart}
-                    onUploadError={this.handleUploadError}
-                    onUploadSuccess={this.handleUploadSuccess}
-                    onProgress={this.handleProgress}
-                    style={{backgroundColor: 'steelblue', color: 'white', padding: 6, borderRadius: 4}}
-                > Upload
-                </CustomUploadButton>
-            </Col>
-            <Col sm={8}>
-                {this.state.avatarURL && <img src={this.state.avatarURL}          
-                    style={{height:"200px"}} alt=""
-                />}                
-            </Col>
-        </FormGroup>
-          <FormGroup row>
-            <Label for="userSchool" sm={2}>
-              School
-            </Label>
-            <Col sm={10}>
-              <Autosuggest
-                suggestions={suggestions}
-                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                getSuggestionValue={getSuggestionValue}
-                renderSuggestion={renderSuggestion}
-                inputProps={inputProps}
-                style={{ width: "900px"}}
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Col sm={{ size: 10 }}>
-              <FormGroup check>
-                <Label check>
-                  <Input type="checkbox" id="checkbox2" /> I agree to Terms and
-                  Conditions.
-                </Label>
+
+          </Row>
+          <Row className="form-div">
+            <Col xs="12" sm="12" md="12" lg="12">
+              <Form onSubmit={this.handleFormSubmit}>
+                <FormGroup row>
+                  <Label for="userEmail" sm={4}>
+                    School Email
+                  </Label>
+                  <Col sm={4}>
+                    <Input
+                      type="email"
+                      name="email"
+                      id="userEmail"
+                      placeholder="Enter a valid .edu email"
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                      required
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Label for="userPassword" sm={4}>
+                    Password
+                  </Label>
+                  <Col sm={3}>
+                    <Input
+                      type="password"
+                      name="password"
+                      id="userPassword"
+                      placeholder="Enter Password"
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      required
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Label for="userName" sm={4}>
+                    Name
+                  </Label>
+                  <Col sm={4}>
+                    <Input
+                      type="name"
+                      name="name"
+                      id="userName"
+                      placeholder="Enter Full Name"
+                      value={this.state.name}
+                      onChange={this.handleInputChange}
+                      required
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Label for="userPhone" sm={4}>
+                    Phone Number
+                  </Label>
+                  <Col sm={3}>
+                    <Input
+                      type="tel"
+                      name="phone"
+                      id="userPhone"
+                      placeholder="Enter Phone Number"
+                      value={this.state.phone}
+                      onChange={this.handleInputChange}
+                      required
+                    />
+                  </Col>
+                </FormGroup>
+                {/* <FormGroup row>
+                  <Label for="imageFile" sm={2}>
+                    Upload Your Image
+                  </Label>
+                  <Col sm={10}>
+                    <Input
+                      type="file"
+                      name="file"
+                      id="imageFile"
+                      onChange={this.fileUpload}
+                      required
+                    />
+                    <FormText color="muted">
+                      Please note uploading a photo gives you a higher chance of
+                      finding a roomie.
+                    </FormText>
+                  </Col>
+                </FormGroup> */}
+              <FormGroup row>
+                  <Label for="imageFile" sm={4}>Upload Your Image</Label>
+                  <Col sm={2}>
+                      {/* {this.state.isUploading && <p>Progress: {this.state.progress}</p> } */}
+                      <CustomUploadButton
+                          id="imageFile"
+                          accept="image/*"
+                          name="avatar"
+                          randomizeFilename 
+                          storageRef={firebase.storage().ref('images')}
+                          onUploadStart={this.handleUploadStart}
+                          onUploadError={this.handleUploadError}
+                          onUploadSuccess={this.handleUploadSuccess}
+                          onProgress={this.handleProgress}
+                          style={{backgroundColor: '#aaa', color: 'white', padding: '5px 15px', borderRadius: 4}}
+                      > Upload
+                      </CustomUploadButton>
+                  </Col>
+                  <Col sm={8}>
+                      {this.state.avatarURL && <img alt="avatar" src={this.state.avatarURL}          
+                          style={{height:"200px"}}
+                      />}                
+                  </Col>
+
               </FormGroup>
+                <FormGroup row>
+                  <Label for="userSchool" sm={4}>
+                    School
+                  </Label>
+                  <Col sm={6}>
+                    <Autosuggest
+                      suggestions={suggestions}
+                      onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                      onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                      getSuggestionValue={getSuggestionValue}
+                      renderSuggestion={renderSuggestion}
+                      inputProps={inputProps}
+                      style={{ width: "900px"}}
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Col sm={4}/>
+                  <Col sm={{ size: 8 }}>
+                    <FormGroup check>
+                      <Label check>
+                        <Input type="checkbox" id="checkbox2" /> I agree to Terms and
+                        Conditions.
+                      </Label>
+                    </FormGroup>
+                  </Col>
+                </FormGroup>
+                <br />
+                <br />
+                <FormGroup row>
+                  <Col sm={4}/>
+                  <Col sm={8}>
+                    <Button className="centerBlock submit-btn" type="submit" color="success">Submit</Button>
+                  </Col>
+                </FormGroup>
+              </Form>
+              {/* End Form */}
             </Col>
-          </FormGroup>
-          <br />
-          <br />
-          <FormGroup check row>
-            <Col sm={{ size: 10, offset: 2 }}>
-              <Button className="centerBlock" type="submit" style={{ width: "200px"}}>Submit</Button>
-            </Col>
-          </FormGroup>
-        </Form>
-      </div>
+          </Row>
+        </Col>
+      </Row>
     );
   }
 }
