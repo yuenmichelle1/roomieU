@@ -1,0 +1,25 @@
+.container-row {
+    margin: 0 auto !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  
+.form-div {
+    margin-top: 20px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+label.col-form-label {
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.submit-btn {
+    width: 200px !important;
+    height: 50px;
+    margin-top: -70px;
+}

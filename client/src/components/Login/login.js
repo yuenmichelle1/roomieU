@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Row,
   Col,
   Button,
   Form,
@@ -8,6 +9,7 @@ import {
   Input
 } from "reactstrap";
 import API from "../../utils/API";
+import "./login.css";
 
 export default class LoginForm extends React.Component {
   state = {
@@ -39,55 +41,60 @@ export default class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        {/* <NavBar/> */}
-        <br />
-        <br />
-        <br />
-        <br />
-        {" "}
-        {" "}
-        <h1 className="text-center"> Log in With Your Email Address</h1>
-        <Form onSubmit={this.handleFormSubmit}>
-          <FormGroup row>
-            <Label for="userEmail" sm={2}>
-              Email
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="email"
-                name="email"
-                id="userEmail"
-                placeholder="Enter Your Email"
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                required
-              />
+      <Row className="container-row">
+        <Col xs="12" sm="12" md="12" lg="12">
+          <Row className="title-div">
+            <Col xs="12" sm="12" md="12" lg="12">
+              <h1 className="header-text text-center">Log in and Find Your Roomie!</h1>
             </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="userPassword" sm={2}>
-              Password
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="password"
-                name="password"
-                id="userPassword"
-                placeholder="Enter Password"
-                value={this.state.password}
-                onChange={this.handleInputChange}
-                required
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup check row>
-            <Col sm={{ size: 10, offset: 2 }}>
-              <Button type="submit">Submit</Button>
-            </Col>
-          </FormGroup>
-        </Form>
-      </div>
+          </Row>
+          <Row className="form-div">
+            <Form onSubmit={this.handleFormSubmit} className="login-form">
+              <FormGroup row>
+                <Label for="userEmail" sm={4}>
+                  Email
+                </Label>
+                <Col sm={4}>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="userEmail"
+                    placeholder="Enter Your Email"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                    required
+                  />
+                </Col>
+              </FormGroup>
+              <FormGroup row>
+                <Label for="userPassword" sm={4}>
+                  Password
+                </Label>
+                <Col sm={4}>
+                  <Input
+                    type="password"
+                    name="password"
+                    id="userPassword"
+                    placeholder="Enter Password"
+                    value={this.state.password}
+                    onChange={this.handleInputChange}
+                    required
+                  />
+                </Col>
+              </FormGroup>
+              <br/>
+              <br/>
+              <FormGroup row>
+                <Col sm={4}/>
+                <Col sm={8}>
+                  <Button type="submit" className="centerBlock submit-btn" color="success">Login</Button>
+                </Col>
+              </FormGroup>
+            </Form>
+            {/* End Form */}
+          </Row>
+        </Col>
+      </Row>
     );
   }
 }
