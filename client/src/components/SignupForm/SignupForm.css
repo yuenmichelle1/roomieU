@@ -14,6 +14,16 @@ label.col-form-label {
   font-weight: 700;
 }
 
+.upload-btn:hover {
+  background-color: #FFC107 !important;
+  color: black !important;
+}
+
+.pic-div {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 .submit-btn {
   width: 200px !important;
   height: 50px;
