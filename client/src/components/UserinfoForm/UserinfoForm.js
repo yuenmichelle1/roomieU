@@ -72,9 +72,8 @@ const UserinfoForm = props => {
             onChange={props.grabUserProfile}
           >
             <option>0-5 miles</option>
-            <option>6-10 miles</option>
-            <option>11-15miles</option>
-            <option>15+ miles</option>
+            <option>6-9 miles</option>
+            <option>10+ miles</option>
           </Input>
         </FormGroup>
         <FormGroup tag="fieldset">
