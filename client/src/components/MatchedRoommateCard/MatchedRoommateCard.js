@@ -8,7 +8,7 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
-import "./RoommateCard.css";
+import "./MatchedRoommateCard.css";
 
 const RoommateCard = props => {
   return (
@@ -35,4 +35,4 @@ const RoommateCard = props => {
   );
 };
 
-export default RoommateCard;
+export default MatchedRoommateCard;
