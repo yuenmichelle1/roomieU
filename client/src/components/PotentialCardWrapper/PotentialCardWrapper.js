@@ -8,11 +8,11 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
-import "./PotentialRoommateCard.css";
+import "./PotentialCardWrapper.css";
 
-const PotentialRoommateCard = props => {
+const PotentialCardWrapper = props => {
   return (
-    // <div className="PotentialRoommateCard">
+    <div className="PotentialRoommateCard">
       <Card>
         <CardImg
           top
@@ -31,8 +31,8 @@ const PotentialRoommateCard = props => {
           <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button>
         </CardBody>
       </Card>
-    // </div> 
+    </div>
   );
 };
 
-export default PotentialRoommateCard;
+export default PotentialCardWrapper;

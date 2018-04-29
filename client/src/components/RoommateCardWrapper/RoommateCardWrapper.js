@@ -7,12 +7,15 @@ import Home from "../Home";
 
 import PendingRoommateCard from "../PendingRoommateCard";
 import MatchedRoommateCard from "../MatchedRoommateCard";
-import PotentialRoommateCard from "../PotentialRoommateCard"
+import PotentialRoommateCard from "../PotentialRoommateCard";
+
+
+import Slider from "react-slick";
 
 
 class RoommateCardWrapper extends Component {
   state = {
-    users: [],
+    potentialRoommates: [],
     requestedRoomies: [],
     reqRoomieObjArr: [],
     candidateRoomies: [],
@@ -60,7 +63,7 @@ class RoommateCardWrapper extends Component {
         .then(res => {
           const ranked = this.sortByMatchScore(user, res.data);
           console.log(ranked.map(a => a.matchScore));
-          this.setState({ users: [...ranked] });
+          this.setState({ potentialRoommates: [...ranked] });
         })
         .catch(err => console.log(err));
     });
@@ -102,21 +105,31 @@ class RoommateCardWrapper extends Component {
   };
 
   render() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3
+        };
     return (
             <Container>
-            {/* <MatchedRoommateCard/> */}
-            {/* <PendingRoommateCard/> */}
-            {this.state.users.map((user, i) => {
-            return <PotentialRoommateCard
-                    key={i}
-                    photo={user.photo}
-                    name={user.name}
-                    school={user.school}
-                    bio={user.bio}
-                    id={user._id}
-                    handleClick={this.handleClick}
-                />
-            })}          
+                {/* <MatchedRoommateCard/> */}
+                {/* <PendingRoommateCard/> */}
+                {/* <PotentialCardWrapper> */}
+                <Slider {...settings}> 
+                    {this.state.potentialRoommates.map((user, i) => {
+                    return <PotentialRoommateCard
+                            key={i}
+                            photo={user.photo}
+                            name={user.name}
+                            school={user.school}
+                            bio={user.bio}
+                            id={user._id}
+                            handleClick={this.handleClick}
+                        />
+                    })} 
+                </Slider>         
             </Container>
         )
     }
