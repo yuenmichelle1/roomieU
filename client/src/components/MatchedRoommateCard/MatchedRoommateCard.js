@@ -12,7 +12,7 @@ import "./MatchedRoommateCard.css";
 
 const MatchedRoommateCard = props => {
   return (
-    <div className="MatchedRoommateCard">
+    // <div className="MatchedRoommateCard">
       <Card>
         <CardImg
           top
@@ -28,10 +28,10 @@ const MatchedRoommateCard = props => {
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.school}</CardSubtitle>
           <CardText><b>Bio:</b>{props.bio}</CardText>
-          {/* <Button onClick={() => props.handleClick(props.id)}>Cancel</Button> */}
+          {/* <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button> */}
         </CardBody>
       </Card>
-    </div>
+    // </div> 
   );
 };
 

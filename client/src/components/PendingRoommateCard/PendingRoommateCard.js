@@ -12,7 +12,7 @@ import "./PendingRoommateCard.css";
 
 const PendingRoommateCard = props => {
   return (
-    <div className="PendingRoommateCard">
+    // <div className="PendingRoommateCard">
       <Card>
         <CardImg
           top
@@ -31,7 +31,7 @@ const PendingRoommateCard = props => {
           <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button>
         </CardBody>
       </Card>
-    </div>
+    // </div> 
   );
 };
 

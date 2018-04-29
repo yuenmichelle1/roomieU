@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import "./PotentialCardWrapper.css";
-import PotentialRoommateCard from "../PotentialRoommateCard";
+import "./MatchedCardWrapper.css";
+import MatchedRoommateCard from "../MatchedRoommateCard";
 
 const settings = {
     dots: true,
@@ -11,11 +11,11 @@ const settings = {
     slidesToScroll: 3
     };
 
-const PotentialCardWrapper = props => {
+const MatchedCardWrapper = props => {
   return ( 
     <Slider {...settings}> 
-        {props.potentialRoommates.map((user, i) => {
-        return <PotentialRoommateCard
+        {props.matchedRoommates.map((user, i) => {
+        return <MatchedRoommateCard
                 key={i}
                 photo={user.photo}
                 name={user.name}
@@ -29,4 +29,4 @@ const PotentialCardWrapper = props => {
   );
 };
 
-export default PotentialCardWrapper;
+export default MatchedCardWrapper;

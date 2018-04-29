@@ -5,17 +5,18 @@ import { CardColumns, Container, Row, Col } from "reactstrap";
 import "./RoommateCardWrapper.css";
 import Home from "../Home";
 
-import PendingRoommateCard from "../PendingRoommateCard";
-import MatchedRoommateCard from "../MatchedRoommateCard";
-import PotentialRoommateCard from "../PotentialRoommateCard";
+import PendingCardWrapper from "../PendingCardWrapper";
+import MatchedCardWrapper from "../MatchedCardWrapper";
+import PotentialCardWrapper from "../PotentialCardWrapper";
 
-
-import Slider from "react-slick";
 
 
 class RoommateCardWrapper extends Component {
   state = {
     potentialRoommates: [],
+    matchedRoommates:[],
+    pendingRoommates:[],
+
     requestedRoomies: [],
     reqRoomieObjArr: [],
     candidateRoomies: [],
@@ -105,45 +106,14 @@ class RoommateCardWrapper extends Component {
   };
 
   render() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
-        };
     return (
             <Container>
-                {/* <MatchedRoommateCard/> */}
-                {/* <PendingRoommateCard/> */}
-                {/* <PotentialCardWrapper> */}
-                <Slider {...settings}> 
-                    {this.state.potentialRoommates.map((user, i) => {
-                    return <PotentialRoommateCard
-                            key={i}
-                            photo={user.photo}
-                            name={user.name}
-                            school={user.school}
-                            bio={user.bio}
-                            id={user._id}
-                            handleClick={this.handleClick}
-                        />
-                    })} 
-                </Slider>         
+                <MatchedCardWrapper matchedRoommates={this.state.potentialRoommates}/>
+                <PendingCardWrapper pendingRoommates={this.state.potentialRoommates}/>
+                <PotentialCardWrapper potentialRoommates={this.state.potentialRoommates}/>       
             </Container>
         )
     }
 }
 
 export default RoommateCardWrapper;
-// {this.state.candidateRoomiesArr.map((user, i) => (
-//     <RoommateCard
-//       key={i}
-//       photo={user.photo}
-//       name={user.name}
-//       school={user.school}
-//       bio={user.bio}
-//       id={user._id}
-//       handleClick={this.handleClick}
-//     />
-//   ))}
