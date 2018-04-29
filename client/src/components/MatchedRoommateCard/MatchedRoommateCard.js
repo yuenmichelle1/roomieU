@@ -10,9 +10,9 @@ import {
 } from "reactstrap";
 import "./MatchedRoommateCard.css";
 
-const RoommateCard = props => {
+const MatchedRoommateCard = props => {
   return (
-    <div className="RoommateCard">
+    <div className="MatchedRoommateCard">
       <Card>
         <CardImg
           top
@@ -28,7 +28,7 @@ const RoommateCard = props => {
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.school}</CardSubtitle>
           <CardText><b>Bio:</b>{props.bio}</CardText>
-          <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button>
+          {/* <Button onClick={() => props.handleClick(props.id)}>Cancel</Button> */}
         </CardBody>
       </Card>
     </div>

@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-
-// import API from "../../utils/API";
 import { AuthConsumer } from "@hasura/react-check-auth";
 import { CardColumns, Container, Row, Col } from "reactstrap";
 import "./Dashboard.css";
 import Home from "../Home";
-
 import RoommateCardWrapper from "../RoommateCardWrapper";
 
 class Dashboard extends Component {

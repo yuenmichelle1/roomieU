@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import RoommateCard from "../RoommateCard";
 import API from "../../utils/API";
-import { AuthConsumer } from "@hasura/react-check-auth";
 import { CardColumns, Container, Row, Col } from "reactstrap";
 import "./RoommateCardWrapper.css";
 import Home from "../Home";
@@ -104,22 +103,23 @@ class RoommateCardWrapper extends Component {
 
   render() {
     return (
-      <AuthConsumer>
-        {(userInfo, isLoading, error) =>
-          userInfo ? (
-              <Container>
-                <PendingRoommateCard/>
-                <MatchedRoommateCard/>
-                <PotentialRoommateCard/>
-                }
-              </Container>
-          ) : (
-            <Home />
-          )
-        }
-      </AuthConsumer>
-    );
-  }
+            <Container>
+            {/* <MatchedRoommateCard/> */}
+            {/* <PendingRoommateCard/> */}
+            {this.state.users.map((user, i) => {
+            return <PotentialRoommateCard
+                    key={i}
+                    photo={user.photo}
+                    name={user.name}
+                    school={user.school}
+                    bio={user.bio}
+                    id={user._id}
+                    handleClick={this.handleClick}
+                />
+            })}          
+            </Container>
+        )
+    }
 }
 
 export default RoommateCardWrapper;

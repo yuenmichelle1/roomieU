@@ -10,9 +10,9 @@ import {
 } from "reactstrap";
 import "./PendingRoommateCard.css";
 
-const RoommateCard = props => {
+const PendingRoommateCard = props => {
   return (
-    <div className="RoommateCard">
+    <div className="PendingRoommateCard">
       <Card>
         <CardImg
           top
