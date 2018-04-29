@@ -6,7 +6,14 @@ export default {
     loginUser: (userData) => axios.post("/auth/login", userData),
     logoutUser: ()=>axios.get("/auth/logout"),
     getUserInfo: ()=>axios.get("/auth/"),
-    filterUser: (criteria)=>axios.post("/api/user", criteria),
+    filterUser: (user)=>axios.post(
+        "/api/user", {
+            school: user.school,
+            radius: user.radius,
+            budget: user.budget,
+            _id: { $ne: user._id }
+          }
+    ),
     getMatch: (id) => axios.get(`/api/user/${id}`),
     getUserLikes: (id) => axios.post(`api/user/requested`, id)
 }

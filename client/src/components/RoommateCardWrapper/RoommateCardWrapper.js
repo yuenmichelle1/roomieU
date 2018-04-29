@@ -18,10 +18,25 @@ class RoommateCardWrapper extends Component {
     pendingRoommates:[],
 
     requestedRoomies: [],
-    reqRoomieObjArr: [],
-    candidateRoomies: [],
-    candidateRoomiesArr: []
+    // reqRoomieObjArr: [],
+    // candidateRoomies: [],
+    // candidateRoomiesArr: []
   };
+
+  getPotentialMatches() {
+    return API.getUserInfo().then(res => {
+      const user = res.data;
+      this.setState({ requestedRoomies: user.requestedRoomies, pendingRoomies: user.candidateRoomies });
+      API.filterUser(user)
+        .then(res => {
+            console.log(res)
+          const ranked = this.sortByMatchScore(user, res.data);
+          console.log(ranked.map(a => a.matchScore));
+          this.setState({ potentialRoommates: [...ranked] });
+        })
+        .catch(err => console.log(err));
+    });
+  }
   componentDidMount() {
     this.getPotentialMatches().then(() => {
       API.getUserLikes(this.state.requestedRoomies).then(res => {
@@ -50,25 +65,6 @@ class RoommateCardWrapper extends Component {
     });
     return matchSortedByScore.sort((a, b) => b.matchScore - a.matchScore);
   };
-
-  getPotentialMatches() {
-    return API.getUserInfo().then(res => {
-      const user = res.data;
-      this.setState({ requestedRoomies: user.requestedRoomies, candidateRoomies: user.candidateRoomies });
-      API.filterUser({
-        school: user.school,
-        radius: user.radius,
-        budget: user.budget,
-        _id: { $ne: user._id }
-      })
-        .then(res => {
-          const ranked = this.sortByMatchScore(user, res.data);
-          console.log(ranked.map(a => a.matchScore));
-          this.setState({ potentialRoommates: [...ranked] });
-        })
-        .catch(err => console.log(err));
-    });
-  }
 
   handleClick = id => {
     this.likeRoommate(id);
@@ -108,8 +104,8 @@ class RoommateCardWrapper extends Component {
   render() {
     return (
             <Container>
-                <MatchedCardWrapper matchedRoommates={this.state.potentialRoommates}/>
-                <PendingCardWrapper pendingRoommates={this.state.potentialRoommates}/>
+                {/* <MatchedCardWrapper matchedRoommates={this.state.potentialRoommates}/> */}
+                {/* <PendingCardWrapper pendingRoommates={this.state.potentialRoommates}/> */}
                 <PotentialCardWrapper potentialRoommates={this.state.potentialRoommates}/>       
             </Container>
         )
