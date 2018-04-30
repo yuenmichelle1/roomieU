@@ -5,6 +5,7 @@ import { AuthConsumer } from "@hasura/react-check-auth";
 import { CardColumns, Container, Row, Col } from "reactstrap";
 import "./Dashboard.css";
 import Home from "../Home";
+import LikedApartmentsWrapper from "../LikedApartmentsWrapper";
 
 class Dashboard extends Component {
   state = {
@@ -159,6 +160,7 @@ class Dashboard extends Component {
                   </Col>
                 </Row>
               </Container>
+              <LikedApartmentsWrapper />
             </div>
           ) : (
             <Home />
