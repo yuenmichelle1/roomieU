@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import RoommateCard from "../RoommateCard";
 import API from "../../utils/API";
 import RoommateCard from "../RoommateCard/RoommateCard";
 import { AuthConsumer } from "@hasura/react-check-auth";
