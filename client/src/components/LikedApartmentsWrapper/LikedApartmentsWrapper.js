@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { AuthConsumer } from "@hasura/react-check-auth";
 import Home from "../Home";
-import { Button } from "reactstrap";
+import { Button, CardColumns } from "reactstrap";
+import ApartmentCardTest from "../ApartmentCardTest/ApartmentCardTest";
 
 class LikedApartmentsWrapper extends Component {
   state = {
@@ -10,7 +11,15 @@ class LikedApartmentsWrapper extends Component {
   };
   // grab liked apartments form user then push to state
   componentDidMount() {
-    // API.getUserInfo()
+    API.getUserInfo().then(data => {
+      const userId= data.data._id;
+      const userApartments = data.data.apartments;
+      console.log(userId + " APARTMENTS TEST");
+      API.getSavedApartments(userId, userApartments).then(result => {
+        this.setState({apartments: [...result.data]})
+        // console.log(result.data, + "APARTMENTS");
+      })
+    })
   }
 
   goToApartmentsPage = () => {
@@ -25,6 +34,9 @@ class LikedApartmentsWrapper extends Component {
             <div>
                 <h1> Your Liked Apartments </h1>
              {/* Apartment Card */}
+             <CardColumns>
+             {this.state.apartments.map(apt => <ApartmentCardTest aptPhoto={apt.photos} address={apt.address} rent={apt.rent} description={apt.description}/>)}
+             </CardColumns>
              <Button onClick={this.goToApartmentsPage} style={{width: "300px"}}> + Apartments </Button>
             </div>
           ) : (

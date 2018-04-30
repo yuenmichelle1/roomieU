@@ -8,5 +8,6 @@ export default {
     getUserInfo: ()=>axios.get("/auth/"),
     filterUser: (criteria)=>axios.post("/api/user", criteria),
     getMatch: (id) => axios.get(`/api/user/${id}`),
-    getUserLikes: (id) => axios.post(`api/user/requested`, id)
+    getUserLikes: (id) => axios.post(`api/user/requested`, id),
+    getSavedApartments: (id, arr) => axios.post(`/api/apartment/${id}/savedApartments`, arr)
 }
