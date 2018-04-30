@@ -5,7 +5,7 @@ const User = require("../models").User;
 let authController = {};
 
 authController.home = (req, res) => {
-    console.log(req.user)
+    // console.log(req.user)
     res.json(req.user)
 };
 

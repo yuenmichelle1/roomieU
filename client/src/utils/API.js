@@ -14,6 +14,8 @@ export default {
             _id: { $ne: user._id }
           }
     ),
-    getMatch: (id) => axios.get(`/api/user/${id}`),
-    getUserLikes: (id) => axios.post(`api/user/requested`, id)
+    // getMatch: (id) => axios.get(`/api/user/${id}`),
+    getPopulatedUserInfo: (id)=>axios.get(`/api/user/${id}/populated`)
+
+    // getUserLikes: (id) => axios.post(`api/user/requested`, id)
 }
