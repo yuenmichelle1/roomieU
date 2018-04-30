@@ -9,7 +9,9 @@ class LikedApartmentsWrapper extends Component {
     apartments: []
   };
   // grab liked apartments form user then push to state
-  componentDidMount() {}
+  componentDidMount() {
+    // API.getUserInfo()
+  }
 
   goToApartmentsPage = () => {
       window.location = "/addapartments";
