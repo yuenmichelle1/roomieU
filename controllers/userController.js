@@ -42,15 +42,25 @@ module.exports = {
       roommatePrefs: false,
       candidateRoomies: false,
       requestedRoomies: false,
-      apartments: false,
-      school: false,
+    //   apartments: false,
+    //   school: false,
       __v: false,
-      budget: false,
-      radius: false,
+    //   budget: false,
+    //   radius: false,
       salt: false,
       hash: false
     };
-    db.User.find(req.body, usersProjection).then(dbUser => {
+
+    const user = req.body;
+    const excludeIds = [...user.requestedRoomies.concat(user.candidateRoomies).concat(user._id)]
+    console.log(excludeIds)
+    const filters = {
+        school: user.school,
+        radius: user.radius,
+        budget: user.budget,
+        _id: { $ne: [excludeIds]}
+      }
+    db.User.find(filters, usersProjection).then(dbUser => {
       console.log(dbUser);
       res.json(dbUser);
     }).catch(err => res.json(err));
@@ -61,7 +71,7 @@ module.exports = {
         if (err) throw err;
         console.log("line62 in usercontroller" + dbUser)
         res.json(dbUser);
-      });
+      })
   }
 
 //   app.get("/comments/read/:id", (req, res) => {

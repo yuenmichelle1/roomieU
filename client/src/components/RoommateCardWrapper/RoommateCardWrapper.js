@@ -13,64 +13,43 @@ import PotentialCardWrapper from "../PotentialCardWrapper";
 
 class RoommateCardWrapper extends Component {
     state = {
-        potentialRoommates: [],
+        potentialRoommates:[],
         matchedRoommates:[],
         pendingRoommates:[],
-
-        requestedRoommates: [],
-        // reqRoomieObjArr: [],
-        // candidateRoomies: [],
-        // candidateRoomiesArr: []
+        requestedRoommates: []
     };
-
-//   getPotentialMatches() {
-//     return API.getUserInfo().then(res => {
-//       const user = res.data;
-//       this.setState({ requestedRoomies: user.requestedRoomies, pendingRoomies: user.candidateRoomies });
-//       API.filterUser(user)
-//         .then(res => {
-//             console.log(res)
-//           const ranked = this.sortByMatchScore(user, res.data);
-//           console.log(ranked.map(a => a.matchScore));
-//           this.setState({ potentialRoommates: [...ranked] });
-//         })
-//         .catch(err => console.log(err));
-//     });
-//   }
+    currentUser={};
     componentDidMount() {
         API.getUserInfo().then(res => {
-            const currentUser = res.data
-            API.getPopulatedUserInfo(currentUser._id).then(userData=>{
-                const pendingRoommates = userData.data.candidateRoomies;
+            this.currentUser = res.data
+            API.getPopulatedUserInfo(this.currentUser._id).then(userData=>{
+                const candidateRoommates = userData.data.candidateRoomies;
                 const requestedRoommates = userData.data.requestedRoomies;
+
                 const requestedRoommatesIds = requestedRoommates.map(roommate=>roommate._id)
-                const matchedRoommates = pendingRoommates.filter((roommate)=>{
+                // find out mutually liked ones.
+                const matchedRoommates = candidateRoommates.filter((roommate)=>{
                     return requestedRoommates.indexOf(roommate._id)!== -1
                 })
-                API.filterUser(currentUser).then(res => {
+                // filter out matched ones from pending roomats
+                const pendingRoommates = candidateRoommates.filter(roommate=>{
+                    return matchedRoommates.indexOf(roommate._id) === -1
+                })
+                // find potential matches. Needs to filter out pending/liked/matched.
+                API.filterUser(this.currentUser).then(res => {
                     console.log(res)
-                    const potentialRoommates = this.sortByMatchScore(currentUser, res.data);              
-                    this.setState({
-                        pendingRoommates,
-                        requestedRoommates,
-                        matchedRoommates,
-                        potentialRoommates
-                    })
+                    if(res.data.length>0){
+                        const potentialRoommates = this.sortByMatchScore(this.currentUser, res.data);              
+                        this.setState({
+                            pendingRoommates,
+                            requestedRoommates,
+                            matchedRoommates,
+                            potentialRoommates
+                        })
+                    }
                 })
             })
         })
-    // API.getPopulatedUserInfo(id)
-    // this.getPotentialMatches().then(() => {
-    //   API.getUserLikes(this.state.requestedRoomies).then(res => {
-    //     this.setState({ reqRoomieObjArr: res.data }, () =>
-    //       console.log(this.state.reqRoomieObjArr)
-    //     );
-    //   }).then(() => {
-    //     API.getUserLikes(this.state.candidateRoomies).then(res =>{
-    //       this.setState({candidateRoomiesArr: res.data});
-    //     })
-    //   })
-    // });
   }
 
   sortByMatchScore = function(user, filteredMatches) {
@@ -88,25 +67,27 @@ class RoommateCardWrapper extends Component {
     return matchSortedByScore.sort((a, b) => b.matchScore - a.matchScore);
   };
 
-//   handleClick = id => {
-//     this.likeRoommate(id);
-//     this.updateOtherUser(id);
-//   };
+  handleClick = id => {
+    this.requestRoommate(id);
+    // this.updateOtherUser(id);
+  };
 
-//   likeRoommate = id => {
-//     // Get user Info to update user info
-//     API.getUserInfo().then(res => {
-//       const currentRequestedRoomies = [...res.data.requestedRoomies];
-//       if (currentRequestedRoomies.indexOf(id) === -1) {
-//         const newRequestedRoomies = [...res.data.requestedRoomies, id];
-//         API.updateUser(res.data._id, {
-//           requestedRoomies: newRequestedRoomies
-//         }).then(result => {
-//           this.setState({ requestedRoomies: newRequestedRoomies });
-//         })
-//       }
-//     });
-//   };
+  requestRoommate = id => {
+
+    if (this.currentUser.requestedRoomies.indexOf(id) === -1) {
+
+
+        API.updateUser(this.currentUser._id, {
+          requestedRoomies: [...this.currentUser.requestedRoomies, id]
+        }).then(result => {
+        //   this.setState({ 
+        //       requestedRoomies: newRequestedRoomies,
+        //       matchedRoommates: "dd"
+        //     });
+        })
+      }
+    
+  };
 
 //   updateOtherUser = id => {
 //     API.getUserInfo().then(res => {
@@ -128,7 +109,7 @@ class RoommateCardWrapper extends Component {
             <Container>
                 <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
                 <PendingCardWrapper pendingRoommates={this.state.pendingRoommates}/>
-                <PotentialCardWrapper potentialRoommates={this.state.potentialRoommates}/>       
+                <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>       
             </Container>
         )
     }

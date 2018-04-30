@@ -28,7 +28,7 @@ const PotentialRoommateCard = props => {
           <CardTitle>{props.name}</CardTitle>
           {/* <CardSubtitle>{props.school}</CardSubtitle> */}
           <CardSubtitle>Compatibility: {100*props.matchScore/5}%</CardSubtitle>
-          <CardText><b>Bio:</b>{props.bio}</CardText>
+          <CardText><b>Bio:</b>{props.bio}<b>School:</b>{props.school}</CardText>
           <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button>
         </CardBody>
       </Card>
