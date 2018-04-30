@@ -26,7 +26,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/roommatepreferences" component={FormWrapper} />
             <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/apartmentpage" component={ApartmentPage} />
+            <Route exact path="/addapartments" component={ApartmentPage} />
         </div>
         </Router>
     </AuthProvider>
