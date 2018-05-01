@@ -65,7 +65,7 @@ module.exports = {
 
   findSavedApartment: (req, res) => {
     const userAptsArr = req.body;
-    db.Apartment.find({ "_id": { "$in": userAptsArr } })
+    db.Apartment.find({ "address": { "$in": userAptsArr } })
       .then(dbApartments => {
         res.json(dbApartments);
       })

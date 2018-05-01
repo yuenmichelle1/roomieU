@@ -36,29 +36,6 @@ const UserSchema = new Schema({
         type:String, 
         trim: true
     },
-
-    // gender: {
-    //     type: String,
-    //     trim: true
-    // },
-
-    // schedule: {
-    //     type: String,
-    //     trim: true
-    // },
-
-    // smoke: {
-    //     type: Boolean,
-    // },
-
-    // pets: {
-    //     type: Boolean,
-    // },
-
-    // party: {
-    //     type: Boolean,
-    //     trim: true
-    // },
     userQuals: {
         type: Array        
     },
@@ -88,7 +65,7 @@ const UserSchema = new Schema({
 
     apartments:[
         {
-            type: Schema.Types.ObjectId,
+            type: String,
             ref: "Apartment"
         }
     ]
