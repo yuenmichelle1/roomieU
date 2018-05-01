@@ -41,9 +41,6 @@ module.exports = {
 
     const user = req.body;
     const excludeIds = [...user.requestedRoomies.concat(user.candidateRoomies).concat(user._id)]
-
-    console.log(excludeIds)
-    console.log(req.body, " this is request body")
     const filters = {
         school: user.school,
         radius: user.radius,
@@ -51,7 +48,6 @@ module.exports = {
         _id: { $nin: excludeIds}
       }
     db.User.find(filters).then(dbUser => {
-    //   console.log(dbUser);
       res.json(dbUser);
     }).catch(err => res.json(err));
   },
@@ -59,14 +55,11 @@ module.exports = {
   getPopulatedUserInfo: (req, res) => {
     db.User.findOne({ _id: req.params.id }).populate("candidateRoomies").populate("requestedRoomies").exec((err,dbUser)=> {
         if (err) throw err;
-        // console.log("line72 in usercontroller" + dbUser)
         res.json(dbUser);
       })
   },
 
   requestRoomie: (req, res) => {
-    console.log(req.body, "___requestRoomie ")
-
     db.User.findByIdAndUpdate(
         req.params.id,
         {

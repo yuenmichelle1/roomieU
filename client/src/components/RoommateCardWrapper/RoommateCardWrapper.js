@@ -1,16 +1,10 @@
 import React, { Component } from "react";
-// import RoommateCard from "../RoommateCard";
 import API from "../../utils/API";
-// import { CardColumns, Container, Row, Col } from "reactstrap";
 import {Container} from "reactstrap";
 import "./RoommateCardWrapper.css";
-// import Home from "../Home";
-
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
 import PotentialCardWrapper from "../PotentialCardWrapper";
-
-
 
 class RoommateCardWrapper extends Component {
     state = {
@@ -21,8 +15,7 @@ class RoommateCardWrapper extends Component {
     };
     currentUser={};
     componentDidMount() {
-        API.getUserInfo().then(res => {
-            // this.currentUser = res.data;       
+        API.getUserInfo().then(res => {    
             this.getAndDisplayUserRoomies(res.data._id);            
         })
     }
@@ -31,8 +24,7 @@ class RoommateCardWrapper extends Component {
         API.getPopulatedUserInfo(id).then(userData=>{
             this.currentUser = userData.data;  
             const candidateRoommates = userData.data.candidateRoomies;
-            const requestedRoommates = userData.data.requestedRoomies;
-         
+            const requestedRoommates = userData.data.requestedRoomies;         
             const requestedRoommatesIds = requestedRoommates.map(roommate=>roommate._id)
             
             // find out overlap between rquested and candidates
@@ -47,16 +39,14 @@ class RoommateCardWrapper extends Component {
             })
 
             // find potential matches. Needs to filter out pending/liked/matched.
-            API.filterUser(this.currentUser).then(res => {
-                console.log(this.currentUser,"wow")       
+            API.filterUser(this.currentUser).then(res => {     
                 const potentialRoommates = res.data.length>0?this.sortByMatchScore(this.currentUser, res.data):[];  
-                console.log(potentialRoommates,"potential roomate in filterUser")
                 this.setState({
                     pendingRoommates,
                     requestedRoommates,
                     matchedRoommates,
                     potentialRoommates
-                }, ()=>console.log(this.state))
+                })
             })
         })
     }
@@ -76,26 +66,15 @@ class RoommateCardWrapper extends Component {
   };
 
   handleClick = id => {
-      console.log("requested" + id)
       this.requestRoommate(id);
-    // this.updateOtherUser(id);
   };
 
   requestRoommate = (id) => {
-    console.log(this.currentUser)
     if (this.currentUser.requestedRoomies.indexOf(id) === -1) {
-
         API.requestRoomie(this.currentUser._id, id).then(result => {
-        //   this.setState({ 
-        //       requestedRoomies: newRequestedRoomies,
-        //       matchedRoommates: "dd"
-        //     });
-        console.log(result, "      result")
         this.getAndDisplayUserRoomies(this.currentUser._id);
-
         })
-      }
-    
+      }    
   };
 
   render() {

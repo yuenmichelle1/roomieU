@@ -9,9 +9,7 @@ export default {
     filterUser: (user)=>axios.post(
         "/api/user", user
     ),
-    // getMatch: (id) => axios.get(`/api/user/${id}`),
     getPopulatedUserInfo: (id)=>axios.get(`/api/user/${id}/populated`),
 
     requestRoomie: (userId, requestedId)=>axios.put(`/api/user/${userId}/request`, {requestedId})
-    // getUserLikes: (id) => axios.post(`api/user/requested`, id)
 }
