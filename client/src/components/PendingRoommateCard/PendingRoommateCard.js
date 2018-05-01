@@ -8,11 +8,11 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
-import "./RoommateCard.css";
+import "./PendingRoommateCard.css";
 
-const RoommateCard = props => {
+const PendingRoommateCard = props => {
   return (
-    <div className="RoommateCard">
+    // <div className="PendingRoommateCard">
       <Card>
         <CardImg
           top
@@ -31,8 +31,8 @@ const RoommateCard = props => {
           <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button>
         </CardBody>
       </Card>
-    </div>
+    // </div> 
   );
 };
 
-export default RoommateCard;
+export default PendingRoommateCard;

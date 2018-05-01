@@ -38,28 +38,54 @@ module.exports = {
       .catch(err => res.json(err));
   },
   filter: (req, res) => {
-    const usersProjection = {
-      roommatePrefs: false,
-      candidateRoomies: false,
-      requestedRoomies: false,
-      apartments: false,
-      school: false,
-      __v: false,
-      budget: false,
-      radius: false,
-      salt: false,
-      hash: false
-    };
-    db.User.find(req.body, usersProjection).then(dbUser => {
-      console.log(dbUser);
+
+    const user = req.body;
+    const excludeIds = [...user.requestedRoomies.concat(user.candidateRoomies).concat(user._id)]
+    const filters = {
+        school: user.school,
+        radius: user.radius,
+        budget: user.budget,
+        _id: { $nin: excludeIds}
+      }
+    db.User.find(filters).then(dbUser => {
       res.json(dbUser);
-    });
+    }).catch(err => res.json(err));
   },
-  getLikes: (req, res) => {
-    let id = req.body;
-    console.log(`THIS IS MY ROUTER ${id}`);
-    db.User.find({"_id": {"$in": id}}).then(dbUsers => {
-      res.json(dbUsers);
-    })
+
+  getPopulatedUserInfo: (req, res) => {
+    db.User.findOne({ _id: req.params.id }).populate("candidateRoomies").populate("requestedRoomies").exec((err,dbUser)=> {
+        if (err) throw err;
+        res.json(dbUser);
+      })
+  },
+
+  requestRoomie: (req, res) => {
+    db.User.findByIdAndUpdate(
+        req.params.id,
+        {
+          $push: {requestedRoomies:req.body.requestedId}
+        },
+        {
+          new: true
+        }
+      )
+        .then(dbUser => {
+            db.User.findByIdAndUpdate(
+                req.body.requestedId,
+                {
+                  $push: {candidateRoomies:req.params.id}
+                },
+                {
+                  new: true
+                }
+              ).then(requestedUser=>{
+                if (dbUser && requestedUser) {
+                    res.json("both users updated");
+                  } else {
+                    res.json("user doesn't exist");
+                  }
+              })
+        })
+        .catch(err => res.json(err));
   }
 };

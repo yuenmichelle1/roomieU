@@ -6,8 +6,11 @@ export default {
     loginUser: (userData) => axios.post("/auth/login", userData),
     logoutUser: ()=>axios.get("/auth/logout"),
     getUserInfo: ()=>axios.get("/auth/"),
-    filterUser: (criteria)=>axios.post("/api/user", criteria),
-    getMatch: (id) => axios.get(`/api/user/${id}`),
-    getUserLikes: (id) => axios.post(`api/user/requested`, id),
+    filterUser: (user)=>axios.post(
+        "/api/user", user
+    ),
+    getPopulatedUserInfo: (id)=>axios.get(`/api/user/${id}/populated`),
+    requestRoomie: (userId, requestedId)=>axios.put(`/api/user/${userId}/request`, {requestedId})
     getSavedApartments: (id, arr) => axios.post(`/api/apartment/${id}/savedApartments`, arr)
+
 }

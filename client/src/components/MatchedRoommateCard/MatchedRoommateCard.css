@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.MatchedRoommateCard {
+    margin: 5px;
+    width:300px;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 250px;
+}
