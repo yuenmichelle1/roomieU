@@ -15,8 +15,7 @@ router.get("/:id/populated", userController.getPopulatedUserInfo);
 
 
 // router.post(`/requested`, userController.getLikes);
-
-
+router.put("/:id/request", userController.requestRoomie)
 
 
 module.exports = router;

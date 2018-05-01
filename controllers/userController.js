@@ -64,16 +64,35 @@ module.exports = {
       })
   },
 
-//   requestRoomie: (req, res) => {
+  requestRoomie: (req, res) => {
+    console.log(req.body, "___requestRoomie ")
 
-//   }
-
-// })
-//   getLikes: (req, res) => {
-//     let id = req.body;
-//     console.log(`THIS IS MY ROUTER ${id}`);
-//     db.User.find({"_id": {"$in": id}}).then(dbUsers => {
-//       res.json(dbUsers);
-//     }).catch(err => res.json(err));
-//   }
+    db.User.findByIdAndUpdate(
+        req.params.id,
+        {
+          $push: {requestedRoomies:req.body.requestedId}
+        },
+        {
+          new: true
+        }
+      )
+        .then(dbUser => {
+            db.User.findByIdAndUpdate(
+                req.body.requestedId,
+                {
+                  $push: {candidateRoomies:req.params.id}
+                },
+                {
+                  new: true
+                }
+              ).then(requestedUser=>{
+                if (dbUser && requestedUser) {
+                    res.json("both users updated");
+                  } else {
+                    res.json("user doesn't exist");
+                  }
+              })
+        })
+        .catch(err => res.json(err));
+  }
 };

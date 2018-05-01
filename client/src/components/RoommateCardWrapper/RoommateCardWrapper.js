@@ -22,41 +22,14 @@ class RoommateCardWrapper extends Component {
     currentUser={};
     componentDidMount() {
         API.getUserInfo().then(res => {
-            this.currentUser = res.data;
-         
-            this.getAndDisplayUserRoomies(this.currentUser._id);
-            // API.getPopulatedUserInfo(this.currentUser._id).then(userData=>{
-            //     const candidateRoommates = userData.data.candidateRoomies;
-            //     const requestedRoommates = userData.data.requestedRoomies;
-    
-            //     const requestedRoommatesIds = requestedRoommates.map(roommate=>roommate._id)
-            //     // find out mutually liked ones.
-            //     const matchedRoommates = candidateRoommates.filter((roommate)=>{
-            //         return requestedRoommates.indexOf(roommate._id)!== -1
-            //     })
-            //     // filter out matched ones from pending roomats
-            //     const pendingRoommates = candidateRoommates.filter(roommate=>{
-            //         return matchedRoommates.indexOf(roommate._id) === -1
-            //     })
-            //     // find potential matches. Needs to filter out pending/liked/matched.
-            //     API.filterUser(this.currentUser).then(res => {
-            //         console.log(res)
-            //         if(res.data.length>0){
-            //             const potentialRoommates = this.sortByMatchScore(this.currentUser, res.data);              
-            //             this.setState({
-            //                 pendingRoommates,
-            //                 requestedRoommates,
-            //                 matchedRoommates,
-            //                 potentialRoommates
-            //             })
-            //         }
-            //     })
-            // })            
+            // this.currentUser = res.data;       
+            this.getAndDisplayUserRoomies(res.data._id);            
         })
     }
     getAndDisplayUserRoomies = (id)=>{
       
         API.getPopulatedUserInfo(id).then(userData=>{
+            this.currentUser = userData.data;  
             const candidateRoommates = userData.data.candidateRoomies;
             const requestedRoommates = userData.data.requestedRoomies;
          
@@ -75,17 +48,15 @@ class RoommateCardWrapper extends Component {
 
             // find potential matches. Needs to filter out pending/liked/matched.
             API.filterUser(this.currentUser).then(res => {
-                console.log(this.currentUser,"wow")
-
-                if(res.data.length>0){
-                    const potentialRoommates = this.sortByMatchScore(this.currentUser, res.data);              
-                    this.setState({
-                        pendingRoommates,
-                        requestedRoommates,
-                        matchedRoommates,
-                        potentialRoommates
-                    })
-                }
+                console.log(this.currentUser,"wow")       
+                const potentialRoommates = res.data.length>0?this.sortByMatchScore(this.currentUser, res.data):[];  
+                console.log(potentialRoommates,"potential roomate in filterUser")
+                this.setState({
+                    pendingRoommates,
+                    requestedRoommates,
+                    matchedRoommates,
+                    potentialRoommates
+                }, ()=>console.log(this.state))
             })
         })
     }
@@ -114,43 +85,43 @@ class RoommateCardWrapper extends Component {
     console.log(this.currentUser)
     if (this.currentUser.requestedRoomies.indexOf(id) === -1) {
 
-        API.requestRoomie(this.currentUser._id, {
-          requestedRoomies: [...this.currentUser.requestedRoomies, id]
-        }).then(result => {
+        API.requestRoomie(this.currentUser._id, id).then(result => {
         //   this.setState({ 
         //       requestedRoomies: newRequestedRoomies,
         //       matchedRoommates: "dd"
         //     });
-
-
-            
+        console.log(result, "      result")
+        this.getAndDisplayUserRoomies(this.currentUser._id);
 
         })
       }
     
   };
 
-//   updateOtherUser = id => {
-//     API.getUserInfo().then(res => {
-//       const userId = res.data._id;
-//       API.getMatch(id).then(result => {
-//         const currentCandidateRoomies = [...res.data.candidateRoomies];
-//         if (currentCandidateRoomies.indexOf(userId) === -1) {
-//           currentCandidateRoomies.push(userId);
-//           API.updateUser(id, {
-//             candidateRoomies: currentCandidateRoomies
-//           }).then(res => console.log(`updated other user`));
-//         }
-//       });
-//     });
-//   };
-
   render() {
     return (
             <Container>
-                <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
-                <PendingCardWrapper pendingRoommates={this.state.pendingRoommates}/>
-                <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>       
+                <div className="row">
+                    <div className="col-md-3"></div>
+                    <div className="col-md-6">
+                        <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
+                    </div>
+                    <div className="col-md-3"></div>
+                </div>
+                <div className="row">
+                    <div className="col-md-3"></div>
+                    <div className="col-md-6">
+                        <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>
+                    </div>
+                    <div className="col-md-3"></div>
+                </div>
+                <div className="row">
+                    <div className="col-md-3"></div>
+                    <div className="col-md-6">
+                        <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>   
+                        </div>
+                    <div className="col-md-3"></div>
+                </div>
             </Container>
         )
     }
