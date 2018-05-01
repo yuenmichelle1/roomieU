@@ -15,6 +15,7 @@ class Dashboard extends Component {
                 userInfo ? (
                     <Container>
                         <RoommateCardWrapper/>
+                        <LikedApartmentsWrapper/>
                     </Container>
                 ) : (
                     <Home />
