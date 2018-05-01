@@ -1,0 +1,17 @@
+.container-row {
+    margin: 0 auto !important;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
+.more-info-div {
+    margin-left: 150px !important;
+    margin-right: 150px !important;
+}
+
+.submit-form-btn {
+    width: 200px !important;
+    height: 50px !important;
+    margin-top:30px;
+    margin-bottom: 50px;
+}

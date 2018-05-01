@@ -4,6 +4,8 @@ import {Container} from "reactstrap";
 import "./Dashboard.css";
 import Home from "../Home";
 import RoommateCardWrapper from "../RoommateCardWrapper";
+import LikedApartmentsWrapper from "../LikedApartmentsWrapper";
+
 
 class Dashboard extends Component {
     render() {
@@ -20,6 +22,7 @@ class Dashboard extends Component {
                 }
             </AuthConsumer>
         );
+
     }
 }
 

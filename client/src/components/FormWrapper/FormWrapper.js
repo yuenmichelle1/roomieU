@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import RoomieForm from "../RoomieForm";
 import UserinfoForm from "../UserinfoForm";
-import { Button } from "reactstrap";
+import { Row, Col, Button } from "reactstrap";
 import API from "../../utils/API";
+
 import {AuthConsumer} from '@hasura/react-check-auth';
-import Home from "../Home"
+import Home from "../Home";
+import './formwrapper.css';
+
+
 class FormWrapper extends Component {
   state = {
-    budget: "$0 - $500",
+    budget: "$0 - $800",
     radius: "0-5 miles",
     bio: "",
     userGender: "",
@@ -21,7 +25,7 @@ class FormWrapper extends Component {
     userPets: "",
     userPetsScore: "",
     genderPref: "",
-    genderPrefScore:"",
+    genderPrefScore: "",
     smokePref: "",
     smokePrefScore: "",
     partyPref: "",
@@ -41,7 +45,6 @@ class FormWrapper extends Component {
     console.log(name);
   };
 
- 
   setUserQuals = event => {
     const value = event.target.value;
     const name = event.target.dataset.name;
@@ -57,45 +60,44 @@ class FormWrapper extends Component {
       budget: this.state.budget,
       radius: this.state.radius,
       bio: this.state.bio,
-
-        userQuals: [
-            this.state.userGenderScore,
-            this.state.userScheduleScore,
-            this.state.userSmokeScore,
-            this.state.userPartyScore,
-            this.state.userPetsScore
-        ],
-        roommatePrefs: [
-            this.state.genderPrefScore,
-            this.state.schedulePrefScore,
-            this.state.smokePrefScore,
-            this.state.partyPrefScore,
-            this.state.petsPrefScore
-        ]
+      userQuals: [
+        this.state.userGenderScore,
+        this.state.userScheduleScore,
+        this.state.userSmokeScore,
+        this.state.userPartyScore,
+        this.state.userPetsScore
+      ],
+      roommatePrefs: [
+        this.state.genderPrefScore,
+        this.state.schedulePrefScore,
+        this.state.smokePrefScore,
+        this.state.partyPrefScore,
+        this.state.petsPrefScore
+      ]
     };
 
     // first get current user info to get userID (note that userData is nested inside of data property)
     // then update user info in the db with preferences. Returned data should be complete user info
-    API.getUserInfo().then(currentUserInfo=>{
-        const currentUserId = currentUserInfo.data._id;
-        API.updateUser(currentUserId, userInfo).then(message => {
-            // This message shows if user successfulay updated. If you prefer returning uer data, edit user controller to return dbuser
-            // console.log(data)
-            console.log(message.data);
-            window.location = "/dashboard";
-        }
-        );
+    API.getUserInfo().then(currentUserInfo => {
+      const currentUserId = currentUserInfo.data._id;
+      API.updateUser(currentUserId, userInfo).then(message => {
+        // This message shows if user successfulay updated. If you prefer returning uer data, edit user controller to return dbuser
+        // console.log(data)
+        console.log(message.data);
+        window.location = "/dashboard";
+      });
     });
-  }
+  };
 
-    
-// only alllow access if user if logged in 
+  // only alllow access if user if logged in
   render() {
     return (
+
     <AuthConsumer> 
         {({userInfo, isLoading, error}) => (userInfo ?        
-            (<div className="wrapper"><br/><br/>
-                <h1 className="text-center"> Tell Us A Bit About You</h1>
+            (<Row className="wrapper more-info-div">
+              <Col xs="12" sm="12" md="12" lg="12">
+                <h1 className="text-center header-text form-header form-header-top"> Tell Us A Bit About You</h1>
                 <UserinfoForm
                 grabUserProfile={this.grabUserProfile}
                 setUserQuals={this.setUserQuals}
@@ -105,7 +107,7 @@ class FormWrapper extends Component {
                 userParty={this.state.userParty}
                 userPets={this.state.userPets}
                 />
-                <h1 className="text-center"> Your Ideal Roommate</h1>
+                <h1 className="text-center header-text form-header"> Your Ideal Roommate</h1>
                 <RoomieForm 
                 setUserQuals={this.setUserQuals}
                 genderPref={this.state.genderPref}
@@ -114,10 +116,16 @@ class FormWrapper extends Component {
                 partyPref={this.state.partyPref}
                 petsPref={this.state.petsPref}
                 />
-                <Button onClick={this.sendData}>Submit</Button>
-            </div>):(<Home/>)
+                <Row className="text-center">
+                  <Col xs="12" sm="12" md="12" lg="12">
+                    <Button onClick={this.sendData} color="success" className="submit-form-btn">Submit</Button>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>):(<Home/>)
         )}                 
     </AuthConsumer> 
+
     );
   }
 }

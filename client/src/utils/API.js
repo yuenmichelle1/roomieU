@@ -10,6 +10,7 @@ export default {
         "/api/user", user
     ),
     getPopulatedUserInfo: (id)=>axios.get(`/api/user/${id}/populated`),
-
     requestRoomie: (userId, requestedId)=>axios.put(`/api/user/${userId}/request`, {requestedId})
+    getSavedApartments: (id, arr) => axios.post(`/api/apartment/${id}/savedApartments`, arr)
+
 }

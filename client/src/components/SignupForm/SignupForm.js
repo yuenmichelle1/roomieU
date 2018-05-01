@@ -141,9 +141,8 @@ export default class SignUpForm extends React.Component {
         <Col xs="12" sm="12" md="12" lg="12">
           <Row className="title-div">
             <Col xs="12" sm="12" md="12" lg="12">
-              <h1 className="header-text text-center">Sign Up With Your School Email</h1>
+              <h1 className="header-text text-center form-header-top">Sign Up With Your School Email</h1>
             </Col>
-
           </Row>
           <Row className="form-div">
             <Col xs="12" sm="12" md="12" lg="12">
@@ -212,31 +211,12 @@ export default class SignUpForm extends React.Component {
                     />
                   </Col>
                 </FormGroup>
-                {/* <FormGroup row>
-                  <Label for="imageFile" sm={2}>
-                    Upload Your Image
-                  </Label>
-                  <Col sm={10}>
-                    <Input
-                      type="file"
-                      name="file"
-                      id="imageFile"
-                      onChange={this.fileUpload}
-                      required
-                    />
-                    <FormText color="muted">
-                      Please note uploading a photo gives you a higher chance of
-                      finding a roomie.
-                    </FormText>
-                  </Col>
-                </FormGroup> */}
               <FormGroup row>
                   <Label for="imageFile" sm={4}>Upload Your Image</Label>
-                  <Col sm={4}>
+                  <Col sm={2}>
                       {/* {this.state.isUploading && <p>Progress: {this.state.progress}</p> } */}
                       <CustomUploadButton
-                          id="imageFile" 
-                          className="upload-btn" 
+                          id="imageFile"
                           accept="image/*"
                           name="avatar"
                           randomizeFilename 
@@ -248,13 +228,12 @@ export default class SignUpForm extends React.Component {
                           style={{backgroundColor: '#aaa', color: 'white', padding: '5px 15px', borderRadius: 4}}
                       > Upload
                       </CustomUploadButton>
-                      <Col sm={8} className="pic-div">
+                  </Col>
+                  <Col sm={8}>
                       {this.state.avatarURL && <img alt="avatar" src={this.state.avatarURL}          
                           style={{height:"200px"}}
                       />}                
-                      </Col>
                   </Col>
-                  
 
               </FormGroup>
                 <FormGroup row>
@@ -293,7 +272,6 @@ export default class SignUpForm extends React.Component {
                   </Col>
                 </FormGroup>
               </Form>
-              {/* End Form */}
             </Col>
           </Row>
         </Col>
