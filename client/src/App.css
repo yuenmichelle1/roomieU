@@ -43,6 +43,15 @@ p {
   line-height: 1.8;
 }
 
+.form-header {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.form-header-top {
+  margin-top: 30px !important;
+}
+
 /* The Standard Breakpoints. Working with fluid images. */
 @media all and (max-width: 1690px) {
 

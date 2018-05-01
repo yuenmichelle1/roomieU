@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="390px" height="180px" viewBox="0 0 390 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>no-smoking</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="no-smoking" fill-rule="nonzero">
+            <path d="M315,150 L285,150 C276.709,150 270,143.291 270,135 C270,126.709 276.709,120 285,120 L315,120 C323.276,120 330,113.276 330,105 C330,96.724 323.276,90 315,90 L285,90 C260.186,90 240,69.814 240,45 C240,20.186 260.186,0 285,0 L315,0 C323.291,0 330,6.709 330,15 C330,23.291 323.291,30 315,30 L285,30 C276.724,30 270,36.724 270,45 C270,53.276 276.724,60 285,60 L315,60 C339.814,60 360,80.186 360,105 C360,129.814 339.815,150 315,150 Z" id="Shape" fill="#57555C"></path>
+            <path d="M375,120 L330,120 L300,150 L330,180 L375,180 C383.284,180 390,173.284 390,165 L390,135 C390,126.716 383.284,120 375,120 Z" id="Shape" fill="#FD3018"></path>
+            <path d="M90,120 L15,120 C6.716,120 0,126.716 0,135 L0,165 C0,173.284 6.716,180 15,180 L90,180 L120,150 L90,120 Z" id="Shape" fill="#FEA832"></path>
+            <rect id="Rectangle-path" fill="#DFCCBF" x="90" y="120" width="240" height="60"></rect>
+            <polygon id="Shape" fill="#EFE6DE" points="225 180 90 180 90 120 165 120"></polygon>
+        </g>
+    </g>
+</svg>

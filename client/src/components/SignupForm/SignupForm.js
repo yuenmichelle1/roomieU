@@ -141,9 +141,8 @@ export default class SignUpForm extends React.Component {
         <Col xs="12" sm="12" md="12" lg="12">
           <Row className="title-div">
             <Col xs="12" sm="12" md="12" lg="12">
-              <h1 className="header-text text-center">Sign Up With Your School Email</h1>
+              <h1 className="header-text text-center form-header-top">Sign Up With Your School Email</h1>
             </Col>
-
           </Row>
           <Row className="form-div">
             <Col xs="12" sm="12" md="12" lg="12">

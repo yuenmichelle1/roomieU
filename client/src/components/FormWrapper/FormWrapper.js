@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import RoomieForm from "../RoomieForm";
 import UserinfoForm from "../UserinfoForm";
-import { Button } from "reactstrap";
+import { Row, Col, Button } from "reactstrap";
 import API from "../../utils/API";
-import { AuthConsumer } from "@hasura/react-check-auth";
+
+import {AuthConsumer} from '@hasura/react-check-auth';
 import Home from "../Home";
+import './formwrapper.css';
+
+
 class FormWrapper extends Component {
   state = {
-    budget: "$0 - $500",
+    budget: "$0 - $800",
     radius: "0-5 miles",
     bio: "",
     userGender: "",
@@ -88,14 +92,13 @@ class FormWrapper extends Component {
   // only alllow access if user if logged in
   render() {
     return (
-      <AuthConsumer>
-        {({ userInfo, isLoading, error }) =>
-          userInfo ? (
-            <div className="wrapper">
-              <br />
-              <br />
-              <h1 className="text-center"> Tell Us A Bit About You</h1>
-              <UserinfoForm
+
+    <AuthConsumer> 
+        {({userInfo, isLoading, error}) => (userInfo ?        
+            (<Row className="wrapper more-info-div">
+              <Col xs="12" sm="12" md="12" lg="12">
+                <h1 className="text-center header-text form-header form-header-top"> Tell Us A Bit About You</h1>
+                <UserinfoForm
                 grabUserProfile={this.grabUserProfile}
                 setUserQuals={this.setUserQuals}
                 userGender={this.state.userGender}
@@ -103,23 +106,26 @@ class FormWrapper extends Component {
                 userSchedule={this.state.userSchedule}
                 userParty={this.state.userParty}
                 userPets={this.state.userPets}
-              />
-              <h1 className="text-center"> Your Ideal Roommate</h1>
-              <RoomieForm
+                />
+                <h1 className="text-center header-text form-header"> Your Ideal Roommate</h1>
+                <RoomieForm 
                 setUserQuals={this.setUserQuals}
                 genderPref={this.state.genderPref}
                 smokePref={this.state.smokePref}
                 schedulePref={this.state.schedulePref}
                 partyPref={this.state.partyPref}
                 petsPref={this.state.petsPref}
-              />
-              <Button onClick={this.sendData}>Submit</Button>
-            </div>
-          ) : (
-            <Home />
-          )
-        }
-      </AuthConsumer>
+                />
+                <Row className="text-center">
+                  <Col xs="12" sm="12" md="12" lg="12">
+                    <Button onClick={this.sendData} color="success" className="submit-form-btn">Submit</Button>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>):(<Home/>)
+        )}                 
+    </AuthConsumer> 
+
     );
   }
 }
