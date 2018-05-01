@@ -17,7 +17,6 @@ class LikedApartmentsWrapper extends Component {
       console.log(userId + " APARTMENTS TEST");
       API.getSavedApartments(userId, userApartments).then(result => {
         this.setState({apartments: [...result.data]})
-        // console.log(result.data, + "APARTMENTS");
       })
     })
   }
