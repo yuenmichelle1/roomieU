@@ -57,20 +57,7 @@ class FormWrapper extends Component {
       budget: this.state.budget,
       radius: this.state.radius,
       bio: this.state.bio,
-    //   userQuals: [
-    //     { gender: this.state.userGenderScore },
-    //     { schedule: this.state.userScheduleScore },
-    //     { smoke: this.state.userSmokeScore },
-    //     { party: this.state.userPartyScore },
-    //     { pets: this.state.userPetsScore }
-    //   ],
-    //   roommatePrefs: [
-    //     { gender: this.state.genderPrefScore },
-    //     { schedule: this.state.schedulePrefScore },
-    //     { smoke: this.state.smokePrefScore },
-    //     { party: this.state.partyPrefScore },
-    //     { pets: this.state.petsPrefScore }
-    //   ]
+
         userQuals: [
             this.state.userGenderScore,
             this.state.userScheduleScore,

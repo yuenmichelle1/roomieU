@@ -10,7 +10,8 @@ export default {
         "/api/user", user
     ),
     // getMatch: (id) => axios.get(`/api/user/${id}`),
-    getPopulatedUserInfo: (id)=>axios.get(`/api/user/${id}/populated`)
+    getPopulatedUserInfo: (id)=>axios.get(`/api/user/${id}/populated`),
 
+    // requestRoomie: (id)=>axios.put(`/api/user/${id}/request`)
     // getUserLikes: (id) => axios.post(`api/user/requested`, id)
 }

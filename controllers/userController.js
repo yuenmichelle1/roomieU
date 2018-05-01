@@ -38,30 +38,20 @@ module.exports = {
       .catch(err => res.json(err));
   },
   filter: (req, res) => {
-    const usersProjection = {
-      roommatePrefs: false,
-      candidateRoomies: false,
-      requestedRoomies: false,
-    //   apartments: false,
-    //   school: false,
-      __v: false,
-    //   budget: false,
-    //   radius: false,
-      salt: false,
-      hash: false
-    };
 
     const user = req.body;
     const excludeIds = [...user.requestedRoomies.concat(user.candidateRoomies).concat(user._id)]
+
     console.log(excludeIds)
+    console.log(req.body, " this is request body")
     const filters = {
         school: user.school,
         radius: user.radius,
         budget: user.budget,
-        _id: { $ne: [excludeIds]}
+        _id: { $nin: excludeIds}
       }
-    db.User.find(filters, usersProjection).then(dbUser => {
-      console.log(dbUser);
+    db.User.find(filters).then(dbUser => {
+    //   console.log(dbUser);
       res.json(dbUser);
     }).catch(err => res.json(err));
   },
@@ -69,20 +59,14 @@ module.exports = {
   getPopulatedUserInfo: (req, res) => {
     db.User.findOne({ _id: req.params.id }).populate("candidateRoomies").populate("requestedRoomies").exec((err,dbUser)=> {
         if (err) throw err;
-        console.log("line62 in usercontroller" + dbUser)
+        // console.log("line72 in usercontroller" + dbUser)
         res.json(dbUser);
       })
-  }
+  },
 
-//   app.get("/comments/read/:id", (req, res) => {
-//     db.News.findOne({
-//             _id: req.params.id
-//         })
-//         .populate("notes")
-//         .then(function (dbNews) {
-//             res.json(dbNews)
-//         })
-//         .catch(err => res.json(err))
+//   requestRoomie: (req, res) => {
+
+//   }
 
 // })
 //   getLikes: (req, res) => {
