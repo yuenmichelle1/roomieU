@@ -5,11 +5,9 @@ const apartmentController = require("../controllers/apartmentController");
 // localhost/api/apartment
 router.get("/:id", apartmentController.find);
 router.get("/search", apartmentController.search);
-
 router.post("/:userId/save", apartmentController.save);
 router.delete("/:userId/:id/unsave", apartmentController.unsave);
-
-router.get("/:userId/savedApartments", apartmentController.findSavedApartment)
+router.post("/:userId/savedApartments", apartmentController.findSavedApartment)
 
 
 module.exports = router;

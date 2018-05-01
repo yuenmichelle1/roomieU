@@ -32,11 +32,11 @@ const UserinfoForm = props => {
             style={{ marginLeft: "10px" }}
             onChange={props.setUserQuals}
             data-name="userGender"
-            value="N/A"
+            value="neutral"
             data-score="0"
-            checked={props.userGender === "N/A"}
+            checked={props.userGender === "neutral"}
           />
-          N/A
+          Neutral
         </FormGroup>
         <FormGroup>
           <Label for="userBudget">
@@ -122,16 +122,6 @@ const UserinfoForm = props => {
             checked={props.userSchedule === "Night Owl"}
           />
           Night Owl
-          <input
-            type="radio"
-            style={{ marginLeft: "10px" }}
-            onChange={props.setUserQuals}
-            data-name="userSchedule"
-            value="N/A"
-            data-score="0"
-            checked={props.userSchedule === "N/A"}
-          />
-          N/A
         </FormGroup>
         <FormGroup>
           <Label for="userPartying">
@@ -157,16 +147,6 @@ const UserinfoForm = props => {
             checked={props.userParty === "Not even"}
           />
           Not even
-          <input
-            type="radio"
-            style={{ marginLeft: "10px" }}
-            onChange={props.setUserQuals}
-            data-name="userParty"
-            value="N/A"
-            data-score="0"
-            checked={props.userParty === "N/A"}
-          />
-          N/A
         </FormGroup>
         <FormGroup>
           <Label for="userPets">Pets: Do you have any?</Label>

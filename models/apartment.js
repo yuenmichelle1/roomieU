@@ -8,7 +8,7 @@ const ApartmentSchema = new Schema({
         trim: true,
         required: true
     },
-    managementCopy: {
+    management: {
         type: String,
         trim: true
     },
