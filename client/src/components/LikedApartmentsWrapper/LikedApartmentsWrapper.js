@@ -25,8 +25,8 @@ class LikedApartmentsWrapper extends Component {
   }
 
   goToApartmentsPage = () => {
-    // Get User School
     API.getUserInfo().then(data => {
+      // Get User School
       const userSchoolName = data.data.school;
       const userSchoolObj = Schools.features.filter(
         el => el.properties.NAME === userSchoolName
@@ -49,10 +49,10 @@ class LikedApartmentsWrapper extends Component {
               <CardColumns>
                 {this.state.apartments.map(apt => (
                   <ApartmentCardTest
-                    aptPhoto={apt.photos}
+                    aptPhoto={apt.photos[0]}
                     address={apt.address}
                     rent={apt.rent}
-                    description={apt.description}
+                    description={apt.features.join(",")}
                   />
                 ))}
               </CardColumns>

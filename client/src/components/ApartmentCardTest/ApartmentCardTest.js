@@ -25,7 +25,7 @@ const ApartmentCardTest = props => {
         />
         <CardBody className="text-center">
           <CardTitle>{props.address}</CardTitle>
-          <CardSubtitle>{props.rent}</CardSubtitle>
+          <CardSubtitle>${props.rent}</CardSubtitle>
           <CardText><b>Description:</b>{props.description}</CardText>
         </CardBody>
       </Card>
