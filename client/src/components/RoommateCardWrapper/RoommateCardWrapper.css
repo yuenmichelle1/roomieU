@@ -2,11 +2,35 @@
     box-sizing: inherit;
 } */
 
-/* .row {
-    width: 900px;
-    height: 500px;
-} */
+.user-card {
+    width: 300px !important;
+    height: 480px;
+    margin-left: 20px !important;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 3px 4px 18px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 18px -2px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 18px -2px rgba(0,0,0,0.75);
+}
+
+.user-photo {
+    overflow: hidden;
+    width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.slick-list {
+    height: 495px;
+    padding-top: 0px;
+}
 
 .slick-arrow {
-    background-color: red !important
+    height: 520px;
+    width: 60px;
+    background-color: #f5f5f5;
+    z-index:99;
+}
+
+.slick-arrow:hover {
+    background-color: #ebebeb;
 }

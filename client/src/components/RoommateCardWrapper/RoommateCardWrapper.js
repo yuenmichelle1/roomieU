@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import {Container} from "reactstrap";
+import {Container, Row, Col} from "reactstrap";
 import "./RoommateCardWrapper.css";
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
@@ -79,29 +79,23 @@ class RoommateCardWrapper extends Component {
 
   render() {
     return (
-            <Container>
-                <div className="row">
-                    <div className="col-md-3"></div>
-                    <div className="col-md-6">
-                        <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
-                    </div>
-                    <div className="col-md-3"></div>
-                </div>
-                <div className="row">
-                    <div className="col-md-3"></div>
-                    <div className="col-md-6">
-                        <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>
-                    </div>
-                    <div className="col-md-3"></div>
-                </div>
-                <div className="row">
-                    <div className="col-md-3"></div>
-                    <div className="col-md-6">
-                        <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>   
-                        </div>
-                    <div className="col-md-3"></div>
-                </div>
-            </Container>
+        <div class="roomies-div">
+            <Row>
+                <Col xs="12">
+                    <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs="12">
+                    <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs="12">
+                    <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>   
+                </Col>
+            </Row>
+        </div>
         )
     }
 }
