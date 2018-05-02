@@ -9,22 +9,28 @@ import CombinedUsersAptsDash from "../CombinedUsersAptsDash";
 
 class Dashboard extends Component {
   state = {
-    isMatchedDashboard: false
+    isMatchedDashboard: false,
+    otherUserId: ""
   };
   changeDashboard = (id) => {
     console.log(id);
-    this.setState({ isMatchedDashboard: true });
+    if (this.state.isMatchedDashboard){
+        this.setState({ isMatchedDashboard: false, otherUserId: id });
+    } else {
+        this.setState({isMatchedDashboard: true, otherUserId: id});
+    }
   };
+
   render() {
     return (
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
           userInfo ? (
             this.state.isMatchedDashboard ? (
-              <CombinedUsersAptsDash />
+              <CombinedUsersAptsDash changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
             ) : (
               <Container>
-                <RoommateCardWrapper changeDashboard={this.changeDashboard}/>
+                <RoommateCardWrapper changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
                 <LikedApartmentsWrapper />
               </Container>
             )

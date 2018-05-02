@@ -28,7 +28,7 @@ const MatchedRoommateCard = props => {
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.school}</CardSubtitle>
           <CardText><b>Bio:</b>{props.bio}</CardText>
-          <Button onClick={() => props.changeDashboard(props.id)} style={{width: "250px"}}>View Apartments You Both Like</Button>
+          <Button onClick={() => props.changeDashboard(props.id)} style={{width: "250px"}} id={props.id}>View Apartments You Both Like</Button>
         </CardBody>
       </Card>
     // </div> 
