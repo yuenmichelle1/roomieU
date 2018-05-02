@@ -65,8 +65,28 @@ class CombinedUsersAptsDash extends Component {
         </Row>
         <Row>
           <Col xs="6">
+            <h1> {this.state.user.name} </h1>
+            <CardDeck>
+              <Card>
+                <CardImg
+                  src={
+                    this.state.user.photo
+                      ? this.state.user.photo
+                      : "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+                  }
+                  alt="You"
+                />
+                <CardBody>
+                  <CardTitle>{this.state.user.name}</CardTitle>
+                  <CardSubtitle>{this.state.user.school}</CardSubtitle>
+                  <CardText>{this.state.user.bio}</CardText>
+                </CardBody>
+              </Card>
+            </CardDeck>
+          </Col>
+          <Col xs="6">
             <h1> {this.state.otherUser.name} </h1>
-            {/* You card */}
+
             <CardDeck>
               <Card>
                 <CardImg
@@ -85,40 +105,30 @@ class CombinedUsersAptsDash extends Component {
               </Card>
             </CardDeck>
           </Col>
-          <Col xs="6">
-          <CardDeck>
-              <Card>
-                <CardImg
-                  src={
-                    this.state.user.photo
-                      ? this.state.user.photo
-                      : "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-                  }
-                  alt="You"
-                />
-                <CardBody>
-                  <CardTitle>{this.state.user.name}</CardTitle>
-                  <CardSubtitle>{this.state.user.school}</CardSubtitle>
-                  <CardText>{this.state.user.bio}</CardText>
-                </CardBody>
-              </Card>
-            </CardDeck>
-          </Col>
         </Row>
         <Row>
           <Col>
             <h1> Common Liked Apartments</h1>
-            <CardColumns>
-              {this.state.matchedApts.map((apt, i) => (
-                <ApartmentCardTest
-                  aptPhoto={apt.photos[0]}
-                  address={apt.address}
-                  rent={apt.rent}
-                  listingName={apt.listingName}
-                  key={i}
-                />
-              ))}
-            </CardColumns>
+            {this.state.matchedApts[0] ? (
+              <CardColumns>
+                {this.state.matchedApts.map((apt, i) => (
+                  <ApartmentCardTest
+                    aptPhoto={apt.photos[0]}
+                    address={apt.address}
+                    rent={apt.rent}
+                    listingName={apt.listingName}
+                    key={i}
+                  />
+                ))}
+              </CardColumns>
+            ) : (
+              <div className="centerText blockCenter">
+                {" "}
+                Currently No Common Apartments with {
+                  this.state.otherUser.name
+                }{" "}
+              </div>
+            )}
           </Col>
         </Row>
       </Container>
