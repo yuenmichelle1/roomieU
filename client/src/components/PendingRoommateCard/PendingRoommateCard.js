@@ -23,6 +23,7 @@ const PendingRoommateCard = props => {
               : "https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
           }
           alt=""
+          className="user-card pending-card"
         />
         <CardBody className="text-center">
           <CardTitle>{props.name}</CardTitle>
