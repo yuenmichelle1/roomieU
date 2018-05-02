@@ -3,21 +3,28 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 
 const ApartmentSchema = new Schema({
+    listingName: {
+        type: String,
+        trim: true,
+        required: true
+    },
     address: {
         type: String,
         trim: true,
         required: true
     },
-    management: {
+    city: {
         type: String,
-        trim: true
-    },
-    amenities: {
-        type: Array  
+        trim: true,
+        required: true
     },
     rent: {
         type: Number,
         trim: true,
+        required: true
+    },
+    features: {
+        type: Array,
         required: true
     },
     photos: {
@@ -25,16 +32,22 @@ const ApartmentSchema = new Schema({
         trim: true,
         required: true
     },
-    description: {
+    propertyType: {
         type: String,
         trim: true,
         required: true
     },
     link: {
-        type: String, 
-    }, 
-    utilities: {
-        type: Array
+        type: String,
+        trim: true
+    },
+    latitude: {
+        type: String,
+        trim: true
+    },
+    longitude: {
+        type: String,
+        trim: true
     }
 })
 

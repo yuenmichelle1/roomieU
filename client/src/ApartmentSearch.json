@@ -1,0 +1,1203 @@
+{
+    "num_found": 75,
+    "total_cost": 20,
+    "records": [
+        {
+            "listingName": "6607 S. Drexel Ave.",
+            "address": "6607 S Drexel Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1150,
+                    "amountMin": 1150,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-08T00:00:00Z",
+                        "2016-06-06T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6607-S-Drexel-Ave-Chicago-IL-60637",
+                        "http://www.rent.com/illinois/chicago-apartments/6607-s-drexel-ave-4-lc2019909"
+                    ]
+                },
+                {
+                    "amountMax": 285000,
+                    "amountMin": 285000,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-04-24T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "sourceURLs": [
+                        "http://www.century21.com/property/6607-south-drexel-avenue-chicago-il-60637-REN019115902"
+                    ]
+                },
+                {
+                    "amountMax": 1250,
+                    "amountMin": 1250,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-06-06T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "http://www.rent.com/illinois/chicago-apartments/6607-s-drexel-ave-4-lc2019909"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Exterior Type",
+                    "value": [
+                        "Brick"
+                    ]
+                },
+                {
+                    "key": "Roof Type",
+                    "value": [
+                        "Unknown"
+                    ]
+                },
+                {
+                    "key": "Heating System",
+                    "value": [
+                        "Forced Air"
+                    ]
+                },
+                {
+                    "key": "Architecture Style",
+                    "value": [
+                        "Other"
+                    ]
+                },
+                {
+                    "key": "Days on site",
+                    "value": [
+                        "296"
+                    ]
+                },
+                {
+                    "key": "Heating Fuel",
+                    "value": [
+                        "Natural Gas"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Refrigerator"
+                    ]
+                },
+                {
+                    "key": "Parking Type",
+                    "value": [
+                        "Garage"
+                    ]
+                },
+                {
+                    "key": "Year Built",
+                    "value": [
+                        "1888"
+                    ]
+                },
+                {
+                    "key": "Amenities",
+                    "value": [
+                        "Basement, Ceiling Fan"
+                    ]
+                },
+                {
+                    "key": "Rooms",
+                    "value": [
+                        "Basement, Bedroom, Den"
+                    ]
+                },
+                {
+                    "key": "Age",
+                    "value": [
+                        "Over 50 Years Old"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6607-S-Drexel-Ave-Chicago-IL-60637",
+                "http://www.rent.com/illinois/chicago-apartments/6607-s-drexel-ave-4-lc2019909",
+                "http://www.century21.com/property/6607-south-drexel-avenue-chicago-il-60637-REN019115902",
+                "http://www.homefinder.com/IL/Chicago/6607-South-Drexel-Avenue-123439460d"
+            ],
+            "imageURLs": [
+                "http://image1.rent.com/imgr/34178f8c5357443acc7e376a250aac7c/480-280",
+                "http://image.rent.com/imgr/e429ac1aa5039816ac66acecac8f66ce/480-280",
+                "http://image.rent.com/imgr/5aad8970a68d0b721facd8da3bdd00ce/480-280",
+                "http://image1.rent.com/imgr/eecee6104f8b390a5262694653e4deed/480-280",
+                "http://img3.homefinder.com/i/3adce2be-4809-11e5-9ca3-2c768a520588/w592-h-q"
+            ],
+            "latitude": "41.7747220",
+            "longitude": "-87.6030070",
+            "id": "AV-SR7NOjCNrmMAssnwb"
+        },
+        {
+            "listingName": "3b/2ba",
+            "address": "6622 S Ingleside Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1350,
+                    "amountMin": 1350,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/6622-S-Ingleside-Ave-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "12 Months"
+                    ]
+                },
+                {
+                    "key": "Amenities",
+                    "value": [
+                        "Deck"
+                    ]
+                },
+                {
+                    "key": "Utilities",
+                    "value": [
+                        "Water Included"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Range, Washer Dryer Hookup, Refrigerator"
+                    ]
+                },
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "Evergreen Park Community High School District 231"
+                    ]
+                }
+            ],
+            "propertyType": "House",
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/6622-S-Ingleside-Ave-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/14647229.jpg"
+            ],
+            "latitude": "41.7742340",
+            "longitude": "-87.6024800",
+            "id": "AV-Sj9JjyCk2Bpf6Dv-x"
+        },
+        {
+            "listingName": "3b/1ba",
+            "address": "6609 S Rhodes Ave 1",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1049,
+                    "amountMin": 1049,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-07-27T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6609-S-Rhodes-Ave-1-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 999,
+                    "amountMin": 999,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6609-S-Rhodes-Ave-1-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "12 Months"
+                    ]
+                },
+                {
+                    "key": "Utilities",
+                    "value": [
+                        "Water Included, Trash Pick-up Included"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Dishwasher, Range, Refrigerator, Oven"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6609-S-Rhodes-Ave-1-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/25389220.jpg"
+            ],
+            "latitude": "41.7745160",
+            "longitude": "-87.6115420",
+            "id": "AV-SqmbUyCk2Bpf6Efbz"
+        },
+        {
+            "listingName": "6536 S Drexel Unit 1",
+            "address": "6536 S Drexel",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1200,
+                    "amountMin": 1200,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-07-27T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6536-S-Drexel-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Washer Dryer On-Site"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6536-S-Drexel-Chicago-IL-60637"
+            ],
+            "latitude": "41.7757150",
+            "longitude": "-87.6037310",
+            "id": "AV-UPju0AXxH_fqQZjXJ"
+        },
+        {
+            "listingName": "6903 S. Prairie Avenue - 6903-2",
+            "address": "6901 S Prairie Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1370,
+                    "amountMin": 1370,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6901-S-Prairie-Avenue-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 1375,
+                    "amountMin": 1375,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6901-S-Prairie-Ave-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 1135,
+                    "amountMin": 1135,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-08T00:00:00Z",
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-05T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6901-S-Prairie-Ave-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 500,
+                    "amountMin": 500,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6901-S-Prairie-Avenue-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "12 Months"
+                    ]
+                },
+                {
+                    "key": "Utilities",
+                    "value": [
+                        "Heat Included, Water Included, Resident Pays Electricity"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6901-S-Prairie-Avenue-Chicago-IL-60637",
+                "https://www.showmetherent.com/6901-S-Prairie-Ave-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/24688595.jpg"
+            ],
+            "latitude": "41.7691247",
+            "longitude": "-87.6183120",
+            "id": "AV-Svq6n_RWkykBu9r1V"
+        },
+        {
+            "listingName": "6609 South Rhodes Avenue, Chicago, Il 60637",
+            "address": "6609 S Rhodes Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1049,
+                    "amountMin": 1049,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-07-27T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6609-S-Rhodes-Ave-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 999,
+                    "amountMin": 999,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6609-S-Rhodes-Ave-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 185000,
+                    "amountMin": 185000,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-07-31T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "sourceURLs": [
+                        "http://www.realtytrac.com/homes-for-sale/il/chicago/60637/6609-s-rhodes-ave-1/1019897"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "12 Months"
+                    ]
+                },
+                {
+                    "key": "Utilities",
+                    "value": [
+                        "Water Included, Resident Pays Electricity, Resident Pays Gas, Resident Pays Heat, Resident Pays Trash Pick-up"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Dishwasher, Range, Refrigerator, Oven"
+                    ]
+                },
+                {
+                    "key": "Subdivision",
+                    "value": [
+                        "mc chesneys resub"
+                    ]
+                },
+                {
+                    "key": "Parcel Number",
+                    "value": [
+                        "20222270040000"
+                    ]
+                },
+                {
+                    "key": "Legal",
+                    "value": [
+                        "north2 blks1-7 mc chesneys hyde par k homestead sub"
+                    ]
+                },
+                {
+                    "key": "Cooling Type",
+                    "value": [
+                        "ac.commercial a/c"
+                    ]
+                },
+                {
+                    "key": "Lot",
+                    "value": [
+                        "42"
+                    ]
+                },
+                {
+                    "key": "County",
+                    "value": [
+                        "cook"
+                    ]
+                },
+                {
+                    "key": "Built in",
+                    "value": [
+                        "1895"
+                    ]
+                },
+                {
+                    "key": "Year Built",
+                    "value": [
+                        "1895"
+                    ]
+                },
+                {
+                    "key": "Days on site",
+                    "value": [
+                        "198"
+                    ]
+                }
+            ],
+            "propertyType": "Duplex",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6609-S-Rhodes-Ave-Chicago-IL-60637",
+                "http://www.realtytrac.com/homes-for-sale/il/chicago/60637/6609-s-rhodes-ave-1/1019897",
+                "http://www.homefinder.com/IL/Chicago/6609-South-Rhodes-Avenue-140873151d"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/23181033.jpg",
+                "http://img3.homefinder.com/i/0dd1f19c-ac94-11e6-a7fd-ecf4bbed67d8/w592-h-q",
+                "http://img2.homefinder.com/i/0a2a49cc-1580-11e7-ba3a-ecf4bbed67d8/w592-h-q",
+                "http://img3.homefinder.com/i/36882bbe-aca9-11e6-a46b-ecf4bbed67d8/w592-h-q",
+                "http://img1.homefinder.com/i/b45eb5fe-ac9e-11e6-add7-ecf4bbed67d8/w592-h-q",
+                "http://img2.homefinder.com/i/ee14d402-c6a9-11e6-93e7-ecf4bbed67d8/w592-h-q",
+                "http://img4.homefinder.com/i/561f10fc-ac9d-11e6-8e29-ecf4bbed67d8/w592-h-q",
+                "http://img4.homefinder.com/i/150f2f2a-c67e-11e6-8c1d-ecf4bbed67d8/w592-h-q",
+                "http://img2.homefinder.com/i/fbc85642-c699-11e6-a588-ecf4bbed67d8/w592-h-q",
+                "http://img4.homefinder.com/i/b2d84b3e-ac92-11e6-a2fb-ecf4bbed67d8/w592-h-q",
+                "http://img2.homefinder.com/i/d7d3fd88-c6d3-11e6-8f9f-ecf4bbed67d8/w592-h-q",
+                "http://img1.homefinder.com/i/66f2b106-c6b3-11e6-90c7-ecf4bbed67d8/w592-h-q",
+                "http://img4.homefinder.com/i/403c4f00-aca9-11e6-9732-ecf4bbed67d8/w592-h-q",
+                "http://img3.homefinder.com/i/90b2f0e6-c6b3-11e6-8ce6-ecf4bbed67d8/w592-h-q",
+                "http://img1.homefinder.com/i/21b88660-c6b3-11e6-a36d-ecf4bbed67d8/w592-h-q",
+                "http://img3.homefinder.com/i/55e08f80-ac93-11e6-bd70-ecf4bbed67d8/w592-h-q",
+                "http://img5.homefinder.com/i/6499629c-153c-11e7-a4b1-ecf4bbed67d8/w592-h-q"
+            ],
+            "latitude": "41.774513",
+            "longitude": "-87.611551",
+            "id": "AV-S6oQ5AXxH_fqQTnsE"
+        },
+        {
+            "listingName": "2b/1ba",
+            "address": "57TH King Dr",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1100,
+                    "amountMin": 1100,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/57Th-King-Drive-Chicago-IL-60637-3"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Refrigerator"
+                    ]
+                },
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "Evergreen Park Community High School District 231"
+                    ]
+                }
+            ],
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/57Th-King-Drive-Chicago-IL-60637-3"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/14705199.jpg"
+            ],
+            "latitude": "41.7900470",
+            "longitude": "-87.6163130",
+            "id": "AV-THFZijCNrmMAsykPJ"
+        },
+        {
+            "listingName": "3b/2ba",
+            "address": "1430 E 69th Street 2 Hoa",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1195,
+                    "amountMin": 1195,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/1430-E-69Th-Street--Bldg---2-Hoa-Chicago-IL-60637-4"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "City Of Chicago School District 299"
+                    ]
+                }
+            ],
+            "propertyType": "Condo",
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/1430-E-69Th-Street--Bldg---2-Hoa-Chicago-IL-60637-4"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/14109493.jpg"
+            ],
+            "latitude": "41.7805099",
+            "longitude": "-87.6038260",
+            "id": "AV-TypVU_RWkykBuDA8E"
+        },
+        {
+            "listingName": "6555 S. Greenwood Avenue",
+            "address": "6555 S Greenwood Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1100,
+                    "amountMin": 1100,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6555-S-Greenwood-Avenue-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "propertyType": "House",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6555-S-Greenwood-Avenue-Chicago-IL-60637"
+            ],
+            "latitude": "41.7752600",
+            "longitude": "-87.5993820",
+            "id": "AV-TsDRajCNrmMAs1R_X"
+        },
+        {
+            "listingName": "3b/0ba",
+            "address": "6052 S Michigan Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 900,
+                    "amountMin": 900,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/6052-S-Michigan-Ave-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "12 Months"
+                    ]
+                },
+                {
+                    "key": "Utilities",
+                    "value": [
+                        "Trash Pick-up Included"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Range"
+                    ]
+                },
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "City Of Chicago School District 299"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/6052-S-Michigan-Ave-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/8010878.jpg"
+            ],
+            "latitude": "41.7841777",
+            "longitude": "-87.6222188",
+            "id": "AV-To7Q7yCk2Bpf6JvT_"
+        },
+        {
+            "listingName": "6603 S. St. Lawrence Ave.",
+            "address": "6601 03 S Saint Lawrence Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1150,
+                    "amountMin": 1150,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6601-03-S-St-Lawrence-Ave-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 1250,
+                    "amountMin": 1250,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6601-03-S-St-Lawrence-Ave-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6601-03-S-St-Lawrence-Ave-Chicago-IL-60637"
+            ],
+            "latitude": "41.7747140",
+            "longitude": "-87.6102949",
+            "id": "AV-TLyroAXxH_fqQVIL2"
+        },
+        {
+            "listingName": "Apartment2b/1ba - N/a",
+            "address": "6430 S Stony Is",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 3515,
+                    "amountMin": 3515,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-30T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "http://www.rent.com/illinois/chicago-apartments/6430-s-stony-island-4-r1906852"
+                    ]
+                },
+                {
+                    "amountMax": 2505,
+                    "amountMin": 2505,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-30T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "http://www.rent.com/illinois/chicago-apartments/6430-s-stony-island-4-r1906853"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Additional",
+                    "value": [
+                        "Laundry"
+                    ]
+                },
+                {
+                    "key": "Laundry",
+                    "value": [
+                        "Laundry Facility"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "http://www.rent.com/illinois/chicago-apartments/6430-s-stony-island-4-r1906852",
+                "http://www.rent.com/illinois/chicago-apartments/6430-s-stony-island-4-r1906853"
+            ],
+            "imageURLs": [
+                "http://image.rent.com/imgr/6f9ed49ad9d995d83ad78f207d514acc/480-280",
+                "http://image1.rent.com/imgr/dd6982bee7dae8b55689dd2cd38d6105/480-280",
+                "http://image.rent.com/imgr/0e697c28f1e83c9b2cd7b805b4fb5975/480-280",
+                "http://image.rent.com/imgr/e9b401f0147eb7b576bc0b77f7621982/480-280"
+            ],
+            "latitude": "41.777638",
+            "longitude": "-87.586896",
+            "id": "AV-SqZkq_RWkykBu9I1A"
+        },
+        {
+            "listingName": "5533 S. Blackstone Ave. Apt. 1",
+            "address": "5533 35 S Blackstone Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 3200,
+                    "amountMin": 3200,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-08T00:00:00Z",
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-05T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/5533-35-S-Blackstone-Ave-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 3000,
+                    "amountMin": 3000,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-08T00:00:00Z",
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-05T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/5533-35-S-Blackstone-Ave-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/5533-35-S-Blackstone-Ave-Chicago-IL-60637"
+            ],
+            "latitude": "41.7941540",
+            "longitude": "-87.5898969",
+            "id": "AV-UAFoO_RWkykBuD0Rb"
+        },
+        {
+            "listingName": "2b/1ba",
+            "address": "7758 S E End",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 700,
+                    "amountMin": 700,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/7758-S-East-End-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "Unknown"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/7758-S-East-End-Chicago-IL-60637"
+            ],
+            "latitude": "41.7534718",
+            "longitude": "-87.5833582",
+            "id": "AV-SuDps_RWkykBu9hM9"
+        },
+        {
+            "listingName": "3b/1ba",
+            "address": "7250",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1050,
+                    "amountMin": 1050,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/7250-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "sourceURLs": [
+                "https://www.showmetherent.com/7250-Chicago-IL-60637"
+            ],
+            "latitude": "41.7633171",
+            "longitude": "-87.6021332",
+            "id": "AV-SYfsx_RWkykBu69Rd"
+        },
+        {
+            "listingName": "6538 S. Drexel Ave.",
+            "address": "6538 S Drexel Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1150,
+                    "amountMin": 1150,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z",
+                        "2016-08-08T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6538-S-Drexel-Ave-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6538-S-Drexel-Ave-Chicago-IL-60637"
+            ],
+            "latitude": "41.7756460",
+            "longitude": "-87.6037310",
+            "id": "AV-SdOn3jCNrmMAsuRFQ"
+        },
+        {
+            "listingName": "3b/1ba",
+            "address": "6020 S Eberhart Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1075,
+                    "amountMin": 1075,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/6020-S-Eberhart-Ave-Unit-1-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "Unknown"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/6020-S-Eberhart-Ave-Unit-1-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/14641138.jpg"
+            ],
+            "latitude": "41.7850990",
+            "longitude": "-87.6135980",
+            "id": "AV-SlAtb_RWkykBu8ik8"
+        },
+        {
+            "listingName": "3b/1ba",
+            "address": "6555 S Langley Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 950,
+                    "amountMin": 950,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/6555-S-Langley-Ave-Chicago-IL-60637"
+                    ]
+                },
+                {
+                    "amountMax": 900,
+                    "amountMin": 900,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2016-08-02T00:00:00Z",
+                        "2016-08-01T00:00:00Z",
+                        "2016-07-30T00:00:00Z",
+                        "2016-08-05T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://www.showmetherent.com/6555-S-Langley-Ave-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "12 Months"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Washer Dryer"
+                    ]
+                },
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "Evergreen Park Community High School District 231"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://www.showmetherent.com/6555-S-Langley-Ave-Chicago-IL-60637",
+                "https://showmetherent.rentlinx.com/6555-S-Langley-Ave-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/13215216.jpg"
+            ],
+            "latitude": "41.7769780",
+            "longitude": "-87.6067650",
+            "id": "AV-SlxAPAXxH_fqQRd1U"
+        },
+        {
+            "listingName": "2b/1ba",
+            "address": "6112 S Evans Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1050,
+                    "amountMin": 1050,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/6112-S-Evans-Ave-Fl-2-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "24 Months"
+                    ]
+                },
+                {
+                    "key": "Amenities",
+                    "value": [
+                        "Deck - Back Porch"
+                    ]
+                },
+                {
+                    "key": "Utilities",
+                    "value": [
+                        "Trash Pick-up Included"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Refrigerator - Refrigerator/freezer"
+                    ]
+                },
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "City Of Chicago School District 299"
+                    ]
+                }
+            ],
+            "propertyType": "Apartment",
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/6112-S-Evans-Ave-Fl-2-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/14993545.jpg"
+            ],
+            "latitude": "41.7835820",
+            "longitude": "-87.6076010",
+            "id": "AV-TAlaNAXxH_fqQUKg3"
+        },
+        {
+            "listingName": "3 Bed/1bath",
+            "address": "5606 S Michigan Ave",
+            "city": "Chicago",
+            "prices": [
+                {
+                    "amountMax": 1400,
+                    "amountMin": 1400,
+                    "currency": "USD",
+                    "dateSeen": [
+                        "2015-10-23T00:00:00Z"
+                    ],
+                    "isSale": "false",
+                    "period": "per month",
+                    "sourceURLs": [
+                        "https://showmetherent.rentlinx.com/5606-S-Michigan-Ave-Chicago-IL-60637"
+                    ]
+                }
+            ],
+            "features": [
+                {
+                    "key": "Lease Lengths",
+                    "value": [
+                        "12 Months"
+                    ]
+                },
+                {
+                    "key": "Amenities",
+                    "value": [
+                        "Unfurnished"
+                    ]
+                },
+                {
+                    "key": "Utilities",
+                    "value": [
+                        "Trash Pick-up Included"
+                    ]
+                },
+                {
+                    "key": "Appliances",
+                    "value": [
+                        "Range"
+                    ]
+                },
+                {
+                    "key": "schoolDistrict",
+                    "value": [
+                        "City Of Chicago School District 299"
+                    ]
+                }
+            ],
+            "propertyType": "Condo",
+            "sourceURLs": [
+                "https://showmetherent.rentlinx.com/5606-S-Michigan-Ave-Chicago-IL-60637"
+            ],
+            "imageURLs": [
+                "https://s3.amazonaws.com/photos.rentlinx.com/L800/9986527.jpg"
+            ],
+            "latitude": "41.7925880",
+            "longitude": "-87.6227540",
+            "id": "AV-TJYf8AXxH_fqQU7Wj"
+        }
+    ]
+}
