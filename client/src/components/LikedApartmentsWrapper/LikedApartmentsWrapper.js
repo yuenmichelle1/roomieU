@@ -5,7 +5,6 @@ import Home from "../Home";
 import { Button, CardColumns } from "reactstrap";
 import ApartmentCardTest from "../ApartmentCardTest/ApartmentCardTest";
 import Schools from "../../CollegesUniversities.json";
-const SchoolNames = Schools.features.map(el => el.properties.NAME);
 
 class LikedApartmentsWrapper extends Component {
   state = {
@@ -47,12 +46,13 @@ class LikedApartmentsWrapper extends Component {
               <h1> Your Liked Apartments </h1>
               {/* Apartment Card */}
               <CardColumns>
-                {this.state.apartments.map(apt => (
+                {this.state.apartments.map((apt,i) => (
                   <ApartmentCardTest
                     aptPhoto={apt.photos[0]}
                     address={apt.address}
                     rent={apt.rent}
-                    description={apt.features.join(",")}
+                    listingName={apt.listingName}
+                    key={i}
                   />
                 ))}
               </CardColumns>

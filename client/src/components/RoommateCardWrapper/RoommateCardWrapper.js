@@ -80,28 +80,14 @@ class RoommateCardWrapper extends Component {
       }    
   };
 
+  
+
   render() {
     return (
-        // <div class="roomies-div">
-        //     <Row>
-        //         <Col xs="12">
-        //             <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
-        //         </Col>
-        //     </Row>
-        //     <Row>
-        //         <Col xs="12">
-        //             <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>
-        //         </Col>
-        //     </Row>
-        //     <Row>
-        //         <Col xs="12">
-        //             <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>   
-        //         </Col>
-        //     </Row>
-        // </div>
+
         <Router>
             <div class="roomies-div">
-                <Link to="/dashboard/matched">Matched ({this.state.matchedRoommates.length})</Link> |
+                <Link to="/dashboard/matched">Matched ({this.state.matchedRoommates.length} )</Link> |
                 <Link to="/dashboard/pending">Pending ({this.state.pendingRoommates.length})</Link> |
                 <Link to="/dashboard/potential">Potential ({this.state.potentialRoommates.length})</Link>
                 {/* <Row>
@@ -117,7 +103,7 @@ class RoommateCardWrapper extends Component {
                             path='/dashboard/:roomie'
                             render={(props)=>{
                                 switch(props.match.params.roomie){
-                                    case "matched": return <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
+                                    case "matched": return <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard}/>
                                     case "pending": return <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>
                                     case "potential": return <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>
                                     default : return null;
