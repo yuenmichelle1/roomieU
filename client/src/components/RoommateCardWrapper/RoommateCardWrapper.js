@@ -77,12 +77,14 @@ class RoommateCardWrapper extends Component {
       }    
   };
 
+  
+
   render() {
     return (
-        <div class="roomies-div">
+        <div className="roomies-div">
             <Row>
                 <Col xs="12">
-                    <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
+                    <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard}/>
                 </Col>
             </Row>
             <Row>

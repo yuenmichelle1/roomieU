@@ -58,7 +58,7 @@ const MatchedCardWrapper = props => {
                     school={user.school}
                     bio={user.bio}
                     id={user._id}
-                    handleClick={props.handleClick}
+                    changeDashboard={props.changeDashboard}
                 />
             })} 
         </Slider>

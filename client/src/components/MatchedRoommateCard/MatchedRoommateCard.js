@@ -5,8 +5,8 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle
-//   Button
+  CardSubtitle,
+  Button
 } from "reactstrap";
 import "./MatchedRoommateCard.css";
 
@@ -28,7 +28,7 @@ const MatchedRoommateCard = props => {
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.school}</CardSubtitle>
           <CardText><b>Bio:</b>{props.bio}</CardText>
-          {/* <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button> */}
+          <Button onClick={() => props.changeDashboard(props.id)} style={{width: "250px"}}>View Apartments You Both Like</Button>
         </CardBody>
       </Card>
     // </div> 
