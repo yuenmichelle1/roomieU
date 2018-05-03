@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import {Row, Col} from "reactstrap";
+import {Row, Col, Badge} from "reactstrap";
 import "./RoommateCardWrapper.css";
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
@@ -87,9 +87,13 @@ class RoommateCardWrapper extends Component {
 
         <Router>
             <div class="roomies-div">
-                <Link to="/dashboard/matched">Matched ({this.state.matchedRoommates.length} )</Link> |
-                <Link to="/dashboard/pending">Pending ({this.state.pendingRoommates.length})</Link> |
-                <Link to="/dashboard/potential">Potential ({this.state.potentialRoommates.length})</Link>
+                <Row className="dash-header">
+                    <Col xs="12">
+                        <Link to="/dashboard/matched" className="header-text dash-link">Matched Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.matchedRoommates.length}</Badge>
+                        <Link to="/dashboard/pending" className="header-text dash-link">Pending Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.pendingRoommates.length}</Badge>
+                        <Link to="/dashboard/potential" className="header-text dash-link">Potential Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
+                    </Col>
+                </Row>
                 {/* <Row>
                     <Col xs="12">
                         <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>

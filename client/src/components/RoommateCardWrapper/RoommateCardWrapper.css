@@ -5,7 +5,6 @@
 .user-card {
     width: 300px !important;
     height: 480px;
-    margin-left: 50px !important;
     margin-bottom: 20px;
     -webkit-box-shadow: 3px 4px 18px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 4px 18px -2px rgba(0,0,0,0.75);
@@ -14,7 +13,7 @@
 
 .user-photo {
     overflow: hidden;
-    width: 100%;
+    width: 299px;
     margin-left: 0px !important;
     margin-right: 0px !important;
 }
@@ -22,23 +21,67 @@
 .slick-list {
     width: 100%;
     height: 495px;
-    padding-top: 50px;
 }
 
 .slick-active, .slick-cloned {
     margin-bottom: 50px;
-    margin-left: -10px;
-    margin-right: -10px;
     z-index: -1;
 }
 
-/* .slick-arrow {
-    height: 520px;
-    width: 60px;
-    background-color: #fff;
-    z-index:99;
-} */
+.dash-header {
+    margin-bottom: 30px;
+}
 
-/* .slick-arrow:hover {
-    background-color: #ebebeb;
-} */
+.dash-link {
+    text-align: center;
+    color: #6c757d !important;
+    font-size: 2em;
+    margin-left: 25px;
+}
+
+.dash-link:hover {
+    color: #28a745 !important;
+}
+
+.dash-link:active {
+    color: #28a745 !important;
+}
+
+.dash-badge {
+    font-size: 1.5em !important;
+    margin-right: 25px;
+}
+
+@media (min-width: 1440px) {
+    .slick-list {
+        height: 600px;
+        padding-top: 0px;
+    }
+
+    .slick-active, .slick-cloned {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 1680px) {
+    .user-card {
+        width: 350px !important;
+        height: 520px;
+    }
+
+    .user-photo {
+        overflow: hidden;
+        width: 349px;
+    }
+
+    .slick-list {
+        height: 550px;
+    }
+    
+    .slick-active, .slick-cloned {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}

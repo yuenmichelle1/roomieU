@@ -38,8 +38,8 @@ function BackArrow(props) {
 const settings = {
     className: "slider variable-width",
     dots: true,
-    // infinite: true,
-    centerMode: true,
+    infinite: true,
+    centerMode: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,   
@@ -47,6 +47,15 @@ const settings = {
     nextArrow: <NextArrow />,
     prevArrow: <BackArrow />,
     responsive: [
+        {
+            breakpoint: 1670,
+            settings: {
+            slidesToShow: 5,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+            }
+        },
         {
             breakpoint: 1366,
             settings: {
@@ -86,7 +95,6 @@ const settings = {
 const PotentialCardWrapper = props => {
   return ( 
     <div>
-        <h1 className="header-text text-center">Potential Roommates <Badge color="secondary">{props.potentialRoommates.length}</Badge></h1>
         <Slider {...settings}> 
             {props.potentialRoommates.map((user, i) => {
             return <PotentialRoommateCard
