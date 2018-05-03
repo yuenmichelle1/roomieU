@@ -11,3 +11,23 @@
     width: 200px;
     height: 250px;
 } */
+
+#trans-bg {
+    background: transparent;
+}
+
+.arrow {
+    position: relative;
+    border-radius:50%;
+    /* margin-top: 100px; */
+    /* margin-right:50px; */
+    z-index: 99;
+}
+
+.arrow:hover {
+    width: 47px;
+}
+
+.back-arrow {
+    margin-left: -50px;
+}

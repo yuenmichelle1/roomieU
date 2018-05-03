@@ -39,7 +39,7 @@ const settings = {
     className: "slider variable-width",
     dots: true,
     infinite: true,
-    centerMode: false,
+    centerMode: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,   
