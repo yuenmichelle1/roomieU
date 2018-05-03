@@ -18,7 +18,7 @@ const LogoutBtn = (props) => (
             </Col>
             <Col xs="4">
             <NavLink href="/dashboard">
-                <img src={props.userInfo.photo} style={{width:"70px", height:"70px", borderRadius: "50%", marginLeft: "-10px"}} alt=""/>
+                <img src={props.userInfo.photo} classname="nav-photo" style={{width:"70px", height:"70px", borderRadius: "50%", marginLeft: "-10px", objectFit: "cover"}} alt=""/>
             </NavLink>
             </Col>
         </Row>

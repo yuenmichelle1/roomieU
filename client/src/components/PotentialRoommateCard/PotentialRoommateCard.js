@@ -29,15 +29,14 @@ const PotentialRoommateCard = props => {
               alt=""
               className="actual-img"
             />
+            <span className="compat-percent">{100*props.matchScore/5}% Match</span>
           </Col>
         </Row>
         <CardBody className="text-left">
           <CardTitle className="header-text name-text">{props.name}</CardTitle>
-          {/* <CardSubtitle>{props.school}</CardSubtitle> */}
-          <CardSubtitle><b>Compatibility:</b> <span className="compat-percent">{100*props.matchScore/5}%</span></CardSubtitle>
-          <CardText><b>School:</b> {props.school}</CardText>
-          <CardText><b>Bio:</b> {props.bio}</CardText>
-          <Button className="btn roomie-btn" color="warning" onClick={() => props.handleClick(props.id)}>Roomie?</Button>
+          <CardSubtitle className="school-text">{props.school}</CardSubtitle>
+          <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
+          <Button className="btn roomie-btn" color="warning" onClick={() => props.handleClick(props.id)}>Let's Be Roomies!</Button>
         </CardBody>
       </Card>
     // </div> 
