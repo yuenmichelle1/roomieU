@@ -17,7 +17,9 @@ const LogoutBtn = (props) => (
                 <NavLink href="/"><Button onClick = {props.handleLogout} color="warning" id="login-btn" className="btns login-btn logout-btn">Log Out</Button></NavLink>
             </Col>
             <Col xs="4">
-            <img src={props.userInfo.photo} style={{width:"70px", height:"70px", borderRadius: "50%", marginLeft: "5px", marginTop: "10px"}} alt=""/>
+            <NavLink href="/dashboard">
+                <img src={props.userInfo.photo} style={{width:"70px", height:"70px", borderRadius: "50%", marginLeft: "-10px"}} alt=""/>
+            </NavLink>
             </Col>
         </Row>
     </Nav>
