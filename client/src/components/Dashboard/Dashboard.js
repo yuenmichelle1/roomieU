@@ -14,29 +14,27 @@ class Dashboard extends Component {
   };
   changeDashboard = (id) => {
     console.log(id);
-    if (this.state.isMatchedDashboard){
-        this.setState({ isMatchedDashboard: false, otherUserId: id });
-    } else {
-        this.setState({isMatchedDashboard: true, otherUserId: id});
-    }
+    // if (this.state.isMatchedDashboard){
+    //     this.setState({ isMatchedDashboard: false, otherUserId: id });
+    // } else {
+    //     this.setState({isMatchedDashboard: true, otherUserId: id});
+    // }
   };
 
   render() {
     return (
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
-          userInfo ? (
-            this.state.isMatchedDashboard ? (
-              <CombinedUsersAptsDash changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
-            ) : (
-              <Container className="dash-container">
-                <RoommateCardWrapper changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
-                <LikedApartmentsWrapper />
-              </Container>
-            )
-          ) : (
-            <Home />
-          )
+          userInfo 
+            ? this.state.isMatchedDashboard 
+                ? <CombinedUsersAptsDash changeDashboard={this.changeDashboard} id={this.state.otherUserId}/> 
+                : (
+                    <Container className="dash-container">
+                        <RoommateCardWrapper changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
+                        <LikedApartmentsWrapper />
+                    </Container>
+                  )
+            : <Home />
         }
       </AuthConsumer>
     );
