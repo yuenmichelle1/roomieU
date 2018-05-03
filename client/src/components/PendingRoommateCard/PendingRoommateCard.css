@@ -56,4 +56,5 @@
 .actual-img {
     object-fit: cover;
     position: relative;
+    height: 250px;
 }

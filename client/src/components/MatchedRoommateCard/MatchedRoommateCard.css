@@ -1,13 +1,56 @@
-* {
-    box-sizing: border-box;
+.user-card {
+    margin: 0 auto;
 }
 
-.MatchedRoommateCard {
-    margin: 5px;
-    width:300px;
+.user-photo {
+    overflow: hidden;
 }
 
-.card-img-top {
-    width: 200px;
+.name-text {
+    font-size: 1.6em;
+    word-wrap: break-word;
+    margin-bottom:3px !important;
+}
+
+.school-text {
+    font-size: .8em;
+    margin-bottom: 5px !important;
+}
+
+.compat-percent {
+    background-color: #28a745ab;
+    padding: 5px 10px;
+    border-radius:5px;
+    color: #fff;
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    z-index:99;
+}
+
+.roomie-btn {
+    position: absolute;
+    width: 200px !important;
+    height: 40px;
+    bottom: 20px;
+    margin: 0 auto;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: 28px;
+    margin-top: 10px;
+    /* color: #000; */
+}
+
+.roomie-btn:hover {
+    color: rgb(80, 80, 80) !important;
+    background-color: #ffc107 !important;
+    -webkit-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+
+.actual-img {
+    object-fit: cover;
+    position: relative;
     height: 250px;
 }
