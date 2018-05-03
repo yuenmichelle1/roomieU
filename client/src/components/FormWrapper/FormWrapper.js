@@ -33,7 +33,8 @@ class FormWrapper extends Component {
     petsPref: "",
     petsPrefScore: "",
     schedulePref: "",
-    schedulePrefScore: ""
+    schedulePrefScore: "",
+    isComplete: true
   };
 
   grabUserProfile = event => {
@@ -75,18 +76,22 @@ class FormWrapper extends Component {
         this.state.petsPrefScore
       ]
     };
-
+    const isComplete = [...userInfo.roommatePrefs, ...userInfo.userQuals,userInfo.radius, userInfo.bio,userInfo.budget].filter(a=>a).length===13  
     // first get current user info to get userID (note that userData is nested inside of data property)
     // then update user info in the db with preferences. Returned data should be complete user info
-    API.getUserInfo().then(currentUserInfo => {
-      const currentUserId = currentUserInfo.data._id;
-      API.updateUser(currentUserId, userInfo).then(message => {
-        // This message shows if user successfulay updated. If you prefer returning uer data, edit user controller to return dbuser
-        // console.log(data)
-        console.log(message.data);
-        window.location = "/dashboard";
-      });
-    });
+    if(isComplete){
+        API.getUserInfo().then(currentUserInfo => {
+        const currentUserId = currentUserInfo.data._id;
+        API.updateUser(currentUserId, userInfo).then(message => {
+            // This message shows if user successfulay updated. If you prefer returning uer data, edit user controller to return dbuser
+            // console.log(data)
+            console.log(message.data);
+            window.location = "/dashboard";
+        });
+        });
+    }else{
+        this.setState({isComplete})
+    }
   };
 
   // only alllow access if user if logged in
@@ -119,6 +124,7 @@ class FormWrapper extends Component {
                 <Row className="text-center">
                   <Col xs="12" sm="12" md="12" lg="12">
                     <Button onClick={this.sendData} color="success" className="submit-form-btn">Submit</Button>
+                    {!this.state.isComplete?(<p style={{color: "red"}}>Please complete the form</p>):("")}
                   </Col>
                 </Row>
               </Col>

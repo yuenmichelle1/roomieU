@@ -67,7 +67,8 @@ export default class SignUpForm extends React.Component {
     avatar: "",
     isUploading: false,
     progress: 0,
-    avatarURL: ""
+    avatarURL: "",
+    signUpError: false
   };
 
     handleUploadStart = () => this.setState({isUploading: true, progress:0});
@@ -94,9 +95,14 @@ export default class SignUpForm extends React.Component {
     // console.log(userData);
     // API.createUser(userData).then((window.location = "/roommatepreferences"));
     API.createUser(userData).then(userInfo=>{
-        window.location = "/roommatepreferences"
+       
         // console.log(userInfo)
-    });
+        if(userInfo.data.email){
+            window.location = "/roommatepreferences"
+        } else {
+            this.setState({signUpError: userInfo.data.message})
+        }
+    })
   };
 
   handleInputChange = event => {
@@ -249,6 +255,7 @@ export default class SignUpForm extends React.Component {
                       renderSuggestion={renderSuggestion}
                       inputProps={inputProps}
                       style={{ width: "900px"}}
+                      required
                     />
                   </Col>
                 </FormGroup>
@@ -257,7 +264,7 @@ export default class SignUpForm extends React.Component {
                   <Col sm={{ size: 8 }}>
                     <FormGroup check>
                       <Label check>
-                        <Input type="checkbox" id="checkbox2" /> I agree to Terms and
+                        <Input type="checkbox" id="checkbox2" required/> I agree to Terms and
                         Conditions.
                       </Label>
                     </FormGroup>
@@ -269,6 +276,7 @@ export default class SignUpForm extends React.Component {
                   <Col sm={4}/>
                   <Col sm={8}>
                     <Button className="centerBlock submit-btn" type="submit" color="success">Submit</Button>
+                    {this.state.signUpError?(<p style={{color: "red"}}>A user with the given email is already registered</p>):("")}
                   </Col>
                 </FormGroup>
               </Form>

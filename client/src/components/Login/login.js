@@ -89,7 +89,7 @@ export default class LoginForm extends React.Component {
                 <Col sm={4}/>
                 <Col sm={8}>
                   <Button type="submit" className="centerBlock submit-btn" color="success">Login</Button>
-                  {this.state.wronglogin?(<p>Wrong email or password</p>):("")}
+                  {this.state.wronglogin?(<p style={{color: "red"}}>Wrong email or password</p>):("")}
                 </Col>
               </FormGroup>
             </Form>
