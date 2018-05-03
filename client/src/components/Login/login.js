@@ -14,22 +14,23 @@ import "./login.css";
 export default class LoginForm extends React.Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    wronglogin: false
   };
 
   handleFormSubmit = (event, data) => {
     const userData = { ...this.state };
     event.preventDefault();
     API.loginUser(userData).then(userInfo=>{
-        // should link to dashboard once it's ready
-        // window.location = "/roommatepreferences";
-        // user information will be in userInfo
         if (userInfo.data.roommatePrefs[0]) {
           window.location="/dashboard";
         } else {
           window.location = "/roommatepreferences";
         }
         console.log(`THIS IS MY USERINFO ${userInfo.data.roommatePrefs[0].gender}`);
+    }).catch(err=>{
+        console.log(err)
+        this.setState({wronglogin:true});
     })
   };
 
@@ -88,6 +89,7 @@ export default class LoginForm extends React.Component {
                 <Col sm={4}/>
                 <Col sm={8}>
                   <Button type="submit" className="centerBlock submit-btn" color="success">Login</Button>
+                  {this.state.wronglogin?(<p style={{color: "red"}}>Wrong email or password</p>):("")}
                 </Col>
               </FormGroup>
             </Form>

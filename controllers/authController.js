@@ -12,6 +12,7 @@ authController.home = (req, res) => {
 authController.doRegister = (req, res) => {
     User.register(new User(req.body), req.body.password, (err, user)=>{
         if(err){
+            console.log("err " + err)
             res.json(err);
         }
         passport.authenticate("local")(req, res, ()=>{
