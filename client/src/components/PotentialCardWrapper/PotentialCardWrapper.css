@@ -11,3 +11,23 @@
     width: 100%;
     max-width: 200px;
 } */
+
+#trans-bg {
+    background: transparent;
+}
+
+.arrow {
+    position: relative;
+    border-radius:50%;
+    /* margin-top: 100px; */
+    /* margin-right:50px; */
+    z-index: 99;
+}
+
+.arrow:hover {
+    background-color: #9CDCAB;
+}
+
+.back-arrow {
+    margin-left: -50px;
+}

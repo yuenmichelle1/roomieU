@@ -29,7 +29,7 @@ const PendingRoommateCard = props => {
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.school}</CardSubtitle>
           <CardText><b>Bio:</b>{props.bio}</CardText>
-          <Button onClick={() => props.handleClick(props.id)}>Roomie?</Button>
+          <Button className="roomie-btn" onClick={() => props.handleClick(props.id)}>Roomie?</Button>
         </CardBody>
       </Card>
     // </div> 

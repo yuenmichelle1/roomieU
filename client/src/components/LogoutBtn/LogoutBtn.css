@@ -1,0 +1,20 @@
+.nav-rightside {
+    margin-top: 10px;
+    margin-right: 25px !important;
+}
+
+.nav-welcome {
+    font-size: 1em;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.logout-btn {
+    position: absolute;
+    right: 7%;
+    width: 100px;
+    height: 35px;
+    padding: 0px !important;
+    padding-top: 5px;
+    margin-top: -5px;
+}

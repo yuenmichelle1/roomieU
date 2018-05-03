@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import {Container, Row, Col} from "reactstrap";
+import {Row, Col} from "reactstrap";
 import "./RoommateCardWrapper.css";
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
