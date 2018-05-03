@@ -7,14 +7,13 @@ import MatchedCardWrapper from "../MatchedCardWrapper";
 import PotentialCardWrapper from "../PotentialCardWrapper";
 
 
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-
 class RoommateCardWrapper extends Component {
     state = {
         potentialRoommates:[],
         matchedRoommates:[],
         pendingRoommates:[],
-        requestedRoommates: []
+        requestedRoommates: [],
+        roommateWrapper: "matched"
     };
     currentUser={};
     componentDidMount() {
@@ -80,11 +79,23 @@ class RoommateCardWrapper extends Component {
       }    
   };
 
+  changeWrapper = (entry) => {
+        this.setState({roommateWrapper: entry});
+  } 
+
+  displayWrapper = (entry) => {
+    switch(entry){
+        case "matched": return <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard}/>;
+        case "pending": return <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>;
+        case "potential": return <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>;
+        default : return null;
+    }
+  }
+
   
 
   render() {
     return (
-
         <Router>
             <div class="roomies-div">
                 <Row className="dash-header">
