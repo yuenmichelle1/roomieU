@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import {Button} from "reactstrap";
+import {Row, Col, Badge} from "reactstrap";
 import "./RoommateCardWrapper.css";
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
@@ -96,12 +96,39 @@ class RoommateCardWrapper extends Component {
 
   render() {
     return (
-        <div>
-            <Button onClick={()=> this.changeWrapper('matched')}> Matched ({this.state.matchedRoommates.length}) </Button>
-            <Button onClick={()=> this.changeWrapper('pending')}> Pending ({this.state.pendingRoommates.length}) </Button>
-            <Button onClick={()=> this.changeWrapper('potential')}> Potential ({this.state.potentialRoommates.length})</Button>
-            {this.displayWrapper(this.state.roommateWrapper)}     
-        </div>
+        <Router>
+            <div class="roomies-div">
+                <Row className="dash-header">
+                    <Col xs="12">
+                        <Link to="/dashboard/matched" className="header-text dash-link">Matched Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.matchedRoommates.length}</Badge>
+                        <Link to="/dashboard/pending" className="header-text dash-link">Pending Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.pendingRoommates.length}</Badge>
+                        <Link to="/dashboard/potential" className="header-text dash-link">Potential Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
+                    </Col>
+                </Row>
+                {/* <Row>
+                    <Col xs="12">
+                        <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates}/>
+                        <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>
+                        <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/> 
+                    </Col>
+                </Row> */}
+                <Row>
+                    <Col xs="12">
+                        <Route 
+                            path='/dashboard/:roomie'
+                            render={(props)=>{
+                                switch(props.match.params.roomie){
+                                    case "matched": return <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard}/>
+                                    case "pending": return <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/>
+                                    case "potential": return <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>
+                                    default : return null;
+                                }
+                            }}                      
+                        />
+                    </Col>
+                </Row>
+            </div>
+        </Router>
         )
     }
 }
