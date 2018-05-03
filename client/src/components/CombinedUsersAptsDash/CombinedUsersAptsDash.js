@@ -100,6 +100,8 @@ class CombinedUsersAptsDash extends Component {
                 <CardBody>
                   <CardTitle>{this.state.otherUser.name}</CardTitle>
                   <CardSubtitle>{this.state.otherUser.school}</CardSubtitle>
+                  <CardText>Contact: {this.state.otherUser.phone}</CardText>
+                  <CardText>Email: {this.state.otherUser.email}</CardText>
                   <CardText>{this.state.otherUser.bio}</CardText>
                 </CardBody>
               </Card>
