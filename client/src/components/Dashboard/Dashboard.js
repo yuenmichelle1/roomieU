@@ -29,7 +29,7 @@ class Dashboard extends Component {
             this.state.isMatchedDashboard ? (
               <CombinedUsersAptsDash changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
             ) : (
-              <Container className="dash-container">
+              <Container>
                 <RoommateCardWrapper changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
                 <LikedApartmentsWrapper />
               </Container>

@@ -6,22 +6,3 @@
     width: 900px;
     height: 500px;
 } */
-
-.dash-container {
-    width: 2000px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    text-align: center;
-}
-
-@media (min-width: 1440px) {
-    .dash-container {
-        max-width: 1250px !important;
-    }
-}
-
-@media (min-width: 1650px) {
-    .dash-container {
-        max-width: 1440px !important;
-    }
-}
