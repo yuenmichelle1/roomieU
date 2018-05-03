@@ -32,12 +32,12 @@ const PotentialRoommateCard = props => {
           </Col>
         </Row>
         <CardBody className="text-left">
-          <CardTitle>{props.name}</CardTitle>
+          <CardTitle className="header-text name-text">{props.name}</CardTitle>
           {/* <CardSubtitle>{props.school}</CardSubtitle> */}
           <CardSubtitle><b>Compatibility:</b> <span className="compat-percent">{100*props.matchScore/5}%</span></CardSubtitle>
           <CardText><b>School:</b> {props.school}</CardText>
           <CardText><b>Bio:</b> {props.bio}</CardText>
-          <Button className="btn roomie-btn" onClick={() => props.handleClick(props.id)}>Roomie?</Button>
+          <Button className="btn roomie-btn" color="warning" onClick={() => props.handleClick(props.id)}>Roomie?</Button>
         </CardBody>
       </Card>
     // </div> 
