@@ -10,13 +10,11 @@ const UserSchema = new Schema({
         trim: true,
         required: true
     },
-
     budget: {
         type: String,
         trim: true,
         require: true
     },
-
     radius: {
         type: String,
         trim: true,
@@ -26,12 +24,14 @@ const UserSchema = new Schema({
         type: String,
         trim: true
     },
-
+    phone: {
+        type: String,
+        trim: true
+    },
     bio: {
         type: String,
         trim: true
     },
-
     school: {
         type:String, 
         trim: true
@@ -43,26 +43,22 @@ const UserSchema = new Schema({
     roommatePrefs: {
         type: Array
     },
-
     candidateRoomies:[
         {
             type: Schema.Types.ObjectId,
             ref: "User"
         }
     ],
-
     requestedRoomies:[
         {
             type: Schema.Types.ObjectId,
             ref: "User"
         }
     ],
-   
     matchedRoomie: {
         type: Schema.Types.ObjectId,
         ref: "User"
     },
-
     apartments:[
         {
             type: String,
