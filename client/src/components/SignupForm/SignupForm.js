@@ -1,5 +1,4 @@
 import React from "react";
-// import Signupform.css
 import "./SignupForm.css";
 import {
   Col,
@@ -60,7 +59,6 @@ export default class SignUpForm extends React.Component {
     password: "",
     name: "",
     phone: "",
-    // file: "",
     value: "",
     suggestions: [],
     //for photo storage
@@ -92,8 +90,7 @@ export default class SignUpForm extends React.Component {
       photo:this.state.avatarURL
     };
     event.preventDefault();
-    // console.log(userData);
-    // API.createUser(userData).then((window.location = "/roommatepreferences"));
+   
     API.createUser(userData).then(userInfo=>{
        
         // console.log(userInfo)
@@ -203,7 +200,7 @@ export default class SignUpForm extends React.Component {
                 </FormGroup>
                 <FormGroup row>
                   <Label for="userPhone" sm={4}>
-                    Phone Number
+                    Phone Number (in the form xxx-xxx-xxxx)
                   </Label>
                   <Col sm={3}>
                     <Input
@@ -214,6 +211,7 @@ export default class SignUpForm extends React.Component {
                       value={this.state.phone}
                       onChange={this.handleInputChange}
                       required
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     />
                   </Col>
                 </FormGroup>
