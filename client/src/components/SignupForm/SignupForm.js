@@ -163,6 +163,7 @@ export default class SignUpForm extends React.Component {
                       value={this.state.email}
                       onChange={this.handleInputChange}
                       required
+                      pattern=".+@.+\.edu"
                     />
                   </Col>
                 </FormGroup>
