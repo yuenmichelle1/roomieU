@@ -103,7 +103,7 @@ const PendingCardWrapper = props => {
                     school={user.school}
                     bio={user.bio}
                     id={user._id}
-                    // matchScore={user.matchScore}
+                    matchScore={user.matchScore}
                     handleClick={props.handleClick}
                 />
             })} 

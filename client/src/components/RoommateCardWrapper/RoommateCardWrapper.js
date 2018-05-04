@@ -40,33 +40,46 @@ class RoommateCardWrapper extends Component {
             const pendingRoommates = candidateRoommates.filter(roommate=>{
                 return matchedRoommatesIds.indexOf(roommate._id) === -1
             })
-
             // find potential matches. Needs to filter out pending/liked/matched.
             API.filterUser(this.state.currentUser).then(res => {     
                 const potentialRoommates = res.data.length>0?this.sortByMatchScore(this.state.currentUser, res.data):[];  
                 this.setState({
-                    pendingRoommates,
-                    requestedRoommates,
-                    matchedRoommates,
-                    potentialRoommates
+                    pendingRoommates: this.sortByMatchScore(this.state.currentUser, pendingRoommates),
+                    requestedRoommates: requestedRoommates,
+                    matchedRoommates: this.sortByMatchScore(this.state.currentUser, matchedRoommates),
+                    potentialRoommates: potentialRoommates
                 })
             })
         })
     }
 
+    // sortByMatchScore = function(user, filteredMatches) {
+    //     const prefs = user.roommatePrefs;
+    //     const matchSortedByScore = filteredMatches.map(filteredMatch => {
+    //     let score = 0;
+    //     filteredMatch.userQuals.forEach((a, i) => {
+    //         if (prefs[i] === "0" || prefs[i] === a) {
+    //         score++;
+    //         }
+    //     });
+    //     filteredMatch["matchScore"] = score;
+    //     return filteredMatch;
+    //     });
+    //     return matchSortedByScore.sort((a, b) => b.matchScore - a.matchScore);
+    // };
     sortByMatchScore = function(user, filteredMatches) {
         const prefs = user.roommatePrefs;
         const matchSortedByScore = filteredMatches.map(filteredMatch => {
-        let score = 0;
-        filteredMatch.userQuals.forEach((a, i) => {
-            if (prefs[i] === "0" || prefs[i] === a) {
-            score++;
-            }
+            let score = 0;
+            filteredMatch.userQuals.forEach((a, i) => {
+                if (prefs[i] === "0" || prefs[i] === a) {
+                score++;
+                }
+            });
+            filteredMatch["matchScore"] = score;
+            return filteredMatch;
         });
-        filteredMatch["matchScore"] = score;
-        return filteredMatch;
-        });
-        return matchSortedByScore.sort((a, b) => b.matchScore - a.matchScore);
+        return matchSortedByScore;
     };
 
     handleClick = id => {

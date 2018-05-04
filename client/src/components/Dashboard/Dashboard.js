@@ -14,11 +14,11 @@ class Dashboard extends Component {
   };
   changeDashboard = (id) => {
     console.log(id);
-    // if (this.state.isMatchedDashboard){
-    //     this.setState({ isMatchedDashboard: false, otherUserId: id });
-    // } else {
-    //     this.setState({isMatchedDashboard: true, otherUserId: id});
-    // }
+    if (this.state.isMatchedDashboard){
+        this.setState({ isMatchedDashboard: false, otherUserId: id });
+    } else {
+        this.setState({isMatchedDashboard: true, otherUserId: id});
+    }
   };
 
   render() {
