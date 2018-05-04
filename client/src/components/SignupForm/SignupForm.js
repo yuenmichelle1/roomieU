@@ -219,10 +219,11 @@ export default class SignUpForm extends React.Component {
                 </FormGroup>
               <FormGroup row>
                   <Label for="imageFile" sm={4}>Upload Your Image</Label>
-                  <Col sm={2}>
+                  <Col sm={4}>
                       {/* {this.state.isUploading && <p>Progress: {this.state.progress}</p> } */}
                       <CustomUploadButton
                           id="imageFile"
+                          className="upload-btn"
                           accept="image/*"
                           name="avatar"
                           randomizeFilename 
@@ -234,12 +235,14 @@ export default class SignUpForm extends React.Component {
                           style={{backgroundColor: '#aaa', color: 'white', padding: '5px 15px', borderRadius: 4}}
                       > Upload
                       </CustomUploadButton>
+                  
+                    <Col sm={8}>
+                        {this.state.avatarURL && <img alt="avatar" src={this.state.avatarURL}          
+                            style={{height:"200px", marginLeft:"-15px"}}
+                        />}                
+                    </Col>
                   </Col>
-                  <Col sm={8}>
-                      {this.state.avatarURL && <img alt="avatar" src={this.state.avatarURL}          
-                          style={{height:"200px"}}
-                      />}                
-                  </Col>
+
 
               </FormGroup>
                 <FormGroup row>
