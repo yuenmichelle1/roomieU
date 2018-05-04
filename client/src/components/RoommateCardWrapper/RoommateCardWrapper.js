@@ -126,7 +126,15 @@ class RoommateCardWrapper extends Component {
                 </Row>
                 <Row>
                     <Col xs="12">
-                        <Route exact path='/dashboard' component={ () => <MatchedCardWrapper convertTitle={this.convertTitle} matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard }/>} />
+                        <Route exact path='/dashboard' component={ () => {
+                            return this.state.matchedRoommates.length>0?
+                                    <MatchedCardWrapper convertTitle={this.convertTitle} matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard }/>
+                                    :(this.state.pendingRoommates.length>0?
+                                    <PendingCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/> 
+                                    :<PotentialCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>)
+                                }
+                            } 
+                        />
                         <Route path='/dashboard/matched' component={ () => <MatchedCardWrapper convertTitle={this.convertTitle} matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard}/> } />
                         <Route path='/dashboard/pending' component={ () => <PendingCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/> } />
                         <Route path='/dashboard/potential' component={ () => <PotentialCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/> } />
