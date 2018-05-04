@@ -5,7 +5,7 @@ import "./RoommateCardWrapper.css";
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
 import PotentialCardWrapper from "../PotentialCardWrapper";
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-dom';
 
 class RoommateCardWrapper extends Component {
     state = {
@@ -119,9 +119,9 @@ class RoommateCardWrapper extends Component {
             <div class="roomies-div">
                 <Row className="dash-header">
                     <Col xs="12">
-                        <Link to="/dashboard/matched" className="header-text dash-link">Matched Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.matchedRoommates.length}</Badge>
-                        <Link to="/dashboard/pending" className="header-text dash-link">Pending Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.pendingRoommates.length}</Badge>
-                        <Link to="/dashboard/potential" className="header-text dash-link">Potential Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
+                        <NavLink to="/dashboard/matched" activeClassName='is-active' className="header-text dash-link">Matched Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.matchedRoommates.length}</Badge>
+                        <NavLink to="/dashboard/pending" activeClassName='is-active' className="header-text dash-link">Pending Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.pendingRoommates.length}</Badge>
+                        <NavLink to="/dashboard/potential" activeClassName='is-active' className="header-text dash-link">Potential Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
                     </Col>
                 </Row>
                 <Row>
