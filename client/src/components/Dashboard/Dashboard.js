@@ -25,18 +25,16 @@ class Dashboard extends Component {
     return (
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
-          userInfo ? (
-            this.state.isMatchedDashboard ? (
-              <CombinedUsersAptsDash changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
-            ) : (
-              <Container className="dash-container">
-                <RoommateCardWrapper changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
-                <LikedApartmentsWrapper />
-              </Container>
-            )
-          ) : (
-            <Home />
-          )
+          userInfo 
+            ? this.state.isMatchedDashboard 
+                ? <CombinedUsersAptsDash changeDashboard={this.changeDashboard} id={this.state.otherUserId}/> 
+                : (
+                    <Container className="dash-container">
+                        <RoommateCardWrapper changeDashboard={this.changeDashboard} id={this.state.otherUserId}/>
+                        <LikedApartmentsWrapper />
+                    </Container>
+                  )
+            : <Home />
         }
       </AuthConsumer>
     );

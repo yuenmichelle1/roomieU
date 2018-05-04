@@ -29,7 +29,7 @@ const PendingRoommateCard = props => {
             alt=""
             className="actual-img"
           />
-          {/* <span className="compat-percent">{100*props.matchScore/5}% Match</span> */}
+          <span className="compat-percent">{100*props.matchScore/5}% Match</span>
         </Col>
       </Row>
           <CardBody className="text-left">
