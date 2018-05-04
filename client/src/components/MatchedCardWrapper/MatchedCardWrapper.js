@@ -105,6 +105,7 @@ const MatchedCardWrapper = props => {
                     id={user._id}
                     matchScore={user.matchScore}
                     changeDashboard={props.changeDashboard}
+                    convertTitle={props.convertTitle} 
                 />
             })} 
         </Slider>
