@@ -7,7 +7,9 @@ class Map extends Component {
     var apartmentList = Apartments
     console.log(apartmentList);
   }
-
+  state = {
+    apartment: ""
+  }
    render() {
    const ApartmentMap = withGoogleMap(props => (
       <GoogleMap
@@ -16,10 +18,14 @@ class Map extends Component {
       >
       {
         Apartments.records.map((apt)=>{
-          console.log(apt);
+        
           return (<Marker
             position={ { lat: Number(apt.latitude), lng: Number(apt.longitude) } }
             key={apt.id}
+            onClick={()=>{
+              console.log("on click");
+              console.log(apt);
+              this.setState({apartment:apt})}}
           />)
 
         })
@@ -34,6 +40,7 @@ class Map extends Component {
           containerElement={ <div style={{ height: `550px`, width: '700px', margin: 'auto' }} /> }
           mapElement={ <div style={{ height: `100%` }} /> }
         />
+        <h1>hello {this.state.apartment.listingName}</h1>
       </div>
    );
   }
