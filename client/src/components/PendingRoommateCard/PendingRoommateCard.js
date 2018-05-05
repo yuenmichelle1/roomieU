@@ -33,7 +33,7 @@ const PendingRoommateCard = props => {
         </Col>
       </Row>
           <CardBody className="text-left">
-            <CardTitle className="header-text name-text">{props.name}</CardTitle>
+            <CardTitle className="header-text name-text">{props.convertTitle(props.name)}</CardTitle>
             <CardSubtitle className="school-text">{props.school}</CardSubtitle>
             <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
             <Button className="btn roomie-btn accept-btn" color="success" onClick={() => props.handleClick(props.id)}>Accept Roomie Invite</Button>

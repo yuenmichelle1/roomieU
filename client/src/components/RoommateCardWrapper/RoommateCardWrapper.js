@@ -5,7 +5,7 @@ import "./RoommateCardWrapper.css";
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
 import PotentialCardWrapper from "../PotentialCardWrapper";
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-dom';
 
 class RoommateCardWrapper extends Component {
     state = {
@@ -94,7 +94,23 @@ class RoommateCardWrapper extends Component {
         }    
     };
 
-  
+    
+    convertTitle = function(str) {
+        const arr = str.split(" ")
+        if (arr.length === 1){
+            return arr[0].charAt(0).toUpperCase() + arr[0].substr(1).toLowerCase();
+        }else{
+            return arr.map((word,index)=>{
+                if(index===0){
+                    return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase() + " ";
+                }else if (index===arr.length-1){
+                    return word.charAt(0).toUpperCase() + ".";
+                }else {
+                    return ""
+                }
+            }).join("")
+        }   
+    }
 
   render() {
       console.log('hello?!', this.state)
@@ -103,17 +119,25 @@ class RoommateCardWrapper extends Component {
             <div class="roomies-div">
                 <Row className="dash-header">
                     <Col xs="12">
-                        <Link to="/dashboard/matched" className="header-text dash-link">Matched Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.matchedRoommates.length}</Badge>
-                        <Link to="/dashboard/pending" className="header-text dash-link">Pending Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.pendingRoommates.length}</Badge>
-                        <Link to="/dashboard/potential" className="header-text dash-link">Potential Roomies</Link> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
+                        <NavLink to="/dashboard/matched" activeClassName='is-active' className="header-text dash-link">Matched Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.matchedRoommates.length}</Badge>
+                        <NavLink to="/dashboard/pending" activeClassName='is-active' className="header-text dash-link">Pending Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.pendingRoommates.length}</Badge>
+                        <NavLink to="/dashboard/potential" activeClassName='is-active' className="header-text dash-link">Potential Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
                     </Col>
                 </Row>
                 <Row>
                     <Col xs="12">
-                        <Route exact path='/dashboard' component={ () => <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard }/>} />
-                        <Route path='/dashboard/matched' component={ () => <MatchedCardWrapper matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard}/> } />
-                        <Route path='/dashboard/pending' component={ () => <PendingCardWrapper handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/> } />
-                        <Route path='/dashboard/potential' component={ () => <PotentialCardWrapper handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/> } />
+                        <Route exact path='/dashboard' component={ () => {
+                            return this.state.matchedRoommates.length>0?
+                                    <MatchedCardWrapper convertTitle={this.convertTitle} matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard }/>
+                                    :(this.state.pendingRoommates.length>0?
+                                    <PendingCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/> 
+                                    :<PotentialCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/>)
+                                }
+                            } 
+                        />
+                        <Route path='/dashboard/matched' component={ () => <MatchedCardWrapper convertTitle={this.convertTitle} matchedRoommates={this.state.matchedRoommates} changeDashboard={this.props.changeDashboard}/> } />
+                        <Route path='/dashboard/pending' component={ () => <PendingCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} pendingRoommates={this.state.pendingRoommates}/> } />
+                        <Route path='/dashboard/potential' component={ () => <PotentialCardWrapper convertTitle={this.convertTitle} handleClick={this.handleClick} potentialRoommates={this.state.potentialRoommates}/> } />
                     </Col>
                 </Row>
             </div>

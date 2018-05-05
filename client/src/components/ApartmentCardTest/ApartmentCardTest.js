@@ -7,13 +7,15 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle
+  CardSubtitle,
+  Row,
+  Col
 } from "reactstrap";
-import './ApartmentCardTest.css';
-
+import "./ApartmentCardTest.css";
 
 const ApartmentCardTest = props => {
   return (
+    <div>
       <Card className="user-card">
         <Row className="user-photo">
           <Col xs="12" sm="12" md="12" lg="12">
@@ -36,6 +38,7 @@ const ApartmentCardTest = props => {
           <CardText><b>Description:</b>{props.listingName}</CardText>
         </CardBody>
       </Card>
+    </div>
   );
 };
 
