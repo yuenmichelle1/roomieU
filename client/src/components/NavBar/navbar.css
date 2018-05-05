@@ -20,3 +20,9 @@
     padding: 5px 10px !important;
     width: 100px;
 }
+
+@media (min-width: 1680px) {
+    .navbar {
+        max-width: 1366px;
+    }
+}

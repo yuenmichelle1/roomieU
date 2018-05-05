@@ -15,6 +15,7 @@ import {
 } from "reactstrap";
 import API from "../../utils/API";
 import ApartmentCardTest from "../ApartmentCardTest/ApartmentCardTest";
+import './CombinedUsersAptsDash.css';
 
 class CombinedUsersAptsDash extends Component {
   state = {
@@ -53,21 +54,19 @@ class CombinedUsersAptsDash extends Component {
     return (
       <Container>
         <Row>
-          <Col>
-            <Button
-              onClick={() => this.props.changeDashboard(this.state.userId)}
-              style={{ width: "250px" }}
-            >
+          <Col xs="12" className="text-center">
+            <h1 className="header-text">Your Match Details</h1>
+            <Button color="success" onClick={() => this.props.changeDashboard(this.state.userId)} className="dashback-btn">
               {" "}
               Back to Main Dashboard{" "}
             </Button>
           </Col>
         </Row>
-        <Row>
-          <Col xs="6">
-            <h1> {this.state.user.name} </h1>
-            <CardDeck>
-              <Card>
+        <Row className="matched-row">
+          <Col xs="4">
+            {/* <h1 className="header-text"> {this.state.user.name} </h1> */}
+            <CardDeck className="matched-div">
+              <Card classname="user-card you-card">
                 <CardImg
                   src={
                     this.state.user.photo
@@ -75,20 +74,21 @@ class CombinedUsersAptsDash extends Component {
                       : "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
                   }
                   alt="You"
+                  className="you-img"
                 />
-                <CardBody>
-                  <CardTitle>{this.state.user.name}</CardTitle>
-                  <CardSubtitle>{this.state.user.school}</CardSubtitle>
-                  <CardText>{this.state.user.bio}</CardText>
+                <CardBody className="text-left you-body">
+                  <CardTitle className="header-text name-text">{this.state.user.name}</CardTitle>
+                  <CardSubtitle className="school-text">{this.state.user.school}</CardSubtitle>
+                  <CardText className="bio-text"><b>Bio:</b> {this.state.user.bio}</CardText>
                 </CardBody>
               </Card>
             </CardDeck>
           </Col>
-          <Col xs="6">
-            <h1> {this.state.otherUser.name} </h1>
+          <Col xs="8">
+            {/* <h1 className="header-text matched-name"> Your Match: {this.state.otherUser.name} </h1> */}
 
-            <CardDeck>
-              <Card>
+            <CardDeck className="matched-div">
+              <Card classname="user-card matched-card">
                 <CardImg
                   src={
                     this.state.otherUser.photo
@@ -96,23 +96,24 @@ class CombinedUsersAptsDash extends Component {
                       : "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
                   }
                   alt="You"
+                  className="matched-img"
                 />
-                <CardBody>
-                  <CardTitle>{this.state.otherUser.name}</CardTitle>
-                  <CardSubtitle>{this.state.otherUser.school}</CardSubtitle>
-                  <CardText>Contact: {this.state.otherUser.phone}</CardText>
-                  <CardText>Email: {this.state.otherUser.email}</CardText>
-                  <CardText>{this.state.otherUser.bio}</CardText>
+                <CardBody className="text-left matched-body">
+                  <CardTitle className="header-text name-text">{this.state.otherUser.name}</CardTitle>
+                  <CardSubtitle className="school-text">{this.state.otherUser.school}</CardSubtitle>
+                  <CardText><b>Contact:</b> {this.state.otherUser.phone}</CardText>
+                  <CardText><b>Email:</b> {this.state.otherUser.email}</CardText>
+                  <CardText className="bio-text"><b>Bio:</b> {this.state.otherUser.bio}</CardText>
                 </CardBody>
               </Card>
             </CardDeck>
           </Col>
         </Row>
         <Row>
-          <Col>
-            <h1> Common Liked Apartments</h1>
+          <Col xs="12" className="text-left">
+            <h1 className="header-text liked-header">You Both Liked These Apartments</h1>
             {this.state.matchedApts[0] ? (
-              <CardColumns>
+              <CardColumns className="both-apts">
                 {this.state.matchedApts.map((apt, i) => (
                   <ApartmentCardTest
                     aptPhoto={apt.photos[0]}

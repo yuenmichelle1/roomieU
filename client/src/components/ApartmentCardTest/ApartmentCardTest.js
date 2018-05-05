@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  Row,
+  Col,
   Card,
   CardImg,
   CardText,
@@ -28,17 +30,12 @@ const ApartmentCardTest = props => {
               alt=""
               className="actual-img"
             />
+            <span className="compat-percent">${props.rent}/mo</span>
           </Col>
         </Row>
         <CardBody className="text-left">
-          <CardTitle className="header-text name-text">
-            {props.address}
-          </CardTitle>
-          <CardSubtitle className="school-text">${props.rent}/mo</CardSubtitle>
-          <CardText className="bio-text">
-            <b>Description:</b>
-            {props.listingName}
-          </CardText>
+          <CardTitle className="header-text name-text" style={{fontSize:"1.3em"}}>{props.address}</CardTitle>
+          <CardText><b>Description:</b>{props.listingName}</CardText>
         </CardBody>
       </Card>
     </div>
