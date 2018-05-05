@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { AuthConsumer } from "@hasura/react-check-auth";
 import Home from "../Home";
-import { Button, CardColumns } from "reactstrap";
+import { Row, Col, Button, CardColumns } from "reactstrap";
 import ApartmentCardTest from "../ApartmentCardTest/ApartmentCardTest";
 import Schools from "../../CollegesUniversities.json";
+import './LikedApartmentsWrapper.css';
 
 class LikedApartmentsWrapper extends Component {
   state = {
@@ -42,27 +43,35 @@ class LikedApartmentsWrapper extends Component {
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
           userInfo ? (
-            <div>
-              <h1> Your Liked Apartments </h1>
+            <div roomies-div>
+              <Row className="dash-header">
+                <Col xs="12">
+                  <h1 className="header-text" style={{marginTop:"30px"}}> Your Liked Apartments </h1>
+                </Col>
+              </Row>
               {/* Apartment Card */}
-              <CardColumns>
-                {this.state.apartments.map((apt,i) => (
-                  <ApartmentCardTest
-                    aptPhoto={apt.photos[0]}
-                    address={apt.address}
-                    rent={apt.rent}
-                    listingName={apt.listingName}
-                    key={i}
-                  />
-                ))}
-              </CardColumns>
-              <Button
-                onClick={this.goToApartmentsPage}
-                style={{ width: "300px" }}
-              >
-                {" "}
-                + Apartments{" "}
-              </Button>
+              <Row>
+                <Col xs="12">
+                  <Button
+                    onClick={this.goToApartmentsPage}
+                    style={{ width: "300px" }}
+                  >
+                    {" "}
+                    + Apartments{" "}
+                  </Button>
+                  <CardColumns>
+                    {this.state.apartments.map((apt,i) => (
+                      <ApartmentCardTest
+                        aptPhoto={apt.photos[0]}
+                        address={apt.address}
+                        rent={apt.rent}
+                        listingName={apt.listingName}
+                        key={i}
+                      />
+                    ))}
+                  </CardColumns>
+                </Col>
+              </Row>
             </div>
           ) : (
             <Home />

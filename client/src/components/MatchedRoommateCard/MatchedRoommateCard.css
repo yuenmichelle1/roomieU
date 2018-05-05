@@ -4,6 +4,7 @@
 
 .user-photo {
     overflow: hidden;
+    object-fit: cover;
 }
 
 .name-text {

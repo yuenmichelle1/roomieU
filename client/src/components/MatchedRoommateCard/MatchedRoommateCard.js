@@ -31,7 +31,7 @@ const MatchedRoommateCard = props => {
             />
             <span className="compat-percent">{100*props.matchScore/5}% Match</span>
           </Col>
-      </Row>
+        </Row>
         <CardBody className="text-left">
           <CardTitle className="header-text name-text">{props.name}</CardTitle>
           <CardSubtitle className="school-text">{props.school}</CardSubtitle>
