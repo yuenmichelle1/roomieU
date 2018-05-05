@@ -210,11 +210,10 @@ class RoommateCardWrapper extends Component {
   render() {
     console.log("hello?!", this.state);
     return (
-
       <Router>
         <div class="roomies-div">
           <Row className="dash-header">
-            <Col xs="12">
+            <Col xs="12" sm="12" md="4">
               <NavLink
                 to="/dashboard/matched"
                 activeClassName="is-active"
@@ -225,6 +224,8 @@ class RoommateCardWrapper extends Component {
               <Badge className="dash-badge" color="warning">
                 {this.state.matchedRoommates.length}
               </Badge>
+             </Col>
+             <Col xs="12" sm="12" md="4">
               <NavLink
                 to="/dashboard/pending"
                 activeClassName="is-active"
@@ -235,6 +236,8 @@ class RoommateCardWrapper extends Component {
               <Badge className="dash-badge" color="warning">
                 {this.state.pendingRoommates.length}
               </Badge>
+              </Col>
+             <Col xs="12" sm="12" md="4">
               <NavLink
                 to="/dashboard/potential"
                 activeClassName="is-active"
@@ -310,7 +313,6 @@ class RoommateCardWrapper extends Component {
       </Router>
     );
   }
-
 }
 
 export default RoommateCardWrapper;
