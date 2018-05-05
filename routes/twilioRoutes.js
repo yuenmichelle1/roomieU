@@ -2,8 +2,8 @@ const axios = require("axios");
 const router = require("express").Router();
 
 // Twilio Credentials
-const accountSid = "AC4a6009c537be94ef37e1838f246773d6";
-const authToken = "a71deb4562d1bda19eab4e3d1493f1a7";
+const accountSid = process.env.TwilioAccountSid;
+const authToken = process.env.TwilioAuthToken;
 
 // require the Twilio module and create a REST client
 const client = require("twilio")(accountSid, authToken);

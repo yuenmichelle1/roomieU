@@ -48,6 +48,17 @@ class RoommateCardWrapper extends Component {
       const pendingRoommates = candidateRoommates.filter(roommate => {
         return matchedRoommatesIds.indexOf(roommate._id) === -1;
       });
+      
+      const newMatchesArr = this.sortByMatchScore(this.state.currentUser, matchedRoommates);
+      const stateMatchedRoommateIds = [ ...this.state.matchedRoommates].map(roommate => roommate._id);
+      // const stateMatchedIds = stateMatchedRoommatesCopy.map(roommate => roommate._id);
+      const newestMatchArrOneObj = newMatchesArr.filter(roommate => (stateMatchedRoommateIds.indexOf(roommate._id) === -1))
+      if (newestMatchArrOneObj.length > 0) {
+        const newMatchPhone = newestMatchArrOneObj[0].phone;
+        API.sendText(newMatchPhone).then(data => console.log(`MMOOOOOOOO ${data}`));
+      }
+      
+
       // find potential matches. Needs to filter out pending/liked/matched.
       API.filterUser(this.state.currentUser).then(res => {
         const potentialRoommates =
@@ -62,25 +73,8 @@ class RoommateCardWrapper extends Component {
               pendingRoommates
             ),
             requestedRoommates: requestedRoommates,
-            matchedRoommates: this.sortByMatchScore(
-              this.state.currentUser,
-              matchedRoommates
-            ),
+            matchedRoommates: newMatchesArr,
             potentialRoommates: potentialRoommates
-          },
-          () => {
-            if (this.state.matchedRoommates.length > matchedRoommatesCopy.length) {
-              const matchedRoommatesCopyIds = matchedRoommatesCopy.map(roommate => roommate._id);
-              const stateMatchedRoommatesCopy = [ ...this.state.matchedRoommates];
-              const stateMatchedIds = stateMatchedRoommatesCopy.map(roommate => roommate._id);
-              // find the new person
-              const newMatchId = stateMatchedIds.find(id => matchedRoommatesCopyIds.indexOf(id) === -1);
-              const newMatch = stateMatchedRoommatesCopy.find(roommate => roommate._id === newMatchId);
-              console.log(`hellooooo ${newMatch.phone}`);
-              const newMatchPhone= newMatch.phone;
-              API.sendText(newMatchPhone).then(data => console.log(`MMOOOOOOOO ${data}`));
-           
-            }
           }
         );
       });
