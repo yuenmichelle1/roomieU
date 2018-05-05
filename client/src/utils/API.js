@@ -12,6 +12,7 @@ export default {
     getPopulatedUserInfo: (id)=>axios.get(`/api/user/${id}/populated`),
     requestRoomie: (userId, requestedId)=>axios.put(`/api/user/${userId}/request`, {requestedId}),
     getSavedApartments: (id, arr) => axios.post(`/api/apartment/${id}/savedApartments`, arr),
-    getAllApts:(arr) => axios.post(`/api/apartment/matchedApartments`, arr)
+    getAllApts:(arr) => axios.post(`/api/apartment/matchedApartments`, arr),
+    sendText: (phone) => axios.post(`/api/text/sendText`, phone)
 
 }
