@@ -8,7 +8,7 @@ const twilioRouter= require("./twilioRoutes");
 router.use("/api/user", userRouter);
 router.use("/api/apartment", apartmentRouter);
 router.use("/auth", authRouter);
-router.use("/api/text", twilioRouter)
+router.use("/api/text", twilioRouter);
 
 
 

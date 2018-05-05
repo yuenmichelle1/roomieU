@@ -8,7 +8,7 @@ import PotentialCardWrapper from "../PotentialCardWrapper";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink,
   Redirect
 } from "react-router-dom";
 
@@ -48,39 +48,103 @@ class RoommateCardWrapper extends Component {
       const pendingRoommates = candidateRoommates.filter(roommate => {
         return matchedRoommatesIds.indexOf(roommate._id) === -1;
       });
-      
-      const newMatchesArr = this.sortByMatchScore(this.state.currentUser, matchedRoommates);
-      const stateMatchedRoommateIds = [ ...this.state.matchedRoommates].map(roommate => roommate._id);
-      // const stateMatchedIds = stateMatchedRoommatesCopy.map(roommate => roommate._id);
-      const newestMatchArrOneObj = newMatchesArr.filter(roommate => (stateMatchedRoommateIds.indexOf(roommate._id) === -1))
-      if (newestMatchArrOneObj.length > 0) {
-        const newMatchPhone = newestMatchArrOneObj[0].phone;
-        API.sendText(newMatchPhone).then(data => console.log(`MMOOOOOOOO ${data}`));
-      }
-      
-
       // find potential matches. Needs to filter out pending/liked/matched.
       API.filterUser(this.state.currentUser).then(res => {
         const potentialRoommates =
           res.data.length > 0
             ? this.sortByMatchScore(this.state.currentUser, res.data)
             : [];
-        const matchedRoommatesCopy = [...this.state.matchedRoommates];
-        this.setState(
-          {
-            pendingRoommates: this.sortByMatchScore(
-              this.state.currentUser,
-              pendingRoommates
-            ),
-            requestedRoommates: requestedRoommates,
-            matchedRoommates: newMatchesArr,
-            potentialRoommates: potentialRoommates
-          }
-        );
+        this.setState({
+          pendingRoommates: this.sortByMatchScore(
+            this.state.currentUser,
+            pendingRoommates
+          ),
+          requestedRoommates: requestedRoommates,
+          matchedRoommates: this.sortByMatchScore(
+            this.state.currentUser,
+            matchedRoommates
+          ),
+          potentialRoommates: potentialRoommates
+        });
       });
     });
   };
 
+  getAndDisplayUserRoomiesPending = id => {
+    API.getPopulatedUserInfo(id).then(userData => {
+      this.setState({ currentUser: userData.data });
+      const candidateRoommates = userData.data.candidateRoomies;
+      const requestedRoommates = userData.data.requestedRoomies;
+      const requestedRoommatesIds = requestedRoommates.map(
+        roommate => roommate._id
+      );
+
+      // find out overlap between rquested and candidates
+      const matchedRoommates = candidateRoommates.filter(roommate => {
+        return requestedRoommatesIds.indexOf(roommate._id) !== -1;
+      });
+
+      const matchedRoommatesIds = matchedRoommates.map(
+        roommate => roommate._id
+      );
+      // filter out matched ones from pending roomats
+      const pendingRoommates = candidateRoommates.filter(roommate => {
+        return matchedRoommatesIds.indexOf(roommate._id) === -1;
+      });
+      const newMatchesArr = this.sortByMatchScore(
+        this.state.currentUser,
+        matchedRoommates
+      );
+      const stateMatchedRoommatesCopy = [...this.state.matchedRoommates];
+      console.log("stateMatchedRoommatesCopy: " + stateMatchedRoommatesCopy);
+      const stateMatchedIds = stateMatchedRoommatesCopy.map(
+        roommate => roommate._id
+      );
+      console.log("stateMatchedIds " + stateMatchedIds);
+      const newestMatchArrOneObj = newMatchesArr.filter(
+        roommate => stateMatchedIds.indexOf(roommate._id) === -1
+      );
+      console.log(newestMatchArrOneObj);
+      if (newestMatchArrOneObj.length > 0) {
+        const newMatchPhone = newestMatchArrOneObj[0].phone;
+        console.log(`API SEND TEXT ${newMatchPhone}`);
+        API.sendText(newMatchPhone).then(data =>
+          console.log(`MMOOOOOOOO ${data}`)
+        );
+      }
+      // find potential matches. Needs to filter out pending/liked/matched.
+      API.filterUser(this.state.currentUser).then(res => {
+        const potentialRoommates =
+          res.data.length > 0
+            ? this.sortByMatchScore(this.state.currentUser, res.data)
+            : [];
+        this.setState({
+          pendingRoommates: this.sortByMatchScore(
+            this.state.currentUser,
+            pendingRoommates
+          ),
+          requestedRoommates: requestedRoommates,
+          matchedRoommates: newMatchesArr,
+          potentialRoommates: potentialRoommates
+        });
+      });
+    });
+  };
+
+  // sortByMatchScore = function(user, filteredMatches) {
+  //     const prefs = user.roommatePrefs;
+  //     const matchSortedByScore = filteredMatches.map(filteredMatch => {
+  //     let score = 0;
+  //     filteredMatch.userQuals.forEach((a, i) => {
+  //         if (prefs[i] === "0" || prefs[i] === a) {
+  //         score++;
+  //         }
+  //     });
+  //     filteredMatch["matchScore"] = score;
+  //     return filteredMatch;
+  //     });
+  //     return matchSortedByScore.sort((a, b) => b.matchScore - a.matchScore);
+  // };
   sortByMatchScore = function(user, filteredMatches) {
     const prefs = user.roommatePrefs;
     const matchSortedByScore = filteredMatches.map(filteredMatch => {
@@ -104,6 +168,18 @@ class RoommateCardWrapper extends Component {
     if (this.state.currentUser.requestedRoomies.indexOf(id) === -1) {
       API.requestRoomie(this.state.currentUser._id, id).then(result => {
         this.getAndDisplayUserRoomies(this.state.currentUser._id);
+      });
+    }
+  };
+
+  handlePendingClick = id => {
+    this.requestPendingRoommate(id);
+  };
+
+  requestPendingRoommate = id => {
+    if (this.state.currentUser.requestedRoomies.indexOf(id) === -1) {
+      API.requestRoomie(this.state.currentUser._id, id).then(result => {
+        this.getAndDisplayUserRoomiesPending(this.state.currentUser._id);
       });
     }
   };
@@ -136,21 +212,33 @@ class RoommateCardWrapper extends Component {
         <div class="roomies-div">
           <Row className="dash-header">
             <Col xs="12">
-              <Link to="/dashboard/matched" className="header-text dash-link">
+              <NavLink
+                to="/dashboard/matched"
+                activeClassName="is-active"
+                className="header-text dash-link"
+              >
                 Matched Roomies
-              </Link>{" "}
+              </NavLink>{" "}
               <Badge className="dash-badge" color="warning">
                 {this.state.matchedRoommates.length}
               </Badge>
-              <Link to="/dashboard/pending" className="header-text dash-link">
+              <NavLink
+                to="/dashboard/pending"
+                activeClassName="is-active"
+                className="header-text dash-link"
+              >
                 Pending Roomies
-              </Link>{" "}
+              </NavLink>{" "}
               <Badge className="dash-badge" color="warning">
                 {this.state.pendingRoommates.length}
               </Badge>
-              <Link to="/dashboard/potential" className="header-text dash-link">
+              <NavLink
+                to="/dashboard/potential"
+                activeClassName="is-active"
+                className="header-text dash-link"
+              >
                 Potential Roomies
-              </Link>{" "}
+              </NavLink>{" "}
               <Badge className="dash-badge" color="warning">
                 {this.state.potentialRoommates.length}
               </Badge>
@@ -171,7 +259,7 @@ class RoommateCardWrapper extends Component {
                   ) : this.state.pendingRoommates.length > 0 ? (
                     <PendingCardWrapper
                       convertTitle={this.convertTitle}
-                      handleClick={this.handleClick}
+                      handleClick={this.handlePendingClick}
                       pendingRoommates={this.state.pendingRoommates}
                     />
                   ) : (
@@ -198,7 +286,7 @@ class RoommateCardWrapper extends Component {
                 component={() => (
                   <PendingCardWrapper
                     convertTitle={this.convertTitle}
-                    handleClick={this.handleClick}
+                    handleClick={this.handlePendingClick}
                     pendingRoommates={this.state.pendingRoommates}
                   />
                 )}
