@@ -118,10 +118,14 @@ class RoommateCardWrapper extends Component {
         <Router>
             <div class="roomies-div">
                 <Row className="dash-header">
-                    <Col xs="12">
+                    <Col xs="12" sm="12" md="4">
                         <NavLink to="/dashboard/matched" activeClassName='is-active' className="header-text dash-link">Matched Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.matchedRoommates.length}</Badge>
+                    </Col>
+                    <Col xs="12" sm="12" md="4">
                         <NavLink to="/dashboard/pending" activeClassName='is-active' className="header-text dash-link">Pending Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.pendingRoommates.length}</Badge>
-                        <NavLink to="/dashboard/potential" activeClassName='is-active' className="header-text dash-link">Potential Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
+                    </Col>
+                    <Col xs="12" sm="12" md="4">
+                    <NavLink to="/dashboard/potential" activeClassName='is-active' className="header-text dash-link">Potential Roomies</NavLink> <Badge className="dash-badge" color="warning">{this.state.potentialRoommates.length}</Badge>
                     </Col>
                 </Row>
                 <Row>

@@ -139,9 +139,9 @@ class LikedApartmentsWrapper extends Component {
               {/* Apartment Card */}
               <Row>
                 <Col xs="12">
-                  <Button
+                  <Button color="success"
                     onClick={this.goToApartmentsPage}
-                    style={{ width: "300px" }}
+                    style={{ width: "300px", marginBottom:"30px" }}
                   >
                     {" "}
                     + Apartments{" "}
