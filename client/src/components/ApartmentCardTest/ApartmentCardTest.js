@@ -7,9 +7,7 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
-  Row,
-  Col
+  CardSubtitle
 } from "reactstrap";
 import "./ApartmentCardTest.css";
 
