@@ -5,12 +5,14 @@ import "./RoommateCardWrapper.css";
 import PendingCardWrapper from "../PendingCardWrapper";
 import MatchedCardWrapper from "../MatchedCardWrapper";
 import PotentialCardWrapper from "../PotentialCardWrapper";
+
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Redirect
 } from "react-router-dom";
+
 
 class RoommateCardWrapper extends Component {
   state = {
@@ -208,6 +210,7 @@ class RoommateCardWrapper extends Component {
   render() {
     console.log("hello?!", this.state);
     return (
+
       <Router>
         <div class="roomies-div">
           <Row className="dash-header">
@@ -307,6 +310,7 @@ class RoommateCardWrapper extends Component {
       </Router>
     );
   }
+
 }
 
 export default RoommateCardWrapper;

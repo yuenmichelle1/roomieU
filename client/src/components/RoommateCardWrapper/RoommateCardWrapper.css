@@ -1,7 +1,9 @@
 /* * {
     box-sizing: inherit;
 } */
-
+.is-active {
+    background-color: yellow
+}
 .user-card {
     width: 300px !important;
     height: 480px;
@@ -29,7 +31,8 @@
 }
 
 .dash-header {
-    margin-bottom: 30px;
+    margin-top: -5px;
+    margin-bottom: 5px;
 }
 
 .dash-link {
