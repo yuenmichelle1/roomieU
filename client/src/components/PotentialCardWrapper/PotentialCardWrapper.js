@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import "./PotentialCardWrapper.css";
 import PotentialRoommateCard from "../PotentialRoommateCard";
-import { Badge } from 'reactstrap';
 import next from './next.png';
 import back from './back.png';
 
@@ -106,7 +105,8 @@ const PotentialCardWrapper = props => {
                     id={user._id}
                     handleClick={props.handleClick}
                     matchScore={user.matchScore}
-                    convertTitle={props.convertTitle} 
+                    convertTitle={props.convertTitle}
+                    cancelPotential={props.cancelPotential}
                 />
             })} 
         </Slider> 

@@ -55,10 +55,12 @@ const UserSchema = new Schema({
             ref: "User"
         }
     ],
-    matchedRoomie: {
-        type: Schema.Types.ObjectId,
-        ref: "User"
-    },
+    dislikedRoomies:[
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ],
     apartments:[
         {
             type: String,

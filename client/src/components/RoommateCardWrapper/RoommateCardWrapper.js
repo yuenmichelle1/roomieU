@@ -9,8 +9,7 @@ import PotentialCardWrapper from "../PotentialCardWrapper";
 import {
   BrowserRouter as Router,
   Route,
-  NavLink,
-  Redirect
+  NavLink
 } from "react-router-dom";
 
 
@@ -34,6 +33,10 @@ class RoommateCardWrapper extends Component {
       this.setState({ currentUser: userData.data });
       const candidateRoommates = userData.data.candidateRoomies;
       const requestedRoommates = userData.data.requestedRoomies;
+
+      const dislikedRoommatesIds = userData.data.dislikedRoomies;
+      console.log(dislikedRoommatesIds, "disliked roomies")
+
       const requestedRoommatesIds = requestedRoommates.map(
         roommate => roommate._id
       );
@@ -52,9 +55,10 @@ class RoommateCardWrapper extends Component {
       });
       // find potential matches. Needs to filter out pending/liked/matched.
       API.filterUser(this.state.currentUser).then(res => {
+        //change compatibi.ity threshold here (1 is 20%,  2 is 40%)
         const potentialRoommates =
           res.data.length > 0
-            ? this.sortByMatchScore(this.state.currentUser, res.data)
+            ? this.sortByMatchScore(this.state.currentUser, res.data).filter(a=>a.matchScore>=2 && dislikedRoommatesIds.indexOf(a._id)===-1)
             : [];
         this.setState({
           pendingRoommates: this.sortByMatchScore(
@@ -133,20 +137,6 @@ class RoommateCardWrapper extends Component {
     });
   };
 
-  // sortByMatchScore = function(user, filteredMatches) {
-  //     const prefs = user.roommatePrefs;
-  //     const matchSortedByScore = filteredMatches.map(filteredMatch => {
-  //     let score = 0;
-  //     filteredMatch.userQuals.forEach((a, i) => {
-  //         if (prefs[i] === "0" || prefs[i] === a) {
-  //         score++;
-  //         }
-  //     });
-  //     filteredMatch["matchScore"] = score;
-  //     return filteredMatch;
-  //     });
-  //     return matchSortedByScore.sort((a, b) => b.matchScore - a.matchScore);
-  // };
   sortByMatchScore = function(user, filteredMatches) {
     const prefs = user.roommatePrefs;
     const matchSortedByScore = filteredMatches.map(filteredMatch => {
@@ -175,6 +165,7 @@ class RoommateCardWrapper extends Component {
   };
 
   handlePendingClick = id => {
+      console.log(id)
     this.requestPendingRoommate(id);
   };
 
@@ -206,6 +197,28 @@ class RoommateCardWrapper extends Component {
         .join("");
     }
   };
+
+    cancelPotential = (dislikedId)=>{
+        API.cancelRoomie(this.state.currentUser._id, dislikedId).then(
+            (response)=>{
+                console.log(response)
+                this.setState({
+                    potentialRoommates: this.state.potentialRoommates.filter(a=>a._id !==dislikedId)
+                })
+            }
+        )
+    };
+    declinePending = (declinedId)=>{
+        API.declineRoomie(this.state.currentUser._id, declinedId).then(
+            (response)=>{
+                console.log(response)
+                this.setState({
+                    pendingRoommates: this.state.pendingRoommates.filter(a=>a._id !==declinedId)
+                })
+            }
+        )
+    };
+
 
   render() {
     console.log("hello?!", this.state);
@@ -267,12 +280,14 @@ class RoommateCardWrapper extends Component {
                       convertTitle={this.convertTitle}
                       handleClick={this.handlePendingClick}
                       pendingRoommates={this.state.pendingRoommates}
+                      declinePending = {this.declinePending}
                     />
                   ) : (
                     <PotentialCardWrapper
                       convertTitle={this.convertTitle}
                       handleClick={this.handleClick}
                       potentialRoommates={this.state.potentialRoommates}
+                      cancelPotential = {this.cancelPotential}
                     />
                   );
                 }}
@@ -294,6 +309,7 @@ class RoommateCardWrapper extends Component {
                     convertTitle={this.convertTitle}
                     handleClick={this.handlePendingClick}
                     pendingRoommates={this.state.pendingRoommates}
+                    declinePending = {this.declinePending}
                   />
                 )}
               />
@@ -304,6 +320,7 @@ class RoommateCardWrapper extends Component {
                     convertTitle={this.convertTitle}
                     handleClick={this.handleClick}
                     potentialRoommates={this.state.potentialRoommates}
+                    cancelPotential = {this.cancelPotential}
                   />
                 )}
               />

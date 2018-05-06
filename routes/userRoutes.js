@@ -13,7 +13,8 @@ router.post("/", userController.filter);
 
 router.get("/:id/populated", userController.getPopulatedUserInfo);
 
-
+router.put("/:id/cancel", userController.cancelRoomie);
+router.put("/:id/decline", userController.declineRoomie)
 // router.post(`/requested`, userController.getLikes);
 router.put("/:id/request", userController.requestRoomie)
 

@@ -106,6 +106,7 @@ const PendingCardWrapper = props => {
                     matchScore={user.matchScore}
                     handleClick={props.handleClick}
                     convertTitle={props.convertTitle} 
+                    declinePending={props.declinePending}
                 />
             })} 
         </Slider> 
