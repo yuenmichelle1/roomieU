@@ -38,6 +38,7 @@ const PotentialRoommateCard = props => {
           <CardSubtitle className="school-text">{props.school}</CardSubtitle>
           <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
           <Button className="btn roomie-btn" color="warning" onClick={() => props.handleClick(props.id)}>Let's Be Roomies!</Button>
+          <Button className="btn" color="success" onClick={() => props.cancelPotential(props.id)}>Nah</Button>
         </CardBody>
       </Card>
     // </div> 

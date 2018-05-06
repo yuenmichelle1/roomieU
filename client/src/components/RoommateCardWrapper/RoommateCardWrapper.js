@@ -33,6 +33,10 @@ class RoommateCardWrapper extends Component {
       this.setState({ currentUser: userData.data });
       const candidateRoommates = userData.data.candidateRoomies;
       const requestedRoommates = userData.data.requestedRoomies;
+
+      const dislikedRoommatesIds = userData.data.dislikedRoomies;
+      console.log(dislikedRoommatesIds, "disliked roomies")
+
       const requestedRoommatesIds = requestedRoommates.map(
         roommate => roommate._id
       );
@@ -54,7 +58,7 @@ class RoommateCardWrapper extends Component {
         //change compatibi.ity threshold here (1 is 20%,  2 is 40%)
         const potentialRoommates =
           res.data.length > 0
-            ? this.sortByMatchScore(this.state.currentUser, res.data).filter(a=>a.matchScore>=2)
+            ? this.sortByMatchScore(this.state.currentUser, res.data).filter(a=>a.matchScore>=2 && dislikedRoommatesIds.indexOf(a._id)===-1)
             : [];
         this.setState({
           pendingRoommates: this.sortByMatchScore(
@@ -133,20 +137,6 @@ class RoommateCardWrapper extends Component {
     });
   };
 
-  // sortByMatchScore = function(user, filteredMatches) {
-  //     const prefs = user.roommatePrefs;
-  //     const matchSortedByScore = filteredMatches.map(filteredMatch => {
-  //     let score = 0;
-  //     filteredMatch.userQuals.forEach((a, i) => {
-  //         if (prefs[i] === "0" || prefs[i] === a) {
-  //         score++;
-  //         }
-  //     });
-  //     filteredMatch["matchScore"] = score;
-  //     return filteredMatch;
-  //     });
-  //     return matchSortedByScore.sort((a, b) => b.matchScore - a.matchScore);
-  // };
   sortByMatchScore = function(user, filteredMatches) {
     const prefs = user.roommatePrefs;
     const matchSortedByScore = filteredMatches.map(filteredMatch => {
@@ -207,6 +197,13 @@ class RoommateCardWrapper extends Component {
     }
   };
 
+  cancelPotential = (dislikedId)=>{
+    API.cancelRoomie(this.state.currentUser._id, dislikedId).then(
+        this.setState({
+            potentialRoommates: this.state.potentialRoommates.filter(a=>a._id !==dislikedId)
+        })
+    )
+}
   render() {
     console.log("hello?!", this.state);
     return (
@@ -273,6 +270,7 @@ class RoommateCardWrapper extends Component {
                       convertTitle={this.convertTitle}
                       handleClick={this.handleClick}
                       potentialRoommates={this.state.potentialRoommates}
+                      cancelPotential = {this.cancelPotential}
                     />
                   );
                 }}
@@ -304,6 +302,7 @@ class RoommateCardWrapper extends Component {
                     convertTitle={this.convertTitle}
                     handleClick={this.handleClick}
                     potentialRoommates={this.state.potentialRoommates}
+                    cancelPotential = {this.cancelPotential}
                   />
                 )}
               />

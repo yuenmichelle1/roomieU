@@ -105,7 +105,8 @@ const PotentialCardWrapper = props => {
                     id={user._id}
                     handleClick={props.handleClick}
                     matchScore={user.matchScore}
-                    convertTitle={props.convertTitle} 
+                    convertTitle={props.convertTitle}
+                    cancelPotential={props.cancelPotential}
                 />
             })} 
         </Slider> 

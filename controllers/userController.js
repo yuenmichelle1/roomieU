@@ -58,7 +58,20 @@ module.exports = {
         res.json(dbUser);
       })
   },
+  cancelRoomie: (req, res) => {
+    db.User.findByIdAndUpdate(
+        req.params.id,
+        {
+            $push: {dislikedRoomies: req.body.dislikedId}
 
+        },
+        {
+            new: true
+        }
+    ).then(dbUser =>{
+        res.json(dbUser)      
+    }).catch(err => res.json(err));
+},
   requestRoomie: (req, res) => {
     db.User.findByIdAndUpdate(
         req.params.id,
