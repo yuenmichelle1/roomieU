@@ -165,6 +165,7 @@ class RoommateCardWrapper extends Component {
   };
 
   handlePendingClick = id => {
+      console.log(id)
     this.requestPendingRoommate(id);
   };
 
@@ -197,13 +198,28 @@ class RoommateCardWrapper extends Component {
     }
   };
 
-  cancelPotential = (dislikedId)=>{
-    API.cancelRoomie(this.state.currentUser._id, dislikedId).then(
-        this.setState({
-            potentialRoommates: this.state.potentialRoommates.filter(a=>a._id !==dislikedId)
-        })
-    )
-}
+    cancelPotential = (dislikedId)=>{
+        API.cancelRoomie(this.state.currentUser._id, dislikedId).then(
+            (response)=>{
+                console.log(response)
+                this.setState({
+                    potentialRoommates: this.state.potentialRoommates.filter(a=>a._id !==dislikedId)
+                })
+            }
+        )
+    };
+    declinePending = (declinedId)=>{
+        API.declineRoomie(this.state.currentUser._id, declinedId).then(
+            (response)=>{
+                console.log(response)
+                this.setState({
+                    pendingRoommates: this.state.pendingRoommates.filter(a=>a._id !==declinedId)
+                })
+            }
+        )
+    };
+
+
   render() {
     console.log("hello?!", this.state);
     return (
@@ -264,6 +280,7 @@ class RoommateCardWrapper extends Component {
                       convertTitle={this.convertTitle}
                       handleClick={this.handlePendingClick}
                       pendingRoommates={this.state.pendingRoommates}
+                      declinePending = {this.declinePending}
                     />
                   ) : (
                     <PotentialCardWrapper
@@ -292,6 +309,7 @@ class RoommateCardWrapper extends Component {
                     convertTitle={this.convertTitle}
                     handleClick={this.handlePendingClick}
                     pendingRoommates={this.state.pendingRoommates}
+                    declinePending = {this.declinePending}
                   />
                 )}
               />

@@ -72,6 +72,21 @@ module.exports = {
         res.json(dbUser)      
     }).catch(err => res.json(err));
 },
+declineRoomie: (req, res) => {
+    db.User.findByIdAndUpdate(
+        req.params.id,
+        {
+            $pull: {candidateRoomies: req.body.declinedId}
+        },
+
+        {
+            new: true
+        }
+    ).exec((err,dbUser)=> {
+        if (err) throw err;
+        res.json(dbUser);
+      })
+  },
   requestRoomie: (req, res) => {
     db.User.findByIdAndUpdate(
         req.params.id,

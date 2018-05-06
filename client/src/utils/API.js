@@ -15,6 +15,7 @@ export default {
     getAllApts:(arr) => axios.post(`/api/apartment/matchedApartments`, arr),
     sendText: (phone) => axios.post(`/api/text/sendText`, phone),
 
-    cancelRoomie: (userId, dislikedId)=>axios.put(`/api/user/${userId}/cancel`, {dislikedId})
+    cancelRoomie: (userId, dislikedId)=>axios.put(`/api/user/${userId}/cancel`, {dislikedId}),
+    declineRoomie: (userId, declinedId)=>axios.put(`/api/user/${userId}/decline`, {declinedId})
 
 }

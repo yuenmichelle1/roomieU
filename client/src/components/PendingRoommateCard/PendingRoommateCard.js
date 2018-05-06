@@ -37,6 +37,7 @@ const PendingRoommateCard = props => {
             <CardSubtitle className="school-text">{props.school}</CardSubtitle>
             <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
             <Button className="btn roomie-btn accept-btn" color="success" onClick={() => props.handleClick(props.id)}>Accept Roomie Invite</Button>
+            <Button className="btn" color="warning" onClick={() => props.declinePending(props.id)}>Decline</Button>
           </CardBody>
         
     </Card>
