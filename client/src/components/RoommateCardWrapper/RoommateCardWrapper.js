@@ -9,8 +9,7 @@ import PotentialCardWrapper from "../PotentialCardWrapper";
 import {
   BrowserRouter as Router,
   Route,
-  NavLink,
-  Redirect
+  NavLink
 } from "react-router-dom";
 
 
@@ -52,9 +51,10 @@ class RoommateCardWrapper extends Component {
       });
       // find potential matches. Needs to filter out pending/liked/matched.
       API.filterUser(this.state.currentUser).then(res => {
+        //change compatibi.ity threshold here (1 is 20%,  2 is 40%)
         const potentialRoommates =
           res.data.length > 0
-            ? this.sortByMatchScore(this.state.currentUser, res.data)
+            ? this.sortByMatchScore(this.state.currentUser, res.data).filter(a=>a.matchScore>=2)
             : [];
         this.setState({
           pendingRoommates: this.sortByMatchScore(

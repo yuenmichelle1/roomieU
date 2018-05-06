@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import "./PotentialCardWrapper.css";
 import PotentialRoommateCard from "../PotentialRoommateCard";
-import { Badge } from 'reactstrap';
 import next from './next.png';
 import back from './back.png';
 
