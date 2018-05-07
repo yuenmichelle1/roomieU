@@ -14,8 +14,9 @@ class Map extends Component {
     apartment: {},
     isSaved: false,
     userSavedApts: [],
-    userId: "", 
-    userSavedAddressArr: []
+    userId: "",
+    userSavedAddressArr: [], 
+    aptsInBudget: []
   };
 
   componentDidMount() {
@@ -23,15 +24,30 @@ class Map extends Component {
     API.getUserInfo().then(data => {
       const userId = data.data._id;
       const userAptAddressesArr = data.data.apartments;
+      const userBudget = data.data.budget;
+      const userBudgetSplit= userBudget.split("$");
+      const userBudgetCap= userBudgetSplit[userBudgetSplit.length-1];
+      // do a check to see if userBudget is 3001+ that changes logic. 
+      const aptsFilteredByCap = Apartments.filter(aptObj => (aptObj.prices <= parseInt(userBudgetCap)));
+      console.log(aptsFilteredByCap);
+
+      // get users savedapartments array object
       API.getSavedApartments(userId, userAptAddressesArr).then(aptObjs => {
-        this.setState({ userSavedApts: aptObjs.data, userId: userId, userSavedAddressArr: userAptAddressesArr });
+        this.setState({
+          userSavedApts: aptObjs.data,
+          userId: userId,
+          userSavedAddressArr: userAptAddressesArr,
+          aptsInBudget: aptsFilteredByCap
+        }, ()=> console.log(this.state.aptsInBudget));
       });
     });
   }
 
   onClick = apt => {
     const userSavedAptsCopy = [...this.state.userSavedApts];
-    if (userSavedAptsCopy.find(apartment => apartment.address === apt.address)) {
+    if (
+      userSavedAptsCopy.find(apartment => apartment.address === apt.address)
+    ) {
       this.setState({ apartment: apt, isSaved: true });
     } else {
       this.setState({ apartment: apt, isSaved: false });
@@ -56,14 +72,17 @@ class Map extends Component {
           longitude: aptObj.longitude
         }).then(data => {
           // update currentUser to Save Address into apartmentsArr of userDocument
-          const userId= this.state.userId;
-          const newAddr= data.data.address;
-          const userSavedAddresses = [...this.state.userSavedAddressArr, newAddr];
+          const userId = this.state.userId;
+          const newAddr = data.data.address;
+          const userSavedAddresses = [
+            ...this.state.userSavedAddressArr,
+            newAddr
+          ];
           this.saveAptToUser(userId, userSavedAddresses);
         });
       } else {
         const userId = this.state.userId;
-        const newAddr= aptObj.address;
+        const newAddr = aptObj.address;
         const userSavedAddresses = [...this.state.userSavedAddressArr, newAddr];
         this.saveAptToUser(userId, userSavedAddresses);
       }
@@ -71,23 +90,35 @@ class Map extends Component {
   };
 
   saveAptToUser = (id, addressArr) => {
-    API.updateUser(id, {apartments: addressArr}).then(result => {
+    API.updateUser(id, { apartments: addressArr }).then(result => {
       API.getSavedApartments(id, result.data.apartments).then(aptObjs => {
-        this.setState({userSavedApts: aptObjs.data, userSavedAddressArr: addressArr, isSaved: true});
-      })
-    })   
-  }
+        this.setState({
+          userSavedApts: aptObjs.data,
+          userSavedAddressArr: addressArr,
+          isSaved: true
+        });
+      });
+    });
+  };
 
-  unsaveFromUser=(address) => {
+  unsaveFromUser = address => {
     const userSavedAddressArrCopy = [...this.state.userSavedAddressArr];
-    const newAddressArrRemovingUnsaved = userSavedAddressArrCopy.filter(addr => (addr !== address));
-    const userId= this.state.userId;
-    API.updateUser(userId, {apartments: newAddressArrRemovingUnsaved}).then(user => {
-      API.getSavedApartments(userId, user.data.apartments).then(aptObjs => {
-        this.setState({userSavedApts: aptObjs.data, userSavedAddressArr: newAddressArrRemovingUnsaved, isSaved: false});
-      })
-    })
-  }
+    const newAddressArrRemovingUnsaved = userSavedAddressArrCopy.filter(
+      addr => addr !== address
+    );
+    const userId = this.state.userId;
+    API.updateUser(userId, { apartments: newAddressArrRemovingUnsaved }).then(
+      user => {
+        API.getSavedApartments(userId, user.data.apartments).then(aptObjs => {
+          this.setState({
+            userSavedApts: aptObjs.data,
+            userSavedAddressArr: newAddressArrRemovingUnsaved,
+            isSaved: false
+          });
+        });
+      }
+    );
+  };
 
   render() {
     const ApartmentMap = withGoogleMap(props => (

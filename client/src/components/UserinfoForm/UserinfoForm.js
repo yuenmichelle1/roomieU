@@ -60,17 +60,17 @@ const UserinfoForm = props => {
             >
               <option>$0 - $800</option>
               <option>$801 - $1000 </option>
-              <option>$1,001 - $1,200</option>
-              <option>$1,201 - $1,400 </option>
-              <option>$1,401 - $1,600</option>
-              <option>$1,601 - $1,800 </option>
-              <option>$1,801 - $2,000</option>
-              <option>$2,001 - $2,200 </option>
+              <option>$1001 - $1200</option>
+              <option>$1201 - $1400 </option>
+              <option>$1401 - $1600</option>
+              <option>$1601 - $1800 </option>
+              <option>$1801 - $2000</option>
+              <option>$2001 - $2200 </option>
               <option>$2,201 - $2,400</option>
-              <option>$2,401 - $2,600 </option>
-              <option>$2,601 - $2,800 </option>
-              <option>$2,801 - $3,000 </option>
-              <option>$3,001 or higher...</option>
+              <option>$2401 - $2600 </option>
+              <option>$2601 - $2800 </option>
+              <option>$2801 - $3000 </option>
+              <option>$3001 or higher...</option>
             </Input>
           </FormGroup>
           <FormGroup>
