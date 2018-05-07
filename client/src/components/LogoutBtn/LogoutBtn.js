@@ -14,7 +14,7 @@ const LogoutBtn = (props) => (
         <Row className="nav-rightside">
             <Col xs="8">
                 <NavItem className="nav-welcome header-text">{props.userInfo.name}</NavItem>
-                <NavLink href="/"><Button onClick = {props.handleLogout} color="warning" id="login-btn" className="btns login-btn logout-btn">Log Out</Button></NavLink>
+                <NavLink><Button onClick = {props.handleLogout} color="warning" id="login-btn" className="btns login-btn logout-btn">Log Out</Button></NavLink>
             </Col>
             <Col xs="4">
             <NavLink href="/dashboard">
