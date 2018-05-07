@@ -209,6 +209,7 @@ class CombinedUsersAptsDash extends Component {
                     rent={apt.rent}
                     listingName={apt.listingName}
                     key={i}
+                    showButton=""
                   />
                 ))}
               </Slider>

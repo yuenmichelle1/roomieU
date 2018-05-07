@@ -7,7 +7,8 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle
+  CardSubtitle,
+  Button
 } from "reactstrap";
 import "./ApartmentCardTest.css";
 
@@ -34,6 +35,7 @@ const ApartmentCardTest = props => {
         <CardBody className="text-left">
           <CardTitle className="header-text name-text" style={{fontSize:"1.3em"}}>{props.address}</CardTitle>
           <CardText><b>Description:</b>{props.listingName}</CardText>
+          {(props.showButton === "show") ? <Button style={{width:"200px"}} onClick={() => props.dislikeApt(props.address)}> Unsave Apt?</Button> : <p />}
         </CardBody>
       </Card>
     </div>

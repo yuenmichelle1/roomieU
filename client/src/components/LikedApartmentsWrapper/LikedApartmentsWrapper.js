@@ -125,6 +125,23 @@ class LikedApartmentsWrapper extends Component {
     // find the element in array that has the name
   };
 
+  dislikeApt = address => {
+    console.log("Is dislike apt being hit? ")
+    const aptsCopy = [...this.state.apartments];
+    // filter and get rid of
+    const newAptsArr = aptsCopy.filter(apt => (apt.address != address));
+    console.log(newAptsArr);
+    const newAptsAddrArr = newAptsArr.map(apt => apt.address);
+    console.log(newAptsAddrArr);
+    API.getUserInfo().then(data => {
+      const userId = data.data._id;
+      API.updateUser(userId, { apartments: newAptsAddrArr }).then(result => {
+        console.log("result");
+        this.setState({ apartments: newAptsArr }, () => {console.log(this.state.apartments)});
+      });
+    });
+  };
+
   render() {
     return (
       <AuthConsumer>
@@ -133,30 +150,36 @@ class LikedApartmentsWrapper extends Component {
             <div roomies-div>
               <Row className="dash-header">
                 <Col xs="12">
-                  <h1 className="header-text" style={{marginTop:"30px"}}> Your Liked Apartments </h1>
+                  <h1 className="header-text" style={{ marginTop: "30px" }}>
+                    {" "}
+                    Your Liked Apartments{" "}
+                  </h1>
                 </Col>
               </Row>
               {/* Apartment Card */}
               <Row>
                 <Col xs="12">
-                  <Button color="success"
+                  <Button
+                    color="success"
                     onClick={this.goToApartmentsPage}
-                    style={{ width: "300px", marginBottom:"30px" }}
+                    style={{ width: "300px", marginBottom: "30px" }}
                   >
                     {" "}
                     + Apartments{" "}
                   </Button>
                   <Slider {...settings}>
-                {this.state.apartments.map((apt, i) => (
-                  <ApartmentCardTest
-                    aptPhoto={apt.photos[0]}
-                    address={apt.address}
-                    rent={apt.rent}
-                    listingName={apt.listingName}
-                    key={i}
-                  />
-                ))}
-              </Slider>
+                    {this.state.apartments.map((apt, i) => (
+                      <ApartmentCardTest
+                        aptPhoto={apt.photos[0]}
+                        address={apt.address}
+                        rent={apt.rent}
+                        listingName={apt.listingName}
+                        key={i}
+                        showButton="show"
+                        dislikeApt={this.dislikeApt}
+                      />
+                    ))}
+                  </Slider>
                 </Col>
               </Row>
             </div>
