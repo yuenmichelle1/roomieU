@@ -7,12 +7,12 @@ module.exports = {
       res.json(dbApartment);
     });
   },
+  
   search: (req, res) => {
-    //need to pass requirement for zillow search endpoint in req body
-    const ZillowEndpoint = "";
-    axios.get(ZillowEndpoint, apartmentData => {
-      res.json(apartmentData);
-    });
+    db.Apartment.findOne({address: req.body.address}).then(dbApartment => {
+      res.json(dbApartment);
+    })
+    
   },
   save: (req, res) => {
     db.Apartment.create(req.body)
@@ -70,5 +70,10 @@ module.exports = {
         res.json(dbApartments);
       })
       .catch(err => res.json(err));
+  },
+  create: (req,res) => {
+    db.Apartment.create(req.body).then(dbApartment => {
+      res.json(dbApartment);
+    })
   }
 };

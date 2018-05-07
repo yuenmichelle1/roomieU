@@ -15,6 +15,10 @@ export default {
     getAllApts:(arr) => axios.post(`/api/apartment/matchedApartments`, arr),
     sendText: (phone) => axios.post(`/api/text/sendText`, phone),
 
+    checkDBForApt: (aptObj) => axios.post(`/api/apartment/search`, aptObj),
+
+    saveAptToDatabase: (aptObj) => axios.post(`/api/apartment/create`, aptObj),
+
     cancelRoomie: (userId, dislikedId)=>axios.put(`/api/user/${userId}/cancel`, {dislikedId}),
     declineRoomie: (userId, declinedId)=>axios.put(`/api/user/${userId}/decline`, {declinedId})
 
