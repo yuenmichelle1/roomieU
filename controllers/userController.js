@@ -30,7 +30,7 @@ module.exports = {
     )
       .then(dbUser => {
         if (dbUser) {
-          res.json("user updated");
+          res.json(dbUser);
         } else {
           res.json("user doesn't exist");
         }

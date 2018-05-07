@@ -176,7 +176,7 @@ class CombinedUsersAptsDash extends Component {
             {/* <h1 className="header-text matched-name"> Your Match: {this.state.otherUser.name} </h1> */}
 
             <CardDeck className="matched-div">
-              <Card classname="user-card matched-card">
+              <Card className="user-card matched-card">
                 <CardImg
                   src={
                     this.state.otherUser.photo
