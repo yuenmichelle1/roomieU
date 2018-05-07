@@ -9,11 +9,6 @@ import back from '../PotentialCardWrapper/back.png';
 function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
-    //   <div
-    //     className={className}
-    //     style={{ ...style, display: "block", background: "red" }}
-    //     onClick={onClick}
-    //   />
     <div className={className}>
         <img className="arrow" src={next} alt="" onClick={onClick}/>
     </div>
@@ -23,11 +18,6 @@ function NextArrow(props) {
 function BackArrow(props) {
     const { className, style, onClick } = props;
     return (
-    //   <div
-    //     className={className}
-    //     style={{ ...style, display: "block", background: "red" }}
-    //     onClick={onClick}
-    //   />
     <div className={className} id="trans-bg">
         <img className="arrow back-arrow" src={back} alt="" onClick={onClick}/>
     </div>

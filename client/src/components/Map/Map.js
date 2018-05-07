@@ -24,19 +24,17 @@ class Map extends Component {
       const userId = data.data._id;
       const userAptAddressesArr = data.data.apartments;
       API.getSavedApartments(userId, userAptAddressesArr).then(aptObjs => {
-        console.log(`all my apts ${aptObjs.data}`);
         this.setState({ userSavedApts: aptObjs.data, userId: userId, userSavedAddressArr: userAptAddressesArr });
       });
     });
   }
 
   onClick = apt => {
-    console.log("on click");
     const userSavedAptsCopy = [...this.state.userSavedApts];
     if (userSavedAptsCopy.find(apartment => apartment.address === apt.address)) {
       this.setState({ apartment: apt, isSaved: true });
     } else {
-      this.setState({ apartment: apt, isSaved: false }, () => console.log(this.state.isSaved));
+      this.setState({ apartment: apt, isSaved: false });
     }
   };
 
@@ -57,7 +55,6 @@ class Map extends Component {
           latitude: aptObj.latitude,
           longitude: aptObj.longitude
         }).then(data => {
-          console.log(data, +"CHECK IF SAVED");
           // update currentUser to Save Address into apartmentsArr of userDocument
           const userId= this.state.userId;
           const newAddr= data.data.address;
