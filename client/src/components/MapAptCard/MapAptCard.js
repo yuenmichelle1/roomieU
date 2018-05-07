@@ -10,12 +10,6 @@ import React from "react";
 
 
 const MapAptCard = props => {
-  const items=props.aptData.imageURLs.map(image => ({
-    src: image,
-    altText: "Slide", 
-    caption: 'Slide',
-    header: 'Header'
-  }));
   return (
     <div>
       <Card>
