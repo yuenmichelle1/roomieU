@@ -80,7 +80,7 @@ class Map extends Component {
       } else {
         aptFilteredByCapAndRadius= aptsFilteredByRadius.filter(aptObj => aptsFilteredByCap.find(apt => (apt.address === aptObj.address)));
       }
-      console.log(aptFilteredByCapAndRadius);
+    
       // get users savedapartments array object
       API.getSavedApartments(userId, userAptAddressesArr).then(aptObjs => {
         this.setState(
