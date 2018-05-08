@@ -42,7 +42,6 @@ function BackArrow(props) {
 }
 
 var settings = {
-  className: "apt-slider",
   dots: true,
   infinite: true,
   nextArrow: <NextArrow />,
