@@ -15,7 +15,7 @@ import "./ApartmentCardTest.css";
 const ApartmentCardTest = props => {
   return (
     <div>
-      <Card className="user-card">
+      <Card className="user-card apt-card">
         <Row className="user-photo">
           <Col xs="12" sm="12" md="12" lg="12">
             <CardImg
@@ -33,9 +33,15 @@ const ApartmentCardTest = props => {
           </Col>
         </Row>
         <CardBody className="text-left">
-          <CardTitle className="header-text name-text" style={{fontSize:"1.3em"}}>{props.address}</CardTitle>
-          <CardText><b>Description:</b>{props.listingName}</CardText>
-          {(props.showButton === "show") ? <Button style={{width:"200px"}} onClick={() => props.dislikeApt(props.address)}> Unsave Apt?</Button> : <p />}
+          <CardTitle className="header-text name-text" style={{fontSize:"1.1em", marginBottom:"5px", textAlign:"center"}}>{props.address}</CardTitle>
+          <Row>
+            <Col xs="12" className="text-center">
+          {/* <CardText><b>Description:</b>{props.listingName}</CardText> */}
+          {(props.showButton === "show") ? 
+          
+              <Button color="danger" style={{width:"130px"}} onClick={() => props.dislikeApt(props.address)}>Remove</Button> : <p />}
+            </Col>
+          </Row>
         </CardBody>
       </Card>
     </div>

@@ -1,0 +1,12 @@
+.aptDiv-title {
+    color: #6c757d !important;
+    font-size: 2em !important;
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.apt-slider {
+    height: 360px;
+    margin-bottom: 50px;
+}

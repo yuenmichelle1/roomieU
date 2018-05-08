@@ -8,7 +8,7 @@
 
 .user-card {
     width: 300px !important;
-    height: 460px;
+    height: 450px;
     margin-bottom: 20px;
     -webkit-box-shadow: 3px 4px 18px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 4px 18px -2px rgba(0,0,0,0.75);
@@ -37,7 +37,7 @@
 }
 
 .dash-header {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .dash-link {

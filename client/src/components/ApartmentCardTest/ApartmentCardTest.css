@@ -2,6 +2,10 @@
     margin: 0 auto;
 }
 
+.apt-card {
+    height: 350px;
+}
+
 .user-photo {
     overflow: hidden;
 }
