@@ -1,6 +1,7 @@
 .nav-rightside {
     margin-top: 10px;
-    margin-right: 25px !important;
+    /* margin-right: 25px !important; */
+    width: 285px;
 }
 
 .nav-welcome {
