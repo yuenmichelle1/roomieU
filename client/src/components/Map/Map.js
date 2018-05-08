@@ -114,7 +114,7 @@ class Map extends Component {
       <div>
         {Object.keys(this.state.apartment).length !== 0 ? (
           <Row>
-            <Col xs="6" sm="6" md="6" lg="6">
+          <Col xs="6" sm="6" md="6" lg="6">
               <ApartmentMap
                 containerElement={
                   <div
@@ -132,6 +132,7 @@ class Map extends Component {
                 isSaved={this.state.isSaved}
               />
             </Col>
+            
           </Row>
         ) : (
           <ApartmentMap

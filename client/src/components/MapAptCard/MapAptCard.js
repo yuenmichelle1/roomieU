@@ -6,25 +6,56 @@ import {
   UncontrolledCarousel
 } from "reactstrap";
 import React from "react";
+import Slider from "react-slick";
+import next from './next.png';
+import back from './back.png';
 
+function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+    //   <div
+    //     className={className}
+    //     style={{ ...style, display: "block", background: "red" }}
+    //     onClick={onClick}
+    //   />
+    <div className={className}>
+        <img className="arrow" src={next} alt="" onClick={onClick}/>
+    </div>
+    );
+}
 
+function BackArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+    //   <div
+    //     className={className}
+    //     style={{ ...style, display: "block", background: "red" }}
+    //     onClick={onClick}
+    //   />
+    <div className={className} id="trans-bg">
+        <img className="arrow back-arrow" src={back} alt="" onClick={onClick}/>
+    </div>
+    );
+}
+
+var settings = {
+  dots: true,
+  infinite: true,
+  nextArrow: <NextArrow />,
+  prevArrow: <BackArrow />,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
 
 const MapAptCard = props => {
   return (
     <div>
       <Card>
-        <CardImg
-          src={props.aptData.imageURLs ? props.aptData.imageURLs[0] : "https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"}
-          alt="Card image cap"
-        />
-        {/* <UncontrolledCarousel
-          autoPlay={true}
-          items={props.aptData.imageURLs ? (props.aptData.imageURLs.map(image => ({
-            src: image,
-            altText: "Apartment", 
-            caption: 'Slide',
-            header: 'Header'
-          }))) : ({src: "https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180", altText: 'no photo found', caption: "No Photo Found", header: "No Photo Found"})} /> */}
+
+      <Slider {...settings}>
+          {props.aptData.imageURLs.map(img =>  <img src={img} width="640px" height="550px" />) }
+      </Slider>
         
         <CardBody>
           <h1>
