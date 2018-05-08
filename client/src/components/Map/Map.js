@@ -36,8 +36,7 @@ class Map extends Component {
     isSaved: false,
     userSavedApts: [],
     userId: "",
-    userSavedAddressArr: [],
-    aptsInBudget: []
+    userSavedAddressArr: []
   };
 
   componentDidMount() {
@@ -62,22 +61,24 @@ class Map extends Component {
      } else {
        aptsFilteredByRadius = Apartments.filter(aptObj => (getDistanceFromLatLonInMiles(schoolLat, schoolLon, aptObj.latitude, aptObj.longitude)< Number(userRadiusCap)));
      }
-     console.log(Number(userRadiusCap));
      console.log(aptsFilteredByRadius);
       // do a check to see if userBudget is 3001+ then grab all apartments, else filter
-      if (Number(userBudgetCap) === 3001) {
+      if (parseInt(userBudgetCap) === 3001) {
         aptsFilteredByCap = Apartments;
       } else {
         aptsFilteredByCap = Apartments.filter(
           aptObj => aptObj.prices <= Number(userBudgetCap)
         );
       }
+      console.log(aptsFilteredByCap);
+
       let aptFilteredByCapAndRadius = [];
+
       if (aptsFilteredByCap.length > aptsFilteredByRadius.length) {
-        aptFilteredByCapAndRadius = aptsFilteredByCap.filter(aptObj => aptsFilteredByRadius.find(apt => (apt.address===aptObj.address)));
+        aptFilteredByCapAndRadius  = aptsFilteredByCap.filter(aptObj => aptsFilteredByRadius.find(apt => (apt.address===aptObj.address)));
         console.log(aptFilteredByCapAndRadius);
       } else {
-        aptsFilteredByCap = aptsFilteredByRadius.filter(aptObj => aptsFilteredByCap.find(apt => (apt.address === aptObj.address)));
+        aptFilteredByCapAndRadius= aptsFilteredByRadius.filter(aptObj => aptsFilteredByCap.find(apt => (apt.address === aptObj.address)));
       }
       console.log(aptFilteredByCapAndRadius);
       // get users savedapartments array object
@@ -86,10 +87,8 @@ class Map extends Component {
           {
             userSavedApts: aptObjs.data,
             userId: userId,
-            userSavedAddressArr: userAptAddressesArr,
-            aptsInBudget: aptsFilteredByCap
-          },
-          () => console.log(this.state.aptsInBudget)
+            userSavedAddressArr: userAptAddressesArr
+          }
         );
       });
     });
