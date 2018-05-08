@@ -16,7 +16,7 @@ const LogoutBtn = (props) => (
                 <NavItem className="nav-welcome header-text">{props.userInfo.name}</NavItem>
                 <NavLink><Button onClick = {props.handleLogout} color="warning" id="login-btn" className="btns login-btn logout-btn">Log Out</Button></NavLink>
             </Col>
-            <Col xs="4">
+            <Col xs="4" style={{padding:0}}>
             <NavLink href="/dashboard">
                 <img src={props.userInfo.photo} className="nav-photo" style={{width:"70px", height:"70px", borderRadius: "50%", marginLeft: "-10px", objectFit: "cover"}} alt=""/>
             </NavLink>

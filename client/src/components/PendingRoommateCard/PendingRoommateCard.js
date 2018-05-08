@@ -36,8 +36,12 @@ const PendingRoommateCard = props => {
             <CardTitle className="header-text name-text">{props.convertTitle(props.name)}</CardTitle>
             <CardSubtitle className="school-text">{props.school}</CardSubtitle>
             <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
-            <Button className="btn roomie-btn accept-btn" color="success" onClick={() => props.handleClick(props.id)}>Accept Roomie Invite</Button>
-            <Button className="btn" color="warning" onClick={() => props.declinePending(props.id)}>Decline</Button>
+            <Row style={{position: "absolute", bottom: "20px"}} className="text-center">
+              <Col xs="12">
+              <Button className="btn remove-btn" color="danger" onClick={() => props.declinePending(props.id)}>Decline</Button>
+                <Button className="btn roomie-btn accept-btn" color="success" onClick={() => props.handleClick(props.id)}>Accept Invite</Button>
+              </Col>
+            </Row>
           </CardBody>
         
     </Card>
