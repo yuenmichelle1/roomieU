@@ -8,6 +8,7 @@ import Schools from "../../CollegesUniversities.json";
 import Slider from "react-slick";
 import next from "../PotentialCardWrapper/next.png";
 import back from "../PotentialCardWrapper/back.png";
+import './LikedApartmentsWrapper.css';
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -38,7 +39,7 @@ function BackArrow(props) {
 }
 
 const settings = {
-  className: "slider variable-width",
+  className: "slider variable-width apt-slider",
   dots: true,
   infinite: true,
   centerMode: true,
@@ -150,23 +151,21 @@ class LikedApartmentsWrapper extends Component {
             <div className="roomies-div">
               <Row className="dash-header">
                 <Col xs="12">
-                  <h1 className="header-text" style={{ marginTop: "30px" }}>
+                  <h1 className="header2-text aptDiv-title">
                     {" "}
                     Your Liked Apartments{" "}
                   </h1>
+                  <Button
+                    color="success"
+                    onClick={this.goToApartmentsPage}
+                    style={{ fontSize:".9em", display:"inline-block", width: "200px", height: "35px", width: "150px", marginTop:"-10px", marginLeft: "30px" }}
+                  >Add Apartments
+                  </Button>
                 </Col>
               </Row>
               {/* Apartment Card */}
               <Row>
                 <Col xs="12">
-                  <Button
-                    color="success"
-                    onClick={this.goToApartmentsPage}
-                    style={{ width: "300px", marginBottom: "30px" }}
-                  >
-                    {" "}
-                    + Apartments{" "}
-                  </Button>
                   <Slider {...settings}>
                     {this.state.apartments.map((apt, i) => (
                       <ApartmentCardTest

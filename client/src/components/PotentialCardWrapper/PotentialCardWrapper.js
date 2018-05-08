@@ -6,7 +6,7 @@ import next from './next.png';
 import back from './back.png';
 
 function NextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
     //   <div
     //     className={className}
@@ -20,7 +20,7 @@ function NextArrow(props) {
 }
 
 function BackArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
     //   <div
     //     className={className}

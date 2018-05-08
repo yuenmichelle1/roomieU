@@ -36,7 +36,11 @@ const MatchedRoommateCard = props => {
           <CardTitle className="header-text name-text">{props.convertTitle(props.name)}</CardTitle>
           <CardSubtitle className="school-text">{props.school}</CardSubtitle>
           <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
-          <Button className="btn roomie-btn details-btn" color="warning" onClick={() => props.changeDashboard(props.id)} id={props.id}>Match Details</Button>
+          <Row style={{position: "absolute", bottom: "20px", left: "80px"}} className="text-center">
+            <Col xs="12" className="text-center">
+              <Button className="btn roomie-btn details-btn" outline color="warning" onClick={() => props.changeDashboard(props.id)} id={props.id}>Match Details</Button>
+            </Col>
+          </Row>
         </CardBody>
       </Card>
     // </div> 

@@ -1,666 +1,760 @@
-[
-  {
-    "listingName": "6607 S. Drexel Ave.",
-    "address": "6607 S Drexel Ave",
-    "city": "Chicago",
-    "prices": 1250,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["In-unit washer and dryer, Air conditioning, Pets allowed"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Refrigerator, Stove, Dishwasher"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat, Water, Cable"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "http://www.rent.com/illinois/chicago-apartments/6607-s-drexel-ave-4-lc2019909",
-    "imageURLs": [
-      "https://circaoldhouses.com/wp-content/uploads/2016/12/6018-S-Rhodes-Ave-Chicago-IL-60637-1.jpg",
-      "http://cdn.home-designing.com/wp-content/uploads/2014/06/white-apartment-kitchen.jpeg",
-      "https://atmedia.imgix.net/dd43a85add5f8065febf8d001f8238f23f2757fd?auto=format&q=45&w=600.0&h=750.0&fit=max&cs=strip",
-      "http://meccafest.com/mec/small-bathroom-designs-Grey-Bathrooms-Bathrooms-Decor.jpg",
-      "https://st.hzcdn.com/simgs/2c819112055c8361_4-4772/transitional-bedroom.jpg"
-    ],
-    "latitude": "41.7747220",
-    "longitude": "-87.6030070",
-    "id": "AV-SR7NOjCNrmMAssnwb"
-  },
-  {
-    "listingName": "3b/2ba",
-    "address": "6622 S Ingleside Ave",
-    "city": "Chicago",
-    "prices": 1350,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Deck, Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Range, Washer/Dryer Hookup, Refrigerator"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["All utilities included"]
-      }
-    ],
-    "propertyType": "House",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/6622-S-Ingleside-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "http://www.celebritydetective.com/pictures/Ryan-Dempster-house-Chicago-Illinois.jpg",
-      "https://i.pinimg.com/originals/93/12/63/93126319c27998de6041050fea2d97cb.jpg",
-      "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2005/12/5/0/7Charalambous_beekman_.jpg.rend.hgtvcom.966.725.suffix/1400935336347.jpeg",
-      "http://www.mapohouse.com/wp-content/uploads/2016/07/httpbloombety.comwp-contentuploads201401Master-Bedroom-Painting-Ideas-with-Gray-Color.jpg",
-      "https://cdn.decoist.com/wp-content/uploads/2014/03/Usher-in-some-natural-ventilation-into-the-basement-bedroom.jpg"
-    ],
-    "latitude": "41.7742340",
-    "longitude": "-87.6024800",
-    "id": "AV-Sj9JjyCk2Bpf6Dv-x"
-  },
-  {
-    "listingName": "3b/1ba",
-    "address": "6609 S Rhodes Ave 1",
-    "city": "Chicago",
-    "prices": 1230,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["In-unit washer and dryer, Air conditioning"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Range, Refrigerator, Oven"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water Included, Trash Pick-up Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://www.showmetherent.com/6609-S-Rhodes-Ave-1-Chicago-IL-60637",
-    "imageURLs": [
-      "https://chuckmanplaces.files.wordpress.com/2011/06/photo-chicago-76th-and-south-shore-drive-apartment-building-from-craigin-springs-photosteam.jpg",
-      "http://www.staradeal.com/south/2017/10/09/best-bohemian-apartment-ideas-on-bohemian-hipster-apartment-kitchen-lg-951092504a29fe89.jpg",
-      "http://apartmentgeeks.net/wp-content/uploads/2016/02/Luxury-Small-Bathroom-design-1-1024x758.jpg",
-      "http://memorabledecor.com/wp-content/uploads/2014/10/Stunning-Ikea-Rugs-Decorating-Ideas-Images-in-Bedroom-Contemporary-design-ideas-.jpg",
-      "https://i.pinimg.com/originals/f5/5b/e5/f55be5336de356a24984bfc5c6c8d959.jpg"
-    ],
-    "latitude": "41.7745160",
-    "longitude": "-87.6115420",
-    "id": "AV-SqmbUyCk2Bpf6Efbz"
-  },
-  {
-    "listingName": "6536 S Drexel Unit 1",
-    "address": "6536 S Drexel",
-    "city": "Chicago",
-    "prices": 1280,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Washer Dryer On-Site"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water and Electricity Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://www.showmetherent.com/6536-S-Drexel-Chicago-IL-60637",
-    "imageURLs": [
-      "http://i.yochicago.com/images/hpmain/065/297065.jpg",
-      "http://i.yochicago.com/images/hpmain/427/298427.jpg",
-      "http://zmeeed.info/wp-content/uploads/2017/03/modern-apartment-bathroom-bathroom-makeovers-for-under-100-life-at-home-trulia-blog.jpg",
-      "http://stmedia.startribune.com/images/ows_140054080453997.jpg",
-      "http://idolza.com/a/f/i/ideas-about-curtain-over-bed-on-pinterest-yellow-master-bedroom-cool-curtains-and-gray-bedrooms_four-poster-bed-drapes_interior-design-companies-cool-bedroom-ideas-photos-ar.jpg"
-    ],
-    "latitude": "41.7757150",
-    "longitude": "-87.6037310",
-    "id": "AV-UPju0AXxH_fqQZjXJ"
-  },
-  {
-    "listingName": "6903 S. Prairie Avenue - 6903-2",
-    "address": "6901 S Prairie Ave",
-    "city": "Chicago",
-    "prices": 1370,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Central Air conditioning"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Stove"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat Included, Water Included, Resident Pays Electricity"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://www.showmetherent.com/6901-S-Prairie-Avenue-Chicago-IL-60637",
-    "imageURLs": [
-      "https://cdn.vox-cdn.com/thumbor/No4U4I62DHQZm0fauUg9O2jwgi8=/0x0:1260x880/920x613/filters:focal(513x413:713x613):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/54757885/Screen_Shot_2017_05_12_at_9.04.40_AM.0.png",
-      "https://i.pinimg.com/736x/c0/27/6d/c0276d2e0b6ae2cd9ba39e0ec8993991--downtown-apartments-for-rent-city-apartments.jpg",
-      "http://debbar.us/media/apartment-bathroom-ideas_ideas-for-decorating-an-apartment-bathroom-apartment-bathroom-designs-ideas-beautiful-apartment-bathroom-ideas-small-apartment-bathroom-decor-ideas-men-s-apartment-bathroom-ideas_large.jpg",
-      "http://idolza.com/a/m/k/kids-room-incredible-breathtaking-grey-ba-ideas-new-at-idea-awesome-brown-wood-glass-modern-design-boys-paint-within-brilliant_tween-boy-bedroom-ideas_dining-room-interior-design-images-of_850x638.jpg",
-      "http://platinumsolutions.us/wp-content/uploads/2018/04/With-Egress-Window-bedroom-egress-modern-on-inside-rhfromgentogenus-windows-laws-affect-and-attic-remodels-angieus-listrhangieslistcom-egress-Basement-Bedroom-With-Egress.jpg"
-    ],
-    "latitude": "41.7691247",
-    "longitude": "-87.6183120",
-    "id": "AV-Svq6n_RWkykBu9r1V"
-  },
-  {
-    "listingName": "6609 South Rhodes Avenue, Chicago, Il 60637",
-    "address": "6609 S Rhodes Ave",
-    "city": "Chicago",
-    "prices": 1349,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready, Central AC, Deck"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Range, Refrigerator, Oven"]
-      },
-      {
-        "key": "Utilities",
-        "value": [
-          "Water and Trash Pick-up Included, Resident Pays Electricity, Gas, and Heat"
-        ]
-      }
-    ],
-    "propertyType": "Duplex",
-    "sourceURLs":
-      "https://www.showmetherent.com/6609-S-Rhodes-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "http://2.bp.blogspot.com/-0DrzSzKAXnY/TYLDOLMZXXI/AAAAAAAAFAQ/_Zw0096MGgI/s1600/P1010227.JPG",
-      "https://i.pinimg.com/736x/03/b1/a1/03b1a174306f526509e2fb9b4fdf55d4--downtown-apartments-for-rent-city-apartments.jpg",
-      "https://atmedia.imgix.net/c627907ce62fc0fe0df91377e0fd1d87bc5f0efb",
-      "https://cdn.homesthetics.net/wp-content/uploads/2016/02/Basement-bedroom-with-a-white-green-design-scheme.jpg",
-      "https://st.hzcdn.com/simgs/eee1e6680465226c_4-3087/transitional-bedroom.jpg"
-    ],
-    "latitude": "41.774513",
-    "longitude": "-87.611551",
-    "id": "AV-S6oQ5AXxH_fqQTnsE"
-  },
-  {
-    "listingName": "2b/1ba",
-    "address": "57TH King Dr",
-    "city": "Chicago",
-    "prices": 1240,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Free High Speed Internet and Cable"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Stove"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat and Water Included, Resident Pays Electricity"]
-      }
-    ],
-    "propertyType": "Duplex",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/57Th-King-Drive-Chicago-IL-60637-3",
-    "imageURLs": [
-      "https://cdnblog.rentcafe.com/blog/wp-content/uploads/2016/03/Duplex-for-sale-at-1048-N-Hoyne-Ave-in-Chicago-via-Point2Homes.jpg",
-      "https://s-ec.bstatic.com/images/hotel/max1024x768/510/51046888.jpg",
-      "https://cdn.decoist.com/wp-content/uploads/2015/12/Modern-bathroom-and-shower-area-of-the-apartment-in-Shad-Thames.jpg",
-      "https://cdn.decoist.com/wp-content/uploads/2014/03/A-breezy-and-cool-color-scheme-for-the-basement-bedroom.jpg",
-      "http://cdn.sosporthcawl.com/uploads/2017/12/portland-navy-king-bedding-with-gray-panel-beds-bedroom-traditional-and-bed.jpg"
-    ],
-    "latitude": "41.7900470",
-    "longitude": "-87.6163130",
-    "id": "AV-THFZijCNrmMAsykPJ"
-  },
-  {
-    "listingName": "3b/2ba",
-    "address": "1430 E 69th Street 2 Hoa",
-    "city": "Chicago",
-    "prices": 1395,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Oven, Washer and Dryer"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Trash Pick-up Included"]
-      }
-    ],
-    "propertyType": "Condo",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/1430-E-69Th-Street--Bldg---2-Hoa-Chicago-IL-60637-4",
-    "imageURLs": [
-      "https://www.seechicagorealestate.com/uploads/ukrainian_village_homes_for_sale_640.jpg",
-      "https://www.amli.com/AMLIContent/Files/apartments/chicago/museumgardens/apartment-interior/museumgardens-apartment-interior-kitchen3.jpg",
-      "https://st.hzcdn.com/simgs/d4b1d5ac04073ba9_4-2792/contemporary-bathroom.jpg",
-      "http://yuorphoto.com/wp-content/uploads/2017/07/Fancy-Queen-Headboard-Collection-With-Modern-Upholstered-And-King-Beds-Images-Twin-Ideas-Headboards-Trends.jpg",
-      "https://s7d1.scene7.com/is/image/BedBathandBeyond/8489823291244m?$478$"
-    ],
-    "latitude": "41.7805099",
-    "longitude": "-87.6038260",
-    "id": "AV-TypVU_RWkykBuDA8E"
-  },
-  {
-    "listingName": "6555 S. Greenwood Avenue",
-    "address": "6555 S Greenwood Ave",
-    "city": "Chicago",
-    "prices": 1300,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Deck - Back Porch, Laundry on site, Gym"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Refrigerator, Dishwasher, Stove, Microwave"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water Included"]
-      }
-    ],
-    "propertyType": "House",
-    "sourceURLs":
-      "https://www.showmetherent.com/6555-S-Greenwood-Avenue-Chicago-IL-60637",
-    "imageURLs": [
-      "https://cdn.vox-cdn.com/thumbor/nGguwVjinrGroHFdi9U_MIn6wuw=/0x0:3000x2000/1820x1024/filters:focal(1252x813:1732x1293):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55975201/House_Calls_Chicago_Bulthuis_exterior_front.0.jpg",
-      "http://i.yochicago.com/images/hpmain/023/294023.jpg",
-      "http://debbar.us/media/apartment-bathroom-ideas_white-small-apartment-bathroom-interior-ideas-bathroom-decorating-ideas-small-apartment-small-bathroom-ideas-apartment-apartment-bathroom-ideas-small-apartment-bathroom-design-ideas_large.jpg",
-      "http://firerunner.me/wp-content/uploads/2018/04/1373-best-bedrooms-images-on-pinterest-bedroom-ideas-master-plus-easy-exterior-layout.jpg",
-      "https://s.s-bol.com/imgbase0/imagebase/large/FC/8/7/2/8/9200000011048278_1.jpg"
-    ],
-    "latitude": "41.7752600",
-    "longitude": "-87.5993820",
-    "id": "AV-TsDRajCNrmMAs1R_X"
-  },
-  {
-    "listingName": "3b/0ba",
-    "address": "6052 S Michigan Ave",
-    "city": "Chicago",
-    "prices": 1400,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Range"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat and Water included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/6052-S-Michigan-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "https://cdn.vox-cdn.com/thumbor/iSmCVKSonTJ7tHxYcWy8RfarKV8=/0x0:3072x2304/920x613/filters:focal(1291x907:1781x1397):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/52992559/2880338116_b56e29d0d5_o.0.jpg",
-      "http://assets.sheratongranddubai.com/lps/assets/u/Kitchen-Two-Bedroom-Apartment-Hotel-Dubai-1.jpg",
-      "http://cromptonhouseapartments.co.uk/wp-content/uploads/2014/02/bat3_family_3bed.jpg",
-      "http://asbienestar.co/wp-content/uploads/2018/01/simple-apartment-bedroom-at-new-amazing-decoration-college-layout.jpg",
-      "http://catinhouse.co/wp-content/uploads/2016/06/Simple-Apartment-Bedroom-Ideas-Tumblr-In-Apartment-Bedroom-Ideas.jpg"
-    ],
-    "latitude": "41.7841777",
-    "longitude": "-87.6222188",
-    "id": "AV-To7Q7yCk2Bpf6JvT_"
-  },
-  {
-    "listingName": "6603 S. St. Lawrence Ave.",
-    "address": "6601 03 S Saint Lawrence Ave",
-    "city": "Chicago",
-    "prices": 1375,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Deck - Back Porch, Laundry on site, Gym"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Refrigerator, Dishwasher, Stove, Microwave"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://www.showmetherent.com/6601-03-S-St-Lawrence-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "https://mredllc.media-cs.connectmls.com/E0F9FE8ACF1CBE07E040010A3D01523D/P_cmls_1710420361915743902_5529.JPEG",
-      "https://i.pinimg.com/736x/40/0c/05/400c05b6fe55597035d4203f2dfd527b--chicago-lofts-chicago-loft-apartment.jpg",
-      "https://s3.amazonaws.com/portal.aptamigo.com/IL/Chicago/Apartment/amli-lofts/int01.jpg",
-      "http://www.nelliadesigns.com/cdn/lovely-bedroom-apartment-ideas-with-bedroom-apartment-home-design-ideas-pineloon.jpg",
-      "http://elghorba.org/wp-content/uploads/2018/03/the-apartments-for-rent-london-highland-village-throughout-bedroom-rent-prepare.jpg"
-    ],
-    "latitude": "41.7747140",
-    "longitude": "-87.6102949",
-    "id": "AV-TLyroAXxH_fqQVIL2"
-  },
-  {
-    "listingName": "Apartment2b/1ba - N/a",
-    "address": "6430 S Stony Is",
-    "city": "Chicago",
-    "prices": 1250,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Oven, Washer and Dryer"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water and Trash Pick-up Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "http://www.rent.com/illinois/chicago-apartments/6430-s-stony-island-4-r1906852",
-    "imageURLs": [
-      "https://mredllc.media-cs.connectmls.com/415E2C6B7971288AE0531407010A90D6/P_1479245694264_5484_Everett_3_ext_1.JPEG",
-      "https://www.amli.com/AMLIContent//Files//apartments//chicago//sevenbridges//apartment-interior/sevenbridges-apartment-interior-Kitchen12.jpg",
-      "https://www.rentfast.ca/rfc/listing_photos/3/0/7/1/3271703.v.47c60893bef175bfc0e268de95abf4b6.jpg",
-      "https://bellezaroom.com/wp-content/uploads/2017/10/49-Comfy-First-Apartment-Bedroom-Decor-and-Design-Ideas.jpg",
-      "https://i.pinimg.com/originals/7a/82/a3/7a82a387cf681b36bda2d0b89f8ff01a.jpg"
-    ],
-    "latitude": "41.777638",
-    "longitude": "-87.586896",
-    "id": "AV-SqZkq_RWkykBu9I1A"
-  },
-  {
-    "listingName": "5533 S. Blackstone Ave. Apt. 1",
-    "address": "5533 35 S Blackstone Ave",
-    "city": "Chicago",
-    "prices": 1380,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Oven, Washer and Dryer"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat, Water, Electric Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://www.showmetherent.com/5533-35-S-Blackstone-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "http://i.yochicago.com/images/hpmain/620/277620.jpg",
-      "https://blog.apartminty.com/wp-content/uploads/2016/06/the-shay-luxury-apartments-in-washington-dc-gourmet-modern-kitchen.jpg",
-      "https://i.pinimg.com/originals/5b/ac/df/5bacdfac9ac87c3b4b3351f3041d27cb.jpg",
-      "http://www.valentinecamp.com/wp-content/uploads/2018/04/graceful-small-apartment-bedroom-ideas-22-with-elegant-interior-design-spectacular-decorating-new-for-apartments-cheap-in-queens-under-village-ny-flat-chelsea-tampa-fl-me-makati-dubai-al-qusai.jpg",
-      "https://baelm.net/wp-content/uploads/2016/12/Cool-Red-Black-And-Cream-Bedroom-Designs-65-In-Interior-Design-For-Home-Remodeling-with-Red-Black-And-Cream-Bedroom-Designs.jpg"
-    ],
-    "latitude": "41.7941540",
-    "longitude": "-87.5898969",
-    "id": "AV-UAFoO_RWkykBuD0Rb"
-  },
-  {
-    "listingName": "2b/1ba",
-    "address": "7758 S E End",
-    "city": "Chicago",
-    "prices": 1270,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready, Central AC, Deck"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Range, Refrigerator, Oven"]
-      },
-      {
-        "key": "Utilities",
-        "value": [
-          "Water and Trash Pick-up Included, Resident Pays Electricity, Gas, and Heat"
-        ]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/7758-S-East-End-Chicago-IL-60637",
-    "imageURLs": [
-      "https://images1.apartments.com/i2/ZW9nBcA-4QM848ZJZfaqSMAFgVlf_BsmWtNtgtT4gO4/117/5468-70-s-hyde-park-boulevard-chicago-il-primary-photo.jpg",
-      "http://www.kitchendesigns.com/blog/wp-content/uploads/2015/05/Boga_NYC_02.jpg",
-      "http://www.effmu.com/2/2015/08/nice-cream-london-apartment-bathroom-images-that-can-be-decor-with-modern-lighting-can-add-the-beauty-inside-the-modern-house-design-ideas-with-simple-design-inside.jpg",
-      "http://writeteens.com/wp-content/uploads/2016/11/simple-small-apartment-master-bedroom-renovation-renderings-bedroom-simple-apartment-bedroom.jpg",
-      "https://s.isanook.com/hm/0/ud/1/5731/1bed-room.jpg"
-    ],
-    "latitude": "41.7534718",
-    "longitude": "-87.5833582",
-    "id": "AV-SuDps_RWkykBu9hM9"
-  },
-  {
-    "listingName": "Three Bedroom3b/1ba - 1205 Sq. Ft.",
-    "address": "5452 66 S Ellis",
-    "city": "Chicago",
-    "prices": 1265,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Free High Speed Internet and Cable"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Stove"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat and Water Included, Resident Pays Electricity"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "http://www.rent.com/illinois/chicago-apartments/5452-5466-s-ellis-avenue-4-605306",
-    "imageURLs": [
-      "https://i.pinimg.com/originals/01/87/77/01877766fcd09775d623c31df344a11b.jpg",
-      "http://theydesign.net/wp-content/uploads/2017/06/simple-apartment-kitchen-ideas-unique-with-image-of-simple-pertaining-to-apartment-kitchen-ideas-5-steps-decorating-the-apartment-kitchen-at-a-small-cost.jpg",
-      "http://www.apinfectologia.org/upload/2017/10/14/simple-apartment-bathroom-home-designs-kaajmaaja-apartment-simple-bathroom-l-bbb90e730c33b39e.jpg",
-      "https://i.pinimg.com/originals/02/f7/24/02f724a78756a8741f776ef556b281c1.jpg",
-      "http://homebuilding.ru/wp-content/uploads/2015/06/Vasastan-Apartment-14-750x498.jpg"
-    ],
-    "latitude": "41.7964",
-    "longitude": "-87.6013",
-    "id": "AV-SSDv2AXxH_fqQOyr_"
-  },
-  {
-    "listingName": "6538 S. Drexel Ave.",
-    "address": "6538 S Drexel Ave",
-    "city": "Chicago",
-    "prices": 1320,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["In-unit washer and dryer, Air conditioning, Pets allowed"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Refrigerator, Stove, Dishwasher"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat, Water, Cable"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://www.showmetherent.com/6538-S-Drexel-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "http://www.chicagobusiness.com/apps/pbcsi.dll/storyimage/CG/20161115/CRED0701/161119933/AR/0/Townhouses-Chicago-Prairie-Avenue.jpg",
-      "http://dossierview.com/wp-content/uploads/2018/04/the-best-of-25-small-apartment-kitchen-ideas-on-pinterest-cute-for-pertaining-to-design-14.jpg",
-      "http://youthvisioning.org/img/2018/05/kerala-hyderabad-small-bangalore-colors-design-wall-bathroom-floor-home-picture-shower-with-for-images-catalogue-and-tile-collection-pictures-karachi-highlighter-kolkata-outdoor-ti.jpg",
-      "http://multiplaga.com/c/simple-apartment-bedroom-pertaining-to-inspiring-decoration-apartment-bedroom-ideas-simple-bedroom-decoration-of-with-remarkable-simple-apartment-bedroom-728x545.jpg",
-      "http://www.cagedesigngroup.com/wp-content/uploads/2016/11/brilliant-apartment-bedroom-ideas-1000-ideas-about-small-apartment-bedrooms-on-pinterest-small-768x768.jpg"
-    ],
-    "latitude": "41.7756460",
-    "longitude": "-87.6037310",
-    "id": "AV-SdOn3jCNrmMAsuRFQ"
-  },
-  {
-    "listingName": "3b/1ba",
-    "address": "6020 S Eberhart Ave",
-    "city": "Chicago",
-    "prices": 1280,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Oven, Washer and Dryer"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water and Trash Pick-up Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/6020-S-Eberhart-Ave-Unit-1-Chicago-IL-60637",
-    "imageURLs": [
-      "https://www.wirtzresidential.com/wp-content/gallery/2970-n-sheridan/2970-N-Sheridan-Rd-1.jpg",
-      "http://www.realestate-marrakesh.com/produit_detail/images/2013-01-27-14-11-18-DSCN0152%20(Copier).JPG",
-      "http://www.loversiq.com/daut/as/f/b/bathrooms-ideas-for-small-1898-new-bathroom-tiles-models_bathroom-ideas-for-small-bathrooms_bathroom_ikea-bathroom-vanity-storage-ideas-wall-decor-lighting-lowes-fixtures-houzz-bathrooms-remodel.jpg",
-      "https://womenmisbehavin.com/wp-content/uploads/2018/03/Great-Bedroom-Ideas-for-Women.jpg",
-      "http://manual17.biz/wp-content/uploads/2016/04/decorating-small-apartment-first-apartment-decorating-homelk-throughout-first-apartment-bedroom-regarding-inspire.jpg"
-    ],
-    "latitude": "41.7850990",
-    "longitude": "-87.6135980",
-    "id": "AV-SlAtb_RWkykBu8ik8"
-  },
-  {
-    "listingName": "3b/1ba",
-    "address": "6555 S Langley Ave",
-    "city": "Chicago",
-    "prices": 1360,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Cable ready"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Dishwasher, Refrigerator, Oven, Washer, Dryer"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water and Trash Pick-up Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://www.showmetherent.com/6555-S-Langley-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "http://smartgrowth.org/wp-content/uploads/2016/07/storrs-square.jpg",
-      "http://assets.sheratongranddubai.com/lps/assets/u/Kitchen-One-Bedroom-Apartment-1-Hotel-Dubai-1.jpg",
-      "http://diyblogdesigns.com/img/2018/04/bathroom-tub-shower-combo-small-remodel-design-ideas-pictures-plans-with-designs-floor-laundry-walk-in-tiny-images-modern-tile-tips-only-and-idea-interior-x-corner-of-enclosures-de.jpg",
-      "https://i.pinimg.com/originals/36/ed/9b/36ed9b812d89cb168eccf52cbd585117.jpg",
-      "http://scopeek.com/wp-content/uploads/2018/02/apartment-room-decor-best-25-apartment-bedroom-decor-ideas-on-pinterest-college-best-photos.jpg"
-    ],
-    "latitude": "41.7769780",
-    "longitude": "-87.6067650",
-    "id": "AV-SlxAPAXxH_fqQRd1U"
-  },
-  {
-    "listingName": "2b/1ba",
-    "address": "6112 S Evans Ave",
-    "city": "Chicago",
-    "prices": 1290,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Fitness Center, Laundry on site"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Refrigerator, Stove"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Water Included"]
-      }
-    ],
-    "propertyType": "Apartment",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/6112-S-Evans-Ave-Fl-2-Chicago-IL-60637",
-    "imageURLs": [
-      "https://www.domu.com/sites/default/files/Lincoln_Park.jpg",
-      "http://slmdesigninteriors.com/media/upload/endearing-modern-kitchen-for-small-apartment-kitchen-minimalist-apartment-design-interior-design-architecture.jpg",
-      "http://smartledtv.info/wp-content/uploads/2018/03/small-bathroom-design-ideas-2015-full-size-of-home-design-best-bathroom-designs-of-great-white-bathroom-home-plans-designs-kerala-style.jpg",
-      "https://i.pinimg.com/736x/69/00/be/6900be9739e3bfe4be13a07537b83af8--desain-kamar-tidur-dekorasi-kamar-tidur.jpg",
-      "https://4.bp.blogspot.com/-ofv1n51YpF0/WRv7sxtWRVI/AAAAAAAAZJU/IShyhzgbweAY_oz1WmypmEim7YPTZ770gCLcB/s1600/41.jpg"
-    ],
-    "latitude": "41.7835820",
-    "longitude": "-87.6076010",
-    "id": "AV-TAlaNAXxH_fqQUKg3"
-  },
-  {
-    "listingName": "3 Bed/1bath",
-    "address": "5606 S Michigan Ave",
-    "city": "Chicago",
-    "prices": 1365,
-    "features": [
-      {
-        "key": "Amenities",
-        "value": ["Laundry on site"]
-      },
-      {
-        "key": "Appliances",
-        "value": ["Stove, Refrigerator"]
-      },
-      {
-        "key": "Utilities",
-        "value": ["Heat and Water Included"]
-      }
-    ],
-    "propertyType": "Condo",
-    "sourceURLs":
-      "https://showmetherent.rentlinx.com/5606-S-Michigan-Ave-Chicago-IL-60637",
-    "imageURLs": [
-      "https://s3.amazonaws.com/bklyner/bklyner/wp-content/uploads/2018/04/Screen-Shot-2018-04-30-at-10.37.29-AM.png",
-      "http://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/3961-29/vintage-apartments-kitchen.jpg",
-      "http://meccafest.com/mec/small-bathroom-designs-Grey-Bathrooms-Bathrooms-Decor.jpg",
-      "http://stylingroom.ru/wp-content/gallery/mal-spalna/thoughtful-teen-room-layout-17.jpg",
-      "http://www.writingpodcastonline.com/wp-content/uploads/2017/04/fancy-bed-for-small-room-home-living-two-sides-work-built-in-stop-collection-sliding-off-designer-modern-new-2017-design-ideas.jpg"
-    ],
-    "latitude": "41.7925880",
-    "longitude": "-87.6227540",
-    "id": "AV-TJYf8AXxH_fqQU7Wj"
-  }
+[{
+        "listingName": "6607 S. Drexel Ave.",
+        "address": "6607 S Drexel Ave",
+        "city": "Chicago",
+        "prices": 1250,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "In-unit washer and dryer, Air conditioning, Pets allowed"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Refrigerator, Stove, Dishwasher"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat, Water, Cable"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "http://www.rent.com/illinois/chicago-apartments/6607-s-drexel-ave-4-lc2019909",
+        "imageURLs": [
+            "https://circaoldhouses.com/wp-content/uploads/2016/12/6018-S-Rhodes-Ave-Chicago-IL-60637-1.jpg",
+            "http://cdn.home-designing.com/wp-content/uploads/2014/06/white-apartment-kitchen.jpeg",
+            "https://atmedia.imgix.net/dd43a85add5f8065febf8d001f8238f23f2757fd?auto=format&q=45&w=600.0&h=750.0&fit=max&cs=strip",
+            "http://meccafest.com/mec/small-bathroom-designs-Grey-Bathrooms-Bathrooms-Decor.jpg",
+            "https://st.hzcdn.com/simgs/2c819112055c8361_4-4772/transitional-bedroom.jpg"
+        ],
+        "latitude": "41.7747220",
+        "longitude": "-87.6030070",
+        "id": "AV-SR7NOjCNrmMAssnwb"
+    },
+    {
+        "listingName": "3b/2ba",
+        "address": "6622 S Ingleside Ave",
+        "city": "Chicago",
+        "prices": 1350,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Deck, Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Range, Washer/Dryer Hookup, Refrigerator"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "All utilities included"
+                ]
+            }
+        ],
+        "propertyType": "House",
+        "sourceURLs": "https://showmetherent.rentlinx.com/6622-S-Ingleside-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "http://www.celebritydetective.com/pictures/Ryan-Dempster-house-Chicago-Illinois.jpg",
+            "https://i.pinimg.com/originals/93/12/63/93126319c27998de6041050fea2d97cb.jpg",
+            "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2005/12/5/0/7Charalambous_beekman_.jpg.rend.hgtvcom.966.725.suffix/1400935336347.jpeg",
+            "http://www.mapohouse.com/wp-content/uploads/2016/07/httpbloombety.comwp-contentuploads201401Master-Bedroom-Painting-Ideas-with-Gray-Color.jpg",
+            "https://cdn.decoist.com/wp-content/uploads/2014/03/Usher-in-some-natural-ventilation-into-the-basement-bedroom.jpg"
+        ],
+        "latitude": "41.7742340",
+        "longitude": "-87.6024800",
+        "id": "AV-Sj9JjyCk2Bpf6Dv-x"
+    }, {
+        "listingName": "3b/1ba",
+        "address": "6609 S Rhodes Ave 1",
+        "city": "Chicago",
+        "prices": 1230,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "In-unit washer and dryer, Air conditioning"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Range, Refrigerator, Oven"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water Included, Trash Pick-up Included"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/6609-S-Rhodes-Ave-1-Chicago-IL-60637",
+        "imageURLs": [
+            "https://chuckmanplaces.files.wordpress.com/2011/06/photo-chicago-76th-and-south-shore-drive-apartment-building-from-craigin-springs-photosteam.jpg",
+            "http://www.staradeal.com/south/2017/10/09/best-bohemian-apartment-ideas-on-bohemian-hipster-apartment-kitchen-lg-951092504a29fe89.jpg",
+            "http://apartmentgeeks.net/wp-content/uploads/2016/02/Luxury-Small-Bathroom-design-1-1024x758.jpg",
+            "http://memorabledecor.com/wp-content/uploads/2014/10/Stunning-Ikea-Rugs-Decorating-Ideas-Images-in-Bedroom-Contemporary-design-ideas-.jpg",
+            "https://i.pinimg.com/originals/f5/5b/e5/f55be5336de356a24984bfc5c6c8d959.jpg"
+        ],
+        "latitude": "41.7745160",
+        "longitude": "-87.6115420",
+        "id": "AV-SqmbUyCk2Bpf6Efbz"
+    }, {
+        "listingName": "6536 S Drexel Unit 1",
+        "address": "6536 S Drexel",
+        "city": "Chicago",
+        "prices": 1280,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Washer Dryer On-Site"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water and Electricity Included"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/6536-S-Drexel-Chicago-IL-60637",
+        "imageURLs": [
+            "http://i.yochicago.com/images/hpmain/065/297065.jpg",
+            "http://i.yochicago.com/images/hpmain/427/298427.jpg",
+            "http://zmeeed.info/wp-content/uploads/2017/03/modern-apartment-bathroom-bathroom-makeovers-for-under-100-life-at-home-trulia-blog.jpg",
+            "http://stmedia.startribune.com/images/ows_140054080453997.jpg",
+            "http://idolza.com/a/f/i/ideas-about-curtain-over-bed-on-pinterest-yellow-master-bedroom-cool-curtains-and-gray-bedrooms_four-poster-bed-drapes_interior-design-companies-cool-bedroom-ideas-photos-ar.jpg"
+        ],
+        "latitude": "41.7757150",
+        "longitude": "-87.6037310",
+        "id": "AV-UPju0AXxH_fqQZjXJ"
+    }, {
+        "listingName": "6903 S. Prairie Avenue - 6903-2",
+        "address": "6901 S Prairie Ave",
+        "city": "Chicago",
+        "prices": 1370,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Central Air conditioning"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Stove"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat Included, Water Included, Resident Pays Electricity"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/6901-S-Prairie-Avenue-Chicago-IL-60637",
+        "imageURLs": [
+            "https://cdn.vox-cdn.com/thumbor/No4U4I62DHQZm0fauUg9O2jwgi8=/0x0:1260x880/920x613/filters:focal(513x413:713x613):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/54757885/Screen_Shot_2017_05_12_at_9.04.40_AM.0.png",
+            "https://i.pinimg.com/736x/c0/27/6d/c0276d2e0b6ae2cd9ba39e0ec8993991--downtown-apartments-for-rent-city-apartments.jpg",
+            "http://debbar.us/media/apartment-bathroom-ideas_ideas-for-decorating-an-apartment-bathroom-apartment-bathroom-designs-ideas-beautiful-apartment-bathroom-ideas-small-apartment-bathroom-decor-ideas-men-s-apartment-bathroom-ideas_large.jpg",
+            "http://idolza.com/a/m/k/kids-room-incredible-breathtaking-grey-ba-ideas-new-at-idea-awesome-brown-wood-glass-modern-design-boys-paint-within-brilliant_tween-boy-bedroom-ideas_dining-room-interior-design-images-of_850x638.jpg",
+            "http://platinumsolutions.us/wp-content/uploads/2018/04/With-Egress-Window-bedroom-egress-modern-on-inside-rhfromgentogenus-windows-laws-affect-and-attic-remodels-angieus-listrhangieslistcom-egress-Basement-Bedroom-With-Egress.jpg"
+        ],
+        "latitude": "41.7691247",
+        "longitude": "-87.6183120",
+        "id": "AV-Svq6n_RWkykBu9r1V"
+    }, {
+        "listingName": "6609 South Rhodes Avenue, Chicago, Il 60637",
+        "address": "6609 S Rhodes Ave",
+        "city": "Chicago",
+        "prices": 1349,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Cable ready, Central AC, Deck"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Range, Refrigerator, Oven"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water and Trash Pick-up Included, Resident Pays Electricity, Gas, and Heat"
+                ]
+            }
+        ],
+        "propertyType": "Duplex",
+        "sourceURLs": "https://www.showmetherent.com/6609-S-Rhodes-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "http://2.bp.blogspot.com/-0DrzSzKAXnY/TYLDOLMZXXI/AAAAAAAAFAQ/_Zw0096MGgI/s1600/P1010227.JPG",
+            "https://i.pinimg.com/736x/03/b1/a1/03b1a174306f526509e2fb9b4fdf55d4--downtown-apartments-for-rent-city-apartments.jpg",
+            "https://atmedia.imgix.net/c627907ce62fc0fe0df91377e0fd1d87bc5f0efb",
+            "https://cdn.homesthetics.net/wp-content/uploads/2016/02/Basement-bedroom-with-a-white-green-design-scheme.jpg",
+            "https://st.hzcdn.com/simgs/eee1e6680465226c_4-3087/transitional-bedroom.jpg"
+        ],
+        "latitude": "41.774513",
+        "longitude": "-87.611551",
+        "id": "AV-S6oQ5AXxH_fqQTnsE"
+    }, {
+        "listingName": "2b/1ba",
+        "address": "57TH King Dr",
+        "city": "Chicago",
+        "prices": 1240,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Free High Speed Internet and Cable"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Stove"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat and Water Included, Resident Pays Electricity"
+                ]
+            }
+        ],
+        "propertyType": "Duplex",
+        "sourceURLs": "https://showmetherent.rentlinx.com/57Th-King-Drive-Chicago-IL-60637-3",
+        "imageURLs": [
+            "https://cdnblog.rentcafe.com/blog/wp-content/uploads/2016/03/Duplex-for-sale-at-1048-N-Hoyne-Ave-in-Chicago-via-Point2Homes.jpg",
+            "https://s-ec.bstatic.com/images/hotel/max1024x768/510/51046888.jpg",
+            "https://cdn.decoist.com/wp-content/uploads/2015/12/Modern-bathroom-and-shower-area-of-the-apartment-in-Shad-Thames.jpg",
+            "https://cdn.decoist.com/wp-content/uploads/2014/03/A-breezy-and-cool-color-scheme-for-the-basement-bedroom.jpg",
+            "http://cdn.sosporthcawl.com/uploads/2017/12/portland-navy-king-bedding-with-gray-panel-beds-bedroom-traditional-and-bed.jpg"
+        ],
+        "latitude": "41.7900470",
+        "longitude": "-87.6163130",
+        "id": "AV-THFZijCNrmMAsykPJ"
+    }, {
+        "listingName": "3b/2ba",
+        "address": "1430 E 69th Street 2 Hoa",
+        "city": "Chicago",
+        "prices": 1395,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Oven, Washer and Dryer"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Trash Pick-up Included"
+                ]
+            }
+
+        ],
+        "propertyType": "Condo",
+        "sourceURLs": "https://showmetherent.rentlinx.com/1430-E-69Th-Street--Bldg---2-Hoa-Chicago-IL-60637-4",
+        "imageURLs": [
+            "https://www.seechicagorealestate.com/uploads/ukrainian_village_homes_for_sale_640.jpg",
+            "https://www.amli.com/AMLIContent/Files/apartments/chicago/museumgardens/apartment-interior/museumgardens-apartment-interior-kitchen3.jpg",
+            "https://st.hzcdn.com/simgs/d4b1d5ac04073ba9_4-2792/contemporary-bathroom.jpg",
+            "http://yuorphoto.com/wp-content/uploads/2017/07/Fancy-Queen-Headboard-Collection-With-Modern-Upholstered-And-King-Beds-Images-Twin-Ideas-Headboards-Trends.jpg",
+            "https://s7d1.scene7.com/is/image/BedBathandBeyond/8489823291244m?$478$"
+        ],
+        "latitude": "41.7805099",
+        "longitude": "-87.6038260",
+        "id": "AV-TypVU_RWkykBuDA8E"
+    }, {
+        "listingName": "6555 S. Greenwood Avenue",
+        "address": "6555 S Greenwood Ave",
+        "city": "Chicago",
+        "prices": 1300,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Deck - Back Porch, Laundry on site, Gym"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Refrigerator, Dishwasher, Stove, Microwave"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water Included"
+                ]
+            }
+
+        ],
+        "propertyType": "House",
+        "sourceURLs": "https://www.showmetherent.com/6555-S-Greenwood-Avenue-Chicago-IL-60637",
+        "imageURLs": [
+            "https://cdn.vox-cdn.com/thumbor/nGguwVjinrGroHFdi9U_MIn6wuw=/0x0:3000x2000/1820x1024/filters:focal(1252x813:1732x1293):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55975201/House_Calls_Chicago_Bulthuis_exterior_front.0.jpg",
+            "http://i.yochicago.com/images/hpmain/023/294023.jpg",
+            "http://debbar.us/media/apartment-bathroom-ideas_white-small-apartment-bathroom-interior-ideas-bathroom-decorating-ideas-small-apartment-small-bathroom-ideas-apartment-apartment-bathroom-ideas-small-apartment-bathroom-design-ideas_large.jpg",
+            "http://firerunner.me/wp-content/uploads/2018/04/1373-best-bedrooms-images-on-pinterest-bedroom-ideas-master-plus-easy-exterior-layout.jpg",
+            "https://s.s-bol.com/imgbase0/imagebase/large/FC/8/7/2/8/9200000011048278_1.jpg"
+        ],
+        "latitude": "41.7752600",
+        "longitude": "-87.5993820",
+        "id": "AV-TsDRajCNrmMAs1R_X"
+    }, {
+        "listingName": "3b/0ba",
+        "address": "6052 S Michigan Ave",
+        "city": "Chicago",
+        "prices": 1400,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Range"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat and Water included"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://showmetherent.rentlinx.com/6052-S-Michigan-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "https://cdn.vox-cdn.com/thumbor/iSmCVKSonTJ7tHxYcWy8RfarKV8=/0x0:3072x2304/920x613/filters:focal(1291x907:1781x1397):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/52992559/2880338116_b56e29d0d5_o.0.jpg",
+            "http://assets.sheratongranddubai.com/lps/assets/u/Kitchen-Two-Bedroom-Apartment-Hotel-Dubai-1.jpg",
+            "http://cromptonhouseapartments.co.uk/wp-content/uploads/2014/02/bat3_family_3bed.jpg",
+            "http://asbienestar.co/wp-content/uploads/2018/01/simple-apartment-bedroom-at-new-amazing-decoration-college-layout.jpg",
+            "http://catinhouse.co/wp-content/uploads/2016/06/Simple-Apartment-Bedroom-Ideas-Tumblr-In-Apartment-Bedroom-Ideas.jpg"
+        ],
+        "latitude": "41.7841777",
+        "longitude": "-87.6222188",
+        "id": "AV-To7Q7yCk2Bpf6JvT_"
+    }, {
+        "listingName": "6603 S. St. Lawrence Ave.",
+        "address": "6601 03 S Saint Lawrence Ave",
+        "city": "Chicago",
+        "prices": 1375,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Deck - Back Porch, Laundry on site, Gym"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Refrigerator, Dishwasher, Stove, Microwave"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water Included"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/6601-03-S-St-Lawrence-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "https://mredllc.media-cs.connectmls.com/E0F9FE8ACF1CBE07E040010A3D01523D/P_cmls_1710420361915743902_5529.JPEG",
+            "https://i.pinimg.com/736x/40/0c/05/400c05b6fe55597035d4203f2dfd527b--chicago-lofts-chicago-loft-apartment.jpg",
+            "https://s3.amazonaws.com/portal.aptamigo.com/IL/Chicago/Apartment/amli-lofts/int01.jpg",
+            "http://www.nelliadesigns.com/cdn/lovely-bedroom-apartment-ideas-with-bedroom-apartment-home-design-ideas-pineloon.jpg",
+            "http://elghorba.org/wp-content/uploads/2018/03/the-apartments-for-rent-london-highland-village-throughout-bedroom-rent-prepare.jpg"
+        ],
+        "latitude": "41.7747140",
+        "longitude": "-87.6102949",
+        "id": "AV-TLyroAXxH_fqQVIL2"
+    }, {
+        "listingName": "Apartment2b/1ba - N/a",
+        "address": "6430 S Stony Is",
+        "city": "Chicago",
+        "prices": 1250,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Oven, Washer and Dryer"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water and Trash Pick-up Included"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "http://www.rent.com/illinois/chicago-apartments/6430-s-stony-island-4-r1906852",
+        "imageURLs": [
+            "https://mredllc.media-cs.connectmls.com/415E2C6B7971288AE0531407010A90D6/P_1479245694264_5484_Everett_3_ext_1.JPEG",
+            "https://www.amli.com/AMLIContent//Files//apartments//chicago//sevenbridges//apartment-interior/sevenbridges-apartment-interior-Kitchen12.jpg",
+            "https://www.rentfast.ca/rfc/listing_photos/3/0/7/1/3271703.v.47c60893bef175bfc0e268de95abf4b6.jpg",
+            "https://bellezaroom.com/wp-content/uploads/2017/10/49-Comfy-First-Apartment-Bedroom-Decor-and-Design-Ideas.jpg",
+            "https://i.pinimg.com/originals/7a/82/a3/7a82a387cf681b36bda2d0b89f8ff01a.jpg"
+        ],
+        "latitude": "41.777638",
+        "longitude": "-87.586896",
+        "id": "AV-SqZkq_RWkykBu9I1A"
+    }, {
+        "listingName": "5533 S. Blackstone Ave. Apt. 1",
+        "address": "5533 35 S Blackstone Ave",
+        "city": "Chicago",
+        "prices": 1380,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Oven, Washer and Dryer"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat, Water, Electric Included"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/5533-35-S-Blackstone-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "http://i.yochicago.com/images/hpmain/620/277620.jpg",
+            "https://blog.apartminty.com/wp-content/uploads/2016/06/the-shay-luxury-apartments-in-washington-dc-gourmet-modern-kitchen.jpg",
+            "https://i.pinimg.com/originals/5b/ac/df/5bacdfac9ac87c3b4b3351f3041d27cb.jpg",
+            "http://www.valentinecamp.com/wp-content/uploads/2018/04/graceful-small-apartment-bedroom-ideas-22-with-elegant-interior-design-spectacular-decorating-new-for-apartments-cheap-in-queens-under-village-ny-flat-chelsea-tampa-fl-me-makati-dubai-al-qusai.jpg",
+            "https://baelm.net/wp-content/uploads/2016/12/Cool-Red-Black-And-Cream-Bedroom-Designs-65-In-Interior-Design-For-Home-Remodeling-with-Red-Black-And-Cream-Bedroom-Designs.jpg"
+        ],
+        "latitude": "41.7941540",
+        "longitude": "-87.5898969",
+        "id": "AV-UAFoO_RWkykBuD0Rb"
+    }, {
+        "listingName": "2b/1ba",
+        "address": "7758 S E End",
+        "city": "Chicago",
+        "prices": 1270,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Cable ready, Central AC, Deck"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Range, Refrigerator, Oven"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water and Trash Pick-up Included, Resident Pays Electricity, Gas, and Heat"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://showmetherent.rentlinx.com/7758-S-East-End-Chicago-IL-60637",
+        "imageURLs": [
+            "https://images1.apartments.com/i2/ZW9nBcA-4QM848ZJZfaqSMAFgVlf_BsmWtNtgtT4gO4/117/5468-70-s-hyde-park-boulevard-chicago-il-primary-photo.jpg",
+            "http://www.kitchendesigns.com/blog/wp-content/uploads/2015/05/Boga_NYC_02.jpg",
+            "http://www.effmu.com/2/2015/08/nice-cream-london-apartment-bathroom-images-that-can-be-decor-with-modern-lighting-can-add-the-beauty-inside-the-modern-house-design-ideas-with-simple-design-inside.jpg",
+            "http://writeteens.com/wp-content/uploads/2016/11/simple-small-apartment-master-bedroom-renovation-renderings-bedroom-simple-apartment-bedroom.jpg",
+            "https://s.isanook.com/hm/0/ud/1/5731/1bed-room.jpg"
+        ],
+        "latitude": "41.7534718",
+        "longitude": "-87.5833582",
+        "id": "AV-SuDps_RWkykBu9hM9"
+    }, {
+        "listingName": "Three Bedroom3b/1ba - 1205 Sq. Ft.",
+        "address": "5452 66 S Ellis",
+        "city": "Chicago",
+        "prices": 1265,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Free High Speed Internet and Cable"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Stove"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat and Water Included, Resident Pays Electricity"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "http://www.rent.com/illinois/chicago-apartments/5452-5466-s-ellis-avenue-4-605306",
+        "imageURLs": [
+            "https://i.pinimg.com/originals/01/87/77/01877766fcd09775d623c31df344a11b.jpg",
+            "http://theydesign.net/wp-content/uploads/2017/06/simple-apartment-kitchen-ideas-unique-with-image-of-simple-pertaining-to-apartment-kitchen-ideas-5-steps-decorating-the-apartment-kitchen-at-a-small-cost.jpg",
+            "http://www.apinfectologia.org/upload/2017/10/14/simple-apartment-bathroom-home-designs-kaajmaaja-apartment-simple-bathroom-l-bbb90e730c33b39e.jpg",
+            "https://i.pinimg.com/originals/02/f7/24/02f724a78756a8741f776ef556b281c1.jpg",
+            "http://homebuilding.ru/wp-content/uploads/2015/06/Vasastan-Apartment-14-750x498.jpg"
+        ],
+        "latitude": "41.7964",
+        "longitude": "-87.6013",
+        "id": "AV-SSDv2AXxH_fqQOyr_"
+    }, {
+        "listingName": "6538 S. Drexel Ave.",
+        "address": "6538 S Drexel Ave",
+        "city": "Chicago",
+        "prices": 1320,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "In-unit washer and dryer, Air conditioning, Pets allowed"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Refrigerator, Stove, Dishwasher"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat, Water, Cable"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/6538-S-Drexel-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "http://www.chicagobusiness.com/apps/pbcsi.dll/storyimage/CG/20161115/CRED0701/161119933/AR/0/Townhouses-Chicago-Prairie-Avenue.jpg",
+            "http://dossierview.com/wp-content/uploads/2018/04/the-best-of-25-small-apartment-kitchen-ideas-on-pinterest-cute-for-pertaining-to-design-14.jpg",
+            "http://youthvisioning.org/img/2018/05/kerala-hyderabad-small-bangalore-colors-design-wall-bathroom-floor-home-picture-shower-with-for-images-catalogue-and-tile-collection-pictures-karachi-highlighter-kolkata-outdoor-ti.jpg",
+            "http://multiplaga.com/c/simple-apartment-bedroom-pertaining-to-inspiring-decoration-apartment-bedroom-ideas-simple-bedroom-decoration-of-with-remarkable-simple-apartment-bedroom-728x545.jpg",
+            "http://www.cagedesigngroup.com/wp-content/uploads/2016/11/brilliant-apartment-bedroom-ideas-1000-ideas-about-small-apartment-bedrooms-on-pinterest-small-768x768.jpg"
+        ],
+        "latitude": "41.7756460",
+        "longitude": "-87.6037310",
+        "id": "AV-SdOn3jCNrmMAsuRFQ"
+    }, {
+        "listingName": "3b/1ba",
+        "address": "6020 S Eberhart Ave",
+        "city": "Chicago",
+        "prices": 1280,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Oven, Washer and Dryer"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water and Trash Pick-up Included"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://showmetherent.rentlinx.com/6020-S-Eberhart-Ave-Unit-1-Chicago-IL-60637",
+        "imageURLs": [
+            "https://www.wirtzresidential.com/wp-content/gallery/2970-n-sheridan/2970-N-Sheridan-Rd-1.jpg",
+            "http://www.realestate-marrakesh.com/produit_detail/images/2013-01-27-14-11-18-DSCN0152%20(Copier).JPG",
+            "http://www.loversiq.com/daut/as/f/b/bathrooms-ideas-for-small-1898-new-bathroom-tiles-models_bathroom-ideas-for-small-bathrooms_bathroom_ikea-bathroom-vanity-storage-ideas-wall-decor-lighting-lowes-fixtures-houzz-bathrooms-remodel.jpg",
+            "https://womenmisbehavin.com/wp-content/uploads/2018/03/Great-Bedroom-Ideas-for-Women.jpg",
+            "http://manual17.biz/wp-content/uploads/2016/04/decorating-small-apartment-first-apartment-decorating-homelk-throughout-first-apartment-bedroom-regarding-inspire.jpg"
+        ],
+        "latitude": "41.7850990",
+        "longitude": "-87.6135980",
+        "id": "AV-SlAtb_RWkykBu8ik8"
+    }, {
+        "listingName": "3b/1ba",
+        "address": "6555 S Langley Ave",
+        "city": "Chicago",
+        "prices": 1360,
+        "features": [
+
+            {
+                "key": "Amenities",
+                "value": [
+                    "Cable ready"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Oven, Washer, Dryer"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water and Trash Pick-up Included"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/6555-S-Langley-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "http://smartgrowth.org/wp-content/uploads/2016/07/storrs-square.jpg",
+            "http://assets.sheratongranddubai.com/lps/assets/u/Kitchen-One-Bedroom-Apartment-1-Hotel-Dubai-1.jpg",
+            "http://diyblogdesigns.com/img/2018/04/bathroom-tub-shower-combo-small-remodel-design-ideas-pictures-plans-with-designs-floor-laundry-walk-in-tiny-images-modern-tile-tips-only-and-idea-interior-x-corner-of-enclosures-de.jpg",
+            "https://i.pinimg.com/originals/36/ed/9b/36ed9b812d89cb168eccf52cbd585117.jpg",
+            "http://scopeek.com/wp-content/uploads/2018/02/apartment-room-decor-best-25-apartment-bedroom-decor-ideas-on-pinterest-college-best-photos.jpg"
+        ],
+        "latitude": "41.7769780",
+        "longitude": "-87.6067650",
+        "id": "AV-SlxAPAXxH_fqQRd1U"
+    },
+    {
+        "listingName": "2b/1ba",
+        "address": "6112 S Evans Ave",
+        "city": "Chicago",
+        "prices": 1290,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Fitness Center, Laundry on site"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Refrigerator, Stove"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water Included"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://showmetherent.rentlinx.com/6112-S-Evans-Ave-Fl-2-Chicago-IL-60637",
+        "imageURLs": [
+            "https://www.domu.com/sites/default/files/Lincoln_Park.jpg",
+            "http://slmdesigninteriors.com/media/upload/endearing-modern-kitchen-for-small-apartment-kitchen-minimalist-apartment-design-interior-design-architecture.jpg",
+            "http://smartledtv.info/wp-content/uploads/2018/03/small-bathroom-design-ideas-2015-full-size-of-home-design-best-bathroom-designs-of-great-white-bathroom-home-plans-designs-kerala-style.jpg",
+            "https://i.pinimg.com/736x/69/00/be/6900be9739e3bfe4be13a07537b83af8--desain-kamar-tidur-dekorasi-kamar-tidur.jpg",
+            "https://4.bp.blogspot.com/-ofv1n51YpF0/WRv7sxtWRVI/AAAAAAAAZJU/IShyhzgbweAY_oz1WmypmEim7YPTZ770gCLcB/s1600/41.jpg"
+        ],
+        "latitude": "41.7835820",
+        "longitude": "-87.6076010",
+        "id": "AV-TAlaNAXxH_fqQUKg3"
+    },
+    {
+        "listingName": "3 Bed/1bath",
+        "address": "5606 S Michigan Ave",
+        "city": "Chicago",
+        "prices": 1365,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Laundry on site"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Stove, Refrigerator"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat and Water Included"
+                ]
+            }
+        ],
+        "propertyType": "Condo",
+        "sourceURLs": "https://showmetherent.rentlinx.com/5606-S-Michigan-Ave-Chicago-IL-60637",
+        "imageURLs": [
+            "https://s3.amazonaws.com/bklyner/bklyner/wp-content/uploads/2018/04/Screen-Shot-2018-04-30-at-10.37.29-AM.png",
+            "http://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/3961-29/vintage-apartments-kitchen.jpg",
+            "http://meccafest.com/mec/small-bathroom-designs-Grey-Bathrooms-Bathrooms-Decor.jpg",
+            "http://stylingroom.ru/wp-content/gallery/mal-spalna/thoughtful-teen-room-layout-17.jpg",
+            "http://www.writingpodcastonline.com/wp-content/uploads/2017/04/fancy-bed-for-small-room-home-living-two-sides-work-built-in-stop-collection-sliding-off-designer-modern-new-2017-design-ideas.jpg"
+        ],
+        "latitude": "41.7925880",
+        "longitude": "-87.6227540",
+        "id": "AV-TJYf8AXxH_fqQU7Wj"
+    }
 ]
+

@@ -37,8 +37,12 @@ const PotentialRoommateCard = props => {
           <CardTitle className="header-text name-text">{props.convertTitle(props.name)}</CardTitle>
           <CardSubtitle className="school-text">{props.school}</CardSubtitle>
           <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
-          <Button className="btn roomie-btn" color="warning" onClick={() => props.handleClick(props.id)}>Let's Be Roomies!</Button>
-          <Button className="btn" color="success" onClick={() => props.cancelPotential(props.id)}>Nah</Button>
+          <Row style={{position: "absolute", bottom: "20px"}} className="text-center">
+            <Col xs="12">
+              <Button className="btn remove-btn" outline color="danger" onClick={() => props.cancelPotential(props.id)}>Remove</Button>
+              <Button className="btn roomie-btn askroomie-btn" outline color="warning" onClick={() => props.handleClick(props.id)}>Let's Be Roomies!</Button>
+            </Col>
+          </Row>
         </CardBody>
       </Card>
     // </div> 
