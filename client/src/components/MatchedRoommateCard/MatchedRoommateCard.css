@@ -42,6 +42,15 @@
     box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
 }
 
+.details-btn {
+    color: #343a40 !important;
+}
+
+.details-btn:hover {
+    color: #000 !important;
+    font-size: 101%;
+}
+
 .actual-img {
     object-fit: cover;
     position: relative;

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Map from "../Map";
-import {Button} from "reactstrap";
+import {Row, Col, Button} from "reactstrap";
+import './ApartmentPage.css';
 
 class ApartmentPage extends Component {
   goToDashboard = () => {
@@ -8,11 +9,25 @@ class ApartmentPage extends Component {
   }
   render() {
     return(
-    <div>
-      <Button onClick={this.goToDashboard} style={{width: "300px"}}> Back To Dashboard </Button>
-      <h1 align="center">Apartment Page</h1>
-      <Map />
-    </div>
+    <Row className="aptpage-div">
+      <Col xs="12">
+        <Row className="aptpage-title">
+          <Col xs="12">
+            <h1 className="header-text text-center">Search for an apartment nearby</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs="12" className="text-center">
+            <Button onClick={this.goToDashboard} outline color="success" className="dashback-btn">Back To Dashboard</Button>
+          </Col>
+        </Row>
+        <Row clasName="map-div">
+          <Col xs="12">
+            <Map />
+          </Col>
+        </Row>
+      </Col>
+    </Row>
     )
 
   }

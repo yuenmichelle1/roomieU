@@ -38,7 +38,7 @@ const MatchedRoommateCard = props => {
           <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
           <Row style={{position: "absolute", bottom: "20px", left: "80px"}} className="text-center">
             <Col xs="12" className="text-center">
-              <Button className="btn roomie-btn details-btn" color="warning" onClick={() => props.changeDashboard(props.id)} id={props.id}>Match Details</Button>
+              <Button className="btn roomie-btn details-btn" outline color="warning" onClick={() => props.changeDashboard(props.id)} id={props.id}>Match Details</Button>
             </Col>
           </Row>
         </CardBody>

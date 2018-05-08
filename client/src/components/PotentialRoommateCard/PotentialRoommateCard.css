@@ -55,8 +55,13 @@
     box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
 }
 
+.askroomie-btn {
+    color: #343a40 !important;
+}
+
 .askroomie-btn:hover {
-    background-color: #ffc107 !important;
+    color: #000 !important;
+    font-size: 101%;
 }
 
 .remove-btn:hover {
