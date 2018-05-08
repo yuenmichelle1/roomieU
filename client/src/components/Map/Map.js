@@ -4,7 +4,7 @@ import Apartments from "../../ApartmentSearch.json";
 import { Row, Col } from "reactstrap";
 import MapAptCard from "../MapAptCard";
 import API from "../../utils/API";
-
+import './Map.css';
 import Schools from "../../CollegesUniversities.json";
 
 // Haversine formula to find distance between geolat and geolong 
@@ -27,7 +27,6 @@ function deg2rad(deg) {
   return deg * (Math.PI / 180);
 }
 
-import './Map.css';
 
 
 class Map extends Component {
