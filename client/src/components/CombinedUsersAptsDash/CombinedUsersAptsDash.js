@@ -144,7 +144,7 @@ class CombinedUsersAptsDash extends Component {
         <Row>
           <Col xs="12" className="text-center">
             <h1 className="header-text">Your Match Details</h1>
-            <Button color="success" onClick={() => this.props.changeDashboard(this.state.userId)} className="dashback-btn">
+            <Button color="success" onClick={() => this.props.changeDashboard(this.state.userId)} outline className="dashback-btn">
               {" "}
               Back to Main Dashboard{" "}
             </Button>

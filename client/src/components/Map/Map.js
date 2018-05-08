@@ -4,6 +4,7 @@ import Apartments from "../../ApartmentSearch.json";
 import { Row, Col } from "reactstrap";
 import MapAptCard from "../MapAptCard";
 import API from "../../utils/API";
+import './Map.css';
 
 class Map extends Component {
   constructor() {
@@ -93,7 +94,7 @@ class Map extends Component {
     const ApartmentMap = withGoogleMap(props => (
       <GoogleMap
         defaultCenter={{ lat: 41.78157, lng: -87.598852 }}
-        defaultZoom={13}
+        defaultZoom={14}
       >
         {Apartments.map(apt => {
           return (
@@ -111,40 +112,51 @@ class Map extends Component {
     ));
 
     return (
-      <div>
-        {Object.keys(this.state.apartment).length !== 0 ? (
-          <Row>
-          <Col xs="6" sm="6" md="6" lg="6">
-              <ApartmentMap
-                containerElement={
-                  <div
-                    style={{ height: `550px`, width: "700px", margin: "auto" }}
-                  />
-                }
-                mapElement={<div style={{ height: `100%` }} />}
-              />
-            </Col>
-            <Col xs="6" sm="6" md="6" lg="6">
-              <MapAptCard
-                aptData={this.state.apartment}
-                saveAptToDB={this.saveAptToDB}
-                unsaveFromUser={this.unsaveFromUser}
-                isSaved={this.state.isSaved}
-              />
-            </Col>
-            
-          </Row>
-        ) : (
-          <ApartmentMap
-            containerElement={
-              <div
-                style={{ height: `550px`, width: "700px", margin: "auto" }}
-              />
-            }
-            mapElement={<div style={{ height: `100%` }} />}
-          />
-        )}
-      </div>
+      <Row>
+        <Col xs="12">
+          {Object.keys(this.state.apartment).length !== 0 ? (
+            <Row>
+              <Col xs="12">
+                <Row>
+                  <Col xs="0" sm="0" md="2" lg="2"/>
+                  <Col xs="12" sm="12" md="8" lg="8">
+                    <ApartmentMap
+                      containerElement={
+                        <div
+                          style={{ height: `250px`, width: "100%", margin: "auto", marginTop: "30px", marginBottom: "30px" }}
+                        />
+                      }
+                      mapElement={<div style={{ height: `100%`, width: "100%" }} />}
+                    />
+                  </Col>
+                  <Col xs="0" sm="0" md="2" lg="2"/>
+                </Row>
+                <Row className="text-left">
+                  <Col xs="0" sm="0" md="2" lg="2"/>
+                  <Col xs="12" sm="12" md="8" lg="8">
+                    <MapAptCard
+                      aptData={this.state.apartment}
+                      saveAptToDB={this.saveAptToDB}
+                      unsaveFromUser={this.unsaveFromUser}
+                      isSaved={this.state.isSaved}
+                    />
+                  </Col>
+                  <Col xs="0" sm="0" md="2" lg="2"/>
+                </Row>
+              </Col>
+            </Row>
+          ) : (
+            <ApartmentMap
+              containerElement={
+                <div
+                  style={{ height: `500px`, width: "90%", margin: "0 auto", marginTop: "30px" }}
+                />
+              }
+              mapElement={<div style={{ height: `100%` }} />}
+            />
+          )}
+        </Col>
+      </Row>
     );
   }
 }
