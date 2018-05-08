@@ -130,7 +130,7 @@ class LikedApartmentsWrapper extends Component {
     console.log("Is dislike apt being hit? ")
     const aptsCopy = [...this.state.apartments];
     // filter and get rid of
-    const newAptsArr = aptsCopy.filter(apt => (apt.address != address));
+    const newAptsArr = aptsCopy.filter(apt => (apt.address !== address));
     console.log(newAptsArr);
     const newAptsAddrArr = newAptsArr.map(apt => apt.address);
     console.log(newAptsAddrArr);
@@ -148,7 +148,7 @@ class LikedApartmentsWrapper extends Component {
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
           userInfo ? (
-            <div roomies-div>
+            <div className="roomies-div">
               <Row className="dash-header">
                 <Col xs="12">
                   <h1 className="header2-text aptDiv-title">

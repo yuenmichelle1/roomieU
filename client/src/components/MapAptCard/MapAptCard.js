@@ -54,6 +54,7 @@ var settings = {
 
 const MapAptCard = props => {
   return (
+
     <Row>
       <Col xs="12">
         <Row className="aptimg-div">
@@ -83,6 +84,7 @@ const MapAptCard = props => {
         </Row>
       </Col>
     </Row>
+
   );
 };
 

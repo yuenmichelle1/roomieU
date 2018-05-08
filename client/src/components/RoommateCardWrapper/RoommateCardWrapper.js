@@ -224,7 +224,7 @@ class RoommateCardWrapper extends Component {
     console.log("hello?!", this.state);
     return (
       <Router>
-        <div class="roomies-div">
+        <div className="roomies-div">
           <Row className="dash-header">
             <Col xs="12" sm="12" md="4">
               <NavLink
