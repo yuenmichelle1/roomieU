@@ -39,8 +39,8 @@ const PotentialRoommateCard = props => {
           <CardText className="bio-text"><b>Bio:</b> {props.bio}</CardText>
           <Row style={{position: "absolute", bottom: "20px"}} className="text-center">
             <Col xs="12">
-              <Button className="btn remove-btn" color="danger" onClick={() => props.cancelPotential(props.id)}>Remove</Button>
-              <Button className="btn roomie-btn askroomie-btn" color="warning" onClick={() => props.handleClick(props.id)}>Let's Be Roomies!</Button>
+              <Button className="btn remove-btn" outline color="danger" onClick={() => props.cancelPotential(props.id)}>Remove</Button>
+              <Button className="btn roomie-btn askroomie-btn" outline color="warning" onClick={() => props.handleClick(props.id)}>Let's Be Roomies!</Button>
             </Col>
           </Row>
         </CardBody>

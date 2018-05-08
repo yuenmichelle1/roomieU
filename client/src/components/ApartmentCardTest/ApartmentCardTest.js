@@ -39,7 +39,7 @@ const ApartmentCardTest = props => {
           {/* <CardText><b>Description:</b>{props.listingName}</CardText> */}
           {(props.showButton === "show") ? 
           
-              <Button color="danger" style={{width:"130px"}} onClick={() => props.dislikeApt(props.address)}>Remove</Button> : <p />}
+              <Button outline color="danger" style={{width:"130px", marginTop:"10px"}} onClick={() => props.dislikeApt(props.address)}>Remove</Button> : <p />}
             </Col>
           </Row>
         </CardBody>
