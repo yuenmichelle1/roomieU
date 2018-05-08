@@ -4,6 +4,27 @@ import Apartments from "../../ApartmentSearch.json";
 import { Row, Col } from "reactstrap";
 import MapAptCard from "../MapAptCard";
 import API from "../../utils/API";
+import Schools from "../../CollegesUniversities.json";
+
+// Haversine formula to find distance between geolat and geolong 
+function getDistanceFromLatLonInMiles(lat1, lon1, lat2, lon2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = deg2rad(lat2 - lat1); // deg2rad below
+  var dLon = deg2rad(lon2 - lon1);
+  var a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(deg2rad(lat1)) *
+      Math.cos(deg2rad(lat2)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  var d = R * c * 0.62137119; // Distance in miles (1 km = 0.62137119 mi)
+  return d;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI / 180);
+}
 
 class Map extends Component {
   constructor() {
@@ -15,7 +36,7 @@ class Map extends Component {
     isSaved: false,
     userSavedApts: [],
     userId: "",
-    userSavedAddressArr: [], 
+    userSavedAddressArr: [],
     aptsInBudget: []
   };
 
@@ -25,20 +46,51 @@ class Map extends Component {
       const userId = data.data._id;
       const userAptAddressesArr = data.data.apartments;
       const userBudget = data.data.budget;
-      const userBudgetSplit= userBudget.split("$");
-      const userBudgetCap= userBudgetSplit[userBudgetSplit.length-1];
-      // do a check to see if userBudget is 3001+ that changes logic. 
-      const aptsFilteredByCap = Apartments.filter(aptObj => (aptObj.prices <= parseInt(userBudgetCap)));
-      console.log(aptsFilteredByCap);
-
+      const userBudgetSplit = userBudget.split("$");
+      const userBudgetCap = userBudgetSplit[userBudgetSplit.length - 1];
+      let aptsFilteredByCap = [];
+      const userSchool = data.data.school;
+      const schoolLat =Schools.features.filter(school => (school.properties.NAME === userSchool))[0].properties.LAT;
+      const schoolLon =Schools.features.filter(school => (school.properties.NAME === userSchool))[0].properties.LON;
+      let userRadiusCap = "";
+      if (data.data.radius !== "10+ miles") {
+        userRadiusCap = data.data.radius.split(" ")[0].split("-")[1];
+      } 
+     let aptsFilteredByRadius = [];
+     if (userRadiusCap === "") {
+       aptsFilteredByRadius = Apartments;
+     } else {
+       aptsFilteredByRadius = Apartments.filter(aptObj => (getDistanceFromLatLonInMiles(schoolLat, schoolLon, aptObj.latitude, aptObj.longitude)< Number(userRadiusCap)));
+     }
+     console.log(Number(userRadiusCap));
+     console.log(aptsFilteredByRadius);
+      // do a check to see if userBudget is 3001+ then grab all apartments, else filter
+      if (Number(userBudgetCap) === 3001) {
+        aptsFilteredByCap = Apartments;
+      } else {
+        aptsFilteredByCap = Apartments.filter(
+          aptObj => aptObj.prices <= Number(userBudgetCap)
+        );
+      }
+      let aptFilteredByCapAndRadius = [];
+      if (aptsFilteredByCap.length > aptsFilteredByRadius.length) {
+        aptFilteredByCapAndRadius = aptsFilteredByCap.filter(aptObj => aptsFilteredByRadius.find(apt => (apt.address===aptObj.address)));
+        console.log(aptFilteredByCapAndRadius);
+      } else {
+        aptsFilteredByCap = aptsFilteredByRadius.filter(aptObj => aptsFilteredByCap.find(apt => (apt.address === aptObj.address)));
+      }
+      console.log(aptFilteredByCapAndRadius);
       // get users savedapartments array object
       API.getSavedApartments(userId, userAptAddressesArr).then(aptObjs => {
-        this.setState({
-          userSavedApts: aptObjs.data,
-          userId: userId,
-          userSavedAddressArr: userAptAddressesArr,
-          aptsInBudget: aptsFilteredByCap
-        }, ()=> console.log(this.state.aptsInBudget));
+        this.setState(
+          {
+            userSavedApts: aptObjs.data,
+            userId: userId,
+            userSavedAddressArr: userAptAddressesArr,
+            aptsInBudget: aptsFilteredByCap
+          },
+          () => console.log(this.state.aptsInBudget)
+        );
       });
     });
   }
