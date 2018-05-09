@@ -33,6 +33,7 @@
 }
 
 .slick-active, .slick-cloned {
+    padding-top: 10px;
     margin-bottom: 50px;
     z-index: -1;
 }
@@ -61,16 +62,179 @@
     margin-right: 25px;
 }
 
-@media (min-width: 1440px) {
-    .slick-list {
-        height: 600px;
-        padding-top: 0px;
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width:375px) and (max-width: 413.98px) {
+    .roomies-div {
+        min-width: 375px;
+        max-width: 414px;
+        margin-top: 30px;
+        margin-left: -10px;
     }
 
-    .slick-active, .slick-cloned {
+    .aptDiv-title {
+        font-size: 1.5em !important;
+        margin-left: -20px !important;
+        margin-top: -10px !important;
+    }
+
+    .addapt-btn {
+        display:block !important;
+        margin: 0 auto !important;
+    }
+
+    .dash-link {
+        font-size: 1.5em;
+        margin-top: 5px;
+    }
+
+    .slick-list {
+        margin-left: -10px !important;
+    }
+}
+
+@media (min-width:414px) and (max-width: 574.98px) {
+    .roomies-div {
+        min-width: 414px;
+        max-width: 425px;
+        margin-top: 30px;
+        margin-left: 1px;
+    }
+
+    .aptDiv-title {
+        font-size: 1.5em !important;
+        margin-left: -20px !important;
+        margin-top: -10px !important;
+    }
+
+    .addapt-btn {
+        display:block !important;
+        margin: 0 auto !important;
+    }
+
+    .dash-link {
+        font-size: 1.5em;
+        margin-top: 5px;
+    }
+
+    .slick-list {
+        margin-left: -10px !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .roomies-div {
+        min-width: 414px;
+        max-width: 425px;
+        margin-top: 30px;
+        margin-left: -100px;
+    }
+
+    .aptDiv-title {
+        font-size: 1.5em !important;
+        margin-left: -20px !important;
+        margin-top: -10px !important;
+    }
+
+    .addapt-btn {
+        display:block !important;
+        margin: 0 auto !important;
+    }
+
+    .dash-link {
+        font-size: 1.5em;
+        margin-top: 5px;
+    }
+
+    .slick-list {
+        margin-left: -10px !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .roomies-div {
+        min-width: 768px;
+        max-width: 990px;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    .dash-link {
+        font-size: 1.2em;
+        margin-top: 0px;
+        margin-left: -25px;
+    }
+
+    .slick-list {
         margin-left: 0px !important;
-        margin-right: 0px !important;
+    }
+
+    .aptDiv-title {
+        font-size: 1.5em !important;
+        margin-left: -20px !important;
+        margin-top: -30px !important;
+    }
+
+    .likedapts-div {
+        margin-bottom: 50px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .slick-active, .slick-cloned {
+        margin-bottom: 50px;
+        margin-left: 50px;
         z-index: -1;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .slick-list {
+        margin-bottom: 50px !important;
+    }
+
+    .apt-remove {
+        margin-left: 0px !important;
+    }
+
+    .viewapt-btn {
+        width: 160px !important;
+        margin-left: 0px !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    .slick-list {
+        height: 500px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+
+    .slick-active, .slick-slide, .slick-cloned, .slick-center {
+        margin-left: 20px;
+        margin-right: 20px;
+        z-index: -1;
+    }
+
+    .likedapts-div {
+        height: 450px;
+    }
+
+    .apt-card {
+        margin-bottom: 60px !important;
+    }
+
+    .apt-remove {
+        margin-left: 0px !important;
+    }
+
+    .viewapt-btn {
+        width: 160px !important;
+        margin-left: 0px !important;
     }
 }
 
@@ -88,9 +252,26 @@
     .slick-list {
         height: 550px;
     }
-    
+
+    .apt-card {
+        margin-bottom: 60px !important;
+    }
+
     .slick-active, .slick-cloned {
         margin-left: 0px !important;
         margin-right: 0px !important;
+    }
+
+    .remove-btn {
+        width: 100px !important;
+        margin-left: 28px !important;
+    }
+
+    .apt-remove {
+        margin-left: 5px !important;
+    }
+    .viewapt-btn {
+        width: 160px !important;
+        margin-left: 0px !important;
     }
 }
