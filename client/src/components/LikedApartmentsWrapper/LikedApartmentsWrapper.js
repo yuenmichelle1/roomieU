@@ -32,7 +32,7 @@ const settings = {
   className: "slider variable-width apt-slider",
   dots: true,
   infinite: true,
-  centerMode: true,
+  // centerMode: true,
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -41,47 +41,78 @@ const settings = {
   prevArrow: <BackArrow />,
   responsive: [
     {
-      breakpoint: 1670,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1366,
+      breakpoint: 1680,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
+        dots: true,
+        centerMode: false
+      }
+    },
+    {
+      breakpoint: 1440,
+      settings: {
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      initialSlide: 0,
+      infinite: true,
+      dots: true,
+      centerMode: false
+      }
+    },
+    {
+        breakpoint: 1366,
+        settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+        }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        infinite: true,
         dots: true
       }
     },
     {
-      breakpoint: 1024,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: true
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      initialSlide: 1,
+      dots: true,
+      infinite: true,
+      centerMode: true
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 575,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        initialSlide: 2
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      dots: true,
+      infinite: true,
+      centerMode: true
       }
-    },
-    {
-      breakpoint: 480,
+  },
+  {
+      breakpoint: 375,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      dots: true,
+      infinite: true,
+      centerMode: true
       }
-    }
+  }
   ]
 };
 
@@ -141,7 +172,7 @@ class LikedApartmentsWrapper extends Component {
       <AuthConsumer>
         {(userInfo, isLoading, error) =>
           userInfo ? (
-            <div className="roomies-div">
+            <div className="roomies-div likedapts-div">
               <Row className="dash-header">
                 <Col xs="12">
                   <h1 className="header2-text aptDiv-title">
@@ -150,6 +181,7 @@ class LikedApartmentsWrapper extends Component {
                   </h1>
                   <Button
                     color="success"
+                    className="addapt-btn"
                     onClick={this.goToApartmentsPage}
                     style={{
                       fontSize: ".9em",

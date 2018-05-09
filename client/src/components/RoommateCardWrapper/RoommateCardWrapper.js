@@ -226,7 +226,7 @@ class RoommateCardWrapper extends Component {
       <Router>
         <div className="roomies-div">
           <Row className="dash-header">
-            <Col xs="12" sm="12" md="4">
+            <Col xs="12" sm="4" md="4">
               <NavLink
                 to="/dashboard/matched"
                 activeClassName="is-active"
@@ -238,7 +238,7 @@ class RoommateCardWrapper extends Component {
                 {this.state.matchedRoommates.length}
               </Badge>
              </Col>
-             <Col xs="12" sm="12" md="4">
+             <Col xs="12" sm="4" md="4">
               <NavLink
                 to="/dashboard/pending"
                 activeClassName="is-active"
@@ -250,7 +250,7 @@ class RoommateCardWrapper extends Component {
                 {this.state.pendingRoommates.length}
               </Badge>
               </Col>
-             <Col xs="12" sm="12" md="4">
+             <Col xs="12" sm="4" md="4">
               <NavLink
                 to="/dashboard/potential"
                 activeClassName="is-active"

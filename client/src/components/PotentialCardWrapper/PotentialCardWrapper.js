@@ -38,7 +38,6 @@ const settings = {
     className: "slider variable-width",
     dots: true,
     infinite: true,
-    centerMode: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,   
@@ -47,12 +46,24 @@ const settings = {
     prevArrow: <BackArrow />,
     responsive: [
         {
-            breakpoint: 1670,
+            breakpoint: 1680,
             settings: {
-            slidesToShow: 5,
+            slidesToShow: 3,
             slidesToScroll: 2,
             infinite: true,
-            dots: true
+            dots: true,
+            centerMode: false
+            }
+        },
+        {
+            breakpoint: 1440,
+            settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            initialSlide: 0,
+            infinite: true,
+            dots: true,
+            centerMode: false
             }
         },
         {
@@ -65,27 +76,54 @@ const settings = {
             }
         },
         {
-            breakpoint: 1024,
+            breakpoint: 1200,
             settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             dots: true
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 992,
             settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            initialSlide: 2
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            dots: true,
+            infinite: true,
+            centerMode: true
+            }
+        },
+        {
+            breakpoint: 575,
             settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            initialSlide: 0,
+            dots: true,
+            infinite: true,
+            centerMode: true
+            }
+        },
+        {
+            breakpoint: 375,
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            dots: true,
+            infinite: true,
+            centerMode: true
             }
         }
     ]
