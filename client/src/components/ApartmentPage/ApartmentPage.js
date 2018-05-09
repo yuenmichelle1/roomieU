@@ -23,7 +23,7 @@ class ApartmentPage extends Component {
         </Row>
         <Row clasName="map-div">
           <Col xs="12">
-            <Map />
+            <Map aptData={this.props.aptData}/>
           </Col>
         </Row>
       </Col>
