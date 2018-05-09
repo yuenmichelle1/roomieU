@@ -1,3 +1,7 @@
+.matched-div {
+    height: 450px;
+}
+
 .dashback-btn {
     width: 250px !important;
     margin-right: 15px !important;
@@ -17,15 +21,41 @@
 }
 
 .matched-body, .you-body {
-    height: 200px;
+    height: 200px !important;
 }
 
 .matched-img, .you-img {
-    height: 350px;
+    height: 350px !important;
     object-fit: cover;
     overflow: hidden;
     margin-left: 0px !important;
     margin-right: 0px !important;
+}
+
+/* .matched-img {
+    width: 100.1% !important;
+} */
+
+.matched-phone {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #28a745ab;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 99;
+}
+
+.matched-email {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    background-color: #28a745ab;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 99;
 }
 
 .liked-header {
@@ -35,6 +65,7 @@
 .both-apts {
     margin: 0 !important;
     padding: 15px !important;
+    max-height: 400px;
 }
 
 @media (min-width: 1440px) {

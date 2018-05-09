@@ -151,7 +151,7 @@ class CombinedUsersAptsDash extends Component {
           </Col>
         </Row>
         <Row className="matched-row">
-          <Col xs="4">
+          <Col xs="6" sm="6" md="4" lg="4">
             {/* <h1 className="header-text"> {this.state.user.name} </h1> */}
             <CardDeck className="matched-div">
               <Card classname="user-card you-card">
@@ -172,7 +172,7 @@ class CombinedUsersAptsDash extends Component {
               </Card>
             </CardDeck>
           </Col>
-          <Col xs="8">
+          <Col xs="6" sm="6" md="8" lg="8">
             {/* <h1 className="header-text matched-name"> Your Match: {this.state.otherUser.name} </h1> */}
 
             <CardDeck className="matched-div">
@@ -186,11 +186,11 @@ class CombinedUsersAptsDash extends Component {
                   alt="You"
                   className="matched-img"
                 />
+                <span className="text-center matched-phone">{this.state.otherUser.phone}</span>
+                <span className="text-center matched-email">{this.state.otherUser.email}</span>
                 <CardBody className="text-left matched-body">
                   <CardTitle className="header-text name-text">{this.state.otherUser.name}</CardTitle>
                   <CardSubtitle className="school-text">{this.state.otherUser.school}</CardSubtitle>
-                  <CardText><b>Contact:</b> {this.state.otherUser.phone}</CardText>
-                  <CardText><b>Email:</b> {this.state.otherUser.email}</CardText>
                   <CardText className="bio-text"><b>Bio:</b> {this.state.otherUser.bio}</CardText>
                 </CardBody>
               </Card>
@@ -214,7 +214,7 @@ class CombinedUsersAptsDash extends Component {
                 ))}
               </Slider>
             ) : (
-              <div className="centerText blockCenter">
+              <div className="text-center blockCenter">
                 {" "}
                 Currently No Common Apartments with {
                   this.state.otherUser.name
