@@ -23,3 +23,10 @@ label.col-form-label {
     height: 50px;
     margin-top: -70px;
 }
+
+@media all and (max-width: 575px) {
+    #userEmail,#userPassword {
+        width: 80%;
+        margin: auto
+    };
+}
