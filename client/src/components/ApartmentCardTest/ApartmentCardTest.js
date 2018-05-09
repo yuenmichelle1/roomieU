@@ -33,12 +33,45 @@ const ApartmentCardTest = props => {
           </Col>
         </Row>
         <CardBody className="text-left">
-          <CardTitle className="header-text name-text" style={{fontSize:"1.1em", marginBottom:"5px", textAlign:"center"}}>{props.address}</CardTitle>
+          <CardTitle
+            className="header-text name-text"
+            style={{
+              fontSize: "1.1em",
+              marginBottom: "5px",
+              textAlign: "center"
+            }}
+          >
+            {props.address}
+          </CardTitle>
           <Row>
             <Col xs="12" className="text-center">
-          {/* <CardText><b>Description:</b>{props.listingName}</CardText> */}
-          {(props.showButton === "show") ? <Button outline color="danger" style={{width:"130px", marginTop:"10px"}} onClick={() => props.dislikeApt(props.address)}>Remove</Button> : <p />}
-              <Button onClick={() => props.showAptData(props.apartmentObj)} outline color="warning" style={{marginLeft: "5px"}}> View </Button>
+              {props.showButton === "show" ? (
+                <Row>
+                  <Col xs="6">
+                    <Button
+                      outline
+                      color="danger"
+                      style={{ width: "130px", marginTop: "10px" }}
+                      onClick={() => props.dislikeApt(props.address)}
+                    >
+                      Remove
+                    </Button>
+                  </Col>
+                  <Col xs="6">
+                    <Button
+                      onClick={() => props.showAptData(props.apartmentObj)}
+                      outline
+                      color="warning"
+                      style={{ marginLeft: "5px", marginTop: "10px"}}
+                    >
+                      {" "}
+                      View{" "}
+                    </Button>
+                  </Col>
+                </Row>
+              ) : (
+                <p />
+              )}
             </Col>
           </Row>
         </CardBody>
