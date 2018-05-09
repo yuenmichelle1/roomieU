@@ -37,9 +37,8 @@ const ApartmentCardTest = props => {
           <Row>
             <Col xs="12" className="text-center">
           {/* <CardText><b>Description:</b>{props.listingName}</CardText> */}
-          {(props.showButton === "show") ? 
-          
-              <Button outline color="danger" style={{width:"130px", marginTop:"10px"}} onClick={() => props.dislikeApt(props.address)}>Remove</Button> : <p />}
+          {(props.showButton === "show") ? <Button outline color="danger" style={{width:"130px", marginTop:"10px"}} onClick={() => props.dislikeApt(props.address)}>Remove</Button> : <p />}
+              <Button onClick={() => props.showAptData(props.apartmentObj)} outline color="warning" style={{marginLeft: "5px"}}> View </Button>
             </Col>
           </Row>
         </CardBody>

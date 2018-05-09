@@ -8,16 +8,11 @@ import Schools from "../../CollegesUniversities.json";
 import Slider from "react-slick";
 import next from "../PotentialCardWrapper/next.png";
 import back from "../PotentialCardWrapper/back.png";
-import './LikedApartmentsWrapper.css';
+import "./LikedApartmentsWrapper.css";
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    //   <div
-    //     className={className}
-    //     style={{ ...style, display: "block", background: "red" }}
-    //     onClick={onClick}
-    //   />
     <div className={className}>
       <img className="arrow" src={next} alt="" onClick={onClick} />
     </div>
@@ -27,11 +22,6 @@ function NextArrow(props) {
 function BackArrow(props) {
   const { className, style, onClick } = props;
   return (
-    //   <div
-    //     className={className}
-    //     style={{ ...style, display: "block", background: "red" }}
-    //     onClick={onClick}
-    //   />
     <div className={className} id="trans-bg">
       <img className="arrow back-arrow" src={back} alt="" onClick={onClick} />
     </div>
@@ -127,10 +117,10 @@ class LikedApartmentsWrapper extends Component {
   };
 
   dislikeApt = address => {
-    console.log("Is dislike apt being hit? ")
+    console.log("Is dislike apt being hit? ");
     const aptsCopy = [...this.state.apartments];
     // filter and get rid of
-    const newAptsArr = aptsCopy.filter(apt => (apt.address !== address));
+    const newAptsArr = aptsCopy.filter(apt => apt.address !== address);
     console.log(newAptsArr);
     const newAptsAddrArr = newAptsArr.map(apt => apt.address);
     console.log(newAptsAddrArr);
@@ -138,10 +128,13 @@ class LikedApartmentsWrapper extends Component {
       const userId = data.data._id;
       API.updateUser(userId, { apartments: newAptsAddrArr }).then(result => {
         console.log("result");
-        this.setState({ apartments: newAptsArr }, () => {console.log(this.state.apartments)});
+        this.setState({ apartments: newAptsArr }, () => {
+          console.log(this.state.apartments);
+        });
       });
     });
   };
+
 
   render() {
     return (
@@ -158,8 +151,17 @@ class LikedApartmentsWrapper extends Component {
                   <Button
                     color="success"
                     onClick={this.goToApartmentsPage}
-                    style={{ fontSize:".9em", display:"inline-block", width: "200px", height: "35px", width: "150px", marginTop:"-10px", marginLeft: "30px" }}
-                  >Add Apartments
+                    style={{
+                      fontSize: ".9em",
+                      display: "inline-block",
+                      width: "200px",
+                      height: "35px",
+                      width: "150px",
+                      marginTop: "-10px",
+                      marginLeft: "30px"
+                    }}
+                  >
+                    Add Apartments
                   </Button>
                 </Col>
               </Row>
@@ -176,6 +178,8 @@ class LikedApartmentsWrapper extends Component {
                         key={i}
                         showButton="show"
                         dislikeApt={this.dislikeApt}
+                        showAptData={this.props.showAptData}
+                        apartmentObj={apt}
                       />
                     ))}
                   </Slider>

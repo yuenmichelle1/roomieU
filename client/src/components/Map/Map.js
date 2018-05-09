@@ -4,10 +4,10 @@ import Apartments from "../../ApartmentSearch.json";
 import { Row, Col } from "reactstrap";
 import MapAptCard from "../MapAptCard";
 import API from "../../utils/API";
-import './Map.css';
+import "./Map.css";
 import Schools from "../../CollegesUniversities.json";
 
-// Haversine formula to find distance between geolat and geolong 
+// Haversine formula to find distance between geolat and geolong
 function getDistanceFromLatLonInMiles(lat1, lon1, lat2, lon2) {
   var R = 6371; // Radius of the earth in km
   var dLat = deg2rad(lat2 - lat1); // deg2rad below
@@ -27,8 +27,6 @@ function deg2rad(deg) {
   return deg * (Math.PI / 180);
 }
 
-
-
 class Map extends Component {
   constructor() {
     super();
@@ -44,6 +42,11 @@ class Map extends Component {
 
   componentDidMount() {
     // get current user's Saved Apartments.
+    if (this.props.aptData && this.props.aptData.address) {
+      this.setState({ apartment: this.props.aptData, isSaved: true }, () =>
+        console.log(this.state.apartment)
+      );
+    }
     API.getUserInfo().then(data => {
       const userId = data.data._id;
       const userAptAddressesArr = data.data.apartments;
@@ -52,19 +55,31 @@ class Map extends Component {
       const userBudgetCap = userBudgetSplit[userBudgetSplit.length - 1];
       let aptsFilteredByCap = [];
       const userSchool = data.data.school;
-      const schoolLat =Schools.features.filter(school => (school.properties.NAME === userSchool))[0].properties.LAT;
-      const schoolLon =Schools.features.filter(school => (school.properties.NAME === userSchool))[0].properties.LON;
+      const schoolLat = Schools.features.filter(
+        school => school.properties.NAME === userSchool
+      )[0].properties.LAT;
+      const schoolLon = Schools.features.filter(
+        school => school.properties.NAME === userSchool
+      )[0].properties.LON;
       let userRadiusCap = "";
       if (data.data.radius !== "10+ miles") {
         userRadiusCap = data.data.radius.split(" ")[0].split("-")[1];
-      } 
-     let aptsFilteredByRadius = [];
-     if (userRadiusCap === "") {
-       aptsFilteredByRadius = Apartments;
-     } else {
-       aptsFilteredByRadius = Apartments.filter(aptObj => (getDistanceFromLatLonInMiles(schoolLat, schoolLon, aptObj.latitude, aptObj.longitude)< Number(userRadiusCap)));
-     }
-     console.log(aptsFilteredByRadius);
+      }
+      let aptsFilteredByRadius = [];
+      if (userRadiusCap === "") {
+        aptsFilteredByRadius = Apartments;
+      } else {
+        aptsFilteredByRadius = Apartments.filter(
+          aptObj =>
+            getDistanceFromLatLonInMiles(
+              schoolLat,
+              schoolLon,
+              aptObj.latitude,
+              aptObj.longitude
+            ) < Number(userRadiusCap)
+        );
+      }
+      console.log(aptsFilteredByRadius);
       // do a check to see if userBudget is 3001+ then grab all apartments, else filter
       if (parseInt(userBudgetCap) === 3001) {
         aptsFilteredByCap = Apartments;
@@ -78,21 +93,23 @@ class Map extends Component {
       let aptFilteredByCapAndRadius = [];
 
       if (aptsFilteredByCap.length > aptsFilteredByRadius.length) {
-        aptFilteredByCapAndRadius  = aptsFilteredByCap.filter(aptObj => aptsFilteredByRadius.find(apt => (apt.address===aptObj.address)));
+        aptFilteredByCapAndRadius = aptsFilteredByCap.filter(aptObj =>
+          aptsFilteredByRadius.find(apt => apt.address === aptObj.address)
+        );
         console.log(aptFilteredByCapAndRadius);
       } else {
-        aptFilteredByCapAndRadius= aptsFilteredByRadius.filter(aptObj => aptsFilteredByCap.find(apt => (apt.address === aptObj.address)));
+        aptFilteredByCapAndRadius = aptsFilteredByRadius.filter(aptObj =>
+          aptsFilteredByCap.find(apt => apt.address === aptObj.address)
+        );
       }
-    
+
       // get users savedapartments array object
       API.getSavedApartments(userId, userAptAddressesArr).then(aptObjs => {
-        this.setState(
-          {
-            userSavedApts: aptObjs.data,
-            userId: userId,
-            userSavedAddressArr: userAptAddressesArr
-          }
-        );
+        this.setState({
+          userSavedApts: aptObjs.data,
+          userId: userId,
+          userSavedAddressArr: userAptAddressesArr
+        });
       });
     });
   }
@@ -202,21 +219,29 @@ class Map extends Component {
             <Row>
               <Col xs="12">
                 <Row>
-                  <Col xs="0" sm="0" md="2" lg="2"/>
+                  <Col xs="0" sm="0" md="2" lg="2" />
                   <Col xs="12" sm="12" md="8" lg="8">
                     <ApartmentMap
                       containerElement={
                         <div
-                          style={{ height: `250px`, width: "100%", margin: "auto", marginTop: "30px", marginBottom: "30px" }}
+                          style={{
+                            height: `250px`,
+                            width: "100%",
+                            margin: "auto",
+                            marginTop: "30px",
+                            marginBottom: "30px"
+                          }}
                         />
                       }
-                      mapElement={<div style={{ height: `100%`, width: "100%" }} />}
+                      mapElement={
+                        <div style={{ height: `100%`, width: "100%" }} />
+                      }
                     />
                   </Col>
-                  <Col xs="0" sm="0" md="2" lg="2"/>
+                  <Col xs="0" sm="0" md="2" lg="2" />
                 </Row>
                 <Row className="text-left">
-                  <Col xs="0" sm="0" md="2" lg="2"/>
+                  <Col xs="0" sm="0" md="2" lg="2" />
                   <Col xs="12" sm="12" md="8" lg="8">
                     <MapAptCard
                       aptData={this.state.apartment}
@@ -225,7 +250,7 @@ class Map extends Component {
                       isSaved={this.state.isSaved}
                     />
                   </Col>
-                  <Col xs="0" sm="0" md="2" lg="2"/>
+                  <Col xs="0" sm="0" md="2" lg="2" />
                 </Row>
               </Col>
             </Row>
@@ -233,7 +258,12 @@ class Map extends Component {
             <ApartmentMap
               containerElement={
                 <div
-                  style={{ height: `500px`, width: "90%", margin: "0 auto", marginTop: "30px" }}
+                  style={{
+                    height: `500px`,
+                    width: "90%",
+                    margin: "0 auto",
+                    marginTop: "30px"
+                  }}
                 />
               }
               mapElement={<div style={{ height: `100%` }} />}
