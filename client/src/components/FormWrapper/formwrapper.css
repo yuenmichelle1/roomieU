@@ -15,3 +15,21 @@
     margin-top:30px;
     margin-bottom: 50px;
 }
+
+@media all and (max-width: 736px) {
+    .more-info-div {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .more-info-div {
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+        font-size: 0.9em;
+    }
+    .more-info-div h1 {
+        font-size: 2em;
+    }
+}
