@@ -21,7 +21,7 @@ class ApartmentPage extends Component {
             <Button onClick={this.goToDashboard} outline color="success" className="dashback-btn">Back To Dashboard</Button>
           </Col>
         </Row>
-        <Row clasName="map-div">
+        <Row className="map-div">
           <Col xs="12">
             <Map aptData={this.props.aptData}/>
           </Col>
