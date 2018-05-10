@@ -163,7 +163,7 @@ export default class SignUpForm extends React.Component {
                     <Input
                       type="email"
                       name="email"
-                      id="userEmail"
+                      // id="userEmail"
                       placeholder="Enter a valid .edu email"
                       value={this.state.email}
                       onChange={this.handleInputChange}
@@ -180,7 +180,7 @@ export default class SignUpForm extends React.Component {
                     <Input
                       type="password"
                       name="password"
-                      id="userPassword"
+                      // id="userPassword"
                       placeholder="Enter Password"
                       value={this.state.password}
                       onChange={this.handleInputChange}

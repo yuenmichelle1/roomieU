@@ -62,7 +62,8 @@ export default class LoginForm extends React.Component {
                   <Input lg={12}
                     type="email"
                     name="email"
-                    id="userEmail"
+                    // id="userEmail"
+                    className="userEmail"
                     placeholder="Enter Your Email"
                     value={this.state.email}
                     onChange={this.handleInputChange}
@@ -80,7 +81,7 @@ export default class LoginForm extends React.Component {
                   <Input lg={12}
                     type="password"
                     name="password"
-                    id="userPassword"
+                    // id="userPassword"
                     placeholder="Enter Password"
                     value={this.state.password}
                     onChange={this.handleInputChange}
