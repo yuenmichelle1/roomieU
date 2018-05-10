@@ -755,6 +755,228 @@
         "latitude": "41.7925880",
         "longitude": "-87.6227540",
         "id": "AV-TJYf8AXxH_fqQU7Wj"
+    },
+    {
+        "listingName": "5355-5361 S. Cottage Grove - Nanb/ba -  Sq.ft.",
+        "address": "5355 S Cottage Grove Ave",
+        "city": "Chicago",
+        "prices": 1200,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Laundry Center, High Speed Internet"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Stainless Steel Appliances"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water, Electric, Heat included"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "http://www.rentcafe.com/apartments/il/chicago/5355-5361-s-cottage-grove/default.aspx",
+        "imageURLs": [
+            "https://images1.apartments.com/i2/NMVn6rZM6rA-t2pe4o17o9SO9CM5ovk-pxpUt-Ojevs/102/luxe-on-madison-chicago-il-primary-photo.jpg",
+            "https://cdn.decoist.com/wp-content/uploads/2014/02/Painted-cabinets-in-the-kitchen.jpg",
+            "https://www.themandrel.com/wp-content/uploads/2018/03/awesome-cute-apartment-bathroom-ideas-delightful-decorating-pictures-simple-pinterest-renovation-rental-on.jpg",
+            "https://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2011/6/29/4/DesignLens_cobalt-blue-room_s4x3.jpg",
+            "http://empiricos.club/wp-content/uploads/2017/09/navy-bedroom-walls-navy-bedroom-walls-with-beige-headboard-navy-blue-bedroom-walls.jpg"
+        ],
+        "latitude": "41.796982",
+        "longitude": "-87.606025",
+        "id": "AV-SX80UAXxH_fqQPtTq"
+    },
+    {
+        "listingName": "4945 S. Forrestville 3s Avii",
+        "address": "4943 S Forrestville Ave",
+        "city": "Chicago",
+        "prices": 1400,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "In-unit washer and dryer, Air conditioning, Pets allowed"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Refrigerator, Stove, Dishwasher"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat, Water, Cable"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/4943-45-Forrestville-Ave---Bldg-Chicago-IL-60615",
+        "imageURLs": [
+            "http://curiouscasa.com/wp-content/uploads/2017/10/Apartment-Buildings-For-Sale-Chicago-B82-About-Remodel-Modern-Home-Decoration-Idea-with-Apartment-Buildings-For-Sale-Chicago.jpg",
+            "http://cdn.home-designing.com/wp-content/uploads/2013/01/galley-kitchen-decor.jpg",
+            "http://apse.co/wp-content/uploads/2018/03/amazing-small-apartment-bathroom-decorating-ideas-more-interior-design.jpg",
+            "https://cdn.homedit.com/wp-content/uploads/2011/09/modern-3-bedroom-apartment-bedroom.jpg",
+            "http://zmeeed.info/wp-content/uploads/2017/03/inspirations-apartment-bedroom-college-apartment-bedroom-layout.jpg"
+        ],
+        "latitude": "41.8044705",
+        "longitude": "-87.6123863",
+        "id": "AV-SSlMUyCk2Bpf6BZEk"
+    },
+    {
+        "listingName": "4710 S Wabash Ave Chicago Il",
+        "address": "4710 S Wabash Ave",
+        "city": "Chicago",
+        "prices": 1270,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "In-unit washer and dryer, Air conditioning"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Range, Refrigerator, Oven"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Water Included, Trash Pick-up Included"
+                ]
+            }
+
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "http://www.loopnet.com/Listing/20413169/4710-S-Wabash-Ave-Chicago-IL/",
+        "imageURLs": [
+            "http://www.meglei.com/imagini/Palmer-panorama-front-2-1200.jpg",
+            "http://simopsstudios.com/kitchenpic/U-Shaped-Kitchen-Renovation-The-Interior-Design.jpg",
+            "http://www.homrem.com/wp-content/uploads/2018/03/bathroom-update-ideas-free-bathroom-updates-awesome-small-bathroom-remodel-awesome-hgtv-of-bathroom-update-ideas.jpg",
+            "http://www.alassiopalmcove.com/files/media/thumbcache/05b/fbb/eb3/master-bedroom.jpg",
+            "http://www.megaplast.com.ua/wp-content/uploads/2016/01/Modern-Interior-Design-Ideas-For-Apartments-1.jpg"
+        ],
+        "latitude": "41.808805",
+        "longitude": "-87.624919",
+        "id": "AV-SjeljyCk2Bpf6DsXf"
+    },
+    {
+        "listingName": "4950 S King Dr. Unit 1a",
+        "address": "4950 S King Dr",
+        "city": "Chicago",
+        "prices": 1230,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Cable-ready, Coin laundry, Street parking"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Air Conditioning, Dishwasher, Microwave"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat Included, Water Included, Resident Pays Electricity"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/4950-S-King-Dr-Unit-1A-Chicago-IL-60615",
+        "imageURLs": [
+            "https://image4.apartmentfinder.com/i2/E6BfoEjUjYWR8wt3tisJ-tAxS8S_FYeL0SMW_f1YpYI/110/the-victorian-apartments-chicago-il-building-photo.jpg",
+            "http://www.alineadesigns.com/wp-content/uploads/2016/12/White-Kitchen-Inset-Cabinets-with-Dark-Maple-Island-white-kitchen-dark-island-.jpg",
+            "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2014/11/20/1/BP_HBBRP101H_Bathroom-2-After.jpg.rend.hgtvcom.966.725.suffix/1416534695477.jpeg",
+            "http://www.meedeedesign.com/wp-content/uploads/classy-elegant-traditional-bedroom-designs-that-will-fit-any-home-classy-bedroom-ideas.jpg",
+            "http://kivalo.club/wp-content/uploads/2017/10/apartment-master-bedroom-ideas-perfect-master-bedroom-ideas-for-apartments-collection-with-wall-ideas-set-fresh-on-apartment-master-bedroom-small-apartment-master-bedroom-ideas.jpg"
+        ],
+        "latitude": "41.8043229",
+        "longitude": "-87.6170910",
+        "id": "AV-T2lMpyCk2Bpf6KnD9"
+    },
+    {
+        "listingName": "5033 S Evans",
+        "address": "5033 S Evans Ave",
+        "city": "Chicago",
+        "prices": 1350,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Central Air conditioning"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Refrigerator, Oven"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Resident Pays Electricity, Gas, Heat"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://www.showmetherent.com/5033-S-Evans-Chicago-IL-60615-2",
+        "imageURLs": [
+            "https://www.amli.com/AMLIContent/Files/apartments/houston/uptown/amenity-exterior/uptown-amenity-exterior-Building%20exterior.jpg",
+            "https://flatpackkitchens.co.uk/articles/wp-content/uploads/2013/06/grey-kitchen.jpg",
+            "https://st.hzcdn.com/simgs/db0189440e78cb4b_4-3505/traditional-bathroom.jpg",
+            "http://www.staradeal.com/south/2017/10/08/best-luxury-apartments-ideas-on-modern-bedroom-night-apartment-interior-deluxe-lg-0182db3abeb5516b.jpg",
+            "https://cdn.jdesigngroup.com/wp-content/uploads/2016/02/08195923/bedroom-miami-42.jpg"
+        ],
+        "latitude": "41.8027790",
+        "longitude": "-87.6078970",
+        "id": "AV-TFPr5AXxH_fqQUlCM"
+    },
+    {
+        "listingName": "4956 S Langley",
+        "address": "4956 S Langley Ave",
+        "city": "Chicago",
+        "prices": 1360,
+        "features": [{
+                "key": "Amenities",
+                "value": [
+                    "Free High Speed Internet and Cable"
+                ]
+            },
+            {
+                "key": "Appliances",
+                "value": [
+                    "Dishwasher, Refrigerator, Stove"
+                ]
+            },
+            {
+                "key": "Utilities",
+                "value": [
+                    "Heat and Water Included, Resident Pays Electricity"
+                ]
+            }
+        ],
+        "propertyType": "Apartment",
+        "sourceURLs": "https://showmetherent.rentlinx.com/4956-S-Langley-Chicago-IL-60615",
+        "imageURLs": [
+            "https://www.therenaissancecompanies.com/sites/www.therenaissancecompanies.com/files/property_images/Wicker%20Park%20Ave%20Elevation.jpg",
+            "https://bella-tucker.com/wp-content/uploads/2011/05/kitchen-best-blue-and-white.jpg",
+            "https://st.hzcdn.com/simgs/1c71e85b0f147758_4-3365/clasico-cuarto-de-bano.jpg",
+            "https://i.pinimg.com/originals/95/75/20/9575205a94abb2847e163f0f74292149.jpg",
+            "http://www.kitchentoday.net/wp-content/uploads/2014/03/small-master-bedroom-design-color-ideas-brown.jpg"
+        ],
+        "latitude": "41.8047860",
+        "longitude": "-87.6088820",
+        "id": "AV-SnWS0_RWkykBu8zjU"
     }
 ]
-
