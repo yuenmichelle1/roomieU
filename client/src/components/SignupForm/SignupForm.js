@@ -156,10 +156,10 @@ export default class SignUpForm extends React.Component {
             <Col xs="12" sm="12" md="12" lg="12">
               <Form onSubmit={this.handleFormSubmit}>
                 <FormGroup row>
-                  <Label for="userEmail" sm={4}>
+                  <Label for="userEmail" xs={4} sm={4}>
                     School Email
                   </Label>
-                  <Col sm={4}>
+                  <Col xs={6} sm={6}>
                     <Input
                       type="email"
                       name="email"
@@ -173,10 +173,10 @@ export default class SignUpForm extends React.Component {
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="userPassword" sm={4}>
+                  <Label for="userPassword" xs={4} sm={4}>
                     Password
                   </Label>
-                  <Col sm={3}>
+                  <Col xs={6} sm={6}>
                     <Input
                       type="password"
                       name="password"
@@ -189,10 +189,10 @@ export default class SignUpForm extends React.Component {
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="userName" sm={4}>
+                  <Label for="userName" xs={2} sm={4}>
                     Name
                   </Label>
-                  <Col sm={4}>
+                  <Col xs={6} sm={6}>
                     <Input
                       type="name"
                       name="name"
@@ -205,10 +205,10 @@ export default class SignUpForm extends React.Component {
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="userPhone" sm={4}>
+                  <Label for="userPhone" xs={4} sm={4}>
                     Phone Number (in the form xxx-xxx-xxxx)
                   </Label>
-                  <Col sm={3}>
+                  <Col xs={6} sm={4}>
                     <Input
                       type="tel"
                       name="phone"
@@ -222,7 +222,7 @@ export default class SignUpForm extends React.Component {
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="imageFile" sm={4}>
+                  <Label for="imageFile" xs={4} sm={4}>
                     Upload Your Image
                   </Label>
                   <Col sm={4}>
@@ -261,10 +261,10 @@ export default class SignUpForm extends React.Component {
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="userSchool" sm={4}>
+                  <Label for="userSchool" xs={4} sm={4}>
                     School
                   </Label>
-                  <Col sm={6}>
+                  <Col xs={6} sm={6}>
                     <Autosuggest
                       suggestions={suggestions}
                       onSuggestionsFetchRequested={
