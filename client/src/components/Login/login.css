@@ -1,32 +1,99 @@
 .container-row {
-    margin: 0 auto !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  
+  margin: 0 auto !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 .form-div {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .login-form {
-    width: 100%;
+  width: 100%;
 }
 
 label.col-form-label {
-    text-align: right;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 .submit-btn {
-    width: 200px !important;
-    height: 50px;
-    margin-top: -70px;
+  width: 200px !important;
+  height: 50px;
+  margin-top: -70px;
 }
 
-@media all and (max-width: 575px) {
-    #userEmail,#userPassword {
-        width: 80%;
-        margin: auto
-    };
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .login-label {
+    width: 80%;
+    max-width: 440px;
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+  #userEmail,
+  #userPassword {
+    width: 80%;
+    max-width: 440px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header-text .text-center .form-header-top {
+    margin-left: 30px;
+  }
 }
+
+@media screen and (max-width: 479px) and (min-width: 455px) {
+  .header-text .text-center .form-header-top h1 {
+    max-width: 400px;
+    height: 3em;
+    width: 70%;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .login-label {
+    width: 80%;
+    max-width: 740px;
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+  #userEmail,
+  #userPassword {
+    width: 80%;
+    max-width: 650px;
+    margin-left: 20px;
+    margin-right: 40px;
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  .header-text .text-center .form-header-top {
+    width: 80%;
+    max-width: 740px;
+    margin: 20px;
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  #password-label {
+    padding-left: 20px;
+
+  }
+}
+
+/* Small Devices, Tablets */
+/* @media only screen and (min-width: 768px) {
+}
+
+/* Medium Devices, Desktops */
+/* @media only screen and (min-width: 992px) {
+  .submit-btn {
+    text-align: center;
+  }
+}  */
