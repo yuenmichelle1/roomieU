@@ -52,8 +52,10 @@ export default class LoginForm extends React.Component {
           <Row className="form-div">
             <Form onSubmit={this.handleFormSubmit} className="login-form">
               <FormGroup row>
+
                 <Col xs={1}/>
                 <Label for="userEmail" className="login-label"  xs={1}>
+
                   Email
                 </Label>
                 <Col >
@@ -67,10 +69,11 @@ export default class LoginForm extends React.Component {
                     required
                   />
                 </Col>
-                <Col xs={10}/>
               </FormGroup>
               <FormGroup row>
+
                 <Label for="userPassword" className="login-label" id="password-label" xs={2}>
+
                   Password
                 </Label>
                 <Col >
