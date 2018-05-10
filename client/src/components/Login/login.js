@@ -59,7 +59,7 @@ export default class LoginForm extends React.Component {
                   Email
                 </Label>
                 <Col >
-                  <Input
+                  <Input lg={12}
                     type="email"
                     name="email"
                     id="userEmail"
@@ -77,7 +77,7 @@ export default class LoginForm extends React.Component {
                   Password
                 </Label>
                 <Col >
-                  <Input
+                  <Input lg={12}
                     type="password"
                     name="password"
                     id="userPassword"
