@@ -6,7 +6,7 @@
   "dependencies": {
     "@hasura/react-check-auth": "^0.1.0-alpha.0",
     "axios": "^0.18.0",
-    "bootstrap": "^4.1.0",
+    "bootstrap": "^4.3.1",
     "firebase": "^4.13.1",
     "react": "^16.3.1",
     "react-autosuggest": "^9.3.4",
